@@ -1,5 +1,6 @@
 # Scope. Stage 0 (department discovery) fills data/departments.jsonl from this list;
 # a verifier checks every department URL before rostering starts.
+# csrankings: affiliation string in CSRankings when it differs from name.
 # email_domains: official domains; subdomains are accepted automatically (cs.cmu.edu ⊂ cmu.edu).
 
 target_departments: &depts
@@ -16,46 +17,46 @@ target_departments: &depts
 
 institutions:
   # ---- Universities (no Princeton, per applicant) ----
-  - {name: Massachusetts Institute of Technology, aliases: [MIT], email_domains: [mit.edu]}
+  - {name: Massachusetts Institute of Technology, csrankings: "Massachusetts Inst. of Technology", aliases: [MIT], email_domains: [mit.edu]}
   - {name: Stanford University, aliases: [Stanford], email_domains: [stanford.edu]}
   - {name: Carnegie Mellon University, aliases: [CMU], email_domains: [cmu.edu]}
-  - {name: University of California Berkeley, aliases: [UC Berkeley, Berkeley], email_domains: [berkeley.edu]}
+  - {name: University of California Berkeley, csrankings: "Univ. of California - Berkeley", aliases: [UC Berkeley, Berkeley], email_domains: [berkeley.edu]}
   - {name: Harvard University, aliases: [Harvard], email_domains: [harvard.edu]}
   - {name: Cornell University, aliases: [Cornell, Cornell Tech, Weill Cornell], email_domains: [cornell.edu, med.cornell.edu]}
   - {name: University of Washington, aliases: [UW], email_domains: [uw.edu, washington.edu]}
-  - {name: University of Illinois Urbana-Champaign, aliases: [UIUC], email_domains: [illinois.edu]}
+  - {name: University of Illinois Urbana-Champaign, csrankings: "Univ. of Illinois at Urbana-Champaign", aliases: [UIUC], email_domains: [illinois.edu]}
   - {name: Georgia Institute of Technology, aliases: [Georgia Tech], email_domains: [gatech.edu]}
   - {name: University of Michigan, aliases: [UMich], email_domains: [umich.edu]}
-  - {name: University of California San Diego, aliases: [UCSD], email_domains: [ucsd.edu]}
-  - {name: University of California Los Angeles, aliases: [UCLA], email_domains: [ucla.edu]}
+  - {name: University of California San Diego, csrankings: "Univ. of California - San Diego", aliases: [UCSD], email_domains: [ucsd.edu]}
+  - {name: University of California Los Angeles, csrankings: "Univ. of California - Los Angeles", aliases: [UCLA], email_domains: [ucla.edu]}
   - {name: University of Texas at Austin, aliases: [UT Austin], email_domains: [utexas.edu]}
   - {name: Columbia University, aliases: [Columbia], email_domains: [columbia.edu, cumc.columbia.edu]}
   - {name: New York University, aliases: [NYU], email_domains: [nyu.edu, nyulangone.org]}
   - {name: University of Pennsylvania, aliases: [UPenn, Penn], email_domains: [upenn.edu, pennmedicine.upenn.edu]}
   - {name: Yale University, aliases: [Yale], email_domains: [yale.edu]}
   - {name: Johns Hopkins University, aliases: [JHU], email_domains: [jhu.edu, jh.edu, jhmi.edu]}
-  - {name: California Institute of Technology, aliases: [Caltech], email_domains: [caltech.edu]}
+  - {name: California Institute of Technology, csrankings: "California Inst. of Technology", aliases: [Caltech], email_domains: [caltech.edu]}
   - {name: University of Chicago, aliases: [UChicago], email_domains: [uchicago.edu]}
   - {name: Duke University, aliases: [Duke], email_domains: [duke.edu]}
   - {name: Brown University, aliases: [Brown], email_domains: [brown.edu]}
   - {name: Northwestern University, aliases: [Northwestern], email_domains: [northwestern.edu]}
-  - {name: University of Maryland, aliases: [UMD], email_domains: [umd.edu]}
+  - {name: University of Maryland, csrankings: "Univ. of Maryland - College Park", aliases: [UMD], email_domains: [umd.edu]}
   - {name: University of Southern California, aliases: [USC], email_domains: [usc.edu]}
-  - {name: University of Wisconsin-Madison, aliases: [UW-Madison], email_domains: [wisc.edu]}
-  - {name: University of Massachusetts Amherst, aliases: [UMass Amherst], email_domains: [umass.edu]}
+  - {name: University of Wisconsin-Madison, csrankings: "University of Wisconsin - Madison", aliases: [UW-Madison], email_domains: [wisc.edu]}
+  - {name: University of Massachusetts Amherst, csrankings: "Univ. of Massachusetts Amherst", aliases: [UMass Amherst], email_domains: [umass.edu]}
   - {name: Purdue University, aliases: [Purdue], email_domains: [purdue.edu]}
   - {name: University of Minnesota, aliases: [UMN], email_domains: [umn.edu]}
   - {name: Pennsylvania State University, aliases: [Penn State], email_domains: [psu.edu]}
   - {name: Rice University, aliases: [Rice], email_domains: [rice.edu]}
-  - {name: University of California Santa Barbara, aliases: [UCSB], email_domains: [ucsb.edu]}
-  - {name: University of California Irvine, aliases: [UCI], email_domains: [uci.edu]}
-  - {name: University of California Davis, aliases: [UC Davis], email_domains: [ucdavis.edu]}
+  - {name: University of California Santa Barbara, csrankings: "Univ. of California - Santa Barbara", aliases: [UCSB], email_domains: [ucsb.edu]}
+  - {name: University of California Irvine, csrankings: "Univ. of California - Irvine", aliases: [UCI], email_domains: [uci.edu]}
+  - {name: University of California Davis, csrankings: "Univ. of California - Davis", aliases: [UC Davis], email_domains: [ucdavis.edu]}
   - {name: University of California San Francisco, aliases: [UCSF], email_domains: [ucsf.edu]}
   - {name: Ohio State University, aliases: [OSU], email_domains: [osu.edu]}
   - {name: Stony Brook University, aliases: [Stony Brook], email_domains: [stonybrook.edu]}
   - {name: Rutgers University, aliases: [Rutgers], email_domains: [rutgers.edu]}
   - {name: University of Virginia, aliases: [UVA], email_domains: [virginia.edu]}
-  - {name: University of North Carolina at Chapel Hill, aliases: [UNC], email_domains: [unc.edu]}
+  - {name: University of North Carolina at Chapel Hill, csrankings: "University of North Carolina", aliases: [UNC], email_domains: [unc.edu]}
   - {name: Emory University, aliases: [Emory], email_domains: [emory.edu]}
   - {name: Vanderbilt University, aliases: [Vanderbilt], email_domains: [vanderbilt.edu, vumc.org]}
   - {name: Washington University in St. Louis, aliases: [WashU], email_domains: [wustl.edu]}
@@ -72,7 +73,7 @@ institutions:
   - {name: University of Florida, aliases: [UF], email_domains: [ufl.edu]}
   - {name: Icahn School of Medicine at Mount Sinai, aliases: [Mount Sinai], email_domains: [mssm.edu, mountsinai.org]}
   - {name: Baylor College of Medicine, aliases: [BCM], email_domains: [bcm.edu]}
-  - {name: Toyota Technological Institute at Chicago, aliases: [TTIC], email_domains: [ttic.edu], grants_phd: true}
+  - {name: Toyota Technological Institute at Chicago, csrankings: "TTI Chicago", aliases: [TTIC], email_domains: [ttic.edu], grants_phd: true}
 
   # ---- Research institutes. phd_path = how an independent PI takes PhD students ----
   - {name: Broad Institute, aliases: [Broad Institute of MIT and Harvard], kind: institute, email_domains: [broadinstitute.org, mit.edu, harvard.edu], phd_path: "via MIT / Harvard appointment"}

@@ -1,0 +1,8 @@
+institution: Carnegie Mellon University
+unit: Language Technologies Institute
+urls: [https://www.lti.cs.cmu.edu/people/faculty/index.html]
+item: div.filterable
+name: a.name
+title: h3
+profile: a.name@href
+expect: 54

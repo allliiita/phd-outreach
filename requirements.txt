@@ -6,3 +6,5 @@ openpyxl>=3.1
 pytest>=8
 google-api-python-client>=2.120
 google-auth-oauthlib>=1.2
+pypdf>=4
+playwright>=1.40   # optional: renders JS-only homepages

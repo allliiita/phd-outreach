@@ -1,0 +1,8 @@
+institution: Carnegie Mellon University
+unit: Department of Statistics & Data Science
+urls: [https://www.cmu.edu/dietrich/statistics-datascience/people/faculty/index.html]
+item: div.filterable
+name: a.name
+title: h3
+profile: a.name@href
+expect: 38          # faculty page only; emeritus + affiliated pages deliberately not rostered

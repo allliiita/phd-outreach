@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import html
 import re
+import threading
 import time
 from pathlib import Path
 from urllib.parse import urlparse
@@ -23,6 +24,8 @@ from .schema import deobfuscate
 SNAP = ROOT / "data" / "snapshots"
 UA = "Mozilla/5.0 (academic-directory-research; contact via applicant email)"
 _last: dict[str, float] = {}
+_locks: dict[str, threading.Lock] = {}
+_guard = threading.Lock()
 MIN_GAP = 2.0  # seconds between requests to the same host
 
 
@@ -36,16 +39,55 @@ def get(url: str, refresh: bool = False) -> str:
     if p.exists() and not refresh:
         return p.read_text(errors="ignore")
     host = urlparse(url).netloc
-    wait = MIN_GAP - (time.time() - _last.get(host, 0))
-    if wait > 0:
-        time.sleep(wait)
-    r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
-    _last[host] = time.time()
+    with _guard:
+        lock = _locks.setdefault(host, threading.Lock())
+    with lock:  # polite: one request at a time per host, MIN_GAP apart (threads fan out across hosts)
+        wait = MIN_GAP - (time.time() - _last.get(host, 0))
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
+        finally:
+            _last[host] = time.time()
     r.raise_for_status()
+    text = r.text
+    if url.lower().split("?")[0].endswith(".pdf") or "pdf" in r.headers.get("content-type", ""):
+        text = pdf_text(r.content)   # CVs: the snapshot holds the extracted text, so quotes stay checkable
+    elif len(visible_text(text)) < 400 and "<script" in text.lower():
+        text = render(url) or text   # JS-rendered homepage / directory: snapshot the rendered DOM instead
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(r.text)
+    p.write_text(text)
     (p.with_suffix(".url")).write_text(url)
-    return r.text
+    return text
+
+
+_pw_lock = threading.Lock()
+
+
+def render(url: str) -> str | None:
+    """Headless Chromium (pre-installed Playwright). Serialised: one browser page at a time."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None
+    with _pw_lock, sync_playwright() as pw:
+        exe = "/opt/pw-browsers/chromium"
+        b = pw.chromium.launch(**({"executable_path": exe} if Path(exe).is_file() else {}))
+        try:
+            pg = b.new_page(user_agent=UA)
+            pg.goto(url, wait_until="networkidle", timeout=30000)
+            return pg.content()
+        except Exception:  # noqa: BLE001
+            return None
+        finally:
+            b.close()
+
+
+def pdf_text(data: bytes) -> str:
+    import io
+    from pypdf import PdfReader
+    pages = PdfReader(io.BytesIO(data)).pages[:15]
+    return html.escape("\n".join(pg.extract_text() or "" for pg in pages))
 
 
 def visible_text(raw: str) -> str:

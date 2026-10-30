@@ -81,8 +81,9 @@ def check(people_raw: list[dict], snapshots: Path | None = None) -> list[tuple[s
                 continue
             snap = snapshot_text(snapshots, str(ev.source_url))
             if snap is not None:
+                from .fetch import visible_text
                 q = " ".join(ev.quote.split()).lower()[:120]
-                if q not in " ".join(snap.split()).lower():
+                if q not in " ".join(snap.split()).lower() and q not in visible_text(snap).lower():
                     problems.append((p.id, f"{fld} quote not found in saved snapshot"))
 
         if p.tier == "A":

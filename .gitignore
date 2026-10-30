@@ -5,3 +5,4 @@ secrets/
 data/snapshots/
 data/sent.jsonl
 assets/*.pdf
+data/seeds/
