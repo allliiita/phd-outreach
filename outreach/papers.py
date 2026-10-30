@@ -104,42 +104,69 @@ def _s2(name: str, institution: str, page: str) -> dict:
     return {"author": [a["authorId"] for _, a in good], "papers": _pick(works)}
 
 
+_inst_ids: dict[str, str | None] = {}
+
+
+def _inst_id(institution: str, key: str) -> str | None:
+    if institution not in _inst_ids:
+        from .config import institutions
+        alias = next((i.get("openalex") for i in institutions()["institutions"] if i["name"] == institution), None)
+        res = _get(f"{OA}/institutions", {"search": alias or institution, "per-page": 1, "api_key": key}, gap=0.2)["results"]
+        _inst_ids[institution] = res[0]["id"].split("/")[-1] if res else None
+    return _inst_ids[institution]
+
+
 def _openalex(name: str, institution: str, page: str, key: str) -> dict:
+    """Authors with this name affiliated with this institution (by OpenAlex id, not by words), and only their
+    works that carry this institution: a same-name author elsewhere cannot leak in."""
+    iid = _inst_id(institution, key)
+    if not iid:
+        return {"problem": f"papers: OpenAlex has no institution {institution!r}"}
     auth = {"api_key": key}
-    found = _get(f"{OA}/authors", {"search": name, "per-page": 15, **auth}, gap=0.2)
-    inst = {t for t in institution.lower().replace(",", " ").split() if len(t) > 3}
-    scored = []
-    for a in found["results"]:
-        insts = [i.get("display_name", "") for i in (a.get("last_known_institutions") or [])]
-        insts += [x["institution"]["display_name"] for x in a.get("affiliations", [])[:5]]
-        s = max((len(inst & set(i.lower().split())) for i in insts), default=0)
-        if s:
-            scored.append((s, a))
-    scored.sort(key=lambda x: -x[0])
-    if not scored or (len(scored) > 1 and scored[0][0] == scored[1][0] and not page):
-        return {"problem": f"papers: OpenAlex ambiguous ({len(scored)} candidates)"}
+    found = _get(f"{OA}/authors", {"search": name, "filter": f"affiliations.institution.id:{iid}", "per-page": 10, **auth}, gap=0.2)["results"]
+    if not found:
+        return {"problem": "papers: no OpenAlex author with this name at this institution"}
     since = date.today().year - 3
-    picked = []
-    for _, a in scored[:3]:
+    words = set(_norm(page).split())
+    per = []
+    for a in found[:5]:   # OpenAlex splits people too; score each same-name candidate separately
         aid = a["id"].split("/")[-1]
-        res = _get(f"{OA}/works", {"filter": f"author.id:{aid},from_publication_date:{since}-01-01",
-                                   "sort": "publication_date:desc", "per-page": 50, **auth}, gap=0.2)
+        res = _get(f"{OA}/works", {"filter": f"author.id:{aid},institutions.id:{iid},from_publication_date:{since}-01-01,type:article|preprint",
+                                   "select": "title,publication_year,doi,primary_location,cited_by_count,authorships,id",
+                                   "sort": "publication_date:desc", "per-page": 40, **auth}, gap=0.2)
         works = [{"title": w["title"], "year": w["publication_year"], "cites": w.get("cited_by_count"),
                   "url": w.get("doi") or (w.get("primary_location") or {}).get("landing_page_url") or w["id"],
-                  "source": "openalex"} for w in res["results"] if w.get("title")]
-        picked.append((_on_page([w["title"] for w in works], page), a["id"], works))
-        if not page:
-            break
-    picked.sort(key=lambda x: -x[0])
-    if page and len(picked) > 1 and picked[0][0] == 0:
-        return {"problem": "papers: OpenAlex candidates not confirmed by page text"}
-    return {"author": picked[0][1], "papers": _pick(picked[0][2])}
+                  "source": "openalex"} for w in res["results"]
+                 if w.get("title") and len(w.get("authorships") or []) <= 30]   # drop big-collaboration papers
+        if works:
+            vocab = set(_norm(" ".join(w["title"] for w in works)).split())
+            per.append((_on_page([w["title"] for w in works], page), len(words & vocab) / (len(vocab) ** 0.5 + 1), aid, works))
+    if not per:
+        return {"problem": "papers: OpenAlex author found but no recent works at this institution"}
+    hit = [x for x in per if x[0]]
+    if hit:
+        chosen, note = hit, None
+    else:
+        per.sort(key=lambda x: -x[1])
+        chosen = per[:1]
+        note = None if len(per) == 1 else f"papers: {len(per)} same-name OpenAlex authors at this school; picked closest to page text, check"
+    works = [w for x in chosen for w in x[3]]
+    out = {"author": "|".join(x[2] for x in chosen), "papers": _pick(works)}
+    if note:
+        out["warning"] = note
+    return out
 
 
 def find_papers(name: str, institution: str, page_text: str = "", scholar: str | None = None) -> dict:
     try:
         key = _key()
-        return _openalex(name, institution, page_text, key) if key else _s2(name, institution, page_text)
+        if key:
+            res = _openalex(name, institution, page_text, key)
+            if not res.get("problem"):
+                return res
+            s2 = _s2(name, institution, page_text)   # new arrivals: works may not carry the institution yet
+            return s2 if not s2.get("problem") else res
+        return _s2(name, institution, page_text)
     except Exception as e:  # noqa: BLE001
         return {"problem": f"papers: {type(e).__name__} {str(e)[:100]}"}
 
