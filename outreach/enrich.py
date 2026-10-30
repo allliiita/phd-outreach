@@ -217,6 +217,8 @@ def signals(raw: str, url: str) -> dict:
 
 
 def enrich(row: dict, with_papers: bool = True) -> dict:
+    from .roster import clean_name
+    row = {**row, "name": clean_name(row["name"])}
     d = {k: row.get(k) for k in ("name", "institution", "department", "title_on_roster", "roster_url", "profile_url", "filter", "ai_venues", "first_paper", "heritage")}
     d["position_class"] = position_class(row.get("title_on_roster") or "")
     d["position"] = {"value": row.get("title_on_roster") or "", "evidence": {
@@ -299,6 +301,23 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
     return d
 
 
+def refill_papers(path: Path) -> None:
+    from .papers import find_papers
+    rows = [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+    n = 0
+    for d in rows:
+        if d["papers"] or not any(p.startswith("papers:") and "rate limited" in p for p in d["problems"]):
+            continue
+        pages = [u for u in (d.get("profile_url"), d.get("homepage"), d.get("pubs")) if u and _cached(u)]
+        res = find_papers(d["name"], d["institution"], " ".join(visible_text(get(u)) for u in pages))
+        d["papers"], d["first_paper"] = res.get("papers", []), d.get("first_paper") or res.get("first_year")
+        d["problems"] = [p for p in d["problems"] if not p.startswith("papers:")] + \
+            [x for x in (res.get("problem"), res.get("warning")) if x]
+        n += bool(d["papers"])
+    path.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in rows))
+    print(f"{path.name}: papers refilled for {n}")
+
+
 def official_profiles(skip: Path) -> dict:
     out = {}
     for f in sorted((ROOT / "data" / "roster").glob("*.jsonl")):
@@ -328,7 +347,10 @@ def main() -> None:
     ap.add_argument("--no-papers", action="store_true")
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--all-ranks", action="store_true", help="also full / emeritus / teaching faculty")
+    ap.add_argument("--refill-papers", action="store_true", help="retry papers only, for dossiers that failed (rate limits)")
     a = ap.parse_args()
+    if a.refill_papers:
+        return refill_papers(OUT / a.roster.name)
     rows = [json.loads(l) for l in a.roster.read_text().splitlines() if l.strip() and not l.startswith('{"_')]
     official = official_profiles(a.roster)
     for r in rows:   # CSRankings rows: use the department's own profile page (email, title) when one exists

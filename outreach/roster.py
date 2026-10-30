@@ -86,10 +86,17 @@ def _sig(el) -> str:
     return el.name + ("." + el["class"][0] if el.get("class") else "")
 
 
+DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.d\.|scd|md|mph|drph)\.?,?\s+)+|(?:,?\s+(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)
+
+
+def clean_name(t: str) -> str:
+    return DEGREE.sub("", t).strip(" ,")
+
+
 def _name_in(el):
     """(name, link) from the first heading / strong / link whose text is shaped like a person's name."""
     for h in ([el] if el.name == "a" else []) + el.find_all(["h2", "h3", "h4", "h5", "strong", "a", "span"]):
-        t = " ".join(h.get_text(" ").split()).strip(" ,")
+        t = clean_name(" ".join(h.get_text(" ").split()).strip(" ,"))
         m = LAST_FIRST.match(t)
         if m:
             t = f"{m.group(2)} {m.group(1)}"

@@ -72,6 +72,7 @@ def _in_text(kw: str, hay: str) -> bool:
 
 
 def assemble(stem: str) -> None:
+    from .roster import clean_name
     doss = {slug_id(d["name"], d["institution"]): d for d in _load(DOSS / f"{stem}.jsonl")}
     judged = {}
     for f in sorted(JOUT.glob(f"{stem}_*.jsonl")):
@@ -112,7 +113,7 @@ def assemble(stem: str) -> None:
         why_b = [] if tier == "A" or rel == "no" or cls not in A_CLASSES else \
             [w for w, bad in (("papers", not papers), ("keywords", len(kws) < 3), ("research text", not d["research"]["text"])) if bad]
         people.append({
-            "id": pid, "tier": tier, "name": d["name"], "institution": d["institution"], "departments": [d["department"]],
+            "id": slug_id(clean_name(d["name"]), d["institution"]), "tier": tier, "name": clean_name(d["name"]), "institution": d["institution"], "departments": [d["department"]],
             "position": d["position"], "position_class": cls, "start_year": start, "email": d["email"],
             "homepage": d["homepage"], "lab_website": d["lab_website"], "google_scholar": d["google_scholar"],
             "keywords": kws[:8] if tier == "A" or len(kws) >= 3 else [],
