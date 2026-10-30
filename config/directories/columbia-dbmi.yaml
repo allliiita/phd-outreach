@@ -1,0 +1,8 @@
+institution: Columbia University
+unit: Department of Biomedical Informatics
+urls: [https://www.dbmi.columbia.edu/faculty/]
+item: div.abcfslItemCntrGridB
+name: h1
+title: div.abcfslMT10
+profile: a[href*="/profile/"]@href
+expect: 52

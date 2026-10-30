@@ -1,0 +1,116 @@
+{"institution":"Massachusetts Institute of Technology","unit":"Statistics and Data Science","url":"https://stat.mit.edu/people_categories/core/","filter":"all"}
+{"institution":"Massachusetts Institute of Technology","unit":"Computational and Systems Biology","url":"https://csbphd.mit.edu/faculty","filter":"all"}
+{"institution":"Massachusetts Institute of Technology","unit":"Institute for Data, Systems, and Society","url":"https://idss.mit.edu/people/directory","filter":"all"}
+{"institution":"Massachusetts Institute of Technology","unit":"Brain and Cognitive Sciences","url":"https://bcs.mit.edu/directory","filter":"ml_only"}
+{"institution":"Massachusetts Institute of Technology","unit":"Electrical Engineering and Computer Science","url":"https://catalog.mit.edu/schools/engineering/electrical-engineering-computer-science/electrical-engineering-computer-science_facultystafftext.pdf","filter":"ml_only"}
+{"institution":"University of California Berkeley","unit":"Statistics","url":"https://statistics.berkeley.edu/people/faculty","filter":"all"}
+{"institution":"University of California Berkeley","unit":"Biostatistics","url":"https://publichealth.berkeley.edu/people","filter":"all"}
+{"institution":"University of California Berkeley","unit":"Neuroscience","url":"https://hwni.berkeley.edu/people","filter":"ml_only"}
+{"institution":"University of California Berkeley","unit":"Electrical Engineering and Computer Sciences","url":"https://www2.eecs.berkeley.edu/Faculty/Lists/EE/faculty.html","filter":"ml_only"}
+{"institution":"University of Washington","unit":"Statistics","url":"https://stat.uw.edu/people/faculty/professors","filter":"all"}
+{"institution":"University of Washington","unit":"Statistics","url":"https://stat.uw.edu/people/faculty/assistant-professors","filter":"all"}
+{"institution":"University of Washington","unit":"Biostatistics","url":"https://www.biostat.washington.edu/people/faculty","filter":"all"}
+{"institution":"University of Washington","unit":"Computational Molecular Biology","url":"https://gsweb.gs.washington.edu/faculty.htm","filter":"all"}
+{"institution":"University of Washington","unit":"Electrical & Computer Engineering","url":"https://www.engr.washington.edu/facultyfinder","filter":"ml_only"}
+{"institution":"University of Michigan","unit":"Statistics","url":"https://prod.lsa.umich.edu/stats/people.directory.html","filter":"all"}
+{"institution":"University of Michigan","unit":"Computational Medicine and Bioinformatics","url":"https://medschool.umich.edu/departments/computational-medicine-bioinformatics/directory","filter":"all"}
+{"institution":"University of Michigan","unit":"Neuroscience (computational faculty)","url":"https://medresearch.umich.edu/labs-departments/centers/mni/people/member-directory","filter":"ml_only"}
+{"institution":"University of Michigan","unit":"Electrical and Computer Engineering","url":"https://ece.engin.umich.edu/people/faculty/","filter":"ml_only"}
+{"institution":"University of Texas at Austin","unit":"Statistics and Data Sciences","url":"https://stat.utexas.edu/directory","filter":"all"}
+{"institution":"University of Texas at Austin","unit":"Neuroscience","url":"https://neuroscience.utexas.edu/people","filter":"ml_only"}
+{"institution":"University of Texas at Austin","unit":"Electrical and Computer Engineering","url":"https://ece.utexas.edu/people/faculty","filter":"ml_only"}
+{"institution":"University of Pennsylvania","unit":"Statistics and Data Science","url":"https://statistics.wharton.upenn.edu/?p=674","filter":"all"}
+{"institution":"University of Pennsylvania","unit":"Biostatistics, Epidemiology and Informatics","url":"https://www.med.upenn.edu/apps/faculty/index.php/g20000220","filter":"all"}
+{"institution":"University of Pennsylvania","unit":"Genomics and Computational Biology","url":"https://www.med.upenn.edu/gcb/faculty.html","filter":"all"}
+{"institution":"University of Pennsylvania","unit":"Computational Neuroscience Initiative","url":"https://www.cni.upenn.edu/people","filter":"ml_only"}
+{"institution":"University of Pennsylvania","unit":"Electrical and Systems Engineering","url":"https://directory.engineering.upenn.edu/","filter":"ml_only"}
+{"institution":"California Institute of Technology","unit":"Computation and Neural Systems","url":"https://www.cns-legacy.caltech.edu/people/index.html","filter":"ml_only"}
+{"institution":"California Institute of Technology","unit":"Electrical Engineering","url":"https://ee.caltech.edu/people/faculty","filter":"ml_only"}
+{"institution":"Brown University","unit":"Biostatistics","url":"https://biostatistics.sph.brown.edu/faculty","filter":"all"}
+{"institution":"Brown University","unit":"Data Science Institute","url":"https://dsi.brown.edu/about/people","filter":"all"}
+{"institution":"Brown University","unit":"Neuroscience","url":"https://neuroscience.brown.edu/people/faculty","filter":"ml_only"}
+{"institution":"Brown University","unit":"Electrical and Computer Engineering","url":"https://engineering.brown.edu/people/faculty/faculty-area/electrical-and-computer-engineering-faculty","filter":"ml_only"}
+{"institution":"University of Southern California","unit":"Biostatistics and Health Data Science","url":"https://keck.usc.edu/biostatistics/faculty/","filter":"all"}
+{"institution":"University of Southern California","unit":"Quantitative and Computational Biology","url":"https://www.qcb-dornsife.usc.edu/people","filter":"all"}
+{"institution":"University of Southern California","unit":"Center for Computational Neuroscience","url":"https://cne.usc.edu/?p=3","filter":"ml_only"}
+{"institution":"University of Southern California","unit":"Electrical and Computer Engineering","url":"https://minghsiehece.usc.edu/groups/ceng/people/","filter":"ml_only"}
+{"institution":"Purdue University","unit":"Statistics","url":"https://www.stat.purdue.edu/people/faculty","filter":"all"}
+{"institution":"Purdue University","unit":"Computational Biology (Computer Science)","url":"https://compbio.cs.purdue.edu/people.html","filter":"all"}
+{"institution":"Stanford University","unit":"Biomedical Data Science","url":"https://dbds.stanford.edu/faculty","filter":"all"}
+{"institution":"Harvard University","unit":"Statistics","url":"https://statistics.fas.harvard.edu/faculty","filter":"all"}
+{"institution":"Harvard University","unit":"Biostatistics","url":"https://www.hsph.harvard.edu/biostatistics/?p=104","filter":"all"}
+{"institution":"Harvard University","unit":"Biomedical Informatics","url":"https://dms.hms.harvard.edu/people/faculty/BMI","filter":"all"}
+{"institution":"Harvard University","unit":"Electrical Engineering","url":"https://seas.harvard.edu/about-us/directory","filter":"ml_only"}
+{"institution":"University of Illinois Urbana-Champaign","unit":"Computational Biology","url":"https://biophysics.illinois.edu/directory/faculty","filter":"all"}
+{"institution":"University of California San Diego","unit":"Biostatistics","url":"https://ph.ucsd.edu/biostat/faculty/index.html","filter":"all"}
+{"institution":"University of California San Diego","unit":"Bioinformatics and Systems Biology","url":"https://catalog.ucsd.edu/faculty/BIOI.html","filter":"all"}
+{"institution":"University of California San Diego","unit":"Electrical and Computer Engineering","url":"https://catalog.ucsd.edu/faculty/ECE.html","filter":"ml_only"}
+{"institution":"Columbia University","unit":"Statistics","url":"https://stat.columbia.edu/department-directory/faculty/","filter":"all"}
+{"institution":"Columbia University","unit":"Biostatistics","url":"https://www.publichealth.columbia.edu/academics/departments/biostatistics/our-faculty","filter":"all"}
+{"institution":"Columbia University","unit":"Biomedical Informatics","url":"https://www.dbmi.columbia.edu/faculty/","filter":"all"}
+{"institution":"Columbia University","unit":"Electrical Engineering","url":"https://www.ee.columbia.edu/faculty-0","filter":"ml_only"}
+{"institution":"Yale University","unit":"Statistics and Data Science","url":"https://statistics.yale.edu/people/faculty","filter":"all"}
+{"institution":"Yale University","unit":"Computational Biology and Biomedical Informatics","url":"https://cbb.yale.edu/people","filter":"all"}
+{"institution":"University of Chicago","unit":"Statistics","url":"https://stat.uchicago.edu/people/","filter":"all"}
+{"institution":"University of Chicago","unit":"Biomedical Data Science","url":"https://medicine.uchicago.edu/biomedical-data-science/faculty-directory","filter":"all"}
+{"institution":"Northwestern University","unit":"Statistics and Data Science","url":"https://statistics.northwestern.edu/people/faculty/","filter":"all"}
+{"institution":"Northwestern University","unit":"Biostatistics","url":"https://www.feinberg.northwestern.edu/sites/biostatistics/faculty/","filter":"all"}
+{"institution":"Northwestern University","unit":"Electrical and Computer Engineering","url":"https://www.mccormick.northwestern.edu/electrical-computer/people/faculty.html","filter":"ml_only"}
+{"institution":"University of Wisconsin-Madison","unit":"Statistics","url":"https://stat.wisc.edu/category/facstaff/faculty/","filter":"all"}
+{"institution":"University of Wisconsin-Madison","unit":"Biostatistics and Medical Informatics","url":"https://biostat.wiscweb.wisc.edu/staff-type/faculty","filter":"all"}
+{"institution":"University of Wisconsin-Madison","unit":"Electrical and Computer Engineering","url":"https://directory.engr.wisc.edu/ece/faculty/","filter":"ml_only"}
+{"institution":"University of Minnesota","unit":"Biostatistics & Health Data Science","url":"https://directory.sph.umn.edu/bio/sph-a-z","filter":"all"}
+{"institution":"University of Minnesota","unit":"Electrical and Computer Engineering","url":"https://ece.umn.edu/directory/","filter":"ml_only"}
+{"institution":"University of California Santa Barbara","unit":"Statistics and Applied Probability","url":"https://www.pstat.ucsb.edu/node/1856","filter":"all"}
+{"institution":"University of California San Francisco","unit":"Epidemiology & Biostatistics","url":"https://epibiostat.ucsf.edu/faculty-list","filter":"all"}
+{"institution":"University of California San Francisco","unit":"Computational Biology and Informatics","url":"https://cbi.ucsf.edu/people/index.html","filter":"all"}
+{"institution":"Rutgers University","unit":"Statistics","url":"https://stat.rutgers.edu/people-pages/faculty","filter":"all"}
+{"institution":"Rutgers University","unit":"Biostatistics and Epidemiology","url":"https://sph.rutgers.edu/concentrations/biostatistics-epidemiology/faculty-staff.php","filter":"all"}
+{"institution":"Rutgers University","unit":"Electrical and Computer Engineering","url":"https://ece.rutgers.edu/staff-directory","filter":"ml_only"}
+{"institution":"Emory University","unit":"Biostatistics and Bioinformatics","url":"https://www.sph.emory.edu/departments/bios","filter":"all"}
+{"institution":"Emory University","unit":"Biomedical Informatics","url":"https://www.bmi.emory.edu/faculty","filter":"all"}
+{"institution":"Boston University","unit":"Statistics","url":"https://www.bu.edu/math/people/faculty/","filter":"all"}
+{"institution":"Boston University","unit":"Biostatistics","url":"https://www.bu.edu/sph/departments/biostatistics/faculty-staff","filter":"all"}
+{"institution":"Boston University","unit":"Electrical & Computer Engineering","url":"https://www.bu.edu/eng/academics/departments-and-divisions/electrical-and-computer-engineering/people/","filter":"ml_only"}
+{"institution":"University of Utah","unit":"Biomedical Informatics","url":"https://people.app.utah.edu/basic.hml?did=391","filter":"all"}
+{"institution":"University of Utah","unit":"Electrical and Computer Engineering","url":"https://ece.utah.edu/?p=5900","filter":"ml_only"}
+{"institution":"University of Notre Dame","unit":"Electrical Engineering","url":"https://ee.nd.edu/faculty","filter":"ml_only"}
+{"institution":"Baylor College of Medicine","unit":"Biostatistics and Informatics","url":"https://www.bcm.edu/academic-centers/dan-l-duncan-comprehensive-cancer-center/research/cancer-center-shared-resources/biostatistics-and-informatics/faculty-staff","filter":"all"}
+{"institution":"Carnegie Mellon University","unit":"Statistics & Data Science","url":"https://www.cmu.edu/dietrich/statistics-datascience/people/faculty/index.html","filter":"all"}
+{"institution":"Carnegie Mellon University","unit":"Computational Biology","url":"https://www.cmu.edu/cbd/people/voting-faculty.html","filter":"all"}
+{"institution":"Carnegie Mellon University","unit":"Neuroscience Institute","url":"https://www.cmu.edu/ni/people/faculty-directory.html","filter":"ml_only"}
+{"institution":"Cornell University","unit":"Statistics and Data Science","url":"https://stat.cornell.edu/directory","filter":"all"}
+{"institution":"Cornell University","unit":"Computational Biology","url":"https://cals.cornell.edu/computational-biology/people","filter":"all"}
+{"institution":"Cornell University","unit":"Electrical and Computer Engineering","url":"https://ece.cornell.edu/ece/employee-directory","filter":"ml_only"}
+{"institution":"Georgia Institute of Technology","unit":"Bioinformatics","url":"https://bioinformatics.gatech.edu/bioinformatics-faculty?page=0","filter":"all"}
+{"institution":"University of California Los Angeles","unit":"Biostatistics","url":"https://ph.ucla.edu/about/faculty-staff-directory","filter":"all"}
+{"institution":"University of California Los Angeles","unit":"Computational and Systems Neuroscience","url":"https://neuroscience.ucla.edu/node/708","filter":"ml_only"}
+{"institution":"New York University","unit":"Biostatistics","url":"https://med.nyu.edu/departments-institutes/population-health/divisions-sections-centers/biostatistics/faculty","filter":"all"}
+{"institution":"New York University","unit":"Statistics (Stern TOPS)","url":"https://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/tops/faculty-staff/full-time-faculty.md","filter":"all"}
+{"institution":"New York University","unit":"Electrical and Computer Engineering","url":"https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering/people","filter":"ml_only"}
+{"institution":"New York University","unit":"Center for Neural Science","url":"https://www.cns.nyu.edu/faculty.php","filter":"ml_only"}
+{"institution":"Johns Hopkins University","unit":"Center for Computational Biology","url":"https://ccb.jhu.edu/people.php","filter":"all"}
+{"institution":"Johns Hopkins University","unit":"Electrical and Computer Engineering","url":"https://engineering.jhu.edu/ece/people/","filter":"ml_only"}
+{"institution":"Duke University","unit":"Statistical Science","url":"https://stat.duke.edu/people/faculty","filter":"all"}
+{"institution":"Duke University","unit":"Biostatistics & Bioinformatics","url":"https://biostat.duke.edu/people/faculty","filter":"all"}
+{"institution":"University of Maryland","unit":"Statistics","url":"https://stat.umd.edu/people/faculty-category.html","filter":"all"}
+{"institution":"University of Maryland","unit":"Computational Biology","url":"https://www.cbcb.umd.edu/our-experts/faculty","filter":"all"}
+{"institution":"University of Maryland","unit":"Electrical and Computer Engineering","url":"https://ece.umd.edu/clark/facultydir","filter":"ml_only"}
+{"institution":"University of Maryland","unit":"Biostatistics and Bioinformatics (School of Medicine)","url":"https://www.medschool.umaryland.edu/epidemiology/biostats/our-team/","filter":"all"}
+{"institution":"Pennsylvania State University","unit":"Electrical Engineering and Computer Science","url":"https://www.eecs.psu.edu/departments/ee-faculty-list.aspx","filter":"ml_only"}
+{"institution":"Pennsylvania State University","unit":"Bioinformatics and Genomics","url":"https://huck.psu.edu/graduate-programs/bioinformatics-and-genomics/people/faculty/p3","filter":"all"}
+{"institution":"Pennsylvania State University","unit":"Bioinformatics and Genomics","url":"https://huck.psu.edu/graduate-programs/bioinformatics-and-genomics/people/faculty/p4","filter":"all"}
+{"institution":"Pennsylvania State University","unit":"Center for Neural Engineering","url":"https://www.cne.psu.edu/people/affiliated-faculty.aspx","filter":"ml_only"}
+{"institution":"University of California Irvine","unit":"Center for Complex Biological Systems","url":"https://ccbs.uci.edu/directory/ccbs-faculty/","filter":"all"}
+{"institution":"University of California Irvine","unit":"Electrical Engineering and Computer Science","url":"https://engineering.uci.edu/directory/dept/eecs","filter":"ml_only"}
+{"institution":"University of California Irvine","unit":"Center for Cognitive Neuroscience (core faculty)","url":"https://www.cence.socsci.uci.edu/faculty.php","filter":"ml_only"}
+{"institution":"Ohio State University","unit":"Statistics","url":"https://stat.osu.edu/people","filter":"all"}
+{"institution":"Ohio State University","unit":"Electrical and Computer Engineering","url":"https://ece.osu.edu/directory","filter":"ml_only"}
+{"institution":"University of Virginia","unit":"Electrical and Computer Engineering","url":"https://engineering.virginia.edu/department/electrical-and-computer-engineering/faculty","filter":"ml_only"}
+{"institution":"University of Virginia","unit":"Neuroscience Graduate Program","url":"https://neurograd.virginia.edu/faculty","filter":"ml_only"}
+{"institution":"Vanderbilt University","unit":"Biostatistics","url":"https://www.vumc.org/biostatistics/people/primary-faculty","filter":"all"}
+{"institution":"Northeastern University","unit":"Electrical and Computer Engineering","url":"https://ece.northeastern.edu/fac/faculty-directory","filter":"ml_only"}
+{"institution":"Arizona State University","unit":"Electrical, Computer and Energy Engineering","url":"https://cen.engineering.asu.edu/faculty","filter":"ml_only"}
+{"institution":"Virginia Tech","unit":"Statistics","url":"https://stat.vt.edu/people/stat-faculty/","filter":"all"}
+{"institution":"University of Florida","unit":"Electrical and Computer Engineering","url":"https://ece.ufl.edu/people/directory/cat/faculty/","filter":"ml_only"}
+{"institution":"University of Florida","unit":"Neuroscience","url":"https://neuroscience.ufl.edu/directory/primary-faculty/","filter":"ml_only"}

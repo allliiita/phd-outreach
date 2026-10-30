@@ -49,7 +49,7 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
         if not items:
             problems.append(f"{url}: selector {cfg['item']!r} matched nothing (page changed or JS-rendered)")
         for it in items:
-            name = _sel(it, cfg.get("name"))
+            name = clean_name(_sel(it, cfg.get("name")))
             if not name:
                 continue
             prof = _sel(it, cfg.get("profile"))
@@ -87,10 +87,11 @@ def _sig(el) -> str:
 
 
 DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.d\.|scd|md|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
+DEGREE_CAPS = re.compile(r"(?:\s+(?:PhD|Ph\.D\.|ScD|MD|MPH|DrPH|MBBS|FACMI))+$")   # "Jane Doe MD" (case-sensitive)
 
 
 def clean_name(t: str) -> str:
-    return DEGREE.sub("", t).strip(" ,")
+    return DEGREE_CAPS.sub("", DEGREE.sub("", t)).strip(" ,")
 
 
 def _name_in(el):
@@ -199,6 +200,13 @@ def main() -> None:
                 continue
             try:
                 rows, how = auto(d["url"], d["institution"], d["unit"], refresh=a.refresh)
+                if not rows:   # JS-built list: snapshot the rendered DOM and try once more
+                    from .fetch import SNAP, render, snapshot_path
+                    html = render(d["url"])
+                    if html:
+                        snapshot_path(SNAP, d["url"]).write_text(html)
+                        rows, how = auto(d["url"], d["institution"], d["unit"])
+                        how += " (rendered)"
             except Exception as e:  # noqa: BLE001
                 rows, how = [], f"FAILED {type(e).__name__} {str(e)[:80]}"
             for r in rows:
