@@ -17,16 +17,15 @@ RANK = {"incoming_assistant": 0, "assistant": 0, "associate": 1, "research_facul
 
 def rows() -> list[dict]:
     seen, out = set(), []
-    for f in sorted((DATA / "people").glob("*.jsonl")):
-        for l in f.read_text().splitlines():
-            if not l.strip():
-                continue
-            p = json.loads(l)
-            key = (p["name"].lower(), p["institution"])
-            if key in seen or p["relevance"] == "no" or p.get("moved") or p["position_class"] not in RANK:
-                continue
-            seen.add(key)
-            out.append(p)
+    allp = [json.loads(l) for f in sorted((DATA / "people").glob("*.jsonl")) for l in f.read_text().splitlines() if l.strip()]
+    allp.sort(key=lambda p: (p["email"] is None, -(p.get("fit") or 0)))   # duplicates: keep the copy with an email
+    for p in allp:
+        keys = {(p["name"].lower(), p["institution"])} | {k for k in (
+            (p["email"] or {}).get("value"), (p.get("homepage") or "").rstrip("/").lower(), p.get("google_scholar")) if k}
+        if keys & seen or p["relevance"] == "no" or p.get("moved") or p["position_class"] not in RANK:
+            continue
+        seen |= keys
+        out.append(p)
     out.sort(key=lambda p: (PRIORITY[p.get("heritage")], -(p.get("fit") or 0), RANK[p["position_class"]],
                             p["email"] is None, p["name"]))
     return out

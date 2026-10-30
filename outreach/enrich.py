@@ -85,6 +85,10 @@ def _quote_around(text: str, needle: str, width: int = 70) -> str:
     return text[max(0, i - width): i + len(needle) + width].strip()
 
 
+PERSONAL_MAIL = {"gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "yahoo.com", "icloud.com", "me.com",
+                 "protonmail.com", "proton.me", "qq.com", "163.com", "126.com", "foxmail.com"}
+
+
 def pick_email(raw: str, url: str, name: str, institution: str, own_page: bool = False) -> dict | None:
     """The one address on this page that belongs to this person, with a verbatim quote. None if unsure."""
     toks = [t for t in norm_name(name).split() if len(t) >= 3]
@@ -96,8 +100,9 @@ def pick_email(raw: str, url: str, name: str, institution: str, own_page: bool =
     for em, _ctx in find_emails(raw):
         local, _, dom = em.partition("@")
         official = not domains or any(dom == d or dom.endswith("." + d) for d in domains)
-        if not official and not (own_page and any(t in local for t in toks)):
-            continue   # other addresses only from the person's own homepage and only if they carry the name
+        personal = dom in PERSONAL_MAIL or any(t in dom for t in toks)   # gmail etc., or their own vanity domain
+        if not official and not (own_page and personal and any(t in local for t in toks + [dom.split(".")[0]])):
+            continue   # never company addresses (meta.com, microsoft.com): outreach goes to the university role
         score = 0
         if any(t in local for t in toks):
             score = 3
