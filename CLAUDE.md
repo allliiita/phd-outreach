@@ -5,19 +5,22 @@ You are the **coordinator**. You do not research professors yourself; you dispat
 ## Goal
 A verified database of AI / ML / statistics / comp-bio faculty and independent PIs at ~57 US universities and ~20 institutes (`config/institutions.yaml`), and ≥800 personalised, human-approved emails sent from it for Fall 2027 PhD applications. Accuracy beats speed: a wrong email address or invented paper is worse than a missing row.
 
-## Hierarchy
+## Pipeline (deterministic first; LLM only where judgement is needed)
 ```
-coordinator (you, main session)
- ├─ stage manager: departments ── workers: 05_department_discovery.md (1 per institution)
- │                                  verifier: re-opens every URL, hunts for missed units
- ├─ stage manager: roster ──────── workers: 10_roster_worker.md (1 per department)
- │                                  verifier: recount against the page; check incoming-faculty news
- ├─ stage manager: profile ─────── workers: 20_profile_worker.md (≤10 people each)
- │                                  verifier: 30_verifier.md (fresh agent, never the same one that wrote it)
- └─ stage manager: email ───────── writer: 40_email_writer.md   critic: 50_email_critic.md
-                                    then emailcheck.py, then HUMAN batch approval, then send.py
+seed      CS: python -m outreach.csrankings            (no LLM; young + ML-venue filter, heritage order)
+          other units: an agent writes config/directories/<slug>.yaml ONCE (use `roster --probe URL`),
+          then python -m outreach.roster --all         (no LLM; count check vs `expect`)
+enrich    python -m outreach.enrich data/roster/X.jsonl  (no LLM; <=3 pages/person, email by regex,
+          links, research paragraph, recruiting lines, papers via OpenAlex/S2) -> data/dossiers/X.jsonl
+judge     python -m outreach.judge prep data/dossiers/X.jsonl -> data/judge/in/*.md
+          haiku subagent per 2-4 files with agents/25_judge.md -> data/judge/out/*.jsonl
+assemble  python -m outreach.judge assemble X -> data/people/X.jsonl; then pipeline merge (validate.py)
+email     writer + critic (separate skill), emailcheck.py, human batch approval, send.py
 ```
-Run workers as parallel subagents (`Agent` tool), ~5–10 at a time. Give each worker only its input file path and the playbook path; keep raw pages out of your own context (summaries only).
+Applicant scope: **young faculty only** (assistant / incoming / recent associate) and **Chinese / Asian surnames
+first** (`outreach/surnames.py`, deliberately loose). The goal is enough well-matched professors to email,
+not a complete census: skip a unit or person when it costs more than it is worth.
+Verifier agents (30_verifier.md) only spot-check judgement fields on a sample; facts are checked by code.
 
 ## Trust pyramid (where errors are stopped, cheapest first)
 1. **Schema** `outreach/schema.py` — a field without a verbatim source quote cannot be stored; emails must appear inside their quote.
@@ -33,11 +36,10 @@ When a verifier or the human finds an error: fix the record AND push the lesson 
 - Papers: `python -m outreach.papers "Name" "Institution"` (OpenAlex). Exit code 2 = ambiguous author → disambiguate with the homepage, never pick blindly.
 - Never scrape Google Scholar. Record its URL only if linked from an official page.
 
-## Order of work (follow the trust curve)
-1. **Pilot**: run all stages for 2 institutions. Human reviews every record (trust level 0). Fix playbooks until the verifier pass rate is ≥95%.
-2. **Gold eval**: `tests/gold/` holds human-checked records. Re-run profile workers on gold names blind (output to a temp dir; don't tell them it's a test) and score with `python -m tests.score_gold`. Required ≥95% field accuracy, 100% email precision.
-3. **Scale**: 5 institutions, then all. `python -m outreach.trust status` decides audit sampling; only the human promotes.
-4. Email stage starts as soon as the first ~100 verified A-tier records exist — deadlines are early December. Prioritise: early-career first, then relevance to the applicant's projects.
+## Order of work
+1. CS via CSRankings for all institutions (done: data/roster/csr-*.jsonl), enrich, judge.
+2. Statistics / Biostatistics / Comp-bio / Data-science units: one YAML per directory, young titles only.
+3. Email stage as soon as ~100 tier-A records with email exist, ordered by heritage priority then fit.
 
 ## Data layout
 - `data/departments.jsonl`, `data/roster/<inst>.jsonl`, `data/people/<batch>.jsonl` (worker output), `data/verdicts/<batch>.jsonl`
@@ -54,9 +56,9 @@ When a verifier or the human finds an error: fix the record AND push the lesson 
 If a step needs a login (Gmail OAuth, a site behind sign-in), stop and ask the human to sign in; never type passwords. Gmail API setup: `secrets/credentials.json` (OAuth desktop client from Google Cloud Console), first run opens a browser for consent.
 
 ## Token budget
-- Workers: `model: "haiku"` for scraping/extraction, `"sonnet"` for verifier and email writer; coordinator only reads one-line summaries.
-- Prefer a script over an agent whenever the step is mechanical; pipe command output through `| tail -20` or grep.
-- After each stage, update SESSION_HANDOFF.md and ask the human to `/clear`, then resume from that file.
+- Never let an agent browse for facts code can extract. Agents get compact files, not pages.
+- Judge: haiku, 2-4 batch files (25 people each) per subagent to amortise its startup cost.
+- Filter command output (`| tail`), update SESSION_HANDOFF.md after each stage.
 
 ## Reporting
 Keep a running `data/LOG.md`: per day, what ran, counts, verifier pass rates, errors found and which check/playbook line now prevents them.
