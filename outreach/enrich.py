@@ -85,7 +85,7 @@ def _quote_around(text: str, needle: str, width: int = 70) -> str:
     return text[max(0, i - width): i + len(needle) + width].strip()
 
 
-def pick_email(raw: str, url: str, name: str, institution: str) -> dict | None:
+def pick_email(raw: str, url: str, name: str, institution: str, own_page: bool = False) -> dict | None:
     """The one address on this page that belongs to this person, with a verbatim quote. None if unsure."""
     toks = [t for t in norm_name(name).split() if len(t) >= 3]
     parts = norm_name(name).split()
@@ -95,8 +95,9 @@ def pick_email(raw: str, url: str, name: str, institution: str) -> dict | None:
     best, best_score = None, 0
     for em, _ctx in find_emails(raw):
         local, _, dom = em.partition("@")
-        if domains and not any(dom == d or dom.endswith("." + d) for d in domains):
-            continue
+        official = not domains or any(dom == d or dom.endswith("." + d) for d in domains)
+        if not official and not (own_page and any(t in local for t in toks)):
+            continue   # other addresses only from the person's own homepage and only if they carry the name
         score = 0
         if any(t in local for t in toks):
             score = 3
@@ -106,6 +107,8 @@ def pick_email(raw: str, url: str, name: str, institution: str) -> dict | None:
             score = 1
         if re.match(r"(info|admin|office|contact|help|web|dept|stat|grad|phd|chair|news|media)\b", local):
             score = 0
+        if not official:
+            score = min(score, 2)   # personal address: usable, flagged below for a human glance
         if score > best_score:
             best, best_score = em, score
     if not best:
@@ -231,7 +234,7 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
             d["problems"].append(f"fetch {u}: {type(e).__name__} {str(e)[:80]}")
             continue
         if not d["email"]:
-            d["email"] = pick_email(raw, u, row["name"], row["institution"])
+            d["email"] = pick_email(raw, u, row["name"], row["institution"], own_page=personal_site(u, row["name"]))
         if not d["position"]["value"]:   # CSRankings rows have no title: take it from the homepage, with a quote
             vis = visible_text(raw)
             t = find_title(vis, row["name"])
@@ -276,7 +279,7 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
         if res.get("problem"):
             d["problems"].append(res["problem"])
     if d["email"] and d["email"].pop("match") < 2:
-        d["problems"].append("email matched by initials only: human check")
+        d["problems"].append("email matched by initials only or non-university address: human check")
     return d
 
 

@@ -1,0 +1,21 @@
+{"institution":"Massachusetts Institute of Technology","unit":"Statistics and Data Science","url":"https://stat.mit.edu/people_categories/core/","filter":"all"}
+{"institution":"Massachusetts Institute of Technology","unit":"Computational and Systems Biology","url":"https://csbphd.mit.edu/faculty","filter":"all"}
+{"institution":"Massachusetts Institute of Technology","unit":"Institute for Data, Systems, and Society","url":"https://idss.mit.edu/people/directory","filter":"all"}
+{"institution":"Massachusetts Institute of Technology","unit":"Brain and Cognitive Sciences","url":"https://bcs.mit.edu/directory","filter":"ml_only"}
+{"institution":"Massachusetts Institute of Technology","unit":"Electrical Engineering and Computer Science","url":"https://catalog.mit.edu/schools/engineering/electrical-engineering-computer-science/electrical-engineering-computer-science_facultystafftext.pdf","filter":"ml_only"}
+{"institution":"University of California Berkeley","unit":"Statistics","url":"https://statistics.berkeley.edu/people/faculty","filter":"all"}
+{"institution":"University of California Berkeley","unit":"Biostatistics","url":"https://publichealth.berkeley.edu/people","filter":"all"}
+{"institution":"University of California Berkeley","unit":"Neuroscience","url":"https://hwni.berkeley.edu/people","filter":"ml_only"}
+{"institution":"University of California Berkeley","unit":"Electrical Engineering and Computer Sciences","url":"https://www2.eecs.berkeley.edu/Faculty/Lists/EE/faculty.html","filter":"ml_only"}
+{"institution":"University of Washington","unit":"Statistics","url":"https://stat.uw.edu/people/faculty/professors","filter":"all"}
+{"institution":"University of Washington","unit":"Statistics","url":"https://stat.uw.edu/people/faculty/assistant-professors","filter":"all"}
+{"institution":"University of Washington","unit":"Biostatistics","url":"https://www.biostat.washington.edu/people/faculty","filter":"all"}
+{"institution":"University of Washington","unit":"Computational Molecular Biology","url":"https://gsweb.gs.washington.edu/faculty.htm","filter":"all"}
+{"institution":"University of Washington","unit":"Electrical & Computer Engineering","url":"https://www.engr.washington.edu/facultyfinder","filter":"ml_only"}
+{"institution":"University of Michigan","unit":"Statistics","url":"https://prod.lsa.umich.edu/stats/people.directory.html","filter":"all"}
+{"institution":"University of Michigan","unit":"Computational Medicine and Bioinformatics","url":"https://medschool.umich.edu/departments/computational-medicine-bioinformatics/directory","filter":"all"}
+{"institution":"University of Michigan","unit":"Neuroscience (computational faculty)","url":"https://medresearch.umich.edu/labs-departments/centers/mni/people/member-directory","filter":"ml_only"}
+{"institution":"University of Michigan","unit":"Electrical and Computer Engineering","url":"https://ece.engin.umich.edu/people/faculty/","filter":"ml_only"}
+{"institution":"University of Texas at Austin","unit":"Statistics and Data Sciences","url":"https://stat.utexas.edu/directory","filter":"all"}
+{"institution":"University of Texas at Austin","unit":"Neuroscience","url":"https://neuroscience.utexas.edu/people","filter":"ml_only"}
+{"institution":"University of Texas at Austin","unit":"Electrical and Computer Engineering","url":"https://ece.utexas.edu/people/faculty","filter":"ml_only"}

@@ -62,7 +62,7 @@ def check(people_raw: list[dict], snapshots: Path | None = None) -> list[tuple[s
             domains = institution_domains(p.institution)
             dom = em.split("@", 1)[1]
             if domains and not any(dom == d or dom.endswith("." + d) for d in domains):
-                problems.append((p.id, f"email domain {dom} not in official domains {domains} (personal/other address? needs human check)"))
+                problems.append((p.id, f"WARN email domain {dom} not in official domains {domains} (personal address from own homepage?)"))
             # the email must be on the actual saved page, not just in the agent's quote
             snap = snapshot_text(snapshots, str(p.email.evidence.source_url))
             if snap is not None and not email_appears_in(p.email.value, snap):
@@ -138,9 +138,9 @@ def main() -> None:
     probs = check(rows, a.snapshots)
     for pid, msg in probs:
         print(f"{pid}\t{msg}")
-    bad = {pid for pid, _ in probs}
+    bad = {pid for pid, m in probs if not m.startswith("WARN")}
     print(f"# {len(rows)} records, {len(rows) - len(bad & {r.get('id') for r in rows})} clean, {len(bad)} with problems", file=sys.stderr)
-    sys.exit(1 if probs else 0)
+    sys.exit(1 if bad else 0)
 
 
 if __name__ == "__main__":

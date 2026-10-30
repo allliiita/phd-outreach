@@ -47,8 +47,18 @@ def get(url: str, refresh: bool = False) -> str:
             time.sleep(wait)
         try:
             r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
+        except requests.exceptions.SSLError:
+            r = None   # incomplete certificate chain (common on university hosts); Chromium completes it
         finally:
             _last[host] = time.time()
+    if r is None:
+        text = render(url)
+        if not text:
+            raise RuntimeError(f"SSL error and browser render failed: {url}")
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(text)
+        p.with_suffix(".url").write_text(url)
+        return text
     r.raise_for_status()
     text = r.text
     if url.lower().split("?")[0].endswith(".pdf") or "pdf" in r.headers.get("content-type", ""):
@@ -110,7 +120,8 @@ def emails(raw: str) -> list[tuple[str, str]]:
     """(email, 80-char context) pairs from mailto links, plain text and [at]/[dot] obfuscation.
     Cloudflare-protected addresses (data-cfemail) are decoded too."""
     found: dict[str, str] = {}
-    text = html.unescape(raw)
+    from urllib.parse import unquote
+    text = unquote(html.unescape(raw))   # mailto:%20name@x.edu
     for m in re.finditer(r'data-cfemail="([0-9a-f]+)"', raw):
         enc = bytes.fromhex(m.group(1))
         found.setdefault("".join(chr(b ^ enc[0]) for b in enc[1:]).lower(), "cloudflare-protected")

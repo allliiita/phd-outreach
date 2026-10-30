@@ -38,7 +38,7 @@ def merge() -> None:
     for r in rows:  # later files win (re-runs supersede)
         by_id[r["id"]] = r
     probs = check(list(by_id.values()), DATA / "snapshots")
-    bad = Counter(pid for pid, _ in probs)
+    bad = Counter(pid for pid, m in probs if not m.startswith("WARN"))
     status = json.loads((DATA / "status.json").read_text()) if (DATA / "status.json").exists() else {}
     with (DATA / "people.jsonl").open("w") as f:
         for pid, r in by_id.items():
