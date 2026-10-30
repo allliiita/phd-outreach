@@ -19,3 +19,10 @@
 {"institution":"University of Texas at Austin","unit":"Statistics and Data Sciences","url":"https://stat.utexas.edu/directory","filter":"all"}
 {"institution":"University of Texas at Austin","unit":"Neuroscience","url":"https://neuroscience.utexas.edu/people","filter":"ml_only"}
 {"institution":"University of Texas at Austin","unit":"Electrical and Computer Engineering","url":"https://ece.utexas.edu/people/faculty","filter":"ml_only"}
+{"institution":"University of Pennsylvania","unit":"Statistics and Data Science","url":"https://statistics.wharton.upenn.edu/?p=674","filter":"all"}
+{"institution":"University of Pennsylvania","unit":"Biostatistics, Epidemiology and Informatics","url":"https://www.med.upenn.edu/apps/faculty/index.php/g20000220","filter":"all"}
+{"institution":"University of Pennsylvania","unit":"Genomics and Computational Biology","url":"https://www.med.upenn.edu/gcb/faculty.html","filter":"all"}
+{"institution":"University of Pennsylvania","unit":"Computational Neuroscience Initiative","url":"https://www.cni.upenn.edu/people","filter":"ml_only"}
+{"institution":"University of Pennsylvania","unit":"Electrical and Systems Engineering","url":"https://directory.engineering.upenn.edu/","filter":"ml_only"}
+{"institution":"California Institute of Technology","unit":"Computation and Neural Systems","url":"https://www.cns-legacy.caltech.edu/people/index.html","filter":"ml_only"}
+{"institution":"California Institute of Technology","unit":"Electrical Engineering","url":"https://ee.caltech.edu/people/faculty","filter":"ml_only"}
