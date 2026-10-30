@@ -58,7 +58,7 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
                 "title_on_roster": _sel(it, cfg.get("title")), "roster_url": url,
                 "profile_url": urljoin(url, prof) if prof else None,
                 "quote": " ".join(it.get_text(" ").split())[:300],
-                "filter": cfg.get("filter", "all"),
+                "filter": cfg.get("filter", "all"), **_mailto(it),
             })
     skip = [re.compile(p, re.I) for p in cfg.get("skip_titles", [])]
     rows = [r for r in rows if not any(p.search(r["title_on_roster"]) for p in skip)]
@@ -82,12 +82,22 @@ NOT_NAME = re.compile(r"\b(read|more|bio|profile|website|email|contact|faculty|p
                       r"statistics|science|university|school|center|institute|program|home)\b", re.I)
 
 
+def _mailto(el) -> dict:
+    """Address linked inside this person's own block (often a UNI like aa4481@...), with the tag as quote."""
+    a = el.find("a", href=re.compile(r"^mailto:", re.I)) if hasattr(el, "find") else None
+    if not a:
+        return {}
+    addr = a["href"][7:].split("?")[0].strip()
+    quote = str(a)[:300]
+    return {"block_email": addr, "block_email_quote": quote} if "@" in addr else {}
+
+
 def _sig(el) -> str:
     return el.name + ("." + el["class"][0] if el.get("class") else "")
 
 
 DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.d\.|scd|md|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
-DEGREE_CAPS = re.compile(r"(?:\s+(?:PhD|Ph\.D\.|ScD|MD|MPH|DrPH|MBBS|FACMI))+$")   # "Jane Doe MD" (case-sensitive)
+DEGREE_CAPS = re.compile(r"(?:,?\s+(?:PhD|Ph\.D\.|ScD|MD|MPH|DrPH|MBBS|FACMI|MS|MA|MSc|MSHP|MSCE|MBA|MPhil|RN|PharmD|[A-Z]{2,6}))+$")   # trailing all-caps credentials   # "Jane Doe MD" (case-sensitive)
 
 
 def clean_name(t: str) -> str:
@@ -152,7 +162,7 @@ def auto(url: str, institution: str, unit: str, refresh: bool = False) -> tuple[
             title = next((l for l in lines if TITLE_WORD.search(l) and len(l) < 150), "")
             rows.append({"name": name, "institution": institution, "department": unit, "title_on_roster": title,
                          "roster_url": page, "profile_url": urljoin(page, prof) if prof else None,
-                         "quote": " ".join(el.get_text(" ").split())[:300], "filter": "all"})
+                         "quote": " ".join(el.get_text(" ").split())[:300], "filter": "all", **_mailto(el)})
         page = nxt
     if not rows:
         return [], "no repeated person blocks found (JS directory? write a YAML or use the browser)"

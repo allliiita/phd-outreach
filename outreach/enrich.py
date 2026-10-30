@@ -280,6 +280,20 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
             pages.append(d["cv"])
         except Exception as e:  # noqa: BLE001
             d["problems"].append(f"fetch cv: {type(e).__name__}")
+    if not d["email"] and row.get("block_email"):   # mailto inside this person's own directory block
+        from .schema import email_appears_in
+        dom = row["block_email"].split("@")[1].lower()
+        doms = institution_domains(row["institution"])
+        if email_appears_in(row["block_email"], row["block_email_quote"]) and any(dom == x or dom.endswith("." + x) for x in doms):
+            d["email"] = {"value": row["block_email"].lower(), "evidence": {"source_url": row["roster_url"],
+                          "quote": row["block_email_quote"], "checked_on": TODAY}}
+    if not d["email"] and row.get("roster_url", "").startswith("http") and "csrankings" not in row["roster_url"]:
+        try:   # directory pages often carry mailto: links; accept only a full name-token match
+            e = pick_email(get(row["roster_url"]), row["roster_url"], row["name"], row["institution"])
+            if e and e["match"] == 3:
+                d["email"] = e
+        except Exception:  # noqa: BLE001
+            pass
     if with_papers:
         from .papers import find_papers
         page_text = " ".join(visible_text(get(u)) for u in pages if _cached(u))
@@ -300,7 +314,7 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
             d["problems"].append(res["problem"])
     if not with_papers:
         d["problems"].append("papers: deferred")   # refilled later, only for people the judge finds relevant
-    if d["email"] and d["email"].pop("match") < 2:
+    if d["email"] and d["email"].pop("match", 3) < 2:
         d["problems"].append("email matched by initials only or non-university address: human check")
     return d
 

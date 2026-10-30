@@ -73,7 +73,12 @@ def check(people_raw: list[dict], snapshots: Path | None = None) -> list[tuple[s
             local = em.split("@")[0]
             initials = "".join(t[0] for t in norm_name(p.name).split())
             quote = p.email.evidence.quote.lower()
-            if toks and not any(t in local or t in quote for t in toks) and not local.startswith(initials[:2]):
+            uni = re.fullmatch(r"([a-z]{2,4})\d{2,5}", local)   # Columbia-style UNI: initials + digits
+            uni_ok = bool(uni) and uni.group(1)[0] == initials[:1] and uni.group(1)[-1] == initials[-1:]
+            if uni and not uni_ok:
+                problems.append((p.id, f"email {em}: UNI letters {uni.group(1)!r} do not match initials {initials!r} (directory error?)"))
+            elif not uni and toks and not any(t in local or t in quote or (len(local) >= 3 and t.startswith(local)) for t in toks) \
+                    and not local.startswith(initials[:2]):
                 problems.append((p.id, f"email {em}: no part of the name in address or quote (wrong person?)"))
 
         for fld, ev in (("position", p.position.evidence), ("keywords", p.keywords_evidence)):
