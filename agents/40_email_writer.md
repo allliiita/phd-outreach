@@ -3,6 +3,13 @@
 Input: one verified Person record (tier A) + `config/applicant.yaml`.
 Output: `{"id", "to", "subject", "body", "claims": [...]}` appended to `data/drafts.jsonl`.
 
+## Step 0: write or skip (this replaces a separate judge pass)
+Read the record first. Write only if the professor does real AI / ML / statistical-learning research, or AI
+for biology / medicine / neuroscience (`goal` in applicant.yaml). If the fit is weak, output
+`{"id": ..., "skip": "<reason, <= 15 words>"}` instead of a draft. Do not stretch a weak fit.
+Name the applicant's goal (Bio-AI / AI research) as the reason for writing; past projects are evidence,
+not the destination. Do not frame the applicant as a calcium-imaging specialist.
+
 ## What a good email is
 Short (130–200 words), specific, honest, easy to answer. The professor should be able to tell in 10 seconds who you are, why them, and what you are asking.
 

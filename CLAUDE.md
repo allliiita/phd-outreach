@@ -12,8 +12,8 @@ seed      CS: python -m outreach.csrankings            (no LLM; young + ML-venue
           then python -m outreach.roster --all         (no LLM; count check vs `expect`)
 enrich    python -m outreach.enrich data/roster/X.jsonl  (no LLM; <=3 pages/person, email by regex,
           links, research paragraph, recruiting lines, papers via OpenAlex/S2) -> data/dossiers/X.jsonl
-judge     python -m outreach.judge prep data/dossiers/X.jsonl -> data/judge/in/*.md
-          haiku subagent per 2-4 files with agents/25_judge.md -> data/judge/out/*.jsonl
+judge     NONE by default: outreach/score.py ranks by Bio-AI lexicon (no LLM). The email writer decides
+          write/skip per person, so the LLM only reads people we actually email.
 assemble  python -m outreach.judge assemble X -> data/people/X.jsonl; then pipeline merge (validate.py)
 email     writer + critic (separate skill), emailcheck.py, human batch approval, send.py
 ```
@@ -57,7 +57,7 @@ If a step needs a login (Gmail OAuth, a site behind sign-in), stop and ask the h
 
 ## Token budget
 - Never let an agent browse for facts code can extract. Agents get compact files, not pages.
-- Judge: haiku, 2-4 batch files (25 people each) per subagent to amortise its startup cost.
+- No bulk LLM judging. LLM reads a person only when writing their email.
 - Filter command output (`| tail`), update SESSION_HANDOFF.md after each stage.
 
 ## Reporting

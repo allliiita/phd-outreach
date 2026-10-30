@@ -314,7 +314,9 @@ def refill_papers(path: Path) -> None:
     n = 0
     for d in rows:
         j = judged.get(slug_id(d["name"], d["institution"]))
-        if judged and d["research"]["text"] and (j is None or j.get("relevance") == "no"):
+        from .score import score
+        rel = j.get("relevance") if j else score(d)["relevance"]
+        if d["research"]["text"] and rel == "no":
             continue   # papers only for people the judge kept: saves the OpenAlex daily budget
         if d["papers"] or not any(p.startswith("papers:") and ("rate limited" in p or "budget" in p or "deferred" in p) for p in d["problems"]):
             continue

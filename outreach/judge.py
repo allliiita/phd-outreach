@@ -85,10 +85,12 @@ def assemble(stem: str) -> None:
         j = judged.get(pid)
         if not d["research"]["text"] and not d["papers"]:
             continue   # nothing known yet (papers deferred): assembled after the refill
-        if d["position_class"] not in SKIP_CLASSES and j is None:
-            issues.append(f"{pid}\tnot judged yet")
-            continue
-        j = j or {"relevance": "no", "relevance_reason": f"skipped by title: {d['title_on_roster']}", "keywords": []}
+        from .score import score
+        auto = score(d)
+        if j is None:   # default path now: no LLM judge, deterministic score
+            j = auto if d["position_class"] not in SKIP_CLASSES else \
+                {"relevance": "no", "relevance_reason": f"skipped by title: {d['title_on_roster']}", "keywords": []}
+        j = {**j, "fit": auto["fit"], "keywords": j.get("keywords") or auto["keywords"]}   # one fit scale for all: Bio-AI
         hay = _norm(d["research"]["text"] + " " + " ".join(p["title"] for p in d["papers"]))
         kws = [k for k in j.get("keywords", []) if _in_text(k, hay)]
         dropped = [k for k in j.get("keywords", []) if k not in kws]
@@ -112,9 +114,9 @@ def assemble(stem: str) -> None:
             if sq:
                 start = {"value": str(j["start_year"]), "evidence": {"source_url": sq["source_url"], "quote": sq["quote"], "checked_on": today}}
         rel = j.get("relevance", "no")
-        tier = "A" if (rel in ("yes", "borderline") and cls in A_CLASSES and 3 <= len(kws) and papers and d["research"]["text"]) else "B"
+        tier = "A" if (rel in ("yes", "borderline") and cls in A_CLASSES and len(kws) >= 2 and d["email"]) else "B"
         why_b = [] if tier == "A" or rel == "no" or cls not in A_CLASSES else \
-            [w for w, bad in (("papers", not papers), ("keywords", len(kws) < 3), ("research text", not d["research"]["text"])) if bad]
+            [w for w, bad in (("email", not d["email"]), ("keywords", len(kws) < 2)) if bad]
         people.append({
             "id": slug_id(clean_name(d["name"]), d["institution"]), "tier": tier, "name": clean_name(d["name"]), "institution": d["institution"], "departments": [d["department"]],
             "position": d["position"], "position_class": cls, "start_year": start, "email": d["email"],

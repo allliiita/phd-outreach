@@ -10,6 +10,10 @@ degree: M.S. in Statistics, Columbia University (2026), GPA 3.71; B.A. Economics
 mention_recommenders: false             # never mention recommendation letters
 publications: none                      # never imply any publication
 
+# Long-term goal (applicant, 2026-10): AI for biology / medicine ("Bio-AI"), or broadly deep AI research
+# (industry research-scientist track is a fine outcome). Calcium imaging is past work, not a constraint.
+goal: >-
+  Bio-AI: machine learning methods for biological and biomedical data; broadly, rigorous AI research.
 interests: >-
   Statistical machine learning for scientific data, especially neural and biological imaging;
   self-supervised and representation learning under limited supervision; rigorous evaluation and

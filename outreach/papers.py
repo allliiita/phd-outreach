@@ -2,8 +2,8 @@
 
   python -m outreach.papers "Firstname Lastname" "Carnegie Mellon University" [--page URL ...]
 
-Providers: OpenAlex when OPENALEX_API_KEY is set (env or secrets/openalex_key; free key), else Semantic
-Scholar. Author disambiguation is deterministic: a candidate is accepted when its paper titles appear in the
+Providers, in order: OpenAlex when a key is set and has budget (secrets/openalex_key); Europe PMC (PubMed,
+bioRxiv, medRxiv; author matched by first name + affiliation); Semantic Scholar. Author disambiguation is deterministic: a candidate is accepted when its paper titles appear in the
 person's own profile/homepage text, or (OpenAlex) its affiliation matches the institution. Otherwise the
 result is {"problem": "ambiguous ..."} and papers stay empty: never pick a same-name author blindly.
 """
@@ -169,6 +169,48 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
     return out
 
 
+EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+GENERIC = {"university", "institute", "college", "school", "center", "of", "the", "at", "and", "state", "technology", "medicine"}
+
+
+def _aff_terms(institution: str) -> list[str]:
+    from .config import institutions
+    inst = next((i for i in institutions()["institutions"] if i["name"] == institution), {"name": institution})
+    names = [inst["name"]] + inst.get("aliases", [])
+    return [n for n in names if len(n) > 2]
+
+
+def _europepmc(name: str, institution: str) -> dict:
+    """PubMed + bioRxiv/medRxiv (+ some arXiv) with per-author affiliations: keep a paper only when an author
+    with this surname and first name has an affiliation naming this institution."""
+    from .validate import norm_name
+    parts = norm_name(name).split()
+    if len(parts) < 2:
+        return {"problem": "papers: name too short for Europe PMC"}
+    first, last = parts[0], parts[-1]
+    terms = _aff_terms(institution)
+    aff_q = " OR ".join(f'AFF:"{t}"' for t in terms)
+    since = date.today().year - 3
+    r = _get(EPMC, {"query": f'AUTH:"{last} {first[0]}" AND ({aff_q}) AND PUB_YEAR:[{since} TO {date.today().year}]',
+                    "format": "json", "pageSize": 50, "resultType": "core", "sort": "P_PDATE_D desc"}, gap=0.4)
+    low_terms = [t.lower() for t in terms]
+    works = []
+    for x in r.get("resultList", {}).get("result", []):
+        authors = (x.get("authorList") or {}).get("author", [])
+        if len(authors) > 30 or not x.get("title"):
+            continue
+        for a in authors:
+            fn = norm_name(a.get("firstName") or "").split()
+            affs = " ".join(i.get("affiliation", "") for i in (a.get("authorAffiliationDetailsList") or {}).get("authorAffiliation", [])).lower()
+            if norm_name(a.get("lastName") or "") == last and fn[:1] == [first] and any(t in affs for t in low_terms):
+                doi = x.get("doi")
+                url = f"https://doi.org/{doi}" if doi else f"https://europepmc.org/article/{x.get('source')}/{x.get('id')}"
+                works.append({"title": x["title"].rstrip("."), "year": int(x.get("pubYear") or 0), "url": url,
+                              "cites": x.get("citedByCount"), "source": "europepmc"})
+                break
+    return {"author": f"epmc:{first} {last}", "papers": _pick(works)} if works else {"problem": "papers: no Europe PMC match"}
+
+
 def find_papers(name: str, institution: str, page_text: str = "", scholar: str | None = None) -> dict:
     try:
         key = None if _oa_off[0] else _key()
@@ -180,9 +222,11 @@ def find_papers(name: str, institution: str, page_text: str = "", scholar: str |
                 res = {"problem": "papers: OpenAlex daily budget exhausted"}
             if not res.get("problem"):
                 return res
-            s2 = _s2(name, institution, page_text)   # new arrivals / no budget: S2, confirmed by page text
-            return s2 if not s2.get("problem") else res
-        return _s2(name, institution, page_text)
+        ep = _europepmc(name, institution)        # bio / biostat / neuro: affiliation-checked, no key needed
+        if not ep.get("problem"):
+            return ep
+        s2 = _s2(name, institution, page_text)    # ML / stats: S2 confirmed by titles on the person's own pages
+        return s2 if not s2.get("problem") else {"problem": "papers: none found (OpenAlex off, Europe PMC, S2)"}
     except Exception as e:  # noqa: BLE001
         return {"problem": f"papers: {type(e).__name__} {str(e)[:100]}"}
 

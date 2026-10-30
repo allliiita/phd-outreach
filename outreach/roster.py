@@ -86,7 +86,7 @@ def _sig(el) -> str:
     return el.name + ("." + el["class"][0] if el.get("class") else "")
 
 
-DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.d\.|scd|md|mph|drph)\.?,?\s+)+|(?:,?\s+(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)
+DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.d\.|scd|md|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
 
 
 def clean_name(t: str) -> str:

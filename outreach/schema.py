@@ -140,12 +140,12 @@ class Person(BaseModel):
         if self.google_scholar and "scholar.google" not in str(self.google_scholar):
             raise ValueError("google_scholar is not a scholar.google.* URL")
         if self.tier == "A":
-            if not (3 <= len(self.keywords) <= 8):
-                raise ValueError("A tier needs 3-8 keywords")
-            if self.keywords_evidence is None:
-                raise ValueError("A tier keywords need evidence")
-            if not (1 <= len(self.recent_papers) <= 3):
-                raise ValueError("A tier needs 1-3 recent papers")
+            if not (2 <= len(self.keywords) <= 8):
+                raise ValueError("A tier needs 2-8 keywords")
+            if self.keywords_evidence is None and not self.recent_papers:
+                raise ValueError("A tier keywords need evidence (research text or papers)")
+            if len(self.recent_papers) > 3:
+                raise ValueError("at most 3 recent papers")   # papers may be empty: not every person is findable
             if self.position_class in (PositionClass.teaching, PositionClass.emeritus, PositionClass.staff_scientist):
                 raise ValueError(f"{self.position_class.value} cannot be A tier")
         return self
