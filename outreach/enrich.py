@@ -197,6 +197,8 @@ def research_text(raw: str) -> str:
     if not cands:   # plain text (PDF) or unusual markup: split visible text into sentence windows
         txt = visible_text(raw)
         cands = [txt[i:i + 700] for i in range(0, min(len(txt), 6000), 350)]
+    nav = re.compile(r"skip to|sign up|contact us|toggle|main navigation|newsletter|search menu|utility", re.I)
+    cands = [c for c in cands if len(nav.findall(c)) < 2]   # menus and footers are not research descriptions
     def score(s: str) -> float:
         return 3 * len(GOOD.findall(s)) + len(RESEARCH_WORDS.findall(s)) - 2 * len(BIO.findall(s)) + min(len(s), 600) / 300
     best = max(cands, key=score, default="")
@@ -312,7 +314,7 @@ def refill_papers(path: Path) -> None:
     n = 0
     for d in rows:
         j = judged.get(slug_id(d["name"], d["institution"]))
-        if judged and (j is None or j.get("relevance") == "no"):
+        if judged and d["research"]["text"] and (j is None or j.get("relevance") == "no"):
             continue   # papers only for people the judge kept: saves the OpenAlex daily budget
         if d["papers"] or not any(p.startswith("papers:") and ("rate limited" in p or "budget" in p or "deferred" in p) for p in d["problems"]):
             continue

@@ -83,6 +83,8 @@ def assemble(stem: str) -> None:
     people, issues = [], []
     for pid, d in doss.items():
         j = judged.get(pid)
+        if not d["research"]["text"] and not d["papers"]:
+            continue   # nothing known yet (papers deferred): assembled after the refill
         if d["position_class"] not in SKIP_CLASSES and j is None:
             issues.append(f"{pid}\tnot judged yet")
             continue
