@@ -17,7 +17,7 @@ RANK = {"incoming_assistant": 0, "assistant": 0, "associate": 1, "research_facul
 
 def rows(skip_cs: bool = False) -> list[dict]:
     seen, out = set(), []
-    allp = [{**json.loads(l), "_cs": f.name.startswith(("csr-", "cmu-lti"))}
+    allp = [{**json.loads(l), "_cs": f.name.startswith(("csr-", "cmu-lti")), "_stem": f.stem}
             for f in sorted((DATA / "people").glob("*.jsonl")) for l in f.read_text().splitlines() if l.strip()]
     allp.sort(key=lambda p: (p["email"] is None, -(p.get("fit") or 0)))   # duplicates: keep the copy with an email
     for p in allp:

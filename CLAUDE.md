@@ -21,6 +21,9 @@ Applicant scope: **young faculty only** (assistant / incoming / recent associate
 first** (`outreach/surnames.py`, deliberately loose). The goal is enough well-matched professors to email,
 not a complete census: skip a unit or person when it costs more than it is worth.
 Verifier agents (30_verifier.md) only spot-check judgement fields on a sample; facts are checked by code.
+**Auditor** (agents/60_auditor.md, Sonnet, independent): after every stage run `python -m outreach.audit`
+and give the pack to a fresh auditor agent. It looks for systemic problems (wrong targets, junk data, funnel
+anomalies, ranking, cost). Every accepted finding becomes a code check or playbook line, as with verifiers.
 
 ## Trust pyramid (where errors are stopped, cheapest first)
 1. **Schema** `outreach/schema.py` — a field without a verbatim source quote cannot be stored; emails must appear inside their quote.

@@ -82,6 +82,17 @@ NOT_NAME = re.compile(r"\b(read|more|bio|profile|website|email|contact|faculty|p
                       r"statistics|science|university|school|center|institute|program|home)\b", re.I)
 
 
+NOT_FACULTY = re.compile(r"year enrolled|ph\.?d\.? (student|candidate)|graduate student|doctoral (student|candidate)|"
+                         r"\bstudent\b|postdoc|post-doctoral|\bstaff\b|administrat|coordinator|assistant to|alumn", re.I)
+
+
+def faculty_like(r: dict) -> bool:
+    """Directories often list students and staff too; drop them before any page is opened."""
+    if TITLE_WORD.search(r.get("title_on_roster") or ""):
+        return not NOT_FACULTY.search(r["title_on_roster"])
+    return not NOT_FACULTY.search(r.get("quote") or "")
+
+
 def _mailto(el) -> dict:
     """Address linked inside this person's own block (often a UNI like aa4481@...), with the tag as quote."""
     a = el.find("a", href=re.compile(r"^mailto:", re.I)) if hasattr(el, "find") else None
@@ -166,6 +177,9 @@ def auto(url: str, institution: str, unit: str, refresh: bool = False) -> tuple[
         page = nxt
     if not rows:
         return [], "no repeated person blocks found (JS directory? write a YAML or use the browser)"
+    dropped = sum(not faculty_like(r) for r in rows)
+    rows = [r for r in rows if faculty_like(r)]
+    how += f", dropped {dropped} students/staff" if dropped else ""
     seen, uniq = set(), []
     for r in rows:
         if r["name"].lower() not in seen:

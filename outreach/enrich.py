@@ -387,7 +387,9 @@ def main() -> None:
     if a.only:
         rows = [r for r in rows if r["name"] == a.only]
     elif not a.all_ranks:   # applicant wants young faculty only: drop senior / non-advising titles before any fetch
-        rows = [r for r in rows if not r.get("title_on_roster") or position_class(r["title_on_roster"]) in YOUNG]
+        from .roster import faculty_like
+        rows = [r for r in rows if faculty_like(r) and
+                (not r.get("title_on_roster") or position_class(r["title_on_roster"]) in YOUNG)]
     from .surnames import PRIORITY, asian_tag
     for r in rows:
         r["heritage"] = r.get("heritage") or asian_tag(r["name"])
