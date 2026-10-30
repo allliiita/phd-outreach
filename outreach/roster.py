@@ -136,8 +136,9 @@ def auto(url: str, institution: str, unit: str, refresh: bool = False) -> tuple[
             name, prof = _name_in(el)
             if not name:
                 continue
-            if not prof:
-                a = el if el.name == "a" else el.find("a", href=True)
+            if not prof or prof.startswith("mailto:"):
+                a = next((x for x in ([el] if el.name == "a" else []) + el.find_all("a", href=True)
+                          if not x.get("href", "").startswith("mailto:")), None)
                 prof = a.get("href") if a else None
             lines = [l.strip() for l in el.get_text("\n").split("\n") if l.strip()]
             title = next((l for l in lines if TITLE_WORD.search(l) and len(l) < 150), "")

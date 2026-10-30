@@ -223,6 +223,14 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
         "source_url": row["roster_url"], "quote": row["quote"], "checked_on": TODAY}}
     d.update(email=None, homepage=None, lab_website=None, google_scholar=None, cv=None,
              pubs=None, contact=None, research={"text": "", "source_url": None}, recruiting=[], start=[], papers=[], problems=[])
+    if (row.get("profile_url") or "").startswith("mailto:"):   # directory linked the address instead of a profile
+        d["email"] = pick_email(row["quote"], row["roster_url"], row["name"], row["institution"])
+        if not d["email"]:   # the address sits in the href only: take it from the directory page, name-matched
+            e = pick_email(get(row["roster_url"]), row["roster_url"], row["name"], row["institution"])
+            d["email"] = e if e and e["match"] == 3 else None
+        row = {**row, "profile_url": None}
+        if d["email"]:
+            d["email"].pop("match", None)
     pages = []
     for k in ("google_scholar", "homepage"):
         d[k] = d[k] or row.get(k)

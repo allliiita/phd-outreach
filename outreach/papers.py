@@ -35,7 +35,7 @@ def _key() -> str | None:
 
 
 def _get(url: str, params: dict, gap: float = 1.1) -> dict:
-    for attempt in range(5):
+    for attempt in range(8):
         with _lock:
             w = gap - (time.time() - _last[0])
             if w > 0:
@@ -43,8 +43,8 @@ def _get(url: str, params: dict, gap: float = 1.1) -> dict:
             r = requests.get(url, params=params, timeout=30,
                              headers={"x-api-key": os.environ["S2_API_KEY"]} if "semanticscholar" in url and os.environ.get("S2_API_KEY") else {})
             _last[0] = time.time()
-        if r.status_code == 429:
-            time.sleep(2 ** attempt * 2)
+        if r.status_code in (429, 503):
+            time.sleep(min(60, 2 ** attempt * 2))
             continue
         r.raise_for_status()
         return r.json()
@@ -111,7 +111,7 @@ def _inst_id(institution: str, key: str) -> str | None:
     if institution not in _inst_ids:
         from .config import institutions
         alias = next((i.get("openalex") for i in institutions()["institutions"] if i["name"] == institution), None)
-        res = _get(f"{OA}/institutions", {"search": alias or institution, "per-page": 1, "api_key": key}, gap=0.2)["results"]
+        res = _get(f"{OA}/institutions", {"search": alias or institution, "per-page": 1, "api_key": key}, gap=0.4)["results"]
         _inst_ids[institution] = res[0]["id"].split("/")[-1] if res else None
     return _inst_ids[institution]
 
@@ -123,7 +123,7 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
     if not iid:
         return {"problem": f"papers: OpenAlex has no institution {institution!r}"}
     auth = {"api_key": key}
-    found = _get(f"{OA}/authors", {"search": name, "filter": f"affiliations.institution.id:{iid}", "per-page": 10, **auth}, gap=0.2)["results"]
+    found = _get(f"{OA}/authors", {"search": name, "filter": f"affiliations.institution.id:{iid}", "per-page": 10, **auth}, gap=0.4)["results"]
     if not found:
         return {"problem": "papers: no OpenAlex author with this name at this institution"}
     since = date.today().year - 3
@@ -133,7 +133,7 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
         aid = a["id"].split("/")[-1]
         res = _get(f"{OA}/works", {"filter": f"author.id:{aid},institutions.id:{iid},from_publication_date:{since}-01-01,type:article|preprint",
                                    "select": "title,publication_year,doi,primary_location,cited_by_count,authorships,id",
-                                   "sort": "publication_date:desc", "per-page": 40, **auth}, gap=0.2)
+                                   "sort": "publication_date:desc", "per-page": 40, **auth}, gap=0.4)
         works = [{"title": w["title"], "year": w["publication_year"], "cites": w.get("cited_by_count"),
                   "url": w.get("doi") or (w.get("primary_location") or {}).get("landing_page_url") or w["id"],
                   "source": "openalex"} for w in res["results"]
@@ -153,7 +153,7 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
     works = [w for x in chosen for w in x[3]]
     out = {"author": "|".join(x[2] for x in chosen), "papers": _pick(works)}
     first = _get(f"{OA}/works", {"filter": f"author.id:{out['author']}", "sort": "publication_year:asc", "per-page": 1,
-                                 "select": "publication_year", **auth}, gap=0.2)["results"]
+                                 "select": "publication_year", **auth}, gap=0.4)["results"]
     out["first_year"] = first[0]["publication_year"] if first else None   # career-age proxy for "young"
     if note:
         out["warning"] = note

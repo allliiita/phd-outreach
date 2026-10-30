@@ -21,3 +21,10 @@ Open:
 2. CS emails ~45% from homepages; add department directory YAMLs (CS/MLD/ECE) per school for the join.
 3. Stats/biostat/comp-bio directories for other schools (agent writes YAML, young titles only).
 4. Judge outputs for csr-* dossiers, then assemble + merge, then email stage (separate skill).
+
+Session 2, later decisions:
+- Applicant: skip CS for now (too competitive). CS done for 11 schools only (csr-*), the rest paused.
+- Non-CS order: neuroscience > comp-bio / biomedical informatics > biostat > statistics > ECE (ml_only).
+  Queue: data/discovery/to_enrich_pri.txt. Directory scrape failures (403 / JS / wrong URL): ~40 units, skipped.
+- Run slowly: one department at a time, --workers 2, one judge agent at a time (applicant shares the token budget).
+- Shortlist: python -m outreach.shortlist -> data/export/shortlist.xlsx (first version sent: 160 CS candidates).
