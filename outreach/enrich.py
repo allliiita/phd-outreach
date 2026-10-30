@@ -270,6 +270,7 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
                     pass
             res = find_papers(row["name"], row["institution"], page_text + " " + " ".join(extra))
         d["papers"], d["papers_author"] = res.get("papers", []), res.get("author")
+        d["first_paper"] = d.get("first_paper") or res.get("first_year")
         if res.get("warning"):
             d["problems"].append(res["warning"])
         if res.get("problem"):

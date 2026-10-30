@@ -1,14 +1,20 @@
-# Department discovery (stage 0, one institution)
+# Department discovery (web search only; no page reading beyond what is needed)
 
-Goal: the list of official directory URLs to roster for one institution. A missed department means a missed group of professors, so this stage is verified too.
+Input: a list of institutions. For each, find the official faculty directory URL for these units (skip a unit
+the school does not have; skip CS, it is already covered):
+- Statistics / Statistics & Data Science
+- Biostatistics
+- Computational Biology / Bioinformatics / Biomedical Informatics / Biomedical Data Science
+- Data Science (only if it appoints its own faculty)
+- Computational neuroscience / Brain & Cognitive Sciences  (set "filter": "ml_only")
+- Electrical & Computer Engineering                         (set "filter": "ml_only")
 
-1. For each kind in `config/institutions.yaml: target_departments`, find the unit at this institution (search "<institution> <unit> faculty directory"). Units can be named differently (e.g. "Machine Learning Department", "Biomedical Data Science", "Quantitative Biomedical Sciences", "Data Science Institute").
-2. For each unit, record the official faculty directory URL(s), split by rank pages if the site splits them.
-3. For units where only some faculty are relevant (ECE, OR, Applied Math, Neuroscience), set `"filter": "ml_only"`.
-4. For institutes, record the PI directory page(s) and the official page that explains how its PIs take PhD students.
+Use one web search per unit ("<institution> <unit> faculty directory"). Prefer the page that lists all regular
+faculty (not a single research area, not "people" landing pages that only link elsewhere). If faculty are split
+by rank on several pages, give each page as its own line.
 
-Output lines to `data/departments.jsonl`:
-```json
-{"institution":"","unit":"","url":"","filter":"all|ml_only","quote":"<page heading verbatim>"}
-```
-The verifier re-opens each URL, confirms it is the official directory of that unit, and searches once more for any target unit that is missing.
+Append one JSON line per URL to the output file you are given:
+{"institution":"<exact name from config/institutions.yaml>","unit":"<unit name as the school writes it>","url":"...","filter":"all|ml_only"}
+
+Do not verify the pages yourself: code scrapes each URL and reports failures. Reply with one line:
+`<file>: N urls for M institutions`.

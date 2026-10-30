@@ -75,6 +75,86 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
     return uniq, problems
 
 
+TITLE_WORD = re.compile(r"\b(professor|lecturer|instructor|scientist|faculty|chair|emerit\w*)\b", re.I)
+NAME_RE = re.compile(r"^[A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]*){1,3}$")
+LAST_FIRST = re.compile(r"^([A-Z][\w'’\-]+(?: [A-Z][\w'’\-]+)?), ([A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]*)?)$")
+NOT_NAME = re.compile(r"\b(read|more|bio|profile|website|email|contact|faculty|people|department|research|news|view|"
+                      r"statistics|science|university|school|center|institute|program|home)\b", re.I)
+
+
+def _sig(el) -> str:
+    return el.name + ("." + el["class"][0] if el.get("class") else "")
+
+
+def _name_in(el):
+    """(name, link) from the first heading / strong / link whose text is shaped like a person's name."""
+    for h in ([el] if el.name == "a" else []) + el.find_all(["h2", "h3", "h4", "h5", "strong", "a", "span"]):
+        t = " ".join(h.get_text(" ").split()).strip(" ,")
+        m = LAST_FIRST.match(t)
+        if m:
+            t = f"{m.group(2)} {m.group(1)}"
+        if NAME_RE.match(t) and not TITLE_WORD.search(t) and not NOT_NAME.search(t):
+            a = h if h.name == "a" else (h.find("a", href=True) or h.find_parent("a"))
+            return t, (a.get("href") if a else None)
+    return "", None
+
+
+def _next_page(soup, url: str) -> str | None:
+    a = soup.find("a", rel="next") or soup.select_one(".pager__item--next a, li.next a, a.next") or soup.find("a", string=re.compile(r"^\s*(next|›|»|next ›|next page)\s*$", re.I))
+    return urljoin(url, a["href"]) if a and a.get("href") else None
+
+
+def auto(url: str, institution: str, unit: str, refresh: bool = False) -> tuple[list[dict], str]:
+    """No selectors: pick the repeated block type whose blocks mostly hold a person-shaped name (titles are a
+    bonus), read name / title / profile link from each, follow `next` pagination (<= 15 pages)."""
+    from .fetch import get as fetch
+    rows, how, page, seen_pages = [], "", url, set()
+    while page and page not in seen_pages and len(seen_pages) < 15:
+        seen_pages.add(page)
+        soup = BeautifulSoup(fetch(page, refresh), "html.parser")
+        nxt = _next_page(soup, page)
+        for t in soup(["nav", "header", "footer"]):
+            t.decompose()
+        groups: dict[str, list] = {}
+        for el in soup.find_all(True):
+            if el.name in ("html", "body", "main", "ul", "ol", "table", "tbody", "section", "form"):
+                continue
+            txt = el.get_text(" ", strip=True)
+            if 5 < len(txt) < 700 and (el.name == "a" or el.find("a", href=True)):
+                groups.setdefault(_sig(el), []).append(el)
+        best, best_score = None, 0.0
+        for sig, els in groups.items():
+            named = sum(bool(_name_in(e)[0]) for e in els)
+            titled = sum(bool(TITLE_WORD.search(e.get_text(" "))) for e in els)
+            score = named * (1.5 if titled >= named / 2 else 1.0) - 0.01 * len(els)
+            if len(els) >= 4 and named / len(els) >= 0.6 and score > best_score:
+                best, best_score = sig, score
+        if not best:
+            break
+        how = f"auto: {best}, {len(seen_pages)} page(s)"
+        for el in groups[best]:
+            name, prof = _name_in(el)
+            if not name:
+                continue
+            if not prof:
+                a = el if el.name == "a" else el.find("a", href=True)
+                prof = a.get("href") if a else None
+            lines = [l.strip() for l in el.get_text("\n").split("\n") if l.strip()]
+            title = next((l for l in lines if TITLE_WORD.search(l) and len(l) < 150), "")
+            rows.append({"name": name, "institution": institution, "department": unit, "title_on_roster": title,
+                         "roster_url": page, "profile_url": urljoin(page, prof) if prof else None,
+                         "quote": " ".join(el.get_text(" ").split())[:300], "filter": "all"})
+        page = nxt
+    if not rows:
+        return [], "no repeated person blocks found (JS directory? write a YAML or use the browser)"
+    seen, uniq = set(), []
+    for r in rows:
+        if r["name"].lower() not in seen:
+            seen.add(r["name"].lower())
+            uniq.append(r)
+    return uniq, how
+
+
 def probe(url: str) -> None:
     """Print the most repeated element signatures that contain a link, to help write `item`."""
     soup = BeautifulSoup(get(url), "html.parser")
@@ -93,10 +173,38 @@ def main() -> None:
     ap.add_argument("cfg", nargs="?", type=Path)
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--probe")
+    ap.add_argument("--departments", type=Path, help="data/departments.jsonl: run auto mode on every line")
+    ap.add_argument("--auto", nargs=4, metavar=("URL", "INSTITUTION", "UNIT", "SLUG"),
+                    help="no-selector mode; writes data/roster/SLUG.jsonl")
     ap.add_argument("--refresh", action="store_true")
     a = ap.parse_args()
     if a.probe:
         return probe(a.probe)
+    if a.departments:
+        OUT.mkdir(parents=True, exist_ok=True)
+        for l in a.departments.read_text().splitlines():
+            if not l.strip():
+                continue
+            d = json.loads(l)
+            slug = d.get("slug") or re.sub(r"[^a-z0-9]+", "-", f"{d['institution']} {d['unit']}".lower()).strip("-")
+            if (DIRS / f"{slug}.yaml").exists() or ((OUT / f"{slug}.jsonl").exists() and not a.refresh):
+                continue
+            try:
+                rows, how = auto(d["url"], d["institution"], d["unit"], refresh=a.refresh)
+            except Exception as e:  # noqa: BLE001
+                rows, how = [], f"FAILED {type(e).__name__} {str(e)[:80]}"
+            for r in rows:
+                r["filter"] = d.get("filter", "all")
+            if rows:
+                (OUT / f"{slug}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+            print(f"{slug}: {len(rows)} rows ({how})" if rows else f"{slug}: NEEDS YAML/MANUAL ({how}) {d['url']}")
+        return
+    if a.auto:
+        rows, how = auto(*a.auto[:3], refresh=a.refresh)
+        OUT.mkdir(parents=True, exist_ok=True)
+        (OUT / f"{a.auto[3]}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+        print(f"{a.auto[3]}: {len(rows)} rows ({how}); titles: {Counter(r['title_on_roster'][:30] for r in rows).most_common(4)}")
+        return
     OUT.mkdir(parents=True, exist_ok=True)
     bad = 0
     for cfg in (sorted(DIRS.glob("*.yaml")) if a.all else [a.cfg]):

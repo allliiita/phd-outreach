@@ -24,6 +24,7 @@ from .papers import _norm
 DATA = ROOT / "data"
 DOSS, JIN, JOUT, PEOPLE = DATA / "dossiers", DATA / "judge" / "in", DATA / "judge" / "out", DATA / "people"
 BATCH = 25
+OLD_ASSOC = 2010   # associate professors whose first paper predates this are not "young" (applicant scope)
 SKIP_CLASSES = {"emeritus", "teaching", "staff_scientist"}
 A_CLASSES = {"assistant", "incoming_assistant", "associate", "full", "institute_pi", "research_faculty"}
 
@@ -40,7 +41,8 @@ def _load(p: Path) -> list[dict]:
 
 def prep(path: Path) -> None:
     from .surnames import PRIORITY
-    rows = [d for d in _load(path) if d["position_class"] not in SKIP_CLASSES | {"full"}]
+    rows = [d for d in _load(path) if d["position_class"] not in SKIP_CLASSES | {"full"}
+            and not (d["position_class"] == "associate" and (d.get("first_paper") or 9999) < OLD_ASSOC)]
     rows.sort(key=lambda d: PRIORITY[d.get("heritage")])
     JIN.mkdir(parents=True, exist_ok=True)
     for old in JIN.glob(f"{path.stem}_*.md"):

@@ -152,6 +152,9 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
         note = None if len(per) == 1 else f"papers: {len(per)} same-name OpenAlex authors at this school; picked closest to page text, check"
     works = [w for x in chosen for w in x[3]]
     out = {"author": "|".join(x[2] for x in chosen), "papers": _pick(works)}
+    first = _get(f"{OA}/works", {"filter": f"author.id:{out['author']}", "sort": "publication_year:asc", "per-page": 1,
+                                 "select": "publication_year", **auth}, gap=0.2)["results"]
+    out["first_year"] = first[0]["publication_year"] if first else None   # career-age proxy for "young"
     if note:
         out["warning"] = note
     return out
