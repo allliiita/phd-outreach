@@ -1,0 +1,38 @@
+{"institution":"Carnegie Mellon University","unit":"Statistics & Data Science","url":"https://www.cmu.edu/dietrich/statistics-datascience/people/faculty/index.html","filter":"all"}
+{"institution":"Carnegie Mellon University","unit":"Computational Biology","url":"https://www.cmu.edu/cbd/people/voting-faculty.html","filter":"all"}
+{"institution":"Carnegie Mellon University","unit":"Neuroscience Institute","url":"https://www.cmu.edu/ni/people/faculty-directory.html","filter":"ml_only"}
+{"institution":"Cornell University","unit":"Statistics and Data Science","url":"https://stat.cornell.edu/directory","filter":"all"}
+{"institution":"Cornell University","unit":"Computational Biology","url":"https://cals.cornell.edu/computational-biology/people","filter":"all"}
+{"institution":"Cornell University","unit":"Electrical and Computer Engineering","url":"https://ece.cornell.edu/ece/employee-directory","filter":"ml_only"}
+{"institution":"Georgia Institute of Technology","unit":"Bioinformatics","url":"https://bioinformatics.gatech.edu/bioinformatics-faculty?page=0","filter":"all"}
+{"institution":"University of California Los Angeles","unit":"Biostatistics","url":"https://ph.ucla.edu/about/faculty-staff-directory","filter":"all"}
+{"institution":"University of California Los Angeles","unit":"Computational and Systems Neuroscience","url":"https://neuroscience.ucla.edu/node/708","filter":"ml_only"}
+{"institution":"New York University","unit":"Biostatistics","url":"https://med.nyu.edu/departments-institutes/population-health/divisions-sections-centers/biostatistics/faculty","filter":"all"}
+{"institution":"New York University","unit":"Statistics (Stern TOPS)","url":"https://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/tops/faculty-staff/full-time-faculty.md","filter":"all"}
+{"institution":"New York University","unit":"Electrical and Computer Engineering","url":"https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering/people","filter":"ml_only"}
+{"institution":"New York University","unit":"Center for Neural Science","url":"https://www.cns.nyu.edu/faculty.php","filter":"ml_only"}
+{"institution":"Johns Hopkins University","unit":"Center for Computational Biology","url":"https://ccb.jhu.edu/people.php","filter":"all"}
+{"institution":"Johns Hopkins University","unit":"Electrical and Computer Engineering","url":"https://engineering.jhu.edu/ece/people/","filter":"ml_only"}
+{"institution":"Duke University","unit":"Statistical Science","url":"https://stat.duke.edu/people/faculty","filter":"all"}
+{"institution":"Duke University","unit":"Biostatistics & Bioinformatics","url":"https://biostat.duke.edu/people/faculty","filter":"all"}
+{"institution":"University of Maryland","unit":"Statistics","url":"https://stat.umd.edu/people/faculty-category.html","filter":"all"}
+{"institution":"University of Maryland","unit":"Computational Biology","url":"https://www.cbcb.umd.edu/our-experts/faculty","filter":"all"}
+{"institution":"University of Maryland","unit":"Electrical and Computer Engineering","url":"https://ece.umd.edu/clark/facultydir","filter":"ml_only"}
+{"institution":"University of Maryland","unit":"Biostatistics and Bioinformatics (School of Medicine)","url":"https://www.medschool.umaryland.edu/epidemiology/biostats/our-team/","filter":"all"}
+{"institution":"Pennsylvania State University","unit":"Electrical Engineering and Computer Science","url":"https://www.eecs.psu.edu/departments/ee-faculty-list.aspx","filter":"ml_only"}
+{"institution":"Pennsylvania State University","unit":"Bioinformatics and Genomics","url":"https://huck.psu.edu/graduate-programs/bioinformatics-and-genomics/people/faculty/p3","filter":"all"}
+{"institution":"Pennsylvania State University","unit":"Bioinformatics and Genomics","url":"https://huck.psu.edu/graduate-programs/bioinformatics-and-genomics/people/faculty/p4","filter":"all"}
+{"institution":"Pennsylvania State University","unit":"Center for Neural Engineering","url":"https://www.cne.psu.edu/people/affiliated-faculty.aspx","filter":"ml_only"}
+{"institution":"University of California Irvine","unit":"Center for Complex Biological Systems","url":"https://ccbs.uci.edu/directory/ccbs-faculty/","filter":"all"}
+{"institution":"University of California Irvine","unit":"Electrical Engineering and Computer Science","url":"https://engineering.uci.edu/directory/dept/eecs","filter":"ml_only"}
+{"institution":"University of California Irvine","unit":"Center for Cognitive Neuroscience (core faculty)","url":"https://www.cence.socsci.uci.edu/faculty.php","filter":"ml_only"}
+{"institution":"Ohio State University","unit":"Statistics","url":"https://stat.osu.edu/people","filter":"all"}
+{"institution":"Ohio State University","unit":"Electrical and Computer Engineering","url":"https://ece.osu.edu/directory","filter":"ml_only"}
+{"institution":"University of Virginia","unit":"Electrical and Computer Engineering","url":"https://engineering.virginia.edu/department/electrical-and-computer-engineering/faculty","filter":"ml_only"}
+{"institution":"University of Virginia","unit":"Neuroscience Graduate Program","url":"https://neurograd.virginia.edu/faculty","filter":"ml_only"}
+{"institution":"Vanderbilt University","unit":"Biostatistics","url":"https://www.vumc.org/biostatistics/people/primary-faculty","filter":"all"}
+{"institution":"Northeastern University","unit":"Electrical and Computer Engineering","url":"https://ece.northeastern.edu/fac/faculty-directory","filter":"ml_only"}
+{"institution":"Arizona State University","unit":"Electrical, Computer and Energy Engineering","url":"https://cen.engineering.asu.edu/faculty","filter":"ml_only"}
+{"institution":"Virginia Tech","unit":"Statistics","url":"https://stat.vt.edu/people/stat-faculty/","filter":"all"}
+{"institution":"University of Florida","unit":"Electrical and Computer Engineering","url":"https://ece.ufl.edu/people/directory/cat/faculty/","filter":"ml_only"}
+{"institution":"University of Florida","unit":"Neuroscience","url":"https://neuroscience.ufl.edu/directory/primary-faculty/","filter":"ml_only"}

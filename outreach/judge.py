@@ -119,6 +119,8 @@ def assemble(stem: str) -> None:
             "keywords_evidence": {"source_url": d["research"]["source_url"], "quote": d["research"]["text"][:300], "checked_on": today}
             if d["research"]["text"] else None,
             "recent_papers": papers if tier == "A" else papers[:3],
+            "fit": j.get("fit"), "fit_projects": j.get("fit_projects", []), "heritage": d.get("heritage"),
+            "first_paper": d.get("first_paper"), "moved": (j.get("notes") or "").startswith("MOVED"),
             "recruiting": rec, "relevance": rel, "relevance_reason": j.get("relevance_reason", ""), "institute": None,
             "notes": "; ".join(filter(None, [j.get("notes", ""), f"fit {j['fit']}/5 via {','.join(j.get('fit_projects', []))}" if j.get("fit") else "",
                                               f"A-tier blocked by missing {', '.join(why_b)}" if why_b else "", *d["problems"]])),

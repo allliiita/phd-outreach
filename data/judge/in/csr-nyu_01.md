@@ -1,0 +1,11 @@
+<!-- batch csr-nyu_01: 2 people -->
+
+## florian-sch-fer-nyu
+Florian Schäfer |  | Computer Science (CSRankings)
+research: My research interests lie at the interface of numerical computation, statistical inference, and competitive games. With my students and collaborators, I have developed state-of-the-art solvers for elliptic PDEs by relating Gaussian elimination to conditional independence, efficient algorithms for multi-agent optimization , and information geometric regularization , the first inviscid regularization of compressible fluid dynamics.
+papers: [0] Optimal Krylov on Average (2026) || [1] Discontinuous Galerkin Semidiscretization of the Information Geometric Regularized Compressible Euler Equations (2026) || [2] Shocks without shock capturing: Information geometric regularization of finite volume methods for Navier–Stokes-like problems (2026) || [3] Möbius Inversion and the Iterated Bootstrap (2026) || [4] Sparse Cholesky factorization for solving nonlinear PDEs via Gaussian processes (2024)
+
+## rumi-chunara-nyu
+Rumi Chunara |  | Computer Science (CSRankings)
+research: My group works at the intersection of artificial intelligence, health, climate, and society . We study how AI systems behave across populations, institutions, and deployment contexts, with a particular focus on robustness, fairness, reasoning, and decision-making under real-world constraints . Our work combines methodological advances in machine learning with collaborations involving healthcare systems, governments, community organizations, and international partners.
+papers: [0] Prior Authorization Requirements and Prescription Fill Patterns Among Patients With Heart Failure (2026) || [1] The importance of clinical context in evaluating algorithmic fairness: insights from a medication adherence prediction algorithm (2026) || [2] Mapping social determinants of health data in sub-Saharan Africa: a scoping review protocol (2026) || [3] Testing the effects of segmented crowdsource-selected messages to improve intentions to follow colorectal cancer screening recommendations: study protocol for a randomized controlled trial (2026) || [4] Self-Preservation in Language Models (2026) || [5] Continual Learning via Self-Probe Gradients (2026)

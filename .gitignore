@@ -6,3 +6,4 @@ data/snapshots/
 data/sent.jsonl
 assets/*.pdf
 data/seeds/
+data/*.log

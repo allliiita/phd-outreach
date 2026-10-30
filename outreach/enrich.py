@@ -241,6 +241,9 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
             if t:
                 d["position"] = {"value": t, "evidence": {"source_url": u, "quote": _quote_around(vis, t, 60)[:300], "checked_on": TODAY}}
                 d["position_class"] = position_class(t)
+                if d["position_class"] not in YOUNG | {"other"}:
+                    d["problems"].append(f"skipped: senior title on profile ({t})")
+                    return d   # early stop: no homepage / papers for senior faculty
         for k, v in pick_links(raw, u, row["name"]).items():
             if v and not d[k] and v not in pages:
                 d[k] = v

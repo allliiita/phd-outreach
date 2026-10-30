@@ -26,3 +26,13 @@
 {"institution":"University of Pennsylvania","unit":"Electrical and Systems Engineering","url":"https://directory.engineering.upenn.edu/","filter":"ml_only"}
 {"institution":"California Institute of Technology","unit":"Computation and Neural Systems","url":"https://www.cns-legacy.caltech.edu/people/index.html","filter":"ml_only"}
 {"institution":"California Institute of Technology","unit":"Electrical Engineering","url":"https://ee.caltech.edu/people/faculty","filter":"ml_only"}
+{"institution":"Brown University","unit":"Biostatistics","url":"https://biostatistics.sph.brown.edu/faculty","filter":"all"}
+{"institution":"Brown University","unit":"Data Science Institute","url":"https://dsi.brown.edu/about/people","filter":"all"}
+{"institution":"Brown University","unit":"Neuroscience","url":"https://neuroscience.brown.edu/people/faculty","filter":"ml_only"}
+{"institution":"Brown University","unit":"Electrical and Computer Engineering","url":"https://engineering.brown.edu/people/faculty/faculty-area/electrical-and-computer-engineering-faculty","filter":"ml_only"}
+{"institution":"University of Southern California","unit":"Biostatistics and Health Data Science","url":"https://keck.usc.edu/biostatistics/faculty/","filter":"all"}
+{"institution":"University of Southern California","unit":"Quantitative and Computational Biology","url":"https://www.qcb-dornsife.usc.edu/people","filter":"all"}
+{"institution":"University of Southern California","unit":"Center for Computational Neuroscience","url":"https://cne.usc.edu/?p=3","filter":"ml_only"}
+{"institution":"University of Southern California","unit":"Electrical and Computer Engineering","url":"https://minghsiehece.usc.edu/groups/ceng/people/","filter":"ml_only"}
+{"institution":"Purdue University","unit":"Statistics","url":"https://www.stat.purdue.edu/people/faculty","filter":"all"}
+{"institution":"Purdue University","unit":"Computational Biology (Computer Science)","url":"https://compbio.cs.purdue.edu/people.html","filter":"all"}

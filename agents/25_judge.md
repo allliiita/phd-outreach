@@ -28,12 +28,15 @@ Write one JSON line per person to `data/judge/out/<stem>_NN.jsonl`:
   are not substrings are deleted automatically, so do not paraphrase.
 - **papers**: indices of up to 3 papers, most relevant to the applicant first.
 - **fit** 1-5: 5 = their work directly overlaps an applicant project (name it in fit_projects); 3 = adjacent
-  methods; 1 = unrelated. Judge the overlap of *topics*, not prestige.
+  methods; 1 = unrelated. Judge the overlap of *topics*, not prestige. The applicant's core is scientific /
+  biological / neural data + representation learning + interpretability; `agents` and `eeg` are side projects:
+  use them only when the professor's main line of work is exactly that (LLM agents; EEG/BCI), never for 5 alone.
+- **notes**: write `MOVED: <where>` if the research text says they now work elsewhere (company, other school).
 - **recruiting**: `Confirmed` / `Not recruiting` only if a `recruit[i]` line says so about PhD students, give
   its index. Otherwise `Unknown` (code sets `Possible` for assistant professors itself).
 - **start_year**: only if a `start:` line states when they joined this institution; else null.
 - **position_class**: null unless the text shows the roster title misleads (e.g. primary appointment at
   another university → `other`, with the reason in notes).
-- **notes**: uncertainty only (e.g. "papers look like a different person"). Empty is fine.
+- **notes** otherwise: uncertainty only (e.g. "papers look like a different person"). Empty is fine.
 
 Output nothing but the JSONL file. Report back one line: `<file>: N judged, Y yes, B borderline`.
