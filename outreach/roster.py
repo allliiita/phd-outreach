@@ -88,6 +88,8 @@ NOT_FACULTY = re.compile(r"year enrolled|ph\.?d\.? (student|candidate)|graduate 
 
 def faculty_like(r: dict) -> bool:
     """Directories often list students and staff too; drop them before any page is opened."""
+    if re.search(r"\b(lab|laboratory|group|center|centre|program|institute|core)\b", r.get("name") or "", re.I):
+        return False   # "Cohen Lab" is not a person (audit 2026-10-30)
     if TITLE_WORD.search(r.get("title_on_roster") or ""):
         return not NOT_FACULTY.search(r["title_on_roster"])
     return not NOT_FACULTY.search(r.get("quote") or "")

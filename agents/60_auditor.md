@@ -17,7 +17,7 @@ Check, in this order:
 4. **Ranking**: is `fit` ordering sensible for the goal? Name concrete people ranked too high / too low.
 5. **Cost and speed**: anything wasting time or tokens (huge units, retries, work on out-of-scope people).
 
-Write `data/audit/report_<date>.md`: at most 10 findings, most important first. Each finding:
+Return the report as your reply (the coordinator saves it to `data/audit/report_<date>.md`): at most 10 findings, most important first. Each finding:
 `problem | evidence (names / units / numbers from the pack) | impact | proposed fix (a code check if it can
 be mechanical, else a playbook line) | confidence`. Then one line: "Biggest risk if we start emailing now: ...".
-Do not browse. Do not edit anything else. Reply with the report path and the one-line biggest risk.
+Do not browse. Do not write files.

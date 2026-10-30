@@ -81,7 +81,9 @@ def assemble(stem: str) -> None:
             judged[j["id"]] = j
     today = date.today().isoformat()
     people, issues = [], []
+    from .quality import apply as quality, trim_kw
     for pid, d in doss.items():
+        d = quality(d)
         j = judged.get(pid)
         if not d["research"]["text"] and not d["papers"]:
             continue   # nothing known yet (papers deferred): assembled after the refill
@@ -91,8 +93,10 @@ def assemble(stem: str) -> None:
             j = auto if d["position_class"] not in SKIP_CLASSES else \
                 {"relevance": "no", "relevance_reason": f"skipped by title: {d['title_on_roster']}", "keywords": []}
         j = {**j, "fit": auto["fit"], "keywords": j.get("keywords") or auto["keywords"]}   # one fit scale for all: Bio-AI
+        if re.search(r"different person|wrong person|same-name", j.get("notes") or "", re.I) and d["papers"]:
+            d = {**d, "papers": [], "problems": d["problems"] + ["papers dropped: judge flagged another person"]}
         hay = _norm(d["research"]["text"] + " " + " ".join(p["title"] for p in d["papers"]))
-        kws = [k for k in j.get("keywords", []) if _in_text(k, hay)]
+        kws = [t for t in (trim_kw(k) for k in j.get("keywords", []) if _in_text(k, hay)) if len(t) > 3]
         dropped = [k for k in j.get("keywords", []) if k not in kws]
         if dropped:
             issues.append(f"{pid}\tdropped keywords not in source text: {dropped}")
