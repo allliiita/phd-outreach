@@ -26,7 +26,7 @@ DOSS, JIN, JOUT, PEOPLE = DATA / "dossiers", DATA / "judge" / "in", DATA / "judg
 BATCH = 25
 OLD_ASSOC = 2010   # associate professors whose first paper predates this are not "young" (applicant scope)
 SKIP_CLASSES = {"emeritus", "teaching", "staff_scientist"}
-A_CLASSES = {"assistant", "incoming_assistant", "associate", "full", "institute_pi", "research_faculty"}
+A_CLASSES = {"assistant", "incoming_assistant", "associate", "full", "institute_pi", "research_faculty", "pi_from_papers"}
 
 
 def slug_id(name: str, institution: str) -> str:

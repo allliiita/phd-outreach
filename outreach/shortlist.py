@@ -12,7 +12,7 @@ from .config import ROOT
 from .surnames import PRIORITY
 
 DATA = ROOT / "data"
-RANK = {"incoming_assistant": 0, "assistant": 0, "associate": 1, "research_faculty": 2}
+RANK = {"incoming_assistant": 0, "assistant": 0, "associate": 1, "research_faculty": 2, "pi_from_papers": 2}
 
 
 def bad_emails() -> dict[str, str]:

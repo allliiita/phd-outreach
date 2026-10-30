@@ -235,6 +235,11 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
         row = {**row, "profile_url": None}
         if d["email"]:
             d["email"].pop("match", None)
+    if row.get("ps_papers"):   # found through papers (outreach/papersource.py): papers come with the row
+        d["papers"] = row["ps_papers"]
+        d["position"] = {"value": f"PI (last author of {row['ps_n']} recent papers at this institution)",
+                         "evidence": {"source_url": row["roster_url"], "quote": row["quote"], "checked_on": TODAY}}
+        d["position_class"] = "pi_from_papers"
     pages = []
     for k in ("google_scholar", "homepage"):
         d[k] = d[k] or row.get(k)
@@ -294,7 +299,7 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
                 d["email"] = e
         except Exception:  # noqa: BLE001
             pass
-    if with_papers:
+    if with_papers and not row.get("ps_papers"):
         from .papers import find_papers
         page_text = " ".join(visible_text(get(u)) for u in pages if _cached(u))
         res = find_papers(row["name"], row["institution"], page_text)

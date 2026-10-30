@@ -25,6 +25,7 @@ class PositionClass(str, Enum):
     teaching = "teaching"                  # lecturer / teaching professor: excluded from A tier
     emeritus = "emeritus"                  # excluded from outreach
     staff_scientist = "staff_scientist"    # institute non-PI: excluded from outreach
+    pi_from_papers = "pi_from_papers"      # last author of >=2 recent papers at this school; title not yet seen
     other = "other"
 
 
