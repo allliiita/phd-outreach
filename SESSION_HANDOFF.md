@@ -28,3 +28,14 @@ Session 2, later decisions:
   Queue: data/discovery/to_enrich_pri.txt. Directory scrape failures (403 / JS / wrong URL): ~40 units, skipped.
 - Run slowly: one department at a time, --workers 2, one judge agent at a time (applicant shares the token budget).
 - Shortlist: python -m outreach.shortlist -> data/export/shortlist.xlsx (first version sent: 160 CS candidates).
+
+## Paused (applicant out of credits). Resume, in this order, slowly:
+1. Paper refill (OpenAlex rate-limited earlier), neuro/comp-bio/biostat first:
+   for f in $(grep -l "rate limited" data/dossiers/*.jsonl | grep -v csr-); do python -m outreach.enrich $f --refill-papers; done
+2. Remaining department enrich (skips finished ones):
+   while read f; do [ -f data/dossiers/$(basename $f) ] || python -m outreach.enrich $f --workers 2; done < data/discovery/to_enrich_pri.txt
+3. Judge (ONE haiku agent at a time, ~7 files each): python -m outreach.judge prep data/dossiers/<dept>.jsonl,
+   then agents/25_judge.md; then python -m outreach.judge assemble <dept>.
+   Already judged non-CS: brown neuro, cmu neuroscience, mit csb, brown/bu/columbia biostat (re-assemble after refill).
+4. python -m outreach.shortlist --no-cs -> data/export/shortlist_noncs.xlsx, send to applicant.
+5. Email stage: applicant will provide a writing skill.
