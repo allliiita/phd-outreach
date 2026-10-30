@@ -15,8 +15,20 @@ DATA = ROOT / "data"
 RANK = {"incoming_assistant": 0, "assistant": 0, "associate": 1, "research_faculty": 2}
 
 
+def bad_emails() -> dict[str, str]:
+    """ids whose email failed validate.py (non-WARN): the address is not trusted, the person needs a lookup."""
+    f = DATA / "validate_report.tsv"
+    out = {}
+    for l in (f.read_text().splitlines() if f.exists() else []):
+        pid, _, msg = l.partition("\t")
+        if msg.startswith("email") and not msg.startswith("WARN"):
+            out[pid] = msg
+    return out
+
+
 def rows(skip_cs: bool = False) -> list[dict]:
     seen, out = set(), []
+    bad = bad_emails()
     allp = [{**json.loads(l), "_cs": f.name.startswith(("csr-", "cmu-lti")), "_stem": f.stem}
             for f in sorted((DATA / "people").glob("*.jsonl")) for l in f.read_text().splitlines() if l.strip()]
     allp.sort(key=lambda p: (p["email"] is None, -(p.get("fit") or 0)))   # duplicates: keep the copy with an email
@@ -28,6 +40,8 @@ def rows(skip_cs: bool = False) -> list[dict]:
         if keys & seen or p["relevance"] == "no" or p.get("moved") or p["position_class"] not in RANK:
             continue
         seen |= keys
+        if p["id"] in bad and p["email"]:
+            p = {**p, "email": None, "notes": f"{p.get('notes', '')}; email rejected: {bad[p['id']]}"}
         out.append(p)
     out.sort(key=lambda p: (PRIORITY[p.get("heritage")], -(p.get("fit") or 0), RANK[p["position_class"]],
                             p["email"] is None, p["name"]))
@@ -67,6 +81,12 @@ def main() -> None:
         ws.auto_filter.ref = ws.dimensions
         for col, wdt in zip("ABCDEFGHIJKLMN", [10, 5, 14, 22, 26, 24, 26, 28, 10, 50, 60, 30, 5, 10]):
             ws.column_dimensions[col].width = wdt
+        ws2 = wb.create_sheet("Need email (look up)")
+        ws2.append(["Fit", "Name", "Institution", "Department", "Position", "Homepage", "Why"])
+        for p in ps:
+            if not p["email"] and (p.get("fit") or 0) >= 3:
+                ws2.append([p.get("fit"), p["name"], p["institution"], "; ".join(p["departments"]), p["position"]["value"],
+                            p.get("homepage") or "", (p.get("notes") or "")[-120:]])
         wb.save(out / f"{name}.xlsx")
     except ImportError:
         pass

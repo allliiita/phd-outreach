@@ -318,7 +318,7 @@
   "validate_ok": true
  },
  "holden-lee-jhu": {
-  "validate_ok": true
+  "validate_ok": false
  },
  "peirong-liu-jhu": {
   "validate_ok": true
@@ -429,10 +429,10 @@
   "validate_ok": true
  },
  "sai-qian-zhang-nyu": {
-  "validate_ok": true
+  "validate_ok": false
  },
  "allen-liu-nyu": {
-  "validate_ok": true
+  "validate_ok": false
  },
  "eunsol-choi-nyu": {
   "validate_ok": true
@@ -444,7 +444,7 @@
   "validate_ok": true
  },
  "david-f-fouhey-nyu": {
-  "validate_ok": true
+  "validate_ok": false
  },
  "lerrel-pinto-nyu": {
   "validate_ok": true
@@ -759,6 +759,3444 @@
   "validate_ok": true
  },
  "gavin-brown-uw-madison": {
+  "validate_ok": true
+ },
+ "huimin-cheng-bu": {
+  "validate_ok": true
+ },
+ "wei-jin-bu": {
+  "validate_ok": true
+ },
+ "jungwun-lee-bu": {
+  "validate_ok": true
+ },
+ "haolin-li-bu": {
+  "validate_ok": true
+ },
+ "qiong-yang-bu": {
+  "validate_ok": true
+ },
+ "xiaoling-zhang-bu": {
+  "validate_ok": true
+ },
+ "yuanming-leng-bu": {
+  "validate_ok": true
+ },
+ "seung-hoan-choi-bu": {
+  "validate_ok": true
+ },
+ "david-r-gagnon-bu": {
+  "validate_ok": true
+ },
+ "helen-e-jenkins-bu": {
+  "validate_ok": true
+ },
+ "sara-lodi-bu": {
+  "validate_ok": true
+ },
+ "shariq-mohammed-bu": {
+  "validate_ok": true
+ },
+ "kerrie-p-nelson-bu": {
+  "validate_ok": true
+ },
+ "prasad-patil-bu": {
+  "validate_ok": true
+ },
+ "gina-marie-peloso-bu": {
+  "validate_ok": true
+ },
+ "sarah-r-preis-bu": {
+  "validate_ok": true
+ },
+ "fatema-shafie-khorassani-bu": {
+  "validate_ok": true
+ },
+ "lukas-m-weber-bu": {
+  "validate_ok": true
+ },
+ "sarah-michelle-leatherman-bu": {
+  "validate_ok": true
+ },
+ "stefano-monti-bu": {
+  "validate_ok": true
+ },
+ "archana-venkataraman-bu": {
+  "validate_ok": true
+ },
+ "vanessa-xanthakis-bu": {
+  "validate_ok": true
+ },
+ "jerry-chen-bu": {
+  "validate_ok": true
+ },
+ "xiaojun-cheng-bu": {
+  "validate_ok": true
+ },
+ "michael-albro-bu": {
+  "validate_ok": true
+ },
+ "stephan-anderson-bu": {
+  "validate_ok": true
+ },
+ "samagya-banskota-bu": {
+  "validate_ok": true
+ },
+ "david-bishop-bu": {
+  "validate_ok": true
+ },
+ "william-boley-bu": {
+  "validate_ok": true
+ },
+ "keith-brown-bu": {
+  "validate_ok": true
+ },
+ "scott-bunch-bu": {
+  "validate_ok": true
+ },
+ "john-caradonna-bu": {
+  "validate_ok": true
+ },
+ "chandramouli-chandrasekaran-bu": {
+  "validate_ok": true
+ },
+ "james-chapman-bu": {
+  "validate_ok": true
+ },
+ "brian-cleary-bu": {
+  "validate_ok": true
+ },
+ "brianne-connizzo-bu": {
+  "validate_ok": true
+ },
+ "eric-cueny-bu": {
+  "validate_ok": true
+ },
+ "brian-depasquale-bu": {
+  "validate_ok": true
+ },
+ "vassilis-digalakis-bu": {
+  "validate_ok": true
+ },
+ "michael-economo-bu": {
+  "validate_ok": true
+ },
+ "jeroen-eyckmans-bu": {
+  "validate_ok": true
+ },
+ "ana-fiszbein-bu": {
+  "validate_ok": true
+ },
+ "valeri-frumkin-bu": {
+  "validate_ok": true
+ },
+ "jeffrey-gavornik-bu": {
+  "validate_ok": true
+ },
+ "larry-han-brown": {
+  "validate_ok": true
+ },
+ "youjin-lee-brown": {
+  "validate_ok": true
+ },
+ "ying-ma-brown": {
+  "validate_ok": true
+ },
+ "stavroula-chrysanthopoulou-brown": {
+  "validate_ok": true
+ },
+ "ani-eloyan-brown": {
+  "validate_ok": true
+ },
+ "anarina-murillo-brown": {
+  "validate_ok": true
+ },
+ "arman-oganisian-brown": {
+  "validate_ok": false
+ },
+ "alice-paul-brown": {
+  "validate_ok": true
+ },
+ "jon-steingrimsson-brown": {
+  "validate_ok": true
+ },
+ "alyssa-bilinski-brown": {
+  "validate_ok": true
+ },
+ "lorin-crawford-brown": {
+  "validate_ok": true
+ },
+ "shira-dunsiger-brown": {
+  "validate_ok": true
+ },
+ "sana-raoof-brown": {
+  "validate_ok": true
+ },
+ "argie-veroniki-brown": {
+  "validate_ok": true
+ },
+ "eysa-lee-brown": {
+  "validate_ok": true
+ },
+ "jeff-huang-brown": {
+  "validate_ok": true
+ },
+ "guixing-wei-brown": {
+  "validate_ok": true
+ },
+ "elizabeth-chen-brown": {
+  "validate_ok": false
+ },
+ "yu-cheng-brown": {
+  "validate_ok": true
+ },
+ "yu-han-chiu-brown": {
+  "validate_ok": true
+ },
+ "fangli-geng-brown": {
+  "validate_ok": true
+ },
+ "jinying-li-brown": {
+  "validate_ok": true
+ },
+ "feng-lin-brown": {
+  "validate_ok": true
+ },
+ "tao-liu-brown": {
+  "validate_ok": true
+ },
+ "peihan-miao-brown": {
+  "validate_ok": true
+ },
+ "li-wang-brown": {
+  "validate_ok": true
+ },
+ "han-zhang-brown": {
+  "validate_ok": true
+ },
+ "saloni-gupta-brown": {
+  "validate_ok": true
+ },
+ "gajendra-kumar-brown": {
+  "validate_ok": true
+ },
+ "sanjay-mishra-brown": {
+  "validate_ok": true
+ },
+ "yashaswini-singh-brown": {
+  "validate_ok": true
+ },
+ "emilia-huerta-s-nchez-brown": {
+  "validate_ok": true
+ },
+ "stephen-bach-brown": {
+  "validate_ok": true
+ },
+ "parker-vanvalkenburgh-brown": {
+  "validate_ok": true
+ },
+ "diana-freed-brown": {
+  "validate_ok": true
+ },
+ "meredith-mendola-brown": {
+  "validate_ok": true
+ },
+ "mia-miyagi-brown": {
+  "validate_ok": true
+ },
+ "xavier-roca-rada-brown": {
+  "validate_ok": true
+ },
+ "tiziano-rotesi-brown": {
+  "validate_ok": true
+ },
+ "hilarie-sit-brown": {
+  "validate_ok": true
+ },
+ "nasim-sonboli-brown": {
+  "validate_ok": true
+ },
+ "dafne-zorzetto-brown": {
+  "validate_ok": true
+ },
+ "matthew-harrison-brown": {
+  "validate_ok": true
+ },
+ "ellie-pavlick-brown": {
+  "validate_ok": true
+ },
+ "rachel-wetts-brown": {
+  "validate_ok": true
+ },
+ "adeel-abbasi-brown": {
+  "validate_ok": true
+ },
+ "imad-al-ghouleh-brown": {
+  "validate_ok": true
+ },
+ "christelle-alvarez-brown": {
+  "validate_ok": true
+ },
+ "rachel-baker-brown": {
+  "validate_ok": true
+ },
+ "gaetano-barone-brown": {
+  "validate_ok": true
+ },
+ "chelsie-benca-bachman-brown": {
+  "validate_ok": true
+ },
+ "miguel-bessa-brown": {
+  "validate_ok": true
+ },
+ "sam-birch-brown": {
+  "validate_ok": true
+ },
+ "malik-boykin-brown": {
+  "validate_ok": true
+ },
+ "christopher-cleveland-brown": {
+  "validate_ok": true
+ },
+ "matthew-coley-o-rourke-brown": {
+  "validate_ok": true
+ },
+ "ingrid-daubar-brown": {
+  "validate_ok": true
+ },
+ "john-eason-brown": {
+  "validate_ok": true
+ },
+ "kim-fernandes-brown": {
+  "validate_ok": true
+ },
+ "kathi-fisler-brown": {
+  "validate_ok": true
+ },
+ "mara-freilich-brown": {
+  "validate_ok": true
+ },
+ "kim-gallon-brown": {
+  "validate_ok": true
+ },
+ "william-goedel-brown": {
+  "validate_ok": true
+ },
+ "javier-g-mez-serrano-brown": {
+  "validate_ok": true
+ },
+ "diana-grigsby-toussaint-brown": {
+  "validate_ok": true
+ },
+ "roee-gutman-brown": {
+  "validate_ok": true
+ },
+ "daniel-ibarra-brown": {
+  "validate_ok": true
+ },
+ "allan-just-brown": {
+  "validate_ok": true
+ },
+ "aditya-khanna-brown": {
+  "validate_ok": true
+ },
+ "leo-kozachkov-brown": {
+  "validate_ok": true
+ },
+ "matt-leblanc-brown": {
+  "validate_ok": true
+ },
+ "ananda-martin-caughey-brown": {
+  "validate_ok": true
+ },
+ "david-meyers-brown": {
+  "validate_ok": true
+ },
+ "elizabeth-miller-brown": {
+  "validate_ok": true
+ },
+ "shanti-morell-hart-brown": {
+  "validate_ok": true
+ },
+ "kevin-mwenda-brown": {
+  "validate_ok": true
+ },
+ "arman-organisian-brown": {
+  "validate_ok": true
+ },
+ "jonathan-pober-brown": {
+  "validate_ok": true
+ },
+ "daniel-ritchid-brown": {
+  "validate_ok": false
+ },
+ "jason-ritt-brown": {
+  "validate_ok": true
+ },
+ "michelle-rogers-brown": {
+  "validate_ok": true
+ },
+ "jennifer-roloff-brown": {
+  "validate_ok": true
+ },
+ "seda-salap-ayca-brown": {
+  "validate_ok": true
+ },
+ "yair-shenfeld-brown": {
+  "validate_ok": true
+ },
+ "brian-theyel-brown": {
+  "validate_ok": true
+ },
+ "james-tompkin-brown": {
+  "validate_ok": true
+ },
+ "alper-uzun-brown": {
+  "validate_ok": true
+ },
+ "ece-uzun-brown": {
+  "validate_ok": true
+ },
+ "nikos-vasilakis-brown": {
+  "validate_ok": true
+ },
+ "tara-white-brown": {
+  "validate_ok": true
+ },
+ "peipei-zhou-brown": {
+  "validate_ok": true
+ },
+ "nora-ayanian-brown": {
+  "validate_ok": true
+ },
+ "indie-garwood-brown": {
+  "validate_ok": true
+ },
+ "domenico-pacifici-brown": {
+  "validate_ok": true
+ },
+ "jacob-rosenstein-brown": {
+  "validate_ok": true
+ },
+ "mehdi-saligane-brown": {
+  "validate_ok": false
+ },
+ "ahmed-abdelfattah-brown": {
+  "validate_ok": true
+ },
+ "anda-chirila-brown": {
+  "validate_ok": true
+ },
+ "theresa-desrochers-brown": {
+  "validate_ok": true
+ },
+ "diane-hoffman-kim-brown": {
+  "validate_ok": true
+ },
+ "alexander-jaworski-brown": {
+  "validate_ok": true
+ },
+ "karla-kaun-brown": {
+  "validate_ok": true
+ },
+ "sonia-mayoral-brown": {
+  "validate_ok": true
+ },
+ "leenoy-meshulam-brown": {
+  "validate_ok": true
+ },
+ "matt-nassar-brown": {
+  "validate_ok": true
+ },
+ "wilson-truccolo-brown": {
+  "validate_ok": true
+ },
+ "ted-wilson-brown": {
+  "validate_ok": true
+ },
+ "yisong-yue-caltech": {
+  "validate_ok": true
+ },
+ "carlos-lois-caltech": {
+  "validate_ok": true
+ },
+ "dean-mobbs-caltech": {
+  "validate_ok": true
+ },
+ "yuki-oka-caltech": {
+  "validate_ok": true
+ },
+ "georgia-gkioxari-caltech": {
+  "validate_ok": true
+ },
+ "mohammad-mirhosseini-caltech": {
+  "validate_ok": true
+ },
+ "kate-hong-cmu": {
+  "validate_ok": true
+ },
+ "drew-beauchamp-cmu": {
+  "validate_ok": true
+ },
+ "maysam-chamanzar-cmu": {
+  "validate_ok": true
+ },
+ "jenelle-feather-cmu": {
+  "validate_ok": true
+ },
+ "aryn-gittis-cmu": {
+  "validate_ok": true
+ },
+ "pulkit-grover-cmu": {
+  "validate_ok": true
+ },
+ "brad-mahon-cmu": {
+  "validate_ok": true
+ },
+ "andreas-pfenning-cmu": {
+  "validate_ok": true
+ },
+ "richard-randall-cmu": {
+  "validate_ok": true
+ },
+ "dave-touretzky-cmu": {
+  "validate_ok": true
+ },
+ "jonathan-tsay-cmu": {
+  "validate_ok": true
+ },
+ "timothy-verstynen-cmu": {
+  "validate_ok": true
+ },
+ "vibha-viswanathan-cmu": {
+  "validate_ok": true
+ },
+ "saurabh-vyas-cmu": {
+  "validate_ok": true
+ },
+ "sossena-wood-cmu": {
+  "validate_ok": true
+ },
+ "eric-yttri-cmu": {
+  "validate_ok": true
+ },
+ "rita-kukafka-columbia": {
+  "validate_ok": true
+ },
+ "yufeng-shen-columbia": {
+  "validate_ok": true
+ },
+ "xuhai-orson-xu-columbia": {
+  "validate_ok": false
+ },
+ "gongbo-zhang-columbia": {
+  "validate_ok": true
+ },
+ "shalmali-joshi-columbia": {
+  "validate_ok": true
+ },
+ "jason-adelman-columbia": {
+  "validate_ok": true
+ },
+ "abdulaziz-alkattan-columbia": {
+  "validate_ok": true
+ },
+ "no-mie-elhadad-columbia": {
+  "validate_ok": true
+ },
+ "pierre-elias-columbia": {
+  "validate_ok": true
+ },
+ "aristidis-floratos-columbia": {
+  "validate_ok": true
+ },
+ "sivan-kinberg-columbia": {
+  "validate_ok": true
+ },
+ "lena-mamykina-columbia": {
+  "validate_ok": false
+ },
+ "matthew-mcdermott-columbia": {
+  "validate_ok": true
+ },
+ "karthik-natarajan-columbia": {
+  "validate_ok": true
+ },
+ "kirill-nikitin-columbia": {
+  "validate_ok": true
+ },
+ "soojin-park-columbia": {
+  "validate_ok": true
+ },
+ "benjamin-ranard-columbia": {
+  "validate_ok": true
+ },
+ "lauren-richter-columbia": {
+  "validate_ok": true
+ },
+ "soumitra-sengupta-columbia": {
+  "validate_ok": true
+ },
+ "casey-ta-columbia": {
+  "validate_ok": true
+ },
+ "dennis-vitkup-columbia": {
+  "validate_ok": true
+ },
+ "qixuan-chen-columbia": {
+  "validate_ok": true
+ },
+ "tian-gu-columbia": {
+  "validate_ok": true
+ },
+ "wenpin-hou-columbia": {
+  "validate_ok": true
+ },
+ "molei-liu-columbia": {
+  "validate_ok": true
+ },
+ "xin-ma-columbia": {
+  "validate_ok": true
+ },
+ "min-qian-columbia": {
+  "validate_ok": true
+ },
+ "xiao-wu-columbia": {
+  "validate_ok": true
+ },
+ "xiaoyu-che-columbia": {
+  "validate_ok": true
+ },
+ "codruta-chiuzan-columbia": {
+  "validate_ok": true
+ },
+ "hanga-galfalvy-columbia": {
+  "validate_ok": true
+ },
+ "jeff-goldsmith-columbia": {
+  "validate_ok": true
+ },
+ "prakash-gorroochurn-columbia": {
+  "validate_ok": true
+ },
+ "cheng-shiun-leu-columbia": {
+  "validate_ok": true
+ },
+ "daniel-malinsky-columbia": {
+  "validate_ok": true
+ },
+ "christine-mauro-columbia": {
+  "validate_ok": true
+ },
+ "caleb-miles-columbia": {
+  "validate_ok": true
+ },
+ "martina-pavlicova-columbia": {
+  "validate_ok": true
+ },
+ "linda-valeri-columbia": {
+  "validate_ok": true
+ },
+ "xiaomu-wei-cornell": {
+  "validate_ok": false
+ },
+ "haiyuan-yu-cornell": {
+  "validate_ok": true
+ },
+ "ling-wei-kong-cornell": {
+  "validate_ok": true
+ },
+ "jingjing-zhai-cornell": {
+  "validate_ok": true
+ },
+ "isabel-kim-cornell": {
+  "validate_ok": true
+ },
+ "sumanta-basu-cornell": {
+  "validate_ok": true
+ },
+ "andrew-clark-cornell": {
+  "validate_ok": true
+ },
+ "erik-enbody-cornell": {
+  "validate_ok": true
+ },
+ "andrew-hein-cornell": {
+  "validate_ok": true
+ },
+ "philipp-messer-cornell": {
+  "validate_ok": true
+ },
+ "jason-mezey-cornell": {
+  "validate_ok": true
+ },
+ "shaila-musharoff-cornell": {
+  "validate_ok": true
+ },
+ "matt-pennell-cornell": {
+  "validate_ok": true
+ },
+ "amy-kuceyeski-cornell": {
+  "validate_ok": true
+ },
+ "james-booth-cornell": {
+  "validate_ok": true
+ },
+ "martin-wells-cornell": {
+  "validate_ok": true
+ },
+ "daniel-barrow-cornell": {
+  "validate_ok": true
+ },
+ "drew-dehaas-cornell": {
+  "validate_ok": true
+ },
+ "alexis-earl-cornell": {
+  "validate_ok": true
+ },
+ "benjamin-haller-cornell": {
+  "validate_ok": true
+ },
+ "jay-love-cornell": {
+  "validate_ok": true
+ },
+ "joshua-schraiber-cornell": {
+  "validate_ok": true
+ },
+ "tianyi-chen-cornell": {
+  "validate_ok": true
+ },
+ "jiaxin-lin-cornell": {
+  "validate_ok": true
+ },
+ "kyra-gan-cornell": {
+  "validate_ok": true
+ },
+ "cindy-hsin-liu-kao-cornell": {
+  "validate_ok": true
+ },
+ "qingyu-zhao-cornell": {
+  "validate_ok": true
+ },
+ "jae-sun-seo-cornell": {
+  "validate_ok": true
+ },
+ "james-c-hwang-cornell": {
+  "validate_ok": true
+ },
+ "udit-gupta-cornell": {
+  "validate_ok": true
+ },
+ "karan-mehta-cornell": {
+  "validate_ok": true
+ },
+ "sid-banerjee-cornell": {
+  "validate_ok": true
+ },
+ "mohamed-abdelfattah-cornell": {
+  "validate_ok": true
+ },
+ "jayadev-acharya-cornell": {
+  "validate_ok": false
+ },
+ "mohammad-alian-cornell": {
+  "validate_ok": true
+ },
+ "eilyan-bitar-cornell": {
+  "validate_ok": true
+ },
+ "david-forbes-delchamps-cornell": {
+  "validate_ok": true
+ },
+ "amal-el-ghazaly-cornell": {
+  "validate_ok": true
+ },
+ "ziv-goldfeld-cornell": {
+  "validate_ok": true
+ },
+ "jack-hare-cornell": {
+  "validate_ok": true
+ },
+ "elizabeth-farrell-helbling-cornell": {
+  "validate_ok": true
+ },
+ "mohamed-i-ibrahim-cornell": {
+  "validate_ok": true
+ },
+ "eric-sander-lavine-cornell": {
+  "validate_ok": true
+ },
+ "francesco-monticone-cornell": {
+  "validate_ok": true
+ },
+ "nils-napp-cornell": {
+  "validate_ok": true
+ },
+ "francesca-parise-cornell": {
+  "validate_ok": true
+ },
+ "kirstin-hagelskjaer-petersen-cornell": {
+  "validate_ok": true
+ },
+ "steven-graham-adie-cornell": {
+  "validate_ok": true
+ },
+ "tapomayukh-bhattacharjee-cornell": {
+  "validate_ok": true
+ },
+ "sarah-dean-cornell": {
+  "validate_ok": false
+ },
+ "christopher-de-sa-cornell": {
+  "validate_ok": true
+ },
+ "giulia-guidi-cornell": {
+  "validate_ok": true
+ },
+ "peter-mcmahon-cornell": {
+  "validate_ok": false
+ },
+ "jacob-mays-cornell": {
+  "validate_ok": true
+ },
+ "kristina-monakhova-cornell": {
+  "validate_ok": true
+ },
+ "cara-m-nunez-cornell": {
+  "validate_ok": true
+ },
+ "kazuki-nomoto-cornell": {
+  "validate_ok": true
+ },
+ "ashley-bohn-cornell": {
+  "validate_ok": true
+ },
+ "keith-hannon-cornell": {
+  "validate_ok": true
+ },
+ "samprit-banerjee-cornell": {
+  "validate_ok": true
+ },
+ "sainyam-galhotra-cornell": {
+  "validate_ok": true
+ },
+ "li-song-dartmouth": {
+  "validate_ok": true
+ },
+ "siming-zhao-dartmouth": {
+  "validate_ok": true
+ },
+ "guanbo-wang-dartmouth": {
+  "validate_ok": true
+ },
+ "jennifer-emond-dartmouth": {
+  "validate_ok": true
+ },
+ "h-robert-frost-dartmouth": {
+  "validate_ok": true
+ },
+ "madelyn-r-frumkin-dartmouth": {
+  "validate_ok": true
+ },
+ "kenneth-hoehn-dartmouth": {
+  "validate_ok": true
+ },
+ "nicholas-jacobson-dartmouth": {
+  "validate_ok": true
+ },
+ "erika-l-moen-dartmouth": {
+  "validate_ok": true
+ },
+ "emily-presseller-dartmouth": {
+  "validate_ok": true
+ },
+ "anne-g-hoen-dartmouth": {
+  "validate_ok": true
+ },
+ "sarah-lord-dartmouth": {
+  "validate_ok": true
+ },
+ "pablo-martinez-camblor-dartmouth": {
+  "validate_ok": true
+ },
+ "yarui-diao-duke": {
+  "validate_ok": true
+ },
+ "xingyuan-fang-duke": {
+  "validate_ok": true
+ },
+ "chuan-hong-duke": {
+  "validate_ok": true
+ },
+ "wenpin-hou-duke": {
+  "validate_ok": true
+ },
+ "zhuoran-hou-duke": {
+  "validate_ok": true
+ },
+ "jiajun-liu-duke": {
+  "validate_ok": true
+ },
+ "xiaoyue-ni-duke": {
+  "validate_ok": true
+ },
+ "an-kwok-ian-wong-duke": {
+  "validate_ok": true
+ },
+ "pan-xu-duke": {
+  "validate_ok": true
+ },
+ "ke-zhu-duke": {
+  "validate_ok": true
+ },
+ "james-jung-duke": {
+  "validate_ok": true
+ },
+ "monica-agrawal-duke": {
+  "validate_ok": true
+ },
+ "rohit-singh-duke": {
+  "validate_ok": true
+ },
+ "georgia-marie-beasley-duke": {
+  "validate_ok": true
+ },
+ "armando-diego-bedoya-duke": {
+  "validate_ok": true
+ },
+ "samuel-berchuck-duke": {
+  "validate_ok": true
+ },
+ "nrupen-bhavsar-duke": {
+  "validate_ok": true
+ },
+ "lexi-bounds-duke": {
+  "validate_ok": true
+ },
+ "carly-brantner-duke": {
+  "validate_ok": true
+ },
+ "david-carlson-duke": {
+  "validate_ok": true
+ },
+ "michael-paul-cary-duke": {
+  "validate_ok": true
+ },
+ "jennifer-l-cohen-duke": {
+  "validate_ok": true
+ },
+ "lawrence-anthony-david-duke": {
+  "validate_ok": true
+ },
+ "jessilyn-dunn-duke": {
+  "validate_ok": true
+ },
+ "matthew-m-engelhard-duke": {
+  "validate_ok": true
+ },
+ "alaattin-erkanli-duke": {
+  "validate_ok": true
+ },
+ "nikki-freeman-duke": {
+  "validate_ok": true
+ },
+ "steven-c-grambow-duke": {
+  "validate_ok": true
+ },
+ "joshua-aaron-granek-duke": {
+  "validate_ok": true
+ },
+ "cynthia-lea-green-duke": {
+  "validate_ok": true
+ },
+ "ricardo-henao-duke": {
+  "validate_ok": true
+ },
+ "john-wirthlin-hickey-duke": {
+  "validate_ok": true
+ },
+ "matthew-hirschey-duke": {
+  "validate_ok": true
+ },
+ "rishi-kamaleswaran-duke": {
+  "validate_ok": true
+ },
+ "avi-kenny-duke": {
+  "validate_ok": true
+ },
+ "taylor-krajewski-duke": {
+  "validate_ok": true
+ },
+ "yuliya-vladimirovna-lokhnygina-duke": {
+  "validate_ok": true
+ },
+ "craig-lowe-duke": {
+  "validate_ok": true
+ },
+ "william-majoros-duke": {
+  "validate_ok": true
+ },
+ "roland-albert-matsouaka-duke": {
+  "validate_ok": true
+ },
+ "maciej-a-mazurowski-duke": {
+  "validate_ok": true
+ },
+ "grace-mclaughlin-duke": {
+  "validate_ok": true
+ },
+ "megan-lee-neely-duke": {
+  "validate_ok": true
+ },
+ "alejandro-ochoa-duke": {
+  "validate_ok": true
+ },
+ "juliessa-pavon-duke": {
+  "validate_ok": true
+ },
+ "sarah-peskoe-duke": {
+  "validate_ok": true
+ },
+ "gina-maria-pomann-duke": {
+  "validate_ok": true
+ },
+ "rebecca-carter-steorts-duke": {
+  "validate_ok": true
+ },
+ "neeraj-k-surana-duke": {
+  "validate_ok": true
+ },
+ "purushothama-rao-tata-duke": {
+  "validate_ok": true
+ },
+ "jessica-dale-tenenbaum-duke": {
+  "validate_ok": true
+ },
+ "jamie-lynn-todd-duke": {
+  "validate_ok": true
+ },
+ "jesse-david-troy-duke": {
+  "validate_ok": true
+ },
+ "elizabeth-louise-turner-duke": {
+  "validate_ok": true
+ },
+ "joao-ricardo-nickenig-vissoci-duke": {
+  "validate_ok": true
+ },
+ "sifan-liu-duke": {
+  "validate_ok": true
+ },
+ "simon-mak-duke": {
+  "validate_ok": true
+ },
+ "filippo-ascolani-duke": {
+  "validate_ok": true
+ },
+ "edwin-severin-iversen-duke": {
+  "validate_ok": true
+ },
+ "anya-katsevich-duke": {
+  "validate_ok": true
+ },
+ "omar-melikechi-duke": {
+  "validate_ok": true
+ },
+ "galen-reeves-duke": {
+  "validate_ok": true
+ },
+ "scott-c-schmidler-duke": {
+  "validate_ok": true
+ },
+ "alexander-volfovsky-duke": {
+  "validate_ok": true
+ },
+ "lasse-vuursteen-duke": {
+  "validate_ok": true
+ },
+ "john-cameron-zito-duke": {
+  "validate_ok": true
+ },
+ "joan-durso-duke": {
+  "validate_ok": true
+ },
+ "full-time-emory": {
+  "validate_ok": true
+ },
+ "christian-chan-harvard": {
+  "validate_ok": true
+ },
+ "sitan-chen-harvard": {
+  "validate_ok": true
+ },
+ "yida-chen-harvard": {
+  "validate_ok": true
+ },
+ "rebecca-hui-cheng-harvard": {
+  "validate_ok": true
+ },
+ "andrew-chin-harvard": {
+  "validate_ok": true
+ },
+ "sueyeon-chung-harvard": {
+  "validate_ok": true
+ },
+ "christine-ahn-harvard": {
+  "validate_ok": true
+ },
+ "hyeonho-cho-harvard": {
+  "validate_ok": true
+ },
+ "ruijun-dang-harvard": {
+  "validate_ok": true
+ },
+ "arkaprabha-basu-harvard": {
+  "validate_ok": true
+ },
+ "mohamed-abdallah-harvard": {
+  "validate_ok": true
+ },
+ "mustafa-abdelrahman-harvard": {
+  "validate_ok": true
+ },
+ "ibrahim-a-abdelwahab-harvard": {
+  "validate_ok": true
+ },
+ "buse-aktas-harvard": {
+  "validate_ok": true
+ },
+ "abdulrahman-alfaraidi-harvard": {
+  "validate_ok": true
+ },
+ "david-alvarez-melis-harvard": {
+  "validate_ok": true
+ },
+ "ariel-amir-harvard": {
+  "validate_ok": true
+ },
+ "lucas-amoudruz-harvard": {
+  "validate_ok": true
+ },
+ "james-arnold-harvard": {
+  "validate_ok": true
+ },
+ "dylan-barber-harvard": {
+  "validate_ok": true
+ },
+ "david-baron-harvard": {
+  "validate_ok": true
+ },
+ "mustafa-basaran-harvard": {
+  "validate_ok": true
+ },
+ "jonathan-bauermann-harvard": {
+  "validate_ok": true
+ },
+ "yonatan-belinkov-harvard": {
+  "validate_ok": true
+ },
+ "leo-benac-harvard": {
+  "validate_ok": true
+ },
+ "daniel-bennett-harvard": {
+  "validate_ok": true
+ },
+ "carter-blair-harvard": {
+  "validate_ok": true
+ },
+ "giovanni-bordiga-harvard": {
+  "validate_ok": true
+ },
+ "giovanni-bovone-harvard": {
+  "validate_ok": true
+ },
+ "kiant-brantley-harvard": {
+  "validate_ok": true
+ },
+ "lara-braverman-harvard": {
+  "validate_ok": true
+ },
+ "michael-brodie-harvard": {
+  "validate_ok": true
+ },
+ "charles-brooks-harvard": {
+  "validate_ok": true
+ },
+ "katherine-burke-harvard": {
+  "validate_ok": true
+ },
+ "kyle-bystrom-harvard": {
+  "validate_ok": true
+ },
+ "anita-cadoux-harvard": {
+  "validate_ok": true
+ },
+ "flavio-p-calmon-harvard": {
+  "validate_ok": false
+ },
+ "davide-cassara-harvard": {
+  "validate_ok": true
+ },
+ "sarah-cavanagh-harvard": {
+  "validate_ok": true
+ },
+ "vinny-chandran-suja-harvard": {
+  "validate_ok": true
+ },
+ "digby-chappell-harvard": {
+  "validate_ok": true
+ },
+ "umut-serdar-civici-harvard": {
+  "validate_ok": true
+ },
+ "david-clarke-harvard": {
+  "validate_ok": true
+ },
+ "louis-colson-harvard": {
+  "validate_ok": true
+ },
+ "erin-crawley-harvard": {
+  "validate_ok": true
+ },
+ "david-j-crowley-harvard": {
+  "validate_ok": true
+ },
+ "akbergenova-yulia-mit": {
+  "validate_ok": true
+ },
+ "cameron-james-mit": {
+  "validate_ok": true
+ },
+ "zhiliang-bai-mit": {
+  "validate_ok": true
+ },
+ "erin-chen-mit": {
+  "validate_ok": true
+ },
+ "linlin-fan-mit": {
+  "validate_ok": true
+ },
+ "gene-wei-li-mit": {
+  "validate_ok": true
+ },
+ "pulin-li-mit": {
+  "validate_ok": true
+ },
+ "sam-peng-mit": {
+  "validate_ok": true
+ },
+ "eric-sun-mit": {
+  "validate_ok": true
+ },
+ "xiao-wang-mit": {
+  "validate_ok": true
+ },
+ "harikesh-s-wong-mit": {
+  "validate_ok": true
+ },
+ "bin-zhang-mit": {
+  "validate_ok": true
+ },
+ "yunha-hwang-mit": {
+  "validate_ok": true
+ },
+ "ankur-jain-mit": {
+  "validate_ok": true
+ },
+ "paul-c-blainey-mit": {
+  "validate_ok": true
+ },
+ "laurie-a-boyer-mit": {
+  "validate_ok": true
+ },
+ "tamara-broderick-mit": {
+  "validate_ok": true
+ },
+ "bryan-bryson-mit": {
+  "validate_ok": true
+ },
+ "eliezer-calo-mit": {
+  "validate_ok": true
+ },
+ "lindsay-case-mit": {
+  "validate_ok": true
+ },
+ "connor-w-coley-mit": {
+  "validate_ok": true
+ },
+ "otto-x-cordero-mit": {
+  "validate_ok": true
+ },
+ "olivia-corradin-mit": {
+  "validate_ok": true
+ },
+ "joseph-h-davis-mit": {
+  "validate_ok": true
+ },
+ "kevin-m-esvelt-mit": {
+  "validate_ok": true
+ },
+ "ila-fiete-mit": {
+  "validate_ok": true
+ },
+ "steven-flavell-mit": {
+  "validate_ok": true
+ },
+ "ernest-fraenkel-mit": {
+  "validate_ok": true
+ },
+ "mary-gehring-mit": {
+  "validate_ok": true
+ },
+ "rafael-gomez-bombarelli-mit": {
+  "validate_ok": true
+ },
+ "jeff-gore-mit": {
+  "validate_ok": true
+ },
+ "anders-sejr-hansen-mit": {
+  "validate_ok": true
+ },
+ "myriam-heiman-mit": {
+  "validate_ok": true
+ },
+ "michael-t-hemann-mit": {
+  "validate_ok": true
+ },
+ "matthew-g-jones-mit": {
+  "validate_ok": true
+ },
+ "becky-lamason-mit": {
+  "validate_ok": true
+ },
+ "tami-lieberman-mit": {
+  "validate_ok": true
+ },
+ "adam-martin-mit": {
+  "validate_ok": true
+ },
+ "hernandez-moura-silva-mit": {
+  "validate_ok": true
+ },
+ "sara-prescott-mit": {
+  "validate_ok": true
+ },
+ "cellular-biophysics-mit": {
+  "validate_ok": true
+ },
+ "francisco-j-s-nchez-rivera-mit": {
+  "validate_ok": true
+ },
+ "alex-k-shalek-mit": {
+  "validate_ok": true
+ },
+ "david-sontag-mit": {
+  "validate_ok": true
+ },
+ "caroline-uhler-mit": {
+  "validate_ok": true
+ },
+ "matthew-vander-heiden-mit": {
+  "validate_ok": true
+ },
+ "seychelle-vos-mit": {
+  "validate_ok": true
+ },
+ "quantitative-imaging-mit": {
+  "validate_ok": true
+ },
+ "jorge-garza-vargas-mit": {
+  "validate_ok": true
+ },
+ "david-bruns-smith-mit": {
+  "validate_ok": true
+ },
+ "alex-damian-mit": {
+  "validate_ok": true
+ },
+ "adityanarayanan-radhakrishnan-mit": {
+  "validate_ok": true
+ },
+ "stephen-bates-mit": {
+  "validate_ok": true
+ },
+ "navid-azizan-mit": {
+  "validate_ok": true
+ },
+ "ashia-wilson-mit": {
+  "validate_ok": true
+ },
+ "jiyuan-hu-nyu": {
+  "validate_ok": true
+ },
+ "ting-fang-lee-nyu": {
+  "validate_ok": true
+ },
+ "yidan-shi-nyu": {
+  "validate_ok": true
+ },
+ "chan-wang-nyu": {
+  "validate_ok": true
+ },
+ "yuyan-wang-nyu": {
+  "validate_ok": true
+ },
+ "hyungrok-do-nyu": {
+  "validate_ok": true
+ },
+ "cheongeun-oh-nyu": {
+  "validate_ok": true
+ },
+ "hyung-g-park-nyu": {
+  "validate_ok": true
+ },
+ "samrachana-adhikari-nyu": {
+  "validate_ok": true
+ },
+ "rebecca-anthopolos-nyu": {
+  "validate_ok": true
+ },
+ "hayley-belli-nyu": {
+  "validate_ok": true
+ },
+ "iv-n-d-az-nyu": {
+  "validate_ok": true
+ },
+ "keith-s-goldfeld-nyu": {
+  "validate_ok": true
+ },
+ "erinn-m-hade-nyu": {
+  "validate_ok": true
+ },
+ "gary-hettinger-nyu": {
+  "validate_ok": true
+ },
+ "nicholas-illenberger-nyu": {
+  "validate_ok": true
+ },
+ "soutrik-mandal-nyu": {
+  "validate_ok": true
+ },
+ "sharon-b-meropol-nyu": {
+  "validate_ok": true
+ },
+ "hakhamanesh-mostafavi-nyu": {
+  "validate_ok": true
+ },
+ "michele-santacatterina-nyu": {
+  "validate_ok": true
+ },
+ "carole-siegel-nyu": {
+  "validate_ok": true
+ },
+ "wei-ji-ma-nyu": {
+  "validate_ok": true
+ },
+ "xinying-cai-nyu": {
+  "validate_ok": true
+ },
+ "kevin-c-chan-nyu": {
+  "validate_ok": true
+ },
+ "wen-biao-gan-nyu": {
+  "validate_ok": true
+ },
+ "biyu-jade-he-nyu": {
+  "validate_ok": true
+ },
+ "sukbin-lim-nyu": {
+  "validate_ok": true
+ },
+ "dayu-lin-nyu": {
+  "validate_ok": true
+ },
+ "michael-long-nyu": {
+  "validate_ok": true
+ },
+ "xing-tian-nyu": {
+  "validate_ok": true
+ },
+ "jayeeta-basu-nyu": {
+  "validate_ok": true
+ },
+ "eric-klann-nyu": {
+  "validate_ok": true
+ },
+ "michael-hawken-nyu": {
+  "validate_ok": true
+ },
+ "chiye-aoki-nyu": {
+  "validate_ok": true
+ },
+ "christine-constantinople-nyu": {
+  "validate_ok": true
+ },
+ "roozbeh-kiani-nyu": {
+  "validate_ok": true
+ },
+ "simon-peron-nyu": {
+  "validate_ok": true
+ },
+ "cristina-savin-nyu": {
+  "validate_ok": true
+ },
+ "david-schneider-nyu": {
+  "validate_ok": true
+ },
+ "david-amodio-nyu": {
+  "validate_ok": true
+ },
+ "clayton-e-curtis-nyu": {
+  "validate_ok": true
+ },
+ "jeremy-s-dasen-nyu": {
+  "validate_ok": true
+ },
+ "jeffrey-erlich-nyu": {
+  "validate_ok": true
+ },
+ "jon-freeman-nyu": {
+  "validate_ok": true
+ },
+ "robert-c-froemke-nyu": {
+  "validate_ok": true
+ },
+ "davi-geiger-nyu": {
+  "validate_ok": true
+ },
+ "marc-h-gershow-nyu": {
+  "validate_ok": true
+ },
+ "todd-gureckis-nyu": {
+  "validate_ok": true
+ },
+ "catherine-hartley-nyu": {
+  "validate_ok": true
+ },
+ "brenden-lake-nyu": {
+  "validate_ok": true
+ },
+ "aaditya-rangan-nyu": {
+  "validate_ok": true
+ },
+ "dmitry-rinberg-nyu": {
+  "validate_ok": true
+ },
+ "niels-ringstad-nyu": {
+  "validate_ok": true
+ },
+ "joel-s-schuman-nyu": {
+  "validate_ok": true
+ },
+ "nicholas-stavropoulos-nyu": {
+  "validate_ok": true
+ },
+ "regina-sullivan-nyu": {
+  "validate_ok": true
+ },
+ "nicolas-x-tritsch-nyu": {
+  "validate_ok": true
+ },
+ "donald-a-wilson-nyu": {
+  "validate_ok": true
+ },
+ "jonathan-winawer-nyu": {
+  "validate_ok": true
+ },
+ "wenqi-cui-nyu": {
+  "validate_ok": true
+ },
+ "danny-yuxing-huang-nyu": {
+  "validate_ok": false
+ },
+ "yuzhang-lin-nyu": {
+  "validate_ok": true
+ },
+ "quanyan-zhu-nyu": {
+  "validate_ok": true
+ },
+ "yi-fang-nyu": {
+  "validate_ok": false
+ },
+ "pei-liu-nyu": {
+  "validate_ok": false
+ },
+ "yang-xu-nyu": {
+  "validate_ok": false
+ },
+ "chinmay-hegde-nyu": {
+  "validate_ok": false
+ },
+ "aziza-almanakly-nyu": {
+  "validate_ok": false
+ },
+ "jona-ball-nyu": {
+  "validate_ok": false
+ },
+ "anna-choromanska-nyu": {
+  "validate_ok": false
+ },
+ "david-fouhey-nyu": {
+  "validate_ok": false
+ },
+ "hamed-rahmani-nyu": {
+  "validate_ok": false
+ },
+ "austin-rovinski-nyu": {
+  "validate_ok": false
+ },
+ "marwa-chafii-nyu": {
+  "validate_ok": false
+ },
+ "andras-gyorgy-nyu": {
+  "validate_ok": false
+ },
+ "sohmyung-ha-nyu": {
+  "validate_ok": false
+ },
+ "michail-maniatakos-nyu": {
+  "validate_ok": false
+ },
+ "azhar-zam-nyu": {
+  "validate_ok": false
+ },
+ "fraida-fund-nyu": {
+  "validate_ok": false
+ },
+ "thanasis-korakis-nyu": {
+  "validate_ok": false
+ },
+ "prashanth-krishnamurthy-nyu": {
+  "validate_ok": false
+ },
+ "jaime-llorca-nyu": {
+  "validate_ok": false
+ },
+ "romain-corcolle-nyu": {
+  "validate_ok": false
+ },
+ "kiren-nayak-nyu": {
+  "validate_ok": true
+ },
+ "zequn-sun-northwestern": {
+  "validate_ok": true
+ },
+ "lihui-zhao-northwestern": {
+  "validate_ok": true
+ },
+ "amy-k-johnson-northwestern": {
+  "validate_ok": true
+ },
+ "lutfiyya-n-muhammad-northwestern": {
+  "validate_ok": true
+ },
+ "jacob-m-schauer-northwestern": {
+  "validate_ok": true
+ },
+ "arthur-butz-northwestern": {
+  "validate_ok": true
+ },
+ "branden-ghena-northwestern": {
+  "validate_ok": true
+ },
+ "mahdi-hosseini-northwestern": {
+  "validate_ok": true
+ },
+ "russell-joseph-northwestern": {
+  "validate_ok": true
+ },
+ "igor-kadota-northwestern": {
+  "validate_ok": true
+ },
+ "laleh-rad-northwestern": {
+  "validate_ok": true
+ },
+ "john-rogers-northwestern": {
+  "validate_ok": true
+ },
+ "jakub-szefer-northwestern": {
+  "validate_ok": true
+ },
+ "david-zaretsky-northwestern": {
+  "validate_ok": true
+ },
+ "xiaoxuan-cai-osu": {
+  "validate_ok": true
+ },
+ "kate-hu-osu": {
+  "validate_ok": true
+ },
+ "kai-tan-osu": {
+  "validate_ok": true
+ },
+ "lang-zeng-osu": {
+  "validate_ok": true
+ },
+ "yuan-zhang-osu": {
+  "validate_ok": true
+ },
+ "alan-gan-osu": {
+  "validate_ok": true
+ },
+ "jiashan-he-osu": {
+  "validate_ok": true
+ },
+ "jeongjin-lee-osu": {
+  "validate_ok": true
+ },
+ "kiljae-lee-osu": {
+  "validate_ok": true
+ },
+ "sang-wan-lee-osu": {
+  "validate_ok": true
+ },
+ "pin-hsun-mao-osu": {
+  "validate_ok": true
+ },
+ "shuai-sun-osu": {
+  "validate_ok": true
+ },
+ "fangyi-wang-osu": {
+  "validate_ok": true
+ },
+ "oh-ran-kwon-osu": {
+  "validate_ok": true
+ },
+ "vincent-vu-osu": {
+  "validate_ok": true
+ },
+ "taeyeon-kim-osu": {
+  "validate_ok": true
+ },
+ "arkobrato-gupta-osu": {
+  "validate_ok": true
+ },
+ "dena-asta-osu": {
+  "validate_ok": true
+ },
+ "arnab-auddy-osu": {
+  "validate_ok": true
+ },
+ "oksana-chkrebtii-osu": {
+  "validate_ok": true
+ },
+ "christopher-hans-osu": {
+  "validate_ok": true
+ },
+ "isa-marques-osu": {
+  "validate_ok": true
+ },
+ "sagnik-nandy-osu": {
+  "validate_ok": true
+ },
+ "sally-paganin-osu": {
+  "validate_ok": true
+ },
+ "subhadeep-paul-osu": {
+  "validate_ok": true
+ },
+ "max-russo-osu": {
+  "validate_ok": true
+ },
+ "jennifer-sinnott-osu": {
+  "validate_ok": true
+ },
+ "christine-bishop-osu": {
+  "validate_ok": true
+ },
+ "michael-hilty-osu": {
+  "validate_ok": true
+ },
+ "seth-adarkwah-yiadom-osu": {
+  "validate_ok": true
+ },
+ "justice-ameyi-osu": {
+  "validate_ok": true
+ },
+ "andrew-gothard-osu": {
+  "validate_ok": true
+ },
+ "torey-hilbert-osu": {
+  "validate_ok": true
+ },
+ "rebecca-hoyd-osu": {
+  "validate_ok": true
+ },
+ "christopher-chen-penn-state": {
+  "validate_ok": true
+ },
+ "xiaogang-hu-penn-state": {
+  "validate_ok": true
+ },
+ "dezhe-jin-penn-state": {
+  "validate_ok": true
+ },
+ "xiaojun-lian-penn-state": {
+  "validate_ok": true
+ },
+ "xiao-liu-penn-state": {
+  "validate_ok": true
+ },
+ "tao-zhou-penn-state": {
+  "validate_ok": true
+ },
+ "taewon-kim-penn-state": {
+  "validate_ok": true
+ },
+ "yongsoo-kim-penn-state": {
+  "validate_ok": true
+ },
+ "laura-cabrera-penn-state": {
+  "validate_ok": true
+ },
+ "corina-drapaca-penn-state": {
+  "validate_ok": true
+ },
+ "aida-ebrahimi-penn-state": {
+  "validate_ok": true
+ },
+ "vladimir-itskov-penn-state": {
+  "validate_ok": true
+ },
+ "nina-lauharatanahirun-penn-state": {
+  "validate_ok": true
+ },
+ "jean-michel-mongeau-penn-state": {
+  "validate_ok": true
+ },
+ "anirban-paul-penn-state": {
+  "validate_ok": true
+ },
+ "justin-silverman-penn-state": {
+  "validate_ok": true
+ },
+ "grayson-sipe-penn-state": {
+  "validate_ok": true
+ },
+ "majid-kazemian-purdue": {
+  "validate_ok": true
+ },
+ "yaqing-chen-rutgers": {
+  "validate_ok": true
+ },
+ "ruobin-gong-rutgers": {
+  "validate_ok": true
+ },
+ "qiyang-han-rutgers": {
+  "validate_ok": true
+ },
+ "yuetian-luo-rutgers": {
+  "validate_ok": true
+ },
+ "guanyang-wang-rutgers": {
+  "validate_ok": true
+ },
+ "min-xu-rutgers": {
+  "validate_ok": true
+ },
+ "linjun-zhang-rutgers": {
+  "validate_ok": false
+ },
+ "pierre-bellec-rutgers": {
+  "validate_ok": true
+ },
+ "matteo-bonvini-rutgers": {
+  "validate_ok": true
+ },
+ "koulik-khamaru-rutgers": {
+  "validate_ok": true
+ },
+ "gemma-moran-rutgers": {
+  "validate_ok": true
+ },
+ "nicole-pashley-rutgers": {
+  "validate_ok": true
+ },
+ "jonathan-h-chen-stanford": {
+  "validate_ok": true
+ },
+ "zihuai-he-stanford": {
+  "validate_ok": true
+ },
+ "manisha-desai-stanford": {
+  "validate_ok": true
+ },
+ "dennis-wall-stanford": {
+  "validate_ok": true
+ },
+ "ehsan-adeli-stanford": {
+  "validate_ok": true
+ },
+ "nima-aghaeepour-stanford": {
+  "validate_ok": true
+ },
+ "russ-b-altman-stanford": {
+  "validate_ok": true
+ },
+ "euan-a-ashley-stanford": {
+  "validate_ok": true
+ },
+ "roxana-daneshjou-stanford": {
+  "validate_ok": true
+ },
+ "jason-fries-stanford": {
+  "validate_ok": true
+ },
+ "olivier-gevaert-stanford": {
+  "validate_ok": true
+ },
+ "john-p-a-ioannidis-stanford": {
+  "validate_ok": true
+ },
+ "aaron-newman-stanford": {
+  "validate_ok": true
+ },
+ "manuel-rivas-stanford": {
+  "validate_ok": true
+ },
+ "leila-wehbe-stanford": {
+  "validate_ok": true
+ },
+ "dorothy-hung-uc-berkeley": {
+  "validate_ok": true
+ },
+ "laura-kwong-uc-berkeley": {
+  "validate_ok": true
+ },
+ "xiudi-li-uc-berkeley": {
+  "validate_ok": true
+ },
+ "jason-su-uc-berkeley": {
+  "validate_ok": true
+ },
+ "jingshen-wang-uc-berkeley": {
+  "validate_ok": true
+ },
+ "lesley-park-uc-berkeley": {
+  "validate_ok": true
+ },
+ "joshua-apte-uc-berkeley": {
+  "validate_ok": true
+ },
+ "deborah-barnett-uc-berkeley": {
+  "validate_ok": true
+ },
+ "patrick-bradshaw-uc-berkeley": {
+  "validate_ok": true
+ },
+ "amanda-brewster-uc-berkeley": {
+  "validate_ok": true
+ },
+ "timothy-brown-uc-berkeley": {
+  "validate_ok": true
+ },
+ "misbath-daouda-uc-berkeley": {
+  "validate_ok": true
+ },
+ "sean-darling-hammond-uc-berkeley": {
+  "validate_ok": true
+ },
+ "tierra-smiley-evans-uc-berkeley": {
+  "validate_ok": true
+ },
+ "mark-fleming-uc-berkeley": {
+  "validate_ok": true
+ },
+ "darlene-francis-uc-berkeley": {
+  "validate_ok": true
+ },
+ "brent-fulton-uc-berkeley": {
+  "validate_ok": true
+ },
+ "david-j-x-gonz-lez-uc-berkeley": {
+  "validate_ok": true
+ },
+ "jenny-guadamuz-uc-berkeley": {
+  "validate_ok": true
+ },
+ "anke-hemmerling-uc-berkeley": {
+  "validate_ok": true
+ },
+ "jana-hirsch-uc-berkeley": {
+  "validate_ok": true
+ },
+ "carly-hyland-uc-berkeley": {
+  "validate_ok": true
+ },
+ "ann-keller-uc-berkeley": {
+  "validate_ok": true
+ },
+ "brian-keum-uc-berkeley": {
+  "validate_ok": true
+ },
+ "joseph-lewnard-uc-berkeley": {
+  "validate_ok": true
+ },
+ "isabel-madzorera-uc-berkeley": {
+  "validate_ok": true
+ },
+ "cassondra-marshall-uc-berkeley": {
+  "validate_ok": true
+ },
+ "leonardo-martinez-uc-berkeley": {
+  "validate_ok": true
+ },
+ "cliona-mchale-uc-berkeley": {
+  "validate_ok": true
+ },
+ "joel-moskowitz-uc-berkeley": {
+  "validate_ok": true
+ },
+ "elizabeth-noth-uc-berkeley": {
+  "validate_ok": true
+ },
+ "ziad-obermeyer-uc-berkeley": {
+  "validate_ok": true
+ },
+ "bambarendage-pinithi-upekka-perera-uc-berkeley": {
+  "validate_ok": true
+ },
+ "sally-picciotto-uc-berkeley": {
+  "validate_ok": true
+ },
+ "ajay-pillarisetti-uc-berkeley": {
+  "validate_ok": true
+ },
+ "corinne-riddell-uc-berkeley": {
+  "validate_ok": true
+ },
+ "filipa-rijo-ferreira-uc-berkeley": {
+  "validate_ok": true
+ },
+ "lia-scott-uc-berkeley": {
+  "validate_ok": true
+ },
+ "valerie-shapiro-uc-berkeley": {
+  "validate_ok": true
+ },
+ "mienah-sharif-uc-berkeley": {
+  "validate_ok": true
+ },
+ "seth-shonkoff-uc-berkeley": {
+  "validate_ok": true
+ },
+ "becky-staiger-uc-berkeley": {
+  "validate_ok": true
+ },
+ "charles-whittaker-uc-berkeley": {
+  "validate_ok": true
+ },
+ "ashley-wolf-uc-berkeley": {
+  "validate_ok": true
+ },
+ "dan-zeltzer-uc-berkeley": {
+  "validate_ok": true
+ },
+ "mariam-aly-uc-berkeley": {
+  "validate_ok": true
+ },
+ "gopala-anumanchipalli-uc-berkeley": {
+  "validate_ok": true
+ },
+ "scott-baraban-uc-berkeley": {
+  "validate_ok": true
+ },
+ "helen-bateup-uc-berkeley": {
+  "validate_ok": true
+ },
+ "annaliese-beery-uc-berkeley": {
+  "validate_ok": true
+ },
+ "sonia-bishop-uc-berkeley": {
+  "validate_ok": true
+ },
+ "kristofer-bouchard-uc-berkeley": {
+  "validate_ok": true
+ },
+ "stephen-brohawn-uc-berkeley": {
+  "validate_ok": true
+ },
+ "anne-collins-uc-berkeley": {
+  "validate_ok": true
+ },
+ "anca-dragan-uc-berkeley": {
+  "validate_ok": true
+ },
+ "song-mei-uc-berkeley": {
+  "validate_ok": true
+ },
+ "kevin-yang-uc-berkeley": {
+  "validate_ok": true
+ },
+ "amanda-coston-uc-berkeley": {
+  "validate_ok": true
+ },
+ "avi-feller-uc-berkeley": {
+  "validate_ok": true
+ },
+ "will-fithian-uc-berkeley": {
+  "validate_ok": true
+ },
+ "ryan-giordano-uc-berkeley": {
+  "validate_ok": true
+ },
+ "liberty-hamilton-uc-berkeley": {
+  "validate_ok": true
+ },
+ "fernando-p-rez-uc-berkeley": {
+  "validate_ok": true
+ },
+ "nikita-zhivotovskiy-uc-berkeley": {
+  "validate_ok": true
+ },
+ "shuai-chen-uc-davis": {
+  "validate_ok": true
+ },
+ "sili-fan-uc-davis": {
+  "validate_ok": true
+ },
+ "yunyi-ren-uc-davis": {
+  "validate_ok": true
+ },
+ "naomi-saito-uc-davis": {
+  "validate_ok": true
+ },
+ "hilary-aralis-uc-davis": {
+  "validate_ok": true
+ },
+ "douglas-ezra-morrison-uc-davis": {
+  "validate_ok": true
+ },
+ "susan-alber-uc-davis": {
+  "validate_ok": true
+ },
+ "jeffrey-fine-uc-davis": {
+  "validate_ok": true
+ },
+ "matt-ponzini-uc-davis": {
+  "validate_ok": true
+ },
+ "sandra-taylor-uc-davis": {
+  "validate_ok": true
+ },
+ "david-lyon-uci": {
+  "validate_ok": true
+ },
+ "hong-wei-dong-ucla": {
+  "validate_ok": true
+ },
+ "weizhe-hong-ucla": {
+  "validate_ok": true
+ },
+ "jonathan-kao-ucla": {
+  "validate_ok": true
+ },
+ "xia-yang-ucla": {
+  "validate_ok": true
+ },
+ "jie-j-zheng-ucla": {
+  "validate_ok": true
+ },
+ "z-hong-zhou-ucla": {
+  "validate_ok": true
+ },
+ "mayank-mehta-ucla": {
+  "validate_ok": true
+ },
+ "avishek-adhikari-ucla": {
+  "validate_ok": true
+ },
+ "ahmet-arac-ucla": {
+  "validate_ok": true
+ },
+ "ausaf-bari-ucla": {
+  "validate_ok": true
+ },
+ "james-bisley-ucla": {
+  "validate_ok": true
+ },
+ "hugh-tad-blair-ucla": {
+  "validate_ok": true
+ },
+ "dean-buonomano-ucla": {
+  "validate_ok": true
+ },
+ "anne-churchland-ucla": {
+  "validate_ok": true
+ },
+ "austin-coley-ucla": {
+  "validate_ok": true
+ },
+ "kathryn-cross-ucla": {
+  "validate_ok": true
+ },
+ "mario-dipoppa-ucla": {
+  "validate_ok": true
+ },
+ "greg-field-ucla": {
+  "validate_ok": true
+ },
+ "peyman-golshani-ucla": {
+  "validate_ok": true
+ },
+ "alex-huk-ucla": {
+  "validate_ok": true
+ },
+ "duncan-leitch-ucla": {
+  "validate_ok": true
+ },
+ "sotiris-masmanidis-ucla": {
+  "validate_ok": true
+ },
+ "martin-monti-ucla": {
+  "validate_ok": true
+ },
+ "gina-poe-ucla": {
+  "validate_ok": true
+ },
+ "carlos-portera-cailliau-ucla": {
+  "validate_ok": true
+ },
+ "dario-ringach-ucla": {
+  "validate_ok": true
+ },
+ "ranmal-samarasinghe-ucla": {
+  "validate_ok": true
+ },
+ "joshua-trachtenberg-ucla": {
+  "validate_ok": true
+ },
+ "marcus-triplett-ucla": {
+  "validate_ok": true
+ },
+ "andrew-wikenheiser-ucla": {
+  "validate_ok": true
+ },
+ "scott-wilke-ucla": {
+  "validate_ok": true
+ },
+ "joel-zylberberg-ucla": {
+  "validate_ok": true
+ },
+ "xinlian-zhang-ucsd": {
+  "validate_ok": true
+ },
+ "jingjing-zou-ucsd": {
+  "validate_ok": true
+ },
+ "saurabh-asthana-ucsf": {
+  "validate_ok": true
+ },
+ "aaron-hechmer-ucsf": {
+  "validate_ok": true
+ },
+ "chen-chen-uchicago": {
+  "validate_ok": true
+ },
+ "mengjie-chen-uchicago": {
+  "validate_ok": true
+ },
+ "david-chen-david-chen-uchicago": {
+  "validate_ok": true
+ },
+ "yu-wei-chen-uchicago": {
+  "validate_ok": true
+ },
+ "jian-ding-uchicago": {
+  "validate_ok": true
+ },
+ "jiangchuan-du-jiangchuan-du-uchicago": {
+  "validate_ok": true
+ },
+ "yijun-fan-yijun-fan-uchicago": {
+  "validate_ok": true
+ },
+ "kevin-huang-kevin-huang-uchicago": {
+  "validate_ok": true
+ },
+ "cong-uchicago": {
+  "validate_ok": true
+ },
+ "zhimei-ren-uchicago": {
+  "validate_ok": true
+ },
+ "yun-feng-tu-yun-feng-tu-uchicago": {
+  "validate_ok": true
+ },
+ "ruochen-wang-ruochen-wang-uchicago": {
+  "validate_ok": true
+ },
+ "jingshu-wang-uchicago": {
+  "validate_ok": true
+ },
+ "zixuan-wu-zixuan-wu-uchicago": {
+  "validate_ok": true
+ },
+ "hong-won-jang-uchicago": {
+  "validate_ok": true
+ },
+ "joonhyuk-jung-joonhyuk-jung-uchicago": {
+  "validate_ok": true
+ },
+ "samprit-chakraborty-samprit-chakraborty-uchicago": {
+  "validate_ok": true
+ },
+ "nisha-chandramoorthy-uchicago": {
+  "validate_ok": true
+ },
+ "mateo-d-az-uchicago": {
+  "validate_ok": false
+ },
+ "claire-donnat-uchicago": {
+  "validate_ok": true
+ },
+ "mathias-drton-uchicago": {
+  "validate_ok": true
+ },
+ "nina-hinrichs-uchicago": {
+  "validate_ok": true
+ },
+ "john-hood-john-hood-uchicago": {
+  "validate_ok": true
+ },
+ "jeremy-hoskins-uchicago": {
+  "validate_ok": true
+ },
+ "yuehaw-khoo-uchicago": {
+  "validate_ok": true
+ },
+ "alisa-knizel-uchicago": {
+  "validate_ok": true
+ },
+ "frederic-koehler-uchicago": {
+  "validate_ok": true
+ },
+ "risi-kondor-uchicago": {
+  "validate_ok": true
+ },
+ "cristina-martin-linares-uchicago": {
+  "validate_ok": true
+ },
+ "molly-offer-westort-uchicago": {
+  "validate_ok": true
+ },
+ "daniel-sanz-alonso-uchicago": {
+  "validate_ok": true
+ },
+ "aaron-schein-uchicago": {
+  "validate_ok": true
+ },
+ "victor-veitch-uchicago": {
+  "validate_ok": true
+ },
+ "xiaoyi-lu-uf": {
+  "validate_ok": true
+ },
+ "jie-xu-uf": {
+  "validate_ok": true
+ },
+ "hamed-dalir-uf": {
+  "validate_ok": true
+ },
+ "joel-harley-uf": {
+  "validate_ok": true
+ },
+ "elham-heidari-uf": {
+  "validate_ok": true
+ },
+ "adam-khalifa-uf": {
+  "validate_ok": true
+ },
+ "sanjeev-koppal-uf": {
+  "validate_ok": true
+ },
+ "nima-maghari-uf": {
+  "validate_ok": true
+ },
+ "nicholas-napoli-uf": {
+  "validate_ok": true
+ },
+ "erin-patrick-uf": {
+  "validate_ok": true
+ },
+ "ann-ramirez-uf": {
+  "validate_ok": true
+ },
+ "ivan-ruchkin-uf": {
+  "validate_ok": true
+ },
+ "damon-woodard-uf": {
+  "validate_ok": true
+ },
+ "hee-sun-han-uiuc": {
+  "validate_ok": true
+ },
+ "hong-jin-uiuc": {
+  "validate_ok": true
+ },
+ "joe-qiao-uiuc": {
+  "validate_ok": true
+ },
+ "mei-shen-uiuc": {
+  "validate_ok": true
+ },
+ "yan-zhang-uiuc": {
+  "validate_ok": true
+ },
+ "sangjin-kim-uiuc": {
+  "validate_ok": true
+ },
+ "mikael-p-backlund-uiuc": {
+  "validate_ok": true
+ },
+ "anastasia-constantina-manesis-uiuc": {
+  "validate_ok": true
+ },
+ "susan-a-martinis-uiuc": {
+  "validate_ok": true
+ },
+ "lisa-olshansky-uiuc": {
+  "validate_ok": true
+ },
+ "taras-v-pogorelov-uiuc": {
+  "validate_ok": true
+ },
+ "beth-marie-stadtmueller-uiuc": {
+  "validate_ok": true
+ },
+ "hyun-youk-uiuc": {
+  "validate_ok": true
+ },
+ "chixiang-chen-umd": {
+  "validate_ok": true
+ },
+ "zhaoyong-feng-umd": {
+  "validate_ok": true
+ },
+ "kai-sun-umd": {
+  "validate_ok": true
+ },
+ "kousick-biswas-umd": {
+  "validate_ok": true
+ },
+ "anup-mahurkar-umd": {
+  "validate_ok": true
+ },
+ "roumen-m-vesselinov-umd": {
+  "validate_ok": true
+ },
+ "can-firtina-umd": {
+  "validate_ok": true
+ },
+ "megan-fritz-umd": {
+  "validate_ok": true
+ },
+ "brantley-hall-umd": {
+  "validate_ok": true
+ },
+ "erin-molloy-umd": {
+  "validate_ok": true
+ },
+ "po-yen-chen-umd": {
+  "validate_ok": true
+ },
+ "sanghamitra-dutta-umd": {
+  "validate_ok": true
+ },
+ "daniel-butts-umd": {
+  "validate_ok": true
+ },
+ "jiang-chunxiao-umd": {
+  "validate_ok": true
+ },
+ "kevin-daniels-umd": {
+  "validate_ok": true
+ },
+ "serkan-dusmez-umd": {
+  "validate_ok": true
+ },
+ "avik-dutt-umd": {
+  "validate_ok": true
+ },
+ "mohammed-ali-eslami-umd": {
+  "validate_ok": true
+ },
+ "nariman-farvardin-umd": {
+  "validate_ok": true
+ },
+ "yun-yang-umd": {
+  "validate_ok": false
+ },
+ "yang-chen-umich": {
+  "validate_ok": true
+ },
+ "xinyi-deng-umich": {
+  "validate_ok": true
+ },
+ "richard-guo-umich": {
+  "validate_ok": true
+ },
+ "jie-he-umich": {
+  "validate_ok": true
+ },
+ "yuqing-lu-umich": {
+  "validate_ok": true
+ },
+ "yuekai-sun-umich": {
+  "validate_ok": true
+ },
+ "kean-ming-tan-umich": {
+  "validate_ok": true
+ },
+ "lai-wei-umich": {
+  "validate_ok": true
+ },
+ "hui-yu-umich": {
+  "validate_ok": true
+ },
+ "auden-bahr-umich": {
+  "validate_ok": true
+ },
+ "katherine-brumberg-umich": {
+  "validate_ok": true
+ },
+ "ahmed-elhossiny-umich": {
+  "validate_ok": true
+ },
+ "colin-fogarty-umich": {
+  "validate_ok": true
+ },
+ "natalie-jusko-umich": {
+  "validate_ok": true
+ },
+ "yoonseo-mok-umich": {
+  "validate_ok": true
+ },
+ "snigdha-panigrahi-umich": {
+  "validate_ok": true
+ },
+ "jeffrey-regier-umich": {
+  "validate_ok": true
+ },
+ "jacob-sellers-umich": {
+  "validate_ok": true
+ },
+ "jonathan-terhorst-umich": {
+  "validate_ok": true
+ },
+ "ningyuan-cao-notre-dame": {
+  "validate_ok": true
+ },
+ "mengxue-hou-notre-dame": {
+  "validate_ok": true
+ },
+ "dafei-jin-notre-dame": {
+  "validate_ok": true
+ },
+ "lei-liu-notre-dame": {
+  "validate_ok": true
+ },
+ "kai-ni-notre-dame": {
+  "validate_ok": true
+ },
+ "zhi-zheng-notre-dame": {
+  "validate_ok": true
+ },
+ "toros-arikan-notre-dame": {
+  "validate_ok": true
+ },
+ "jonathan-chisum-notre-dame": {
+  "validate_ok": true
+ },
+ "nishanth-gadiyar-notre-dame": {
+  "validate_ok": true
+ },
+ "douglas-hall-notre-dame": {
+  "validate_ok": true
+ },
+ "scott-howard-notre-dame": {
+  "validate_ok": true
+ },
+ "alexei-orlov-notre-dame": {
+  "validate_ok": true
+ },
+ "yasemin-ozkan-aydin-notre-dame": {
+  "validate_ok": true
+ },
+ "thomas-pratt-notre-dame": {
+  "validate_ok": true
+ },
+ "minghong-ma-upenn": {
+  "validate_ok": true
+ },
+ "long-ding-upenn": {
+  "validate_ok": true
+ },
+ "arghya-mukherjee-upenn": {
+  "validate_ok": true
+ },
+ "joshua-gold-upenn": {
+  "validate_ok": true
+ },
+ "maria-geffen-upenn": {
+  "validate_ok": true
+ },
+ "danielle-bassett-upenn": {
+  "validate_ok": true
+ },
+ "david-brainard-upenn": {
+  "validate_ok": true
+ },
+ "joshua-goldwyn-upenn": {
+  "validate_ok": true
+ },
+ "eleni-katifori-upenn": {
+  "validate_ok": true
+ },
+ "philip-nelson-upenn": {
+  "validate_ok": true
+ },
+ "michael-arcaro-upenn": {
+  "validate_ok": true
+ },
+ "vikas-bhandawat-upenn": {
+  "validate_ok": true
+ },
+ "marc-fuccillo-upenn": {
+  "validate_ok": true
+ },
+ "ethan-goldberg-upenn": {
+  "validate_ok": true
+ },
+ "tim-machado-upenn": {
+  "validate_ok": true
+ },
+ "alexander-proekt-upenn": {
+  "validate_ok": true
+ },
+ "flavia-vitale-upenn": {
+  "validate_ok": true
+ },
+ "franz-weber-upenn": {
+  "validate_ok": true
+ },
+ "geoffrey-aguirre-upenn": {
+  "validate_ok": true
+ },
+ "michael-beauchamp-upenn": {
+  "validate_ok": true
+ },
+ "johannes-burge-upenn": {
+  "validate_ok": true
+ },
+ "russell-epstein-upenn": {
+  "validate_ok": true
+ },
+ "jay-gottfried-upenn": {
+  "validate_ok": true
+ },
+ "casey-halpern-upenn": {
+  "validate_ok": true
+ },
+ "joseph-kable-upenn": {
+  "validate_ok": true
+ },
+ "michael-kahana-upenn": {
+  "validate_ok": true
+ },
+ "joel-mainland-upenn": {
+  "validate_ok": true
+ },
+ "bijan-pesaran-upenn": {
+  "validate_ok": true
+ },
+ "nicole-rust-upenn": {
+  "validate_ok": true
+ },
+ "anna-schapiro-upenn": {
+  "validate_ok": true
+ },
+ "sky-cao-upenn": {
+  "validate_ok": true
+ },
+ "ying-jin-upenn": {
+  "validate_ok": true
+ },
+ "zhimei-ren-upenn": {
+  "validate_ok": true
+ },
+ "yuting-wei-upenn": {
+  "validate_ok": true
+ },
+ "anderson-ye-zhang-upenn": {
+  "validate_ok": true
+ },
+ "bingxin-zhao-upenn": {
+  "validate_ok": true
+ },
+ "enric-boix-upenn": {
+  "validate_ok": true
+ },
+ "damek-davis-upenn": {
+  "validate_ok": true
+ },
+ "edgar-dobriban-upenn": {
+  "validate_ok": false
+ },
+ "eugene-katsevich-upenn": {
+  "validate_ok": true
+ },
+ "hamsa-bastani-upenn": {
+  "validate_ok": true
+ },
+ "maria-cuellar-upenn": {
+  "validate_ok": true
+ },
+ "michael-harhay-upenn": {
+  "validate_ok": true
+ },
+ "hamed-hassani-upenn": {
+  "validate_ok": true
+ },
+ "dean-knox-upenn": {
+  "validate_ok": true
+ },
+ "linxi-liu-pitt": {
+  "validate_ok": true
+ },
+ "yeon-jung-seo-pitt": {
+  "validate_ok": true
+ },
+ "kristina-paris-pitt": {
+  "validate_ok": true
+ },
+ "bryan-nelson-pitt": {
+  "validate_ok": true
+ },
+ "ruth-mihalyi-pitt": {
+  "validate_ok": true
+ },
+ "lucas-mentch-pitt": {
+  "validate_ok": true
+ },
+ "chris-mckennan-pitt": {
+  "validate_ok": true
+ },
+ "alina-r-kuvelkar-pitt": {
+  "validate_ok": true
+ },
+ "jordan-awan-pitt": {
+  "validate_ok": true
+ },
+ "lillian-chin-ut-austin": {
+  "validate_ok": true
+ },
+ "linran-fan-ut-austin": {
+  "validate_ok": true
+ },
+ "cheng-guo-ut-austin": {
+  "validate_ok": true
+ },
+ "yaoyao-jia-ut-austin": {
+  "validate_ok": true
+ },
+ "sensen-li-ut-austin": {
+  "validate_ok": true
+ },
+ "ruochen-lu-ut-austin": {
+  "validate_ok": true
+ },
+ "august-shi-ut-austin": {
+  "validate_ok": true
+ },
+ "atlas-wang-ut-austin": {
+  "validate_ok": true
+ },
+ "jun-wang-ut-austin": {
+  "validate_ok": true
+ },
+ "guandao-yang-ut-austin": {
+  "validate_ok": true
+ },
+ "amy-zhang-ut-austin": {
+  "validate_ok": true
+ },
+ "neil-zhao-ut-austin": {
+  "validate_ok": true
+ },
+ "mingyuan-zhou-ut-austin": {
+  "validate_ok": true
+ },
+ "hao-zhu-ut-austin": {
+  "validate_ok": true
+ },
+ "yicheng-zhu-ut-austin": {
+  "validate_ok": true
+ },
+ "kun-woo-cho-ut-austin": {
+  "validate_ok": true
+ },
+ "hyeji-kim-ut-austin": {
+  "validate_ok": true
+ },
+ "shwetadwip-chowdhury-ut-austin": {
+  "validate_ok": true
+ },
+ "poulami-das-ut-austin": {
+  "validate_ok": true
+ },
+ "jaydeep-kulkarni-ut-austin": {
+  "validate_ok": true
+ },
+ "mohit-tiwari-ut-austin": {
+  "validate_ok": true
+ },
+ "jonathan-baker-ut-austin": {
+  "validate_ok": true
+ },
+ "david-burghoff-ut-austin": {
+  "validate_ok": true
+ },
+ "sandeep-chinchali-ut-austin": {
+  "validate_ok": true
+ },
+ "alfonso-cuevas-ut-austin": {
+  "validate_ok": true
+ },
+ "michael-cullinan-ut-austin": {
+  "validate_ok": true
+ },
+ "william-fagelson-ut-austin": {
+  "validate_ok": true
+ },
+ "emanuele-galiffi-ut-austin": {
+  "validate_ok": true
+ },
+ "neal-hall-ut-austin": {
+  "validate_ok": true
+ },
+ "alex-j-hanson-ut-austin": {
+  "validate_ok": true
+ },
+ "jean-anne-incorvia-ut-austin": {
+  "validate_ok": true
+ },
+ "brian-johnson-ut-austin": {
+  "validate_ok": true
+ },
+ "javad-mohammadi-ut-austin": {
+  "validate_ok": true
+ },
+ "aryan-mokhtari-ut-austin": {
+  "validate_ok": false
+ },
+ "pedro-santacruz-ut-austin": {
+  "validate_ok": true
+ },
+ "samantha-santacruz-ut-austin": {
+  "validate_ok": true
+ },
+ "shyam-shankar-ut-austin": {
+  "validate_ok": true
+ },
+ "david-soloveichik-ut-austin": {
+  "validate_ok": true
+ },
+ "jon-tamir-ut-austin": {
+  "validate_ok": true
+ },
+ "edison-thomaz-ut-austin": {
+  "validate_ok": false
+ },
+ "james-tunnell-ut-austin": {
+  "validate_ok": true
+ },
+ "neeraja-yadwadkar-ut-austin": {
+  "validate_ok": true
+ },
+ "vansh-bansal-ut-austin": {
+  "validate_ok": true
+ },
+ "entejar-alam-ut-austin": {
+  "validate_ok": true
+ },
+ "lulu-jiang-uva": {
+  "validate_ok": true
+ },
+ "chia-yi-kuan-uva": {
+  "validate_ok": true
+ },
+ "xin-li-uva": {
+  "validate_ok": true
+ },
+ "xiaorong-liu-uva": {
+  "validate_ok": true
+ },
+ "xiaowei-lu-uva": {
+  "validate_ok": true
+ },
+ "tsai-yi-lu-uva": {
+  "validate_ok": true
+ },
+ "hui-zong-uva": {
+  "validate_ok": true
+ },
+ "jung-bum-shin-uva": {
+  "validate_ok": true
+ },
+ "manoj-patel-uva": {
+  "validate_ok": true
+ },
+ "stephen-abbott-uva": {
+  "validate_ok": true
+ },
+ "david-acunzo-uva": {
+  "validate_ok": true
+ },
+ "sameer-bajikar-uva": {
+  "validate_ok": true
+ },
+ "doug-bayliss-uva": {
+  "validate_ok": true
+ },
+ "mark-beenhakker-uva": {
+  "validate_ok": true
+ },
+ "ashley-brandebura-uva": {
+  "validate_ok": true
+ },
+ "jennifer-burnsed-uva": {
+  "validate_ok": true
+ },
+ "john-campbell-uva": {
+  "validate_ok": true
+ },
+ "anna-cliffe-uva": {
+  "validate_ok": true
+ },
+ "barry-condron-uva": {
+  "validate_ok": true
+ },
+ "elise-cope-uva": {
+  "validate_ok": true
+ },
+ "jaeda-coutinho-budd-uva": {
+  "validate_ok": false
+ },
+ "noelle-dwyer-uva": {
+  "validate_ok": true
+ },
+ "alev-erisir-uva": {
+  "validate_ok": true
+ },
+ "tanya-evans-uva": {
+  "validate_ok": true
+ },
+ "sarah-ewald-uva": {
+  "validate_ok": true
+ },
+ "ukpong-bassey-eyo-uva": {
+  "validate_ok": true
+ },
+ "heather-ferris-uva": {
+  "validate_ok": true
+ },
+ "sarah-flowers-uva": {
+  "validate_ok": true
+ },
+ "alban-gaultier-uva": {
+  "validate_ok": true
+ },
+ "ali-deniz-guler-uva": {
+  "validate_ok": true
+ },
+ "tajie-h-harris-uva": {
+  "validate_ok": true
+ },
+ "harris-kaplan-uva": {
+  "validate_ok": true
+ },
+ "jaideep-kapur-uva": {
+  "validate_ok": true
+ },
+ "kyle-lampe-uva": {
+  "validate_ok": true
+ },
+ "john-lukens-uva": {
+  "validate_ok": true
+ },
+ "nadia-lunardi-uva": {
+  "validate_ok": true
+ },
+ "wendy-lynch-uva": {
+  "validate_ok": true
+ },
+ "mani-mahadevan-uva": {
+  "validate_ok": true
+ },
+ "daniel-meliza-uva": {
+  "validate_ok": true
+ },
+ "francesco-michelassi-uva": {
+  "validate_ok": true
+ },
+ "edward-nieh-uva": {
+  "validate_ok": true
+ },
+ "william-a-petri-uva": {
+  "validate_ok": true
+ },
+ "richard-price-uva": {
+  "validate_ok": true
+ },
+ "elizabeth-proctor-uva": {
+  "validate_ok": true
+ },
+ "meghan-puglia-uva": {
+  "validate_ok": true
+ },
+ "adema-ribic-uva": {
+  "validate_ok": true
+ },
+ "james-ross-uva": {
+  "validate_ok": true
+ },
+ "natasha-sheybani-uva": {
+  "validate_ok": true
+ },
+ "sarah-siegrist-uva": {
+  "validate_ok": true
+ },
+ "harald-sontheimer-uva": {
+  "validate_ok": true
+ },
+ "brady-spencer-uva": {
+  "validate_ok": true
+ },
+ "james-radford-stone-uva": {
+  "validate_ok": true
+ },
+ "petr-tvrdik-uva": {
+  "validate_ok": true
+ },
+ "john-van-horn-uva": {
+  "validate_ok": true
+ },
+ "b-jill-venton-uva": {
+  "validate_ok": true
+ },
+ "marina-weiler-uva": {
+  "validate_ok": true
+ },
+ "ian-wenker-uva": {
+  "validate_ok": true
+ },
+ "joshua-d-wythe-uva": {
+  "validate_ok": true
+ },
+ "scott-o-zeitlin-uva": {
+  "validate_ok": true
+ },
+ "eli-zunder-uva": {
+  "validate_ok": true
+ },
+ "zhiyi-zuo-uva": {
+  "validate_ok": true
+ },
+ "kevin-lin-uw": {
+  "validate_ok": true
+ },
+ "guanghao-qi-uw": {
+  "validate_ok": true
+ },
+ "ting-ye-uw": {
+  "validate_ok": true
+ },
+ "lyndia-brumback-uw": {
+  "validate_ok": true
+ },
+ "peter-gilbert-uw": {
+  "validate_ok": true
+ },
+ "michael-leblanc-uw": {
+  "validate_ok": true
+ },
+ "eardi-lila-uw": {
+  "validate_ok": true
+ },
+ "robyn-mcclelland-uw": {
+  "validate_ok": true
+ },
+ "barbra-richardson-uw": {
+  "validate_ok": true
+ },
+ "amy-willis-uw": {
+  "validate_ok": true
+ },
+ "ting-cao-uw": {
+  "validate_ok": true
+ },
+ "mo-chen-uw": {
+  "validate_ok": true
+ },
+ "simon-du-uw": {
+  "validate_ok": true
+ },
+ "andy-feng-uw": {
+  "validate_ok": true
+ },
+ "kai-mei-fu-uw": {
+  "validate_ok": true
+ },
+ "michael-bailey-uw": {
+  "validate_ok": true
+ },
+ "david-beck-uw": {
+  "validate_ok": true
+ },
+ "david-bergsman-uw": {
+  "validate_ok": true
+ },
+ "andre-berndt-uw": {
+  "validate_ok": true
+ },
+ "gilbert-bernstein-uw": {
+  "validate_ok": true
+ },
+ "byron-boots-uw": {
+  "validate_ok": true
+ },
+ "patrick-m-boyle-uw": {
+  "validate_ok": true
+ },
+ "samuel-burden-uw": {
+  "validate_ok": true
+ },
+ "david-butman-uw": {
+  "validate_ok": true
+ },
+ "katya-cherukumilli-uw": {
+  "validate_ok": true
+ },
+ "john-choe-uw": {
+  "validate_ok": true
+ },
+ "andrea-coladangelo-uw": {
+  "validate_ok": true
+ },
+ "nicoleta-cristea-uw": {
+  "validate_ok": true
+ },
+ "sayamindu-dasgupta-uw": {
+  "validate_ok": true
+ },
+ "jennifer-davis-uw": {
+  "validate_ok": true
+ },
+ "morteza-derakhti-uw": {
+  "validate_ok": true
+ },
+ "charles-dorn-uw": {
+  "validate_ok": true
+ },
+ "serena-eley-uw": {
+  "validate_ok": true
+ },
+ "abdolmajid-erfani-uw": {
+  "validate_ok": true
+ },
+ "leah-findlater-uw": {
+  "validate_ok": true
+ },
+ "stefania-fresca-uw": {
+  "validate_ok": true
+ },
+ "erica-fuhrmeister-uw": {
+  "validate_ok": true
+ },
+ "sawyer-fuller-uw": {
+  "validate_ok": true
+ },
+ "yin-li-uw-madison": {
+  "validate_ok": true
+ },
+ "zhou-zhang-uw-madison": {
+  "validate_ok": true
+ },
+ "mohit-gupta-uw-madison": {
+  "validate_ok": true
+ },
+ "diego-hernando-uw-madison": {
+  "validate_ok": true
+ },
+ "elebeoba-may-uw-madison": {
+  "validate_ok": true
+ },
+ "swamit-tannu-uw-madison": {
+  "validate_ok": true
+ },
+ "sheau-chiann-chen-vanderbilt": {
+  "validate_ok": true
+ },
+ "liping-du-vanderbilt": {
+  "validate_ok": true
+ },
+ "chih-yuan-hsu-vanderbilt": {
+  "validate_ok": true
+ },
+ "li-ching-huang-vanderbilt": {
+  "validate_ok": true
+ },
+ "shi-huang-vanderbilt": {
+  "validate_ok": true
+ },
+ "hakmook-kang-vanderbilt": {
+  "validate_ok": true
+ },
+ "dandan-liu-vanderbilt": {
+  "validate_ok": true
+ },
+ "jinyuan-liu-vanderbilt": {
+  "validate_ok": true
+ },
+ "ran-tao-vanderbilt": {
+  "validate_ok": true
+ },
+ "jing-wang-vanderbilt": {
+  "validate_ok": true
+ },
+ "yu-wang-vanderbilt": {
+  "validate_ok": true
+ },
+ "jing-yang-vanderbilt": {
+  "validate_ok": true
+ },
+ "panpan-zhang-vanderbilt": {
+  "validate_ok": true
+ },
+ "shilin-zhao-vanderbilt": {
+  "validate_ok": true
+ },
+ "yuwei-zhu-vanderbilt": {
+  "validate_ok": true
+ },
+ "gustavo-amorim-vanderbilt": {
+  "validate_ok": true
+ },
+ "amir-asiaee-vanderbilt": {
+  "validate_ok": true
+ },
+ "bryan-blette-vanderbilt": {
+  "validate_ok": true
+ },
+ "svetlana-eden-vanderbilt": {
+  "validate_ok": true
+ },
+ "shawn-garbett-vanderbilt": {
+  "validate_ok": true
+ },
+ "tebeb-gebretsadik-vanderbilt": {
+  "validate_ok": true
+ },
+ "amber-j-hackstadt-vanderbilt": {
+  "validate_ok": true
+ },
+ "hui-nian-vanderbilt": {
+  "validate_ok": true
+ },
+ "lauren-r-samuels-vanderbilt": {
+  "validate_ok": true
+ },
+ "matt-shotwell-vanderbilt": {
+  "validate_ok": true
+ },
+ "andrew-spieker-vanderbilt": {
+  "validate_ok": true
+ },
+ "mackenzie-stuenkel-vanderbilt": {
+  "validate_ok": true
+ },
+ "simon-vandekar-vanderbilt": {
+  "validate_ok": true
+ },
+ "peter-jin-washu": {
+  "validate_ok": false
+ },
+ "yang-eric-li-washu": {
+  "validate_ok": true
+ },
+ "tristan-qingyun-li-washu": {
+  "validate_ok": true
+ },
+ "michael-p-meers-washu": {
+  "validate_ok": true
+ },
+ "meers-lab-washu": {
+  "validate_ok": true
+ },
+ "schedl-lab-washu": {
+  "validate_ok": true
+ },
+ "dutcher-lab-washu": {
+  "validate_ok": true
+ },
+ "aki-ushiki-washu": {
+  "validate_ok": true
+ },
+ "jin-lab-washu": {
+  "validate_ok": true
+ },
+ "michael-white-washu": {
+  "validate_ok": true
+ },
+ "white-lab-washu": {
+  "validate_ok": true
+ },
+ "zhao-lab-washu": {
+  "validate_ok": true
+ },
+ "gabor-egervari-washu": {
+  "validate_ok": true
+ },
+ "egervari-lab-washu": {
+  "validate_ok": true
+ },
+ "tychele-turner-washu": {
+  "validate_ok": true
+ },
+ "turner-lab-washu": {
+  "validate_ok": true
+ },
+ "nancy-saccone-washu": {
+  "validate_ok": true
+ },
+ "saccone-lab-washu": {
+  "validate_ok": true
+ },
+ "mitra-lab-washu": {
+  "validate_ok": true
+ },
+ "frederick-arnold-washu": {
+  "validate_ok": true
+ },
+ "arnold-lab-washu": {
+  "validate_ok": true
+ },
+ "milbrandt-lab-washu": {
+  "validate_ok": true
+ },
+ "zhiyuan-cao-yale": {
+  "validate_ok": true
+ },
+ "zhaochen-ye-yale": {
+  "validate_ok": true
+ },
+ "haley-xiaohe-zhang-yale": {
+  "validate_ok": true
+ },
+ "kevin-jin-yale": {
+  "validate_ok": true
+ },
+ "yuntian-liu-yale": {
+  "validate_ok": true
+ },
+ "leona-wang-yale": {
+  "validate_ok": true
+ },
+ "ao-huang-yale": {
+  "validate_ok": true
+ },
+ "tianyu-liu-yale": {
+  "validate_ok": true
+ },
+ "chang-lu-yale": {
+  "validate_ok": true
+ },
+ "weihao-zhao-yale": {
+  "validate_ok": true
+ },
+ "suchen-zheng-yale": {
+  "validate_ok": true
+ },
+ "mingze-dong-yale": {
+  "validate_ok": true
+ },
+ "yunzhe-jiang-yale": {
+  "validate_ok": true
+ },
+ "ruiqi-li-yale": {
+  "validate_ok": true
+ },
+ "xin-xin-yale": {
+  "validate_ok": true
+ },
+ "dingyao-zhang-yale": {
+  "validate_ok": true
+ },
+ "noah-yann-lee-yale": {
+  "validate_ok": true
+ },
+ "kriti-agrawal-yale": {
+  "validate_ok": true
+ },
+ "inna-cohen-yale": {
+  "validate_ok": true
+ },
+ "trevor-brokowski-yale": {
+  "validate_ok": true
+ },
+ "christine-dien-yale": {
+  "validate_ok": true
+ },
+ "ardavan-abiri-yale": {
+  "validate_ok": true
+ },
+ "jenel-fraij-armstrong-yale": {
+  "validate_ok": true
+ },
+ "jessica-kasamoto-yale": {
+  "validate_ok": true
+ },
+ "philip-adejumo-yale": {
+  "validate_ok": true
+ },
+ "cole-jensen-yale": {
+  "validate_ok": true
+ },
+ "yaroslav-markov-yale": {
+  "validate_ok": true
+ },
+ "edel-aron-yale": {
+  "validate_ok": true
+ },
+ "zhou-fan-yale": {
+  "validate_ok": true
+ },
+ "shuangping-li-yale": {
+  "validate_ok": true
+ },
+ "lu-lu-yale": {
+  "validate_ok": true
+ },
+ "zhuoran-yang-yale": {
+  "validate_ok": true
+ },
+ "sinho-chewi-yale": {
+  "validate_ok": true
+ },
+ "roy-lederman-yale": {
+  "validate_ok": true
+ },
+ "theo-mckenzie-yale": {
+  "validate_ok": true
+ },
+ "theodor-misiakiewicz-yale": {
+  "validate_ok": true
+ },
+ "omar-montasser-yale": {
+  "validate_ok": true
+ },
+ "johan-ugander-yale": {
   "validate_ok": true
  }
 }

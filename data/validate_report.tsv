@@ -1,8 +1,57 @@
+jerry-chen-bu	WARN email domain chen-lab.org not in official domains ['bu.edu'] (personal address from own homepage?)
+stephan-anderson-bu	WARN email domain bmc.org not in official domains ['bu.edu'] (personal address from own homepage?)
+elizabeth-chen-brown	keywords too generic: ['machine learning']
+daniel-ritchid-brown	keywords too generic: ['machine learning', 'artificial intelligence']
+mehdi-saligane-brown	keywords too generic: ['artificial intelligence']
+georgia-gkioxari-caltech	WARN email domain gmail.com not in official domains ['caltech.edu'] (personal address from own homepage?)
+brad-mahon-cmu	WARN email domain rcbi.rochester.edu not in official domains ['cmu.edu'] (personal address from own homepage?)
+xuhai-orson-xu-columbia	keywords too generic: ['artificial intelligence']
+lena-mamykina-columbia	email om2196@cumc.columbia.edu: UNI letters 'om' do not match initials 'lm' (directory error?)
+jayadev-acharya-cornell	keywords too generic: ['machine learning']
+sarah-dean-cornell	keywords too generic: ['machine learning']
+peter-mcmahon-cornell	keywords too generic: ['machine learning']
+holden-lee-jhu	email hlee283@jhu.edu: UNI letters 'hlee' do not match initials 'hl' (directory error?)
 chen-feng-nyu	email not found in saved snapshot of its source page
+sai-qian-zhang-nyu	email not found in saved snapshot of its source page
 allen-liu-nyu	WARN email domain gmail.com not in official domains ['nyu.edu', 'nyulangone.org'] (personal address from own homepage?)
-lerrel-pinto-nyu	WARN email domain meta.com not in official domains ['nyu.edu', 'nyulangone.org'] (personal address from own homepage?)
-kangwook-lee-uw-madison	WARN email domain krafton.com not in official domains ['wisc.edu'] (personal address from own homepage?)
-tengyang-xie-uw-madison	WARN email domain microsoft.com not in official domains ['wisc.edu'] (personal address from own homepage?)
+allen-liu-nyu	email cliu568@gmail.com: UNI letters 'cliu' do not match initials 'al' (directory error?)
 yiqiao-zhong-uw-madison	email not found in saved snapshot of its source page
 dimitris-s-papailiopoulos-uw-madison	WARN email domain papail.io not in official domains ['wisc.edu'] (personal address from own homepage?)
 pedro-morgado-uw-madison	WARN email domain gmail.com not in official domains ['wisc.edu'] (personal address from own homepage?)
+flavio-p-calmon-harvard	keywords too generic: ['machine learning', 'artificial intelligence']
+erin-chen-mit	WARN email domain yeclab.org not in official domains ['mit.edu'] (personal address from own homepage?)
+paul-c-blainey-mit	WARN email domain broadinstitute.org not in official domains ['mit.edu'] (personal address from own homepage?)
+danny-yuxing-huang-nyu	email not found in saved snapshot of its source page
+yi-fang-nyu	email not found in saved snapshot of its source page
+pei-liu-nyu	email not found in saved snapshot of its source page
+yang-xu-nyu	email not found in saved snapshot of its source page
+chinmay-hegde-nyu	email not found in saved snapshot of its source page
+aziza-almanakly-nyu	email not found in saved snapshot of its source page
+jona-ball-nyu	email not found in saved snapshot of its source page
+anna-choromanska-nyu	email not found in saved snapshot of its source page
+david-fouhey-nyu	email not found in saved snapshot of its source page
+hamed-rahmani-nyu	email not found in saved snapshot of its source page
+austin-rovinski-nyu	email not found in saved snapshot of its source page
+marwa-chafii-nyu	email not found in saved snapshot of its source page
+andras-gyorgy-nyu	email not found in saved snapshot of its source page
+sohmyung-ha-nyu	email not found in saved snapshot of its source page
+michail-maniatakos-nyu	email not found in saved snapshot of its source page
+azhar-zam-nyu	email not found in saved snapshot of its source page
+fraida-fund-nyu	email not found in saved snapshot of its source page
+thanasis-korakis-nyu	email not found in saved snapshot of its source page
+prashanth-krishnamurthy-nyu	email not found in saved snapshot of its source page
+jaime-llorca-nyu	email not found in saved snapshot of its source page
+romain-corcolle-nyu	email not found in saved snapshot of its source page
+linjun-zhang-rutgers	keywords too generic: ['Machine Learning']
+mateo-d-az-uchicago	keywords too generic: ['machine learning']
+yun-yang-umd	keywords too generic: ['machine learning']
+edgar-dobriban-upenn	keywords too generic: ['machine learning']
+aryan-mokhtari-ut-austin	keywords too generic: ['machine learning', 'artificial intelligence']
+edison-thomaz-ut-austin	keywords too generic: ['Machine Learning']
+jaeda-coutinho-budd-uva	email not found in saved snapshot of its source page
+gilbert-bernstein-uw	WARN email domain gilbertbernstein.com not in official domains ['uw.edu', 'washington.edu'] (personal address from own homepage?)
+peter-jin-washu	email jin810@wustl.edu: UNI letters 'jin' do not match initials 'pj' (directory error?)
+david-f-fouhey-nyu	possible duplicate person david fouhey @ new york university: ['david-f-fouhey-nyu', 'david-fouhey-nyu']
+arman-oganisian-brown	email arman_oganisian@brown.edu shared by ['arman-oganisian-brown', 'arman-organisian-brown']
+xiaomu-wei-cornell	email aprilwei@cornell.edu shared by ['xiaomu-wei-cornell', 'ling-wei-kong-cornell']
+david-f-fouhey-nyu	email david.fouhey@nyu.edu shared by ['david-f-fouhey-nyu', 'david-fouhey-nyu']
