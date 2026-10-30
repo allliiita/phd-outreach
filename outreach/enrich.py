@@ -296,6 +296,8 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
             d["problems"].append(res["warning"])
         if res.get("problem"):
             d["problems"].append(res["problem"])
+    if not with_papers:
+        d["problems"].append("papers: deferred")   # refilled later, only for people the judge finds relevant
     if d["email"] and d["email"].pop("match") < 2:
         d["problems"].append("email matched by initials only or non-university address: human check")
     return d
@@ -303,10 +305,16 @@ def enrich(row: dict, with_papers: bool = True) -> dict:
 
 def refill_papers(path: Path) -> None:
     from .papers import find_papers
+    from .judge import JOUT, slug_id
     rows = [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+    judged = {j["id"]: j for f in JOUT.glob(f"{path.stem}_*.jsonl") for j in
+              (json.loads(l) for l in f.read_text().splitlines() if l.strip())}
     n = 0
     for d in rows:
-        if d["papers"] or not any(p.startswith("papers:") and "rate limited" in p for p in d["problems"]):
+        j = judged.get(slug_id(d["name"], d["institution"]))
+        if judged and (j is None or j.get("relevance") == "no"):
+            continue   # papers only for people the judge kept: saves the OpenAlex daily budget
+        if d["papers"] or not any(p.startswith("papers:") and ("rate limited" in p or "budget" in p or "deferred" in p) for p in d["problems"]):
             continue
         pages = [u for u in (d.get("profile_url"), d.get("homepage"), d.get("pubs")) if u and _cached(u)]
         res = find_papers(d["name"], d["institution"], " ".join(visible_text(get(u)) for u in pages))

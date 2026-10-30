@@ -34,6 +34,13 @@ def _key() -> str | None:
     return k or (f.read_text().strip() if f.exists() else None)
 
 
+class BudgetExhausted(RuntimeError):
+    pass
+
+
+_oa_off = [False]
+
+
 def _get(url: str, params: dict, gap: float = 1.1) -> dict:
     for attempt in range(8):
         with _lock:
@@ -43,6 +50,8 @@ def _get(url: str, params: dict, gap: float = 1.1) -> dict:
             r = requests.get(url, params=params, timeout=30,
                              headers={"x-api-key": os.environ["S2_API_KEY"]} if "semanticscholar" in url and os.environ.get("S2_API_KEY") else {})
             _last[0] = time.time()
+        if r.status_code == 429 and "openalex" in url and int(r.headers.get("retry-after", 0)) > 600:
+            raise BudgetExhausted(r.headers.get("retry-after"))   # daily key budget: no point retrying today
         if r.status_code in (429, 503):
             time.sleep(min(60, 2 ** attempt * 2))
             continue
@@ -129,7 +138,7 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
     since = date.today().year - 3
     words = set(_norm(page).split())
     per = []
-    for a in found[:5]:   # OpenAlex splits people too; score each same-name candidate separately
+    for a in found[:3]:   # OpenAlex splits people too; score each same-name candidate separately
         aid = a["id"].split("/")[-1]
         res = _get(f"{OA}/works", {"filter": f"author.id:{aid},institutions.id:{iid},from_publication_date:{since}-01-01,type:article|preprint",
                                    "select": "title,publication_year,doi,primary_location,cited_by_count,authorships,id",
@@ -162,12 +171,16 @@ def _openalex(name: str, institution: str, page: str, key: str) -> dict:
 
 def find_papers(name: str, institution: str, page_text: str = "", scholar: str | None = None) -> dict:
     try:
-        key = _key()
+        key = None if _oa_off[0] else _key()
         if key:
-            res = _openalex(name, institution, page_text, key)
+            try:
+                res = _openalex(name, institution, page_text, key)
+            except BudgetExhausted:
+                _oa_off[0] = True   # rest of this run uses Semantic Scholar
+                res = {"problem": "papers: OpenAlex daily budget exhausted"}
             if not res.get("problem"):
                 return res
-            s2 = _s2(name, institution, page_text)   # new arrivals: works may not carry the institution yet
+            s2 = _s2(name, institution, page_text)   # new arrivals / no budget: S2, confirmed by page text
             return s2 if not s2.get("problem") else res
         return _s2(name, institution, page_text)
     except Exception as e:  # noqa: BLE001
