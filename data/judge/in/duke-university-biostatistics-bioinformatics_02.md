@@ -1,4 +1,4 @@
-<!-- batch duke-university-biostatistics-bioinformatics_02: 13 people -->
+<!-- batch duke-university-biostatistics-bioinformatics_02: 12 people -->
 
 ## alejandro-ochoa-duke
 Alejandro Ochoa | Assistant Professor of Biostatistics & Bioinformatics | Biostatistics & Bioinformatics
@@ -47,6 +47,3 @@ research:  nav items Sign up for our newsletter Find A Collaborator Utility Cont
 ## joao-ricardo-nickenig-vissoci-duke
 Joao Ricardo Nickenig Vissoci | Associate Professor in Emergency Medicine | Biostatistics & Bioinformatics
 research: le sub nav items Sign up for our newsletter Find A Collaborator Utility Contact Us Employment Give Home 310 Trent Dr, Durham, NC 27710 Joao Ricardo Nickenig Vissoci Positions Associate Professor in Emergency Medicine Assistant Professor in Biostatistics & Bioinformatics Associate Research Professor of Global Health Associate Professor in Neurosurgery 310 Trent Dr, Durham, NC 27710 jnv4@duke.edu Main navigation About People Education and Training Divisions Research Events News Find A Collaborator Footer About Us Contact Us Education Research Duke in Durham Terms and Conditions Accessibility Giv
-
-## jennifer-jo-wernegreen-duke
-Jennifer Jo Wernegreen | Associate Professor of Environmental and Evolutionary Genomics in the Division of Environmental Natural Sciences | Biostatistics & Bioinformatics

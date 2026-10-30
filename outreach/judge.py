@@ -42,7 +42,8 @@ def _load(p: Path) -> list[dict]:
 def prep(path: Path) -> None:
     from .surnames import PRIORITY
     rows = [d for d in _load(path) if d["position_class"] not in SKIP_CLASSES | {"full"}
-            and not (d["position_class"] == "associate" and (d.get("first_paper") or 9999) < OLD_ASSOC)]
+            and not (d["position_class"] == "associate" and (d.get("first_paper") or 9999) < OLD_ASSOC)
+            and (d["research"]["text"] or d["papers"])]   # nothing to judge on: skip (re-enrich later instead)
     rows.sort(key=lambda d: PRIORITY[d.get("heritage")])
     JIN.mkdir(parents=True, exist_ok=True)
     for old in JIN.glob(f"{path.stem}_*.md"):

@@ -1,0 +1,44 @@
+<!-- batch brown-university-electrical-and-computer-engineering_00: 6 people -->
+
+## peipei-zhou-brown
+Peipei Zhou | Assistant Professor of Engineering | Electrical and Computer Engineering | FILTER: ML-relevant faculty only
+research: Research Interests electronic design automation, computer architecture, reconfigurable computing, heterogeneous computing, compiler, modeling and optimization for computing system, chiplet-based system, sustainable computing, precision medicine, artificial intelligence
+papers: [0] Physical Intelligence on the Edge: A Vision for the Decade Ahead (2026) || [1] YAVIN: A Unified Architecture for Secure Edge Processing in Memory (2026) || [2] AgileOS: A GPU Operating System Layer for Protected CUDA Services (2026) || [3] To Overlay or to Customize? Revisiting Architectural Choices in Heterogeneous Systems (2026) || [4] DORA: Dataflow-Instruction Orchestration Architecture for DNN Acceleration (2026) || [5] μ-ORCA: Optimizing Acceleration for Microsecond-Scale Deep Neural Network Inference on ACAP (2026)
+recruit[0]: Peipei Zhou | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Engineerin
+recruit[1]: tion Reservations Accessibility Careers at Brown Give To Brown Social Navigation Facebook Flickr Instagram LinkedIn X/Twitter YouTube © Brown University School of Engineering Brown University For You Prospective Students Current Students Faculty & St
+recruit[2]: tion and Application: Three A’s that keep Zhou at the top of her class | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & St
+
+## indie-garwood-brown
+Indie Garwood | Assistant Professor | Electrical and Computer Engineering | FILTER: ML-relevant faculty only
+research: Research Interests neuroengineering, neuromodulation, psychiatry, deep brain stimulation, multiregional neurophysiology, signal processing
+recruit[0]: Indie Garwood | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Engineer
+recruit[1]: tion Reservations Accessibility Careers at Brown Give To Brown Social Navigation Facebook Flickr Instagram LinkedIn X/Twitter YouTube © Brown University School of Engineering Brown University For You Prospective Students Current Students Faculty & St
+
+## leo-kozachkov-brown
+Leo Kozachkov | Howard E. Zimmerman Assistant Professor of Engineering and Brain Science | Electrical and Computer Engineering | FILTER: ML-relevant faculty only
+research: At his core, Kozachkov sees himself as a researcher who uses the mathematics of engineering to do interesting and useful things. Using and developing the tools from engineering to understand the brain and machine learning/AI made this a natural bridge for his first tenure-track faculty position. At Brown, he easily lists a handful of current faculty names he is looking forward to working with: David Borton, Nora Ayanian, Arto Nurmikko, the Braingate team, Pedro Felzenszwalb, and Miguel Bessa. “Miguel focuses on materials, but he’s very interested in machine learning and AI, and we’ve been in c
+papers: [0] Traversing the solution space of neural networks with Hessian Null Space Continuation (2026) || [1] A metric for comparing complex systems by their dynamics (2026) || [2] NRGPT: An Energy-based Alternative for GPT (2025) || [3] InputDSA : Demixing then comparing recurrent and externally driven dynamics. (2025)
+recruit[0]: Leo Kozachkov | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Engineer
+recruit[1]: tion Reservations Accessibility Careers at Brown Give To Brown Social Navigation Facebook Flickr Instagram LinkedIn X/Twitter YouTube © Brown University School of Engineering Brown University For You Prospective Students Current Students Faculty & St
+recruit[2]: Minding the math | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Engin
+
+## domenico-pacifici-brown
+Domenico Pacifici | Associate Professor of Engineering and Associate Professor of Physics | Electrical and Computer Engineering | FILTER: ML-relevant faculty only
+research: Research Interests silicon-based microphotonics, nanophotonics, plasmonics, nanoengineered materials and devices for information, sensing and energy-harvesting applications
+recruit[0]: Domenico Pacifici | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Engi
+recruit[1]: tion Reservations Accessibility Careers at Brown Give To Brown Social Navigation Facebook Flickr Instagram LinkedIn X/Twitter YouTube © Brown University School of Engineering Brown University For You Prospective Students Current Students Faculty & St
+
+## jacob-rosenstein-brown
+Jacob Rosenstein | Associate Professor of Engineering | Electrical and Computer Engineering | FILTER: ML-relevant faculty only
+research: Research Interests mixed-signal electronics, instrumentation, electrophysiology, nanopore sensors, embedded systems, VLSI, sensor interfaces, microfluidics
+papers: [0] Label-free all-electrical tracking of individual and collective cell migration on a megapixel CMOS capacitance sensor (2026) || [1] Fibrin/MoS 2 -nanosheet conductive hydrogels with programmed time scales and pathways for bioresorption (2025) || [2] Non-optical, label-free electrical capacitance imaging of microorganisms (2025) || [3] Electrical Capacitance Tomography of Cell Cultures on a CMOS Microelectrode Array (2024) || [4] A 5,000,000 Frame/Sec Burst-Mode Cryogenic Thermal Imager With On-Chip Frame Memory (2024) || [5] Repurposing Waste Chemicals for Sustainable and Durable Molecular Data Storage (2024)
+recruit[0]: Jacob Rosenstein | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Engin
+recruit[1]: tion Reservations Accessibility Careers at Brown Give To Brown Social Navigation Facebook Flickr Instagram LinkedIn X/Twitter YouTube © Brown University School of Engineering Brown University For You Prospective Students Current Students Faculty & St
+
+## mehdi-saligane-brown
+Mehdi Saligane | Assistant Professor | Electrical and Computer Engineering | FILTER: ML-relevant faculty only
+research: Research Interests Integrated Circuits, VLSI, artificial intelligence, hardware architecture, Software Hardware co-design, Biosensors, Cryogenic Circuits, mixed-signal electronics, design automation and test of integrated circuits, low-power design, energy-efficient computing systems, computer architecture
+papers: [0] CircuitsDNA: Discovering Unconventional Multi-Accuracy Arithmetic Circuits via Evolutionary Synthesis (2026) || [1] SILK: Closing the Time-of-Check-to-Time-of-Use Gap in RoT-Protected AI Systems (2026) || [2] Heterogeneity-Aware Microscaling for Efficient Low-Bit LLM Inference (2026) || [3] LLMForge: Multi-Backend Hardware-Aware Neural Architecture Search with Infinite-Head Attention for Edge Language Models (2026) || [4] Mitigating Classical Resource Costs in Quantum Error Correction via Generalized qLDPC Predecoding (2026) || [5] Frieren: A Fault-Tolerant Reconfigurable Energy-Efficient Computing Architecture With Enhanced Reliability in Harsh Environments (2026)
+recruit[0]: Mehdi Saligane | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & Staff Alumni Parents & Families Give Now School of Enginee
+recruit[1]: tion Reservations Accessibility Careers at Brown Give To Brown Social Navigation Facebook Flickr Instagram LinkedIn X/Twitter YouTube © Brown University School of Engineering Brown University For You Prospective Students Current Students Faculty & St
+recruit[2]: Young Faculty Award to develop a new kind of DNA-based computer memory | Engineering | Brown University Skip to Main Content Brown University Secondary Navigation Navigation About Events News For You Prospective Students Current Students Faculty & St
