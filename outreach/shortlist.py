@@ -48,10 +48,22 @@ def rows(skip_cs: bool = False) -> list[dict]:
     return out
 
 
+def targets() -> dict:
+    import yaml
+    f = ROOT / "config" / "targets.yaml"
+    return yaml.safe_load(f.read_text()) if f.exists() else {}
+
+
 def main() -> None:
     import sys
-    skip_cs = "--no-cs" in sys.argv
+    t = targets() if "--targets" in sys.argv else {}
+    skip_cs = "--no-cs" in sys.argv or t.get("include_cs") is False
     ps = rows(skip_cs)
+    if t:
+        ex = set(t.get("exclude_schools", []))
+        ps = [p for p in ps if p["institution"] not in ex and (not t.get("heritage") or p.get("heritage") == t["heritage"])]
+        focus = set(t.get("focus_schools", []))
+        ps.sort(key=lambda p: (p["institution"] not in focus, p["email"] is None, -(p.get("fit") or 0)))
     cols = ["Heritage", "Fit", "Matches project", "Name", "Institution", "Department", "Position", "Email",
             "Recruiting", "Keywords", "Paper 1", "Homepage", "Tier", "Check"]
     table = [[p.get("heritage") or "", p.get("fit") or "", ",".join(p.get("fit_projects") or []), p["name"], p["institution"],
@@ -61,7 +73,7 @@ def main() -> None:
               p.get("homepage") or "", p["tier"], "human check" if "human check" in p.get("notes", "") else ""] for p in ps]
     out = DATA / "export"
     out.mkdir(parents=True, exist_ok=True)
-    name = "shortlist_noncs" if skip_cs else "shortlist"
+    name = "batch1" if t else ("shortlist_noncs" if skip_cs else "shortlist")
     with (out / f"{name}.csv").open("w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
         w.writerow(cols)

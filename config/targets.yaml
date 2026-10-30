@@ -1,0 +1,35 @@
+# Applicant's choices (2026-10-30). shortlist.py reads this file; edit here, not in code.
+heritage: chinese            # only Chinese-surname faculty in this round
+target_size: [200, 300]
+focus_schools:               # scouted department by department this round
+  - Boston University
+  - Icahn School of Medicine at Mount Sinai
+  - University of Pennsylvania
+  - University of Virginia
+  - Duke University
+  - University of South Florida
+  - Washington University in St. Louis
+  - University of Michigan
+  - University of California San Francisco
+  - Cold Spring Harbor Laboratory
+exclude_schools:             # "too competitive", "too remote", "not for me"
+  - Harvard University
+  - Massachusetts Institute of Technology
+  - Yale University
+  - Brown University
+  - Carnegie Mellon University
+  - University of Texas at Austin
+  - Texas A&M University
+  - Baylor College of Medicine
+  - Rice University
+  - University at Buffalo
+  - University of Illinois Urbana-Champaign
+  - University of Wisconsin-Madison
+  - University of Minnesota
+  - Ohio State University
+  - Purdue University
+  - University of Notre Dame
+  - Pennsylvania State University
+exclude_units: [biostatistics in schools of public health]
+institutes_this_round: [Cold Spring Harbor Laboratory]   # other institutes postponed
+include_cs: false

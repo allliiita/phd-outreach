@@ -61,6 +61,7 @@ institutions:
   - {name: Vanderbilt University, aliases: [Vanderbilt], email_domains: [vanderbilt.edu, vumc.org]}
   - {name: Washington University in St. Louis, aliases: [WashU], email_domains: [wustl.edu]}
   - {name: Boston University, aliases: [BU], email_domains: [bu.edu]}
+  - {name: University of South Florida, aliases: [USF], email_domains: [usf.edu]}
   - {name: Northeastern University, aliases: [Northeastern], email_domains: [northeastern.edu]}
   - {name: University of Pittsburgh, aliases: [Pitt], email_domains: [pitt.edu]}
   - {name: University of Utah, aliases: [Utah], email_domains: [utah.edu]}

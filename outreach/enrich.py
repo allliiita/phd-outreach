@@ -373,6 +373,7 @@ def main() -> None:
     ap.add_argument("--no-papers", action="store_true")
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--all-ranks", action="store_true", help="also full / emeritus / teaching faculty")
+    ap.add_argument("--heritage", help="only rows with this surname tag (e.g. chinese), filtered before any fetch")
     ap.add_argument("--refill-papers", action="store_true", help="retry papers only, for dossiers that failed (rate limits)")
     a = ap.parse_args()
     if a.refill_papers:
@@ -393,6 +394,8 @@ def main() -> None:
     from .surnames import PRIORITY, asian_tag
     for r in rows:
         r["heritage"] = r.get("heritage") or asian_tag(r["name"])
+    if a.heritage:
+        rows = [r for r in rows if r["heritage"] == a.heritage]
     rows.sort(key=lambda r: PRIORITY[r["heritage"]])
     with ThreadPoolExecutor(a.workers) as ex:
         out = list(ex.map(lambda r: enrich(r, not a.no_papers), rows))
