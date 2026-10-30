@@ -65,7 +65,8 @@ def check(people_raw: list[dict], snapshots: Path | None = None) -> list[tuple[s
                 problems.append((p.id, f"WARN email domain {dom} not in official domains {domains} (personal address from own homepage?)"))
             # the email must be on the actual saved page, not just in the agent's quote
             snap = snapshot_text(snapshots, str(p.email.evidence.source_url))
-            if snap is not None and not email_appears_in(p.email.value, snap):
+            if snap is not None and not email_appears_in(p.email.value, snap) and \
+                    not email_appears_in(p.email.value, __import__("outreach.fetch", fromlist=["visible_text"]).visible_text(snap)):
                 problems.append((p.id, "email not found in saved snapshot of its source page"))
             # name plausibility: a name token (>=3 chars) or the initials in the local part, or the name in the quote.
             # (lesson from pilot: davidch@, joel@, isabella@ are real first-name addresses)

@@ -423,13 +423,13 @@
   "validate_ok": true
  },
  "chen-feng-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "mengye-ren-nyu": {
   "validate_ok": true
  },
  "sai-qian-zhang-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "allen-liu-nyu": {
   "validate_ok": false
@@ -702,7 +702,7 @@
   "validate_ok": true
  },
  "yiqiao-zhong-uw-madison": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "grigorios-chrysos-uw-madison": {
   "validate_ok": true
@@ -2307,7 +2307,7 @@
   "validate_ok": true
  },
  "danny-yuxing-huang-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "yuzhang-lin-nyu": {
   "validate_ok": true
@@ -2316,64 +2316,64 @@
   "validate_ok": true
  },
  "yi-fang-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "pei-liu-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "yang-xu-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "chinmay-hegde-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "aziza-almanakly-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "jona-ball-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "anna-choromanska-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "david-fouhey-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "hamed-rahmani-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "austin-rovinski-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "marwa-chafii-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "andras-gyorgy-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "sohmyung-ha-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "michail-maniatakos-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "azhar-zam-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "fraida-fund-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "thanasis-korakis-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "prashanth-krishnamurthy-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "jaime-llorca-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "romain-corcolle-nyu": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "kiren-nayak-nyu": {
   "validate_ok": true
@@ -3681,7 +3681,7 @@
   "validate_ok": true
  },
  "jaeda-coutinho-budd-uva": {
-  "validate_ok": false
+  "validate_ok": true
  },
  "noelle-dwyer-uva": {
   "validate_ok": true
@@ -4197,6 +4197,1155 @@
   "validate_ok": true
  },
  "johan-ugander-yale": {
+  "validate_ok": true
+ },
+ "lei-hou-bu": {
+  "validate_ok": true
+ },
+ "nelson-lau-bu": {
+  "validate_ok": true
+ },
+ "chao-zhang-bu": {
+  "validate_ok": true
+ },
+ "liangliang-hao-bu": {
+  "validate_ok": true
+ },
+ "lei-tian-bu": {
+  "validate_ok": true
+ },
+ "wanzheng-hu-bu": {
+  "validate_ok": true
+ },
+ "yigong-hu-bu": {
+  "validate_ok": true
+ },
+ "dan-li-bu": {
+  "validate_ok": true
+ },
+ "xi-ling-bu": {
+  "validate_ok": true
+ },
+ "tianyu-wang-bu": {
+  "validate_ok": true
+ },
+ "chuanfei-dong-bu": {
+  "validate_ok": true
+ },
+ "boqing-gong-bu": {
+  "validate_ok": true
+ },
+ "sophie-hao-bu": {
+  "validate_ok": true
+ },
+ "dk-lee-bu": {
+  "validate_ok": true
+ },
+ "chris-chao-su-bu": {
+  "validate_ok": true
+ },
+ "dan-ma-duke": {
+  "validate_ok": false
+ },
+ "pengfei-song-duke": {
+  "validate_ok": true
+ },
+ "huanghe-yang-duke": {
+  "validate_ok": true
+ },
+ "junjie-yao-duke": {
+  "validate_ok": true
+ },
+ "yi-zhang-duke": {
+  "validate_ok": true
+ },
+ "ching-zhu-duke": {
+  "validate_ok": true
+ },
+ "hwanhee-hong-duke": {
+  "validate_ok": true
+ },
+ "zhicheng-ji-duke": {
+  "validate_ok": true
+ },
+ "zhiguo-li-duke": {
+  "validate_ok": true
+ },
+ "lin-lin-duke": {
+  "validate_ok": true
+ },
+ "pixu-shi-duke": {
+  "validate_ok": true
+ },
+ "yuan-wu-duke": {
+  "validate_ok": true
+ },
+ "jichun-xie-duke": {
+  "validate_ok": true
+ },
+ "siqi-liu-duke": {
+  "validate_ok": true
+ },
+ "danfeng-zhang-duke": {
+  "validate_ok": true
+ },
+ "danyang-zhuo-duke": {
+  "validate_ok": true
+ },
+ "tingjun-chen-duke": {
+  "validate_ok": true
+ },
+ "neil-gong-duke": {
+  "validate_ok": true
+ },
+ "huanqian-loh-duke": {
+  "validate_ok": true
+ },
+ "yu-tong-duke": {
+  "validate_ok": true
+ },
+ "nuo-li-duke": {
+  "validate_ok": true
+ },
+ "rebecca-chung-hui-yang-duke": {
+  "validate_ok": true
+ },
+ "ji-xin-cheng-bu": {
+  "validate_ok": true
+ },
+ "qiang-cui-bu": {
+  "validate_ok": true
+ },
+ "xin-zhang-bu": {
+  "validate_ok": true
+ },
+ "xue-han-bu": {
+  "validate_ok": true
+ },
+ "chen-yang-bu": {
+  "validate_ok": true
+ },
+ "yanhang-zhang-bu": {
+  "validate_ok": true
+ },
+ "weiming-xia-bu": {
+  "validate_ok": true
+ },
+ "haiyan-gong-bu": {
+  "validate_ok": true
+ },
+ "sam-ling-bu": {
+  "validate_ok": true
+ },
+ "jerry-l-chen-bu": {
+  "validate_ok": true
+ },
+ "yanbing-wang-bu": {
+  "validate_ok": true
+ },
+ "jinying-chen-bu": {
+  "validate_ok": true
+ },
+ "kevin-j-chang-bu": {
+  "validate_ok": true
+ },
+ "christopher-s-chen-bu": {
+  "validate_ok": true
+ },
+ "ching-ti-liu-bu": {
+  "validate_ok": true
+ },
+ "huiping-zhang-bu": {
+  "validate_ok": true
+ },
+ "jinke-han-bu": {
+  "validate_ok": true
+ },
+ "nan-liu-duke": {
+  "validate_ok": true
+ },
+ "chunhao-wang-duke": {
+  "validate_ok": true
+ },
+ "weitao-yang-duke": {
+  "validate_ok": false
+ },
+ "lingchong-you-duke": {
+  "validate_ok": true
+ },
+ "brian-c-lau-duke": {
+  "validate_ok": true
+ },
+ "tony-jun-huang-duke": {
+  "validate_ok": true
+ },
+ "sheng-luo-duke": {
+  "validate_ok": true
+ },
+ "jason-yongsheng-chan-duke": {
+  "validate_ok": true
+ },
+ "ching-yu-cheng-duke": {
+  "validate_ok": true
+ },
+ "deshan-yang-duke": {
+  "validate_ok": true
+ },
+ "haiyang-wu-duke": {
+  "validate_ok": true
+ },
+ "qiuwen-wu-duke": {
+  "validate_ok": true
+ },
+ "fang-fang-yin-duke": {
+  "validate_ok": true
+ },
+ "li-ma-duke": {
+  "validate_ok": true
+ },
+ "liang-zhong-duke": {
+  "validate_ok": true
+ },
+ "andrew-wang-duke": {
+  "validate_ok": true
+ },
+ "yang-sheng-duke": {
+  "validate_ok": true
+ },
+ "anthony-n-kuo-duke": {
+  "validate_ok": true
+ },
+ "carolyn-s-p-lam-duke": {
+  "validate_ok": true
+ },
+ "ru-rong-ji-duke": {
+  "validate_ok": true
+ },
+ "miaofang-chi-duke": {
+  "validate_ok": true
+ },
+ "zhi-dong-zhou-duke": {
+  "validate_ok": true
+ },
+ "z-josh-huang-duke": {
+  "validate_ok": true
+ },
+ "shein-chung-chow-duke": {
+  "validate_ok": true
+ },
+ "yiyang-gong-duke": {
+  "validate_ok": true
+ },
+ "anru-r-zhang-duke": {
+  "validate_ok": true
+ },
+ "brian-lau-duke": {
+  "validate_ok": true
+ },
+ "rui-liu-duke": {
+  "validate_ok": true
+ },
+ "xi-chen-duke": {
+  "validate_ok": true
+ },
+ "henry-h-yin-duke": {
+  "validate_ok": true
+ },
+ "wei-yang-duke": {
+  "validate_ok": true
+ },
+ "chui-ming-gemmy-cheung-duke": {
+  "validate_ok": true
+ },
+ "fan-yuan-duke": {
+  "validate_ok": true
+ },
+ "walter-t-lee-duke": {
+  "validate_ok": true
+ },
+ "yur-ren-kuo-duke": {
+  "validate_ok": true
+ },
+ "hao-fan-duke": {
+  "validate_ok": true
+ },
+ "damon-wong-duke": {
+  "validate_ok": true
+ },
+ "jennifer-y-zhang-duke": {
+  "validate_ok": true
+ },
+ "gavin-siew-wei-tan-duke": {
+  "validate_ok": true
+ },
+ "ling-ling-chan-duke": {
+  "validate_ok": true
+ },
+ "yu-chi-liu-duke": {
+  "validate_ok": true
+ },
+ "chi-long-ho-duke": {
+  "validate_ok": true
+ },
+ "james-weiquan-li-duke": {
+  "validate_ok": true
+ },
+ "shihuan-kuang-duke": {
+  "validate_ok": true
+ },
+ "adam-claridge-chang-duke": {
+  "validate_ok": true
+ },
+ "jin-liu-duke": {
+  "validate_ok": true
+ },
+ "terence-z-wong-duke": {
+  "validate_ok": true
+ },
+ "andrew-s-h-tsai-duke": {
+  "validate_ok": true
+ },
+ "xiaosi-gu-mount-sinai": {
+  "validate_ok": true
+ },
+ "bin-zhang-mount-sinai": {
+  "validate_ok": true
+ },
+ "andrew-l-ji-mount-sinai": {
+  "validate_ok": true
+ },
+ "hongyan-zou-mount-sinai": {
+  "validate_ok": true
+ },
+ "tian-liu-mount-sinai": {
+  "validate_ok": true
+ },
+ "yanqing-wang-mount-sinai": {
+  "validate_ok": true
+ },
+ "li-feng-mount-sinai": {
+  "validate_ok": true
+ },
+ "gilbert-h-l-tang-mount-sinai": {
+  "validate_ok": true
+ },
+ "xueyan-mei-mount-sinai": {
+  "validate_ok": true
+ },
+ "kuan-lin-huang-mount-sinai": {
+  "validate_ok": true
+ },
+ "pei-wang-mount-sinai": {
+  "validate_ok": true
+ },
+ "raymond-l-chai-mount-sinai": {
+  "validate_ok": true
+ },
+ "lili-chan-mount-sinai": {
+  "validate_ok": true
+ },
+ "guo-cheng-yuan-mount-sinai": {
+  "validate_ok": true
+ },
+ "ming-chao-mount-sinai": {
+  "validate_ok": true
+ },
+ "kyung-lee-mount-sinai": {
+  "validate_ok": true
+ },
+ "denise-j-cai-mount-sinai": {
+  "validate_ok": true
+ },
+ "christine-chen-mount-sinai": {
+  "validate_ok": true
+ },
+ "baihan-lin-mount-sinai": {
+  "validate_ok": true
+ },
+ "shuang-wang-mount-sinai": {
+  "validate_ok": true
+ },
+ "li-shen-mount-sinai": {
+  "validate_ok": true
+ },
+ "samuel-y-huang-mount-sinai": {
+  "validate_ok": true
+ },
+ "zhenyu-yue-mount-sinai": {
+  "validate_ok": true
+ },
+ "xiang-xu-mount-sinai": {
+  "validate_ok": true
+ },
+ "bishuang-cai-mount-sinai": {
+  "validate_ok": true
+ },
+ "mingqian-huang-mount-sinai": {
+  "validate_ok": true
+ },
+ "peak-woo-mount-sinai": {
+  "validate_ok": true
+ },
+ "ke-sheng-ucsf": {
+  "validate_ok": true
+ },
+ "edward-f-chang-ucsf": {
+  "validate_ok": true
+ },
+ "julian-c-hong-ucsf": {
+  "validate_ok": false
+ },
+ "yin-shen-ucsf": {
+  "validate_ok": true
+ },
+ "jin-ge-ucsf": {
+  "validate_ok": true
+ },
+ "jingjing-li-ucsf": {
+  "validate_ok": true
+ },
+ "yue-ma-ucsf": {
+  "validate_ok": true
+ },
+ "bo-huang-ucsf": {
+  "validate_ok": true
+ },
+ "chun-jimmie-ye-ucsf": {
+  "validate_ok": true
+ },
+ "peter-p-sun-ucsf": {
+  "validate_ok": true
+ },
+ "yi-li-ucsf": {
+  "validate_ok": true
+ },
+ "felix-y-feng-ucsf": {
+  "validate_ok": true
+ },
+ "doris-d-wang-ucsf": {
+  "validate_ok": true
+ },
+ "su-guo-ucsf": {
+  "validate_ok": true
+ },
+ "timothy-wen-ucsf": {
+  "validate_ok": true
+ },
+ "xin-cynthia-wu-ucsf": {
+  "validate_ok": true
+ },
+ "yan-li-ucsf": {
+  "validate_ok": true
+ },
+ "elaine-e-tseng-ucsf": {
+  "validate_ok": true
+ },
+ "mary-feng-ucsf": {
+  "validate_ok": true
+ },
+ "wilson-liao-ucsf": {
+  "validate_ok": true
+ },
+ "cheng-william-hong-ucsf": {
+  "validate_ok": true
+ },
+ "sunita-p-ho-ucsf": {
+  "validate_ok": true
+ },
+ "franklin-w-huang-ucsf": {
+  "validate_ok": true
+ },
+ "xin-duan-ucsf": {
+  "validate_ok": true
+ },
+ "pao-tien-chuang-ucsf": {
+  "validate_ok": true
+ },
+ "guo-n-huang-ucsf": {
+  "validate_ok": true
+ },
+ "duan-xu-ucsf": {
+  "validate_ok": true
+ },
+ "zhen-j-wang-ucsf": {
+  "validate_ok": true
+ },
+ "yadong-huang-ucsf": {
+  "validate_ok": true
+ },
+ "yvonne-w-wu-ucsf": {
+  "validate_ok": true
+ },
+ "xueding-wang-umich": {
+  "validate_ok": true
+ },
+ "arvind-rao-umich": {
+  "validate_ok": true
+ },
+ "yi-li-umich": {
+  "validate_ok": true
+ },
+ "jian-kang-umich": {
+  "validate_ok": true
+ },
+ "xiang-zhou-umich": {
+  "validate_ok": true
+ },
+ "kevin-c-chung-umich": {
+  "validate_ok": true
+ },
+ "yun-jiang-umich": {
+  "validate_ok": true
+ },
+ "jun-hee-lee-umich": {
+  "validate_ok": true
+ },
+ "guan-xu-umich": {
+  "validate_ok": true
+ },
+ "zhongming-liu-umich": {
+  "validate_ok": true
+ },
+ "yuanfang-guan-umich": {
+  "validate_ok": false
+ },
+ "yue-cao-umich": {
+  "validate_ok": true
+ },
+ "thomas-d-wang-umich": {
+  "validate_ok": true
+ },
+ "duxin-sun-umich": {
+  "validate_ok": true
+ },
+ "xudong-fan-umich": {
+  "validate_ok": true
+ },
+ "gongjun-xu-umich": {
+  "validate_ok": true
+ },
+ "wenjing-wang-umich": {
+  "validate_ok": true
+ },
+ "jie-liu-umich": {
+  "validate_ok": true
+ },
+ "l-jay-guo-umich": {
+  "validate_ok": true
+ },
+ "hao-jie-zhu-umich": {
+  "validate_ok": true
+ },
+ "taraz-g-lee-umich": {
+  "validate_ok": true
+ },
+ "hom-lay-wang-umich": {
+  "validate_ok": true
+ },
+ "henry-x-liu-umich": {
+  "validate_ok": true
+ },
+ "pei-suen-tsou-umich": {
+  "validate_ok": true
+ },
+ "zirui-huang-umich": {
+  "validate_ok": true
+ },
+ "jifeng-zhang-umich": {
+  "validate_ok": true
+ },
+ "chuan-zhou-umich": {
+  "validate_ok": true
+ },
+ "christopher-x-hong-umich": {
+  "validate_ok": true
+ },
+ "y-eugene-chen-umich": {
+  "validate_ok": true
+ },
+ "xiaoquan-wen-umich": {
+  "validate_ok": true
+ },
+ "xiwen-gong-umich": {
+  "validate_ok": true
+ },
+ "wei-zheng-umich": {
+  "validate_ok": true
+ },
+ "shan-bao-umich": {
+  "validate_ok": true
+ },
+ "jiayu-zhou-umich": {
+  "validate_ok": true
+ },
+ "jouha-min-umich": {
+  "validate_ok": true
+ },
+ "hyun-min-kang-umich": {
+  "validate_ok": true
+ },
+ "haoming-zhang-umich": {
+  "validate_ok": true
+ },
+ "kyoung-eun-lee-umich": {
+  "validate_ok": true
+ },
+ "xiaoqiang-huang-umich": {
+  "validate_ok": false
+ },
+ "yanming-wang-umich": {
+  "validate_ok": true
+ },
+ "xin-jing-umich": {
+  "validate_ok": true
+ },
+ "vincent-l-chen-umich": {
+  "validate_ok": true
+ },
+ "fei-wen-umich": {
+  "validate_ok": true
+ },
+ "zhan-chen-umich": {
+  "validate_ok": true
+ },
+ "jianping-fu-umich": {
+  "validate_ok": false
+ },
+ "bo-yang-umich": {
+  "validate_ok": true
+ },
+ "zhen-xu-umich": {
+  "validate_ok": true
+ },
+ "wei-zhang-umich": {
+  "validate_ok": true
+ },
+ "yongqing-li-umich": {
+  "validate_ok": true
+ },
+ "wenhao-sun-umich": {
+  "validate_ok": true
+ },
+ "yang-zhang-umich": {
+  "validate_ok": true
+ },
+ "ivy-f-tso-umich": {
+  "validate_ok": true
+ },
+ "meilan-k-han-umich": {
+  "validate_ok": true
+ },
+ "cheri-x-deng-umich": {
+  "validate_ok": true
+ },
+ "kevin-he-umich": {
+  "validate_ok": true
+ },
+ "grace-l-su-umich": {
+  "validate_ok": true
+ },
+ "rajesh-c-rao-umich": {
+  "validate_ok": true
+ },
+ "jie-xu-umich": {
+  "validate_ok": true
+ },
+ "heang-ping-chan-umich": {
+  "validate_ok": true
+ },
+ "ling-qi-umich": {
+  "validate_ok": true
+ },
+ "allen-p-liu-umich": {
+  "validate_ok": true
+ },
+ "li-shen-upenn": {
+  "validate_ok": true
+ },
+ "kai-wang-upenn": {
+  "validate_ok": true
+ },
+ "yong-fan-upenn": {
+  "validate_ok": true
+ },
+ "qi-long-upenn": {
+  "validate_ok": true
+ },
+ "fuchiang-rich-tsui-upenn": {
+  "validate_ok": true
+ },
+ "mingyao-li-upenn": {
+  "validate_ok": true
+ },
+ "kai-tan-upenn": {
+  "validate_ok": true
+ },
+ "wenrui-hao-upenn": {
+  "validate_ok": true
+ },
+ "nancy-r-zhang-upenn": {
+  "validate_ok": true
+ },
+ "chan-shen-upenn": {
+  "validate_ok": true
+ },
+ "yanxiang-deng-upenn": {
+  "validate_ok": true
+ },
+ "wanding-zhou-upenn": {
+  "validate_ok": true
+ },
+ "timothy-c-zhu-upenn": {
+  "validate_ok": true
+ },
+ "hao-wu-upenn": {
+  "validate_ok": true
+ },
+ "zhi-huang-upenn": {
+  "validate_ok": true
+ },
+ "yong-chen-upenn": {
+  "validate_ok": true
+ },
+ "yi-xing-upenn": {
+  "validate_ok": true
+ },
+ "hao-huang-upenn": {
+  "validate_ok": true
+ },
+ "ying-xiao-upenn": {
+  "validate_ok": true
+ },
+ "bomyi-lim-upenn": {
+  "validate_ok": true
+ },
+ "lin-z-li-upenn": {
+  "validate_ok": true
+ },
+ "jiyoun-song-upenn": {
+  "validate_ok": true
+ },
+ "wilfried-mai-upenn": {
+  "validate_ok": true
+ },
+ "gui-shuang-ying-upenn": {
+  "validate_ok": true
+ },
+ "hongming-zhuang-upenn": {
+  "validate_ok": true
+ },
+ "albert-c-yan-upenn": {
+  "validate_ok": true
+ },
+ "lifang-he-upenn": {
+  "validate_ok": true
+ },
+ "denise-j-xu-upenn": {
+  "validate_ok": true
+ },
+ "jae-w-song-upenn": {
+  "validate_ok": true
+ },
+ "hongzhe-li-upenn": {
+  "validate_ok": true
+ },
+ "pak-kin-wong-upenn": {
+  "validate_ok": true
+ },
+ "qing-x-yang-upenn": {
+  "validate_ok": true
+ },
+ "rong-zhou-upenn": {
+  "validate_ok": true
+ },
+ "zhenhao-shi-upenn": {
+  "validate_ok": true
+ },
+ "bo-li-upenn": {
+  "validate_ok": true
+ },
+ "hongjun-song-upenn": {
+  "validate_ok": true
+ },
+ "shu-yang-upenn": {
+  "validate_ok": true
+ },
+ "paul-c-kuo-usf": {
+  "validate_ok": true
+ },
+ "huabei-jiang-usf": {
+  "validate_ok": true
+ },
+ "tianyu-zhao-usf": {
+  "validate_ok": true
+ },
+ "jianjun-pan-usf": {
+  "validate_ok": true
+ },
+ "rays-h-y-jiang-usf": {
+  "validate_ok": true
+ },
+ "jianfeng-cai-usf": {
+  "validate_ok": true
+ },
+ "dong-xu-usf": {
+  "validate_ok": true
+ },
+ "wenqi-liu-usf": {
+  "validate_ok": true
+ },
+ "xiaoming-liu-usf": {
+  "validate_ok": true
+ },
+ "wei-shen-chen-usf": {
+  "validate_ok": true
+ },
+ "tsz-lau-usf": {
+  "validate_ok": true
+ },
+ "hui-wang-ai-uva": {
+  "validate_ok": true
+ },
+ "aidong-zhang-uva": {
+  "validate_ok": true
+ },
+ "haibo-dong-uva": {
+  "validate_ok": true
+ },
+ "hui-li-uva": {
+  "validate_ok": true
+ },
+ "jie-sun-uva": {
+  "validate_ok": true
+ },
+ "edward-s-chang-uva": {
+  "validate_ok": true
+ },
+ "chongzhi-zang-uva": {
+  "validate_ok": true
+ },
+ "kyusang-lee-uva": {
+  "validate_ok": true
+ },
+ "jianxin-xie-uva": {
+  "validate_ok": true
+ },
+ "brit-long-uva": {
+  "validate_ok": true
+ },
+ "zongli-lin-uva": {
+  "validate_ok": true
+ },
+ "joseph-poon-uva": {
+  "validate_ok": true
+ },
+ "ling-qi-uva": {
+  "validate_ok": true
+ },
+ "charles-a-su-uva": {
+  "validate_ok": true
+ },
+ "xudong-li-uva": {
+  "validate_ok": true
+ },
+ "zhongshan-he-uva": {
+  "validate_ok": true
+ },
+ "quing-zhu-washu": {
+  "validate_ok": true
+ },
+ "shuo-wang-washu": {
+  "validate_ok": true
+ },
+ "hong-chen-washu": {
+  "validate_ok": true
+ },
+ "zhen-he-washu": {
+  "validate_ok": true
+ },
+ "chao-zhou-washu": {
+  "validate_ok": true
+ },
+ "yinjie-j-tang-washu": {
+  "validate_ok": true
+ },
+ "hua-li-washu": {
+  "validate_ok": true
+ },
+ "song-hu-washu": {
+  "validate_ok": true
+ },
+ "jie-zheng-washu": {
+  "validate_ok": true
+ },
+ "yuan-chuan-tai-washu": {
+  "validate_ok": true
+ },
+ "hongyu-an-washu": {
+  "validate_ok": true
+ },
+ "chenyang-lu-washu": {
+  "validate_ok": true
+ },
+ "yongjian-liu-washu": {
+  "validate_ok": true
+ },
+ "jr-shin-li-washu": {
+  "validate_ok": true
+ },
+ "fuhai-li-washu": {
+  "validate_ok": true
+ },
+ "li-yang-washu": {
+  "validate_ok": true
+ },
+ "michelle-v-lee-washu": {
+  "validate_ok": true
+ },
+ "yan-yu-washu": {
+  "validate_ok": false
+ },
+ "jin-moo-lee-washu": {
+  "validate_ok": true
+ },
+ "qingyun-li-washu": {
+  "validate_ok": false
+ },
+ "yao-chen-washu": {
+  "validate_ok": true
+ },
+ "xiaoxia-cui-washu": {
+  "validate_ok": true
+ },
+ "fuzhong-zhang-washu": {
+  "validate_ok": true
+ },
+ "lei-liu-washu": {
+  "validate_ok": true
+ },
+ "hua-pan-washu": {
+  "validate_ok": true
+ },
+ "qing-wang-washu": {
+  "validate_ok": true
+ },
+ "andrew-r-lee-washu": {
+  "validate_ok": true
+ },
+ "zhao-han-usf": {
+  "validate_ok": true
+ },
+ "jiajun-huang-usf": {
+  "validate_ok": true
+ },
+ "fengchun-qiao-usf": {
+  "validate_ok": true
+ },
+ "yili-ren-usf": {
+  "validate_ok": true
+ },
+ "yi-sheng-usf": {
+  "validate_ok": true
+ },
+ "guangjing-wang-usf": {
+  "validate_ok": true
+ },
+ "ning-wang-usf": {
+  "validate_ok": true
+ },
+ "shichen-zhang-usf": {
+  "validate_ok": false
+ },
+ "jiaqi-gu-usf": {
+  "validate_ok": true
+ },
+ "xiankui-yang-usf": {
+  "validate_ok": true
+ },
+ "libin-ye-usf": {
+  "validate_ok": true
+ },
+ "wenqi-yu-usf": {
+  "validate_ok": true
+ },
+ "haitao-ji-usf": {
+  "validate_ok": true
+ },
+ "rays-jiang-usf": {
+  "validate_ok": true
+ },
+ "michael-n-teng-usf": {
+  "validate_ok": true
+ },
+ "thao-ho-usf": {
+  "validate_ok": true
+ },
+ "shaohui-wang-usf": {
+  "validate_ok": true
+ },
+ "bo-ding-usf": {
+  "validate_ok": true
+ },
+ "hao-yang-usf": {
+  "validate_ok": true
+ },
+ "yuqiang-bai-usf": {
+  "validate_ok": true
+ },
+ "chunlin-li-uva": {
+  "validate_ok": true
+ },
+ "lingxiao-wang-uva": {
+  "validate_ok": true
+ },
+ "shan-yu-uva": {
+  "validate_ok": false
+ },
+ "wei-min-chen-uva": {
+  "validate_ok": true
+ },
+ "tinyi-chu-uva": {
+  "validate_ok": true
+ },
+ "sheng-en-shawn-hu-uva": {
+  "validate_ok": true
+ },
+ "xiaowei-hu-uva": {
+  "validate_ok": true
+ },
+ "ziqiao-wang-uva": {
+  "validate_ok": true
+ },
+ "yaohua-yang-uva": {
+  "validate_ok": true
+ },
+ "jennie-ma-uva": {
+  "validate_ok": true
+ },
+ "xin-wang-uva": {
+  "validate_ok": true
+ },
+ "ruyun-jin-uva": {
+  "validate_ok": true
+ },
+ "guofen-yan-uva": {
+  "validate_ok": true
+ },
+ "wei-yu-uva": {
+  "validate_ok": true
+ },
+ "hong-zhu-uva": {
+  "validate_ok": true
+ },
+ "jie-shen-uva": {
+  "validate_ok": true
+ },
+ "yue-cheng-uva": {
+  "validate_ok": true
+ },
+ "lei-li-uva": {
+  "validate_ok": true
+ },
+ "cheng-peng-uva": {
+  "validate_ok": true
+ },
+ "jeffrey-woo-uva": {
+  "validate_ok": true
+ },
+ "aiying-zhang-uva": {
+  "validate_ok": true
+ },
+ "yifan-dai-washu": {
+  "validate_ok": true
+ },
+ "jingyi-shi-washu": {
+  "validate_ok": false
+ },
+ "shuo-yang-washu": {
+  "validate_ok": true
+ },
+ "chien-ju-ho-washu": {
+  "validate_ok": true
+ },
+ "i-ting-angelina-lee-washu": {
+  "validate_ok": true
+ },
+ "chongjie-zhang-washu": {
+  "validate_ok": true
+ },
+ "ning-zhang-washu": {
+  "validate_ok": true
+ },
+ "xudong-chen-washu": {
+  "validate_ok": true
+ },
+ "yingying-fan-washu": {
+  "validate_ok": true
+ },
+ "hong-hu-washu": {
+  "validate_ok": true
+ },
+ "jung-tsung-shen-washu": {
+  "validate_ok": true
+ },
+ "chuan-wang-washu": {
+  "validate_ok": true
+ },
+ "yong-wang-washu": {
+  "validate_ok": true
+ },
+ "zhiyang-wang-washu": {
+  "validate_ok": true
+ },
+ "shen-zeng-washu": {
+  "validate_ok": true
+ },
+ "edward-han-washu": {
+  "validate_ok": false
+ },
+ "cheng-huang-washu": {
+  "validate_ok": true
+ },
+ "jason-yi-washu": {
+  "validate_ok": true
+ },
+ "likai-chen-washu": {
+  "validate_ok": true
+ },
+ "ran-chen-washu": {
+  "validate_ok": true
+ },
+ "chao-cheng-washu": {
+  "validate_ok": true
+ },
+ "jimin-ding-washu": {
+  "validate_ok": true
+ },
+ "ting-wang-washu": {
+  "validate_ok": true
+ },
+ "sunny-c-lin-washu": {
+  "validate_ok": true
+ },
+ "linying-zhang-washu": {
+  "validate_ok": true
+ },
+ "ling-chen-washu": {
+  "validate_ok": true
+ },
+ "charles-gu-washu": {
+  "validate_ok": true
+ },
+ "ruijin-lu-washu": {
+  "validate_ok": true
+ },
+ "ruiwen-zhou-washu": {
+  "validate_ok": true
+ },
+ "yidan-sun-washu": {
+  "validate_ok": true
+ },
+ "lijuan-feng-washu": {
   "validate_ok": true
  }
 }

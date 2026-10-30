@@ -84,6 +84,7 @@ def run(institution: str, heritage: str | None, cap: int) -> list[dict]:
                "ps_papers": sorted(p["papers"], key=lambda w: -w["year"])[:8], "ps_n": len(p["papers"])}
         if mine:
             em, (url, aff) = next(iter(mine.items()))
+            url = f"{url}#{re.sub(r'[^a-z0-9]+', '-', name.lower())}"   # one snapshot per person: co-authors share a paper
             sp = snapshot_path(SNAP, url)
             sp.parent.mkdir(parents=True, exist_ok=True)
             sp.write_text(aff)
