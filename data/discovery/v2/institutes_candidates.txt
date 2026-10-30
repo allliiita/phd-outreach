@@ -1,0 +1,4 @@
+# From Sonnet agent 2026-10-30, from model knowledge (no web search) -> verify each URL before use.
+OWN PhD: Rockefeller University; Scripps Research; Salk; Sanford Burnham Prebys; CSHL; St. Jude; Stowers; MSK (GSK + Tri-I); Van Andel; Roswell Park; Mayo Clinic GSBS; Jackson Laboratory; Wistar(?); Buck Institute
+PARTNER: Broad; Whitehead; Koch (MIT); McGovern (MIT); Picower (MIT); Wyss (Harvard); Ragon; Dana-Farber; Institute for Protein Innovation; Fred Hutch; Allen Institute; Ai2; ISB; Arc; CZ Biohub SF/Chicago/NY; Gladstone; La Jolla Institute for Immunology; Janelia; Flatiron; NYGC; Carnegie Embryology; Lieber; Fox Chase; Moffitt; MD Anderson; Cleveland Clinic Lerner; HudsonAlpha; OMRF; MBL; Max Planck Florida; LBNL Biosciences; ORNL/Argonne/PNNL; NIH IRP (GPP); Santa Fe Institute; Seattle Children's RI; Benaroya
+UNSURE/EXCLUDE: Altos, Calico, TRI, CZ Imaging Institute, Allen Discovery Centers (university-based)
