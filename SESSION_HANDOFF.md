@@ -39,3 +39,13 @@ Session 2, later decisions:
    Already judged non-CS: brown neuro, cmu neuroscience, mit csb, brown/bu/columbia biostat (re-assemble after refill).
 4. python -m outreach.shortlist --no-cs -> data/export/shortlist_noncs.xlsx, send to applicant.
 5. Email stage: applicant will provide a writing skill.
+
+## Session 3 (token-saving redesign)
+- No bulk LLM judge any more: outreach/score.py (Bio-AI lexicon) gives relevance / fit / verbatim keywords.
+  Calibrated vs ~400 Haiku judgements: 97% of Haiku "yes" are auto yes/borderline.
+- Applicant goal: Bio-AI or broad deep-AI research (config/applicant.yaml `goal`); calcium imaging is past work.
+- Papers: OpenAlex (when budget) -> Europe PMC (author first name + affiliation) -> S2 page-confirmed -> empty.
+  Papers are optional for tier A now (tier A = relevant + young + email + >=2 keywords).
+- Email writer step 0 decides write/skip (agents/40_email_writer.md): the LLM reads only people we email.
+- Non-CS shortlist: 414 candidates, 337 with email, 46 fit>=4. Background: enrich rest, then refill papers,
+  re-assemble, shortlist (task chain, see data/refill.log).
