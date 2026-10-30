@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+secrets/
+data/snapshots/
+data/sent.jsonl
+assets/*.pdf

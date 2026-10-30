@@ -1,0 +1,51 @@
+# Facts the email writer may use. Nothing outside this file (plus the professor record) may be
+# claimed about the applicant. Edit freely.
+name: Lindsey Ma
+sender_email: lm3879@columbia.edu      # which mailbox sends; change if you send from Gmail
+cv_pdf: assets/Lindsey_Ma_CV.pdf        # export the CV doc to PDF and put it here
+website: https://lindseyma.com
+github: https://github.com/Lindsey-cyber
+target_entry: Fall 2027 PhD
+degree: M.S. in Statistics, Columbia University (2026), GPA 3.71; B.A. Economics, Renmin University of China
+mention_recommenders: false             # never mention recommendation letters
+publications: none                      # never imply any publication
+
+interests: >-
+  Statistical machine learning for scientific data, especially neural and biological imaging;
+  self-supervised and representation learning under limited supervision; rigorous evaluation and
+  interpretability of deep models.
+
+# Each project: what the email writer may say, and which professor topics it matches.
+projects:
+  - key: arborphy
+    one_liner: >-
+      At Arborphy AI (advised by Prof. Tian Zheng, Columbia Statistics) I built and stress-tested a
+      BioCLIP + EfficientNet fusion model for fine-grained plant species recognition, and found with a
+      leakage-aware, multi-seed protocol that the fusion gains did not reliably beat a BioCLIP-only baseline.
+    matches: [computer vision, foundation models, representation learning, evaluation, biodiversity, ecology, multimodal, interpretability]
+  - key: calcium
+    one_liner: >-
+      At Columbia's Center for Theoretical Neuroscience I worked on self-supervised denoising of two-photon
+      calcium imaging (masking strategies combined with penalized matrix decomposition, with synthetic
+      benchmarks built from real neuronal footprints).
+    matches: [neuroscience, calcium imaging, self-supervised, denoising, matrix factorization, computational neuroscience, imaging, signal processing]
+  - key: interp
+    one_liner: >-
+      I reproduced circuit-tracing analyses of hallucination on Qwen3 and built probing/steering tooling
+      with sham and randomized controls, concluding the effects were too unstable to support causal claims.
+    matches: [LLM, interpretability, NLP, mechanistic interpretability, trustworthy AI, causal]
+  - key: flywire
+    one_liner: >-
+      In a course project I fit Bayesian stochastic block models to the FlyWire connectome to infer latent
+      neuron types.
+    matches: [Bayesian, network, graph, connectomics, latent variable, statistical modeling]
+  - key: eeg
+    one_liner: >-
+      I built a real-time EEG motor-imagery decoder, raising accuracy from 67.9% to 77.4% over a CSP-LDA
+      baseline with run-grouped validation.
+    matches: [brain-computer interface, EEG, neural decoding, time series, biomedical signal]
+  - key: agents
+    one_liner: >-
+      I built a multi-agent system with blind cross-model verification and trust levels that gate each stage's
+      autonomy on measured error rates.
+    matches: [agents, LLM systems, reliability, evaluation, human-AI]
