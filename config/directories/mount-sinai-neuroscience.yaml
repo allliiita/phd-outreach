@@ -1,0 +1,26 @@
+institution: Icahn School of Medicine at Mount Sinai
+unit: Neuroscience
+urls:
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=0
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=10
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=20
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=30
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=40
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=50
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=60
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=70
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=80
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=90
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=100
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=110
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=120
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=130
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=140
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=150
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513038742&selectedFilter=department&tab=faculty&start=160
+item: div.space-x-3.border-b
+name: a.cursor-pointer
+title: p.font-semibold
+profile: a.cursor-pointer@href
+filter: all
+expect: 169

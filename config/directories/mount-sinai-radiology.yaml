@@ -1,0 +1,11 @@
+institution: Icahn School of Medicine at Mount Sinai
+unit: Radiology
+urls:
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513039032&selectedFilter=department&tab=faculty&start=0
+- https://faculty.icahn.mssm.edu/results?departmentId=0000072470001513039032&selectedFilter=department&tab=faculty&start=10
+item: div.space-x-3.border-b
+name: a.cursor-pointer
+title: p.font-semibold
+profile: a.cursor-pointer@href
+filter: all
+expect: 11
