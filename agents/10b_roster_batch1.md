@@ -35,6 +35,7 @@ ucsf_profiles_scan.py); page through every result page.
    "Tampa Campus" as names. Search the page text for every surname you expect before declaring done.)
    Pagination without rel=next (Duke "page/2") is not followed: list every page URL in a YAML. Sidebar staff
    rows and badge text ("NAE Member") are not people. (Duke ECE lost 19 of 56 faculty this way.)
+- Paginated search pages: check each page's 'of N' equals the unit total; a fallback page silently injects other departments (Mount Sinai 2026-10-31).
 3. Big list without titles (e.g. names only): still roster it; titles come from profiles later.
 Budget: ~90 tool calls. Cut losses on a unit after ~6 calls: mark it and move on.
 

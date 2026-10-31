@@ -1,0 +1,11 @@
+institution: Icahn School of Medicine at Mount Sinai
+unit: BMEII core + AI
+urls:
+- https://bmeiisinai.org/project/faculty/
+- https://bmeiisinai.org/project/ai/
+item: div.et_pb_team_member_description
+name: h4.et_pb_module_header
+title: p.et_pb_member_position
+filter: all
+expect: 19
+skip_titles: ["student"]

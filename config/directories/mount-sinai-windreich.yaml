@@ -1,0 +1,11 @@
+institution: Icahn School of Medicine at Mount Sinai
+unit: Windreich AI and Human Health
+urls:
+- https://icahn.mssm.edu/about/artificial-intelligence/faculty
+item: div.group.col-span-1.flex.items-start
+name: h5
+title: div.text-base
+profile: h5 a@href
+filter: all
+skip_titles: ["Digital and Technology Partners"]
+expect: 33
