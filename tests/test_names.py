@@ -15,5 +15,5 @@ def test_names():
 
 
 def test_not_names():
-    for t in ["Google Scholar", "Tampa Campus"]:
+    for t in ["Google Scholar", "Tampa Campus", "NAE Member", "IEEE Fellow", "NAS Member"]:
         assert NOT_NAME.search(t)

@@ -33,6 +33,8 @@ ucsf_profiles_scan.py); page through every result page.
    page_count is YOUR count of the live page, never the scouting number. (USF 2026-10-31: auto-parse silently
    dropped people whose card layout differed — EE 24/28, Chemistry 45/49 — and took "Google Scholar" /
    "Tampa Campus" as names. Search the page text for every surname you expect before declaring done.)
+   Pagination without rel=next (Duke "page/2") is not followed: list every page URL in a YAML. Sidebar staff
+   rows and badge text ("NAE Member") are not people. (Duke ECE lost 19 of 56 faculty this way.)
 3. Big list without titles (e.g. names only): still roster it; titles come from profiles later.
 Budget: ~90 tool calls. Cut losses on a unit after ~6 calls: mark it and move on.
 

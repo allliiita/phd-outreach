@@ -81,7 +81,7 @@ UP = "A-ZÀ-ÖØ-ÞĀ-Ž"   # capitals incl. accented ("Ünlü")
 NAME_RE = re.compile(rf"^[{UP}][\w'’.\-]*(?: (?:[{UP}][\w'’.\-]*|\([^()]{{1,20}}\))){{1,4}}$")
 LAST_FIRST = re.compile(r"^([A-Z][\w'’\-]+(?: [A-Z][\w'’\-]+)?), ([A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]*)?)$")
 NOT_NAME = re.compile(r"\b(read|more|bio|profile|website|email|contact|faculty|people|department|research|news|view|"
-                      r"statistics|science|university|school|center|institute|program|home|scholar|google|campus|linkedin|orcid)\b", re.I)
+                      r"statistics|science|university|school|center|institute|program|home|scholar|google|campus|linkedin|orcid|member|fellow|award|medal)\b", re.I)
 
 
 NOT_FACULTY = re.compile(r"year enrolled|ph\.?d\.? (student|candidate)|graduate student|doctoral (student|candidate)|"
@@ -111,7 +111,7 @@ def _sig(el) -> str:
     return el.name + ("." + el["class"][0] if el.get("class") else "")
 
 
-DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.?d|p\.h\.d|sc\.?d|dr\.?sc|m\.?d|m\.?eng|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
+DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|p\.?h\.?d|sc\.?d|dr\.?sc|d\.?m\.?(?:d|sc)|m\.?d|m\.?eng|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|p\.?h\.?d|sc\.?d|d\.?m\.?(?:d|sc)|dr\.?sc|m\.?eng|m\.?sc|m\.?d|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
 DEGREE_CAPS = re.compile(r"(?:,?\s+(?:PhD|Ph\.D\.|ScD|MD|MPH|DrPH|MBBS|FACMI|MS|MA|MSc|MSHP|MSCE|MBA|MPhil|RN|PharmD|[A-Z]{2,6}))+$")   # trailing all-caps credentials   # "Jane Doe MD" (case-sensitive)
 
 
@@ -127,7 +127,7 @@ def _name_in(el):
         t = clean_name(" ".join(h.get_text(" ").split()).strip(" ,"))
         m = LAST_FIRST.match(t)
         if m:
-            t = f"{m.group(2)} {m.group(1)}"
+            t = clean_name(f"{m.group(2)} {m.group(1)}")
         if NAME_RE.match(t) and not TITLE_WORD.search(t) and not NOT_NAME.search(t):
             a = h if h.name == "a" else (h.find("a", href=True) or h.find_parent("a"))
             return t, (a.get("href") if a else None)
