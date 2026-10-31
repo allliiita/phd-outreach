@@ -1,0 +1,40 @@
+{"id": "b1-0000", "fit": "C", "theme": "other", "summary": "Molecular mechanisms of neuronal migration and brain development; Reelin and Foxr1 pathways.", "hook": ""}
+{"id": "b1-0001", "fit": "B", "theme": "NeuroAI", "summary": "Decodes mental states from fMRI neural patterns; builds whole-brain predictors of cognition.", "hook": "EEG decoding"}
+{"id": "b1-0002", "fit": "A", "theme": "core-ML/CV", "summary": "Computer vision and ML research on generalization, efficiency and visual analytics.", "hook": "BioCLIP/EfficientNet fusion"}
+{"id": "b1-0003", "fit": "C", "theme": "other", "summary": "Bio-first papers on depression, transcriptional aging and uterine aging; no ML in titles.", "hook": ""}
+{"id": "b1-0004", "fit": "C", "theme": "other", "summary": "Online media audiences and social media analytics; computational methods, no ML methods named.", "hook": ""}
+{"id": "b1-0005", "fit": "?", "theme": "AI-for-science", "summary": "Mars plasma physics; one paper is a machine-learning heat-flux closure for fluid modeling.", "hook": ""}
+{"id": "b1-0006", "fit": "A", "theme": "core-ML/CV", "summary": "Economic impact of AI and textual data in e-commerce; text extraction and understanding.", "hook": ""}
+{"id": "b1-0007", "fit": "?", "theme": "AI-for-science", "summary": "Urban heat mitigation; one deep-learning spatial optimization paper for green and cool roofs.", "hook": ""}
+{"id": "b1-0008", "fit": "C", "theme": "other", "summary": "Mathematical physics: hyperbolic P(Phi)2 model on the plane; no ML.", "hook": ""}
+{"id": "b1-0009", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0010", "fit": "C", "theme": "other", "summary": "Long-range neocortical networks via in vivo imaging with molecular and genetic tools.", "hook": ""}
+{"id": "b1-0011", "fit": "C", "theme": "other", "summary": "Clinical and basic biology lab integrating genotype, epigenome and phenotype data.", "hook": ""}
+{"id": "b1-0012", "fit": "B", "theme": "medical-AI", "summary": "Biomedical imaging of neurovascular and tissue dynamics; physics-informed neural network for laser speckle imaging.", "hook": ""}
+{"id": "b1-0013", "fit": "C", "theme": "other", "summary": "Molecular and cellular tools for disease detection, transcriptome engineering and imaging in vivo.", "hook": ""}
+{"id": "b1-0014", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0015", "fit": "C", "theme": "other", "summary": "RNAi and piRNA pathways against transposable elements; wet-lab genome defense.", "hook": ""}
+{"id": "b1-0016", "fit": "C", "theme": "other", "summary": "Attention and visual cortex via psychophysics, TMS and fMRI; modeling is not ML.", "hook": ""}
+{"id": "b1-0017", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0018", "fit": "A", "theme": "core-ML/CV", "summary": "Interpretability for NLP; transformer recognition and LLM training theory per paper titles.", "hook": "LLM circuit tracing / probing (interpretability)"}
+{"id": "b1-0019", "fit": "C", "theme": "other", "summary": "Tetherless optoelectronic microsystem for chronic neural recording in awake mice.", "hook": ""}
+{"id": "b1-0020", "fit": "C", "theme": "other", "summary": "Pump-probe ultrafast control of quantum phases and Weyl semimetals; no ML.", "hook": ""}
+{"id": "b1-0021", "fit": "A", "theme": "core-ML/CV", "summary": "ML and computer vision for recognition, autonomous driving, imageomics and healthcare.", "hook": "BioCLIP/EfficientNet fusion"}
+{"id": "b1-0022", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0023", "fit": "C", "theme": "other", "summary": "Multiferroic tunnel junctions and van der Waals heterostructures; materials, no ML.", "hook": ""}
+{"id": "b1-0024", "fit": "C", "theme": "stats-methods", "summary": "Statistical methods for genetics and EHR data; Alzheimer's genetic association papers.", "hook": ""}
+{"id": "b1-0025", "fit": "A", "theme": "core-ML/CV", "summary": "Develops machine learning algorithms with theoretical and empirical performance guarantees.", "hook": ""}
+{"id": "b1-0026", "fit": "C", "theme": "other", "summary": "Reliable, fast systems spanning ML systems and cloud computing platforms; systems, not ML methods.", "hook": ""}
+{"id": "b1-0027", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0028", "fit": "B", "theme": "NeuroAI", "summary": "Brain-body motor control; ML video analysis and neural encoding from behavior via Gaussian splatting.", "hook": ""}
+{"id": "b1-0029", "fit": "C", "theme": "other", "summary": "Metabolites and dietary/neuronal regulation in hematologic malignancies; wet-lab.", "hook": ""}
+{"id": "b1-0030", "fit": "C", "theme": "other", "summary": "Clinical studies in critical care, intraoperative hypoxemia and pulmonary embolism.", "hook": ""}
+{"id": "b1-0031", "fit": "A", "theme": "core-ML/CV", "summary": "Robotics: learns realistic lip motions for humanoid face robots; physical AI.", "hook": ""}
+{"id": "b1-0032", "fit": "C", "theme": "other", "summary": "Cardiac innervation and adrenergic arrhythmia biology; no ML.", "hook": ""}
+{"id": "b1-0033", "fit": "B", "theme": "medical-AI", "summary": "ML and LLMs on EHR data: representation learning, LLM screening, cardiovascular risk.", "hook": ""}
+{"id": "b1-0034", "fit": "C", "theme": "other", "summary": "Experimental and theoretical small-scale physicochemical hydrodynamics; no ML.", "hook": ""}
+{"id": "b1-0035", "fit": "B", "theme": "medical-AI", "summary": "Quantitative MRI acquisition, reconstruction and AI-based image analysis for clinical translation.", "hook": ""}
+{"id": "b1-0036", "fit": "C", "theme": "other", "summary": "Bayesian program error localization; differential privacy mechanisms; no ML.", "hook": ""}
+{"id": "b1-0037", "fit": "C", "theme": "other", "summary": "Datacenter and cloud computing systems, plus ML systems; systems research.", "hook": ""}
+{"id": "b1-0038", "fit": "C", "theme": "other", "summary": "Numerical analysis of quantum algorithms and open quantum system mixing; no ML.", "hook": ""}
+{"id": "b1-0039", "fit": "C", "theme": "other", "summary": "Molecular genetics: PAPS phosphatase sulfation and neuron-glia signaling in C. elegans.", "hook": ""}

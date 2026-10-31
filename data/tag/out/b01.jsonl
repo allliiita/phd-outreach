@@ -1,0 +1,40 @@
+{"id": "b1-0040", "fit": "?", "theme": "other", "summary": "Biochemistry affiliate listing with no research description.", "hook": ""}
+{"id": "b1-0041", "fit": "?", "theme": "other", "summary": "Mathematics assistant professor; card gives only a recruiting note and no research topics.", "hook": ""}
+{"id": "b1-0042", "fit": "C", "theme": "other", "summary": "Atomic-scale manufacturing of low-dimensional materials, nanodevices and quantum systems.", "hook": ""}
+{"id": "b1-0043", "fit": "C", "theme": "other", "summary": "PIEZO and TMEM63B mechanosensitive channels in pain and sickle cell disease.", "hook": ""}
+{"id": "b1-0044", "fit": "C", "theme": "other", "summary": "Neutral atom arrays with optical tweezers for quantum simulation and computation.", "hook": ""}
+{"id": "b1-0045", "fit": "C", "theme": "other", "summary": "Clinical trial outcomes and treatment-effect heterogeneity for anticoagulation and cardiac surgery.", "hook": ""}
+{"id": "b1-0046", "fit": "B", "theme": "AI-for-science", "summary": "Develops AI methods for biomedical data; LLMs for cell-type annotation and automated analysis.", "hook": ""}
+{"id": "b1-0047", "fit": "?", "theme": "other", "summary": "Biostatistics faculty listing with no research text or papers.", "hook": ""}
+{"id": "b1-0048", "fit": "B", "theme": "AI-for-science", "summary": "Sequence-to-function models, cell annotation and rare-variant association methods for genomics.", "hook": ""}
+{"id": "b1-0049", "fit": "C", "theme": "other", "summary": "Photoacoustic imaging technology: illumination, ultrasonic detection and image reconstruction.", "hook": ""}
+{"id": "b1-0050", "fit": "A", "theme": "stats-methods", "summary": "Covariate adjustment with variable selection and variance estimation in randomized trials.", "hook": ""}
+{"id": "b1-0051", "fit": "C", "theme": "other", "summary": "Cancer biology on ATM, cGAS and PARP1 DNA repair and intracellular drug delivery.", "hook": ""}
+{"id": "b1-0052", "fit": "B", "theme": "medical-AI", "summary": "Cytometry-based outcome prediction (cytoGPNet) alongside transplant and lung cancer immune studies.", "hook": ""}
+{"id": "b1-0053", "fit": "A", "theme": "AI-for-science", "summary": "Zero-shot autonomous microscopy for scalable characterization of 2D materials.", "hook": ""}
+{"id": "b1-0054", "fit": "C", "theme": "other", "summary": "Neural circuit mechanisms of volitional movement across brain areas.", "hook": ""}
+{"id": "b1-0055", "fit": "B", "theme": "medical-AI", "summary": "Reinforcement learning for decision support in ECMO management.", "hook": ""}
+{"id": "b1-0056", "fit": "C", "theme": "other", "summary": "Photoacoustic molecular imaging probes and ultrasound-prior tomography.", "hook": ""}
+{"id": "b1-0057", "fit": "B", "theme": "AI-for-science", "summary": "Trajectory-guided dimensionality reduction for multi-sample single-cell RNA-seq data.", "hook": ""}
+{"id": "b1-0058", "fit": "C", "theme": "other", "summary": "Fly learning circuits and mutant screens using high-throughput behavioral apparatus.", "hook": ""}
+{"id": "b1-0059", "fit": "?", "theme": "other", "summary": "Biochemistry faculty listing with no research text or papers.", "hook": ""}
+{"id": "b1-0060", "fit": "A", "theme": "stats-methods", "summary": "Sampling algorithms and MCMC with diffusion paths for Bayesian inference and generative modeling.", "hook": ""}
+{"id": "b1-0061", "fit": "A", "theme": "stats-methods", "summary": "Gaussian process surrogate modeling for computer experiments and sensitivity analysis.", "hook": ""}
+{"id": "b1-0062", "fit": "C", "theme": "other", "summary": "Explicit constructions and analysis of Cayley high-dimensional expanders.", "hook": ""}
+{"id": "b1-0063", "fit": "A", "theme": "core-ML/CV", "summary": "Disaggregated machine learning via in-physics computing at radio frequency.", "hook": ""}
+{"id": "b1-0064", "fit": "C", "theme": "other", "summary": "Undergraduate student services coordinator, not a research faculty member.", "hook": ""}
+{"id": "b1-0065", "fit": "B", "theme": "AI-for-science", "summary": "AI-agent network structure compared with human social networks; scRNA dimensionality reduction.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0066", "fit": "?", "theme": "other", "summary": "Electrical engineering faculty listing with no research text or papers.", "hook": ""}
+{"id": "b1-0067", "fit": "?", "theme": "other", "summary": "Robotic manipulation: contact mechanics, motion control and interactive perception.", "hook": ""}
+{"id": "b1-0068", "fit": "C", "theme": "other", "summary": "Soft electronics and digital metamaterials for sensing human signals and adaptive materials.", "hook": ""}
+{"id": "b1-0069", "fit": "C", "theme": "other", "summary": "Digital psychological intervention trial for chronic obstructive pulmonary disease patients.", "hook": ""}
+{"id": "b1-0070", "fit": "C", "theme": "other", "summary": "Single-cell multiomic profiling and CAR T therapy for muscle regeneration.", "hook": ""}
+{"id": "b1-0071", "fit": "B", "theme": "AI-for-science", "summary": "Develops ML methods for single-cell genomics and spatial transcriptomics in tumors.", "hook": ""}
+{"id": "b1-0072", "fit": "C", "theme": "other", "summary": "Quantum algorithms for ground energy and Green's function estimation in quantum chemistry.", "hook": ""}
+{"id": "b1-0073", "fit": "C", "theme": "other", "summary": "Survival sample-size and propensity-score analyses for clinical trials.", "hook": ""}
+{"id": "b1-0074", "fit": "?", "theme": "other", "summary": "Pharmacology and cancer biology faculty listing; card has no research text.", "hook": ""}
+{"id": "b1-0075", "fit": "B", "theme": "AI-for-science", "summary": "Cell-state TWAS, temporal expression modeling and LLM-based single-cell preprocessing.", "hook": ""}
+{"id": "b1-0076", "fit": "C", "theme": "other", "summary": "Win ratio effect size methods for survival outcomes in clinical trials.", "hook": ""}
+{"id": "b1-0077", "fit": "C", "theme": "stats-methods", "summary": "Kinship and heritability estimation bias in genetic association models.", "hook": ""}
+{"id": "b1-0078", "fit": "C", "theme": "other", "summary": "Human neuron models of schizophrenia and Down syndrome using CRISPR engineering.", "hook": ""}
+{"id": "b1-0079", "fit": "C", "theme": "other", "summary": "Vascular surgery research on limb salvage and endovascular revascularization outcomes.", "hook": ""}
