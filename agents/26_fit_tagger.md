@@ -7,7 +7,7 @@ denoising of calcium imaging, BioCLIP/EfficientNet fusion (CV, evaluation), LLM 
 (interpretability), Bayesian stochastic block models on a connectome, EEG decoding, multi-agent LLM systems.
 
 For each card output one JSON line to data/tag/out/<batch>.jsonl:
-{"id", "fit":"A|B|C|?", "theme":"core-ML/CV|AI-for-science|NeuroAI|medical-AI|stats-methods|other",
+{"id", "fit":"A|B|C|?", "theme":"NeuroAI|core-ML/CV|AI-for-science|medical-AI|stats-methods|other",
  "summary":"<=20 words, what the lab does, from the card only", "hook":"<which applicant project matches, or ''>"}
 A = develops ML / AI methods, models or architectures (any domain, including pure CV / NLP / RL / theory of ML,
     statistical learning, generative models for molecules or proteins, AI for science).
@@ -16,3 +16,7 @@ C = biology / clinical / wet-lab first, or CS work with no ML (systems, security
     without ML) -> will be dropped.
 ? = card too thin to tell (no research text, no papers).
 Use ONLY the card. Never invent topics. A summary must be supported by words in research or paper titles.
+Theme rules: NeuroAI = ML on neural data, brain-inspired / neuro-AI models, computational neuroscience with ML,
+connectomics, BCI decoding. AI-for-science = ML for molecules, proteins, materials, physics, genomics.
+medical-AI = ML on clinical data, medical imaging, EHR. stats-methods = statistical learning / inference
+methods. core-ML/CV = everything else in ML/AI (CV, NLP, RL, theory, LLMs, robotics learning).

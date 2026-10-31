@@ -37,4 +37,8 @@ include_cs: true             # 2026-10-31: CS/ECE are the preferred home (goal: 
 # Who: assistant / incoming assistant / associate (promoted ~2020+) / independent fellow; Chinese surnames.
 # Fit (per person, not per department): A = develops ML methods or architectures (any domain, incl. pure AI/CV);
 # B = deep learning on bio / medical / neural data with method contributions; C = biology/clinic-first -> drop.
-# Theme tag: core-ML/CV | AI-for-science | NeuroAI | medical-AI.  Order: A before B.
+# Theme tag: core-ML/CV | AI-for-science | NeuroAI | medical-AI | stats-methods.
+# Priority (applicant, confirmed 2026-10-31), then A before B inside each tier:
+#   1 NeuroAI (any department)  2 member of an AI department / cross-department AI initiative (grid group G2)
+#   3 CS / ECE / Statistics / data-science / other-engineering ML (G1)  4 molecular / protein / other bio ML (G3)
+priority: [NeuroAI, G2, G1, G3]

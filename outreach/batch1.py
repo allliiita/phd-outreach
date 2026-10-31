@@ -69,10 +69,28 @@ def cmd_enrich() -> None:
                            cwd=ROOT, check=False)
 
 
+def roster_groups() -> dict[str, str]:
+    """roster file name -> grid group (G1 AI core, G2 AI dept/initiative, G3 molecular/biomed, G4 neuro)."""
+    return {Path(g["roster"]).name: str(g.get("group", "")) for g in grid() if g.get("roster")}
+
+
+def priority(theme: str, groups: set[str]) -> int:
+    """Applicant's order (config/targets.yaml `priority`): NeuroAI, then AI departments / initiatives,
+    then CS-type ML, then molecular / bio ML."""
+    if theme == "NeuroAI":
+        return 1
+    if any("G2" in g for g in groups):
+        return 2
+    if any("G1" in g for g in groups) or theme in ("core-ML/CV", "stats-methods"):
+        return 3
+    return 4
+
+
 def people() -> list[dict]:
     """One record per person (name + institution); departments merged. Dossier rows with a senior title on the
     profile page are dropped (enrich records that as a problem)."""
     by: dict[tuple, dict] = {}
+    grp = roster_groups()
     for p in rosters():
         for d in jl(DATA / "dossiers" / p.name):
             if d.get("heritage") != "chinese":
@@ -85,10 +103,11 @@ def people() -> list[dict]:
             k = (d["name"].lower().strip(), d["institution"])
             if k in by:
                 by[k]["departments"].append(d["department"])
+                by[k]["groups"].append(grp.get(p.name, ""))
                 if not by[k].get("email") and d.get("email"):
                     by[k].update(email=d["email"])
                 continue
-            by[k] = {**d, "departments": [d["department"]], "title": pos}
+            by[k] = {**d, "departments": [d["department"]], "groups": [grp.get(p.name, "")], "title": pos}
     out = sorted(by.values(), key=lambda d: (d["institution"], d["name"]))
     for i, d in enumerate(out):
         d["id"] = f"b1-{i:04d}"
@@ -143,7 +162,7 @@ def cmd_export() -> None:
     for pid, p in ps.items():
         t = tags.get(pid, {"fit": "?"})
         em = (p.get("email") or {}).get("value")
-        rec = {"School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
+        rec = {"Priority": priority(t.get("theme", ""), set(p.get("groups") or [])), "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
                "Fit": t.get("fit"), "Theme": t.get("theme", ""), "Research (1 line)": t.get("summary", ""),
                "Hook (your project)": t.get("hook", ""), "Email": em or "",
@@ -156,7 +175,7 @@ def cmd_export() -> None:
         sheet = "Dropped (C)" if t.get("fit") == "C" else ("Need email" if not em or pid in bad else "People")
         rows[sheet].append(rec)
     for v in rows.values():
-        v.sort(key=lambda r: (order.get(r["Fit"], 2), r["Theme"], r["School"], r["Name"]))
+        v.sort(key=lambda r: (r.get("Priority", 9), order.get(r.get("Fit"), 2), r.get("School", ""), r.get("Name", "")))
     cshl = [r for r in jl(DATA / "roster" / "cshl-faculty.jsonl") if young_title(r.get("title_on_roster") or "")]
     rows["CSHL (any heritage)"] = [{"Name": r["name"], "Title (official page)": r["title_on_roster"],
                                    "Page": r.get("profile_url", "")} for r in cshl]
