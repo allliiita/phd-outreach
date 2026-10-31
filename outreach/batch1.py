@@ -151,6 +151,15 @@ def coverage() -> list[dict]:
     return rows
 
 
+def check_note(p: dict) -> str:
+    notes = []
+    if position_class(p["title"] or "") == "associate":
+        notes.append("associate: confirm promoted 2020+")
+    if "epidemiology" in (p["title"] + " " + (p.get("quote") or "")).lower():
+        notes.append("appointment in Epidemiology & Biostatistics (excluded dept): your call")
+    return "; ".join(notes)
+
+
 def cmd_export() -> None:
     import openpyxl
     ps = {p["id"]: p for p in jl(TAG / "people.jsonl")}
@@ -170,8 +179,7 @@ def cmd_export() -> None:
                "Homepage": p.get("homepage") or p.get("profile_url") or "",
                "Paper 1": ((p.get("papers") or [{}])[0]).get("title", ""),
                "Paper 2": ((p.get("papers") or [{}, {}])[1:2] or [{}])[0].get("title", ""),
-               "Official page": p.get("roster_url", ""), "Check": "associate: confirm promoted 2020+" if
-               position_class(p["title"] or "") == "associate" else ""}
+               "Official page": p.get("roster_url", ""), "Check": check_note(p)}
         sheet = "Dropped (C)" if t.get("fit") == "C" else ("Need email" if not em or pid in bad else "People")
         rows[sheet].append(rec)
     for v in rows.values():

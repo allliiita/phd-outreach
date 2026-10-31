@@ -3,7 +3,7 @@ import re,json,sys,html
 sys.path.insert(0,'data/discovery/v3')
 import ucsf_profiles_scan as s
 INSTN="University of California San Francisco"
-FAC=re.compile(r"professor|lecturer|instructor|researcher|scientist|faculty",re.I)
+FAC=re.compile(r"professor|\bprof\b|lecturer|instructor|researcher|scientist|faculty",re.I)   # \bprof\b: "ASST PROF-HCOMP"
 UNITS={ # profiles dept -> (slug, unit label, group)
  "Bioengineering":("ucsf-bts","Bioengineering and Therapeutic Sciences (Profiles dept Bioengineering)","G2"),
  "Radiology":("ucsf-radiology","Radiology and Biomedical Imaging","G3"),
