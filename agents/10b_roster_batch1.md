@@ -30,6 +30,9 @@ ucsf_profiles_scan.py); page through every result page.
    if 0 / wrong rows, write config/directories/<slug>-<unit-slug>.yaml (see cshl-faculty.yaml) and run it.
    Keep all ranks (filtering is done by code later). Titles verbatim. No LLM-typed names or titles.
 2. Self-check: row count vs the page (state both numbers), 3 random rows vs the page, no students / staff.
+   page_count is YOUR count of the live page, never the scouting number. (USF 2026-10-31: auto-parse silently
+   dropped people whose card layout differed — EE 24/28, Chemistry 45/49 — and took "Google Scholar" /
+   "Tampa Campus" as names. Search the page text for every surname you expect before declaring done.)
 3. Big list without titles (e.g. names only): still roster it; titles come from profiles later.
 Budget: ~90 tool calls. Cut losses on a unit after ~6 calls: mark it and move on.
 
