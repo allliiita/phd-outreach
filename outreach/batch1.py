@@ -160,12 +160,44 @@ def check_note(p: dict) -> str:
     return "; ".join(notes)
 
 
+def cmd_validate() -> None:
+    """Deterministic email checks (same rules as validate.py): the address is on its saved source page,
+    on an official domain (else WARN), plausibly the person's, and not shared by two people."""
+    from .config import institution_domains
+    from .fetch import SNAP, visible_text
+    from .validate import email_appears_in, norm_name, snapshot_text
+    out, seen = [], defaultdict(list)
+    for p in jl(TAG / "people.jsonl"):
+        e = p.get("email") or {}
+        em = (e.get("value") or "").lower()
+        if not em:
+            continue
+        seen[em].append(p["id"])
+        snap = snapshot_text(SNAP, e.get("evidence", {}).get("source_url", ""))
+        if snap is None:
+            out.append((p["id"], "email source page has no saved snapshot"))
+        elif not (email_appears_in(em, snap) or email_appears_in(em, visible_text(snap))):
+            out.append((p["id"], "email not found in saved snapshot of its source page"))
+        doms = institution_domains(p["institution"])
+        dom = em.split("@", 1)[1]
+        if doms and not any(dom == d or dom.endswith("." + d) for d in doms):
+            out.append((p["id"], f"WARN email domain {dom} not in {doms}"))
+        toks = [t for t in norm_name(p["name"]).split() if len(t) >= 3]
+        local = em.split("@")[0]
+        ini = "".join(t[0] for t in norm_name(p["name"]).split())
+        if not any(t in local for t in toks) and not local.startswith(ini[:2]):
+            out.append((p["id"], f"WARN email local part {local} does not resemble the name"))
+    out += [(i, f"email {em} shared by {ids}") for em, ids in seen.items() if len(ids) > 1 for i in ids]
+    (DATA / "validate_report.tsv").write_text("".join(f"{i}\t{m}\n" for i, m in out))
+    print(f"{len(out)} problems ({sum(not m.startswith('WARN') for _, m in out)} hard) -> data/validate_report.tsv")
+
+
 def cmd_export() -> None:
     import openpyxl
     ps = {p["id"]: p for p in jl(TAG / "people.jsonl")}
     tags = {t["id"]: t for f in sorted((TAG / "out").glob("*.jsonl")) for t in jl(f)}
-    bad = {l.split("\t")[0] for l in (DATA / "validate_report.tsv").read_text().splitlines()} \
-        if (DATA / "validate_report.tsv").exists() else set()
+    bad = {l.split("\t")[0] for l in (DATA / "validate_report.tsv").read_text().splitlines()
+           if l and not l.split("\t", 1)[1].startswith("WARN")} if (DATA / "validate_report.tsv").exists() else set()
     order = {"A": 0, "B": 1, "?": 2, "C": 3}
     rows = defaultdict(list)
     for pid, p in ps.items():
@@ -205,7 +237,7 @@ def cmd_export() -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["rosters", "enrich", "cards", "export"])
+    ap.add_argument("cmd", choices=["rosters", "enrich", "cards", "validate", "export"])
     ap.add_argument("--size", type=int, default=40)
     a = ap.parse_args()
     if a.cmd == "rosters":
@@ -215,6 +247,8 @@ def main() -> None:
         cmd_enrich()
     elif a.cmd == "cards":
         cmd_cards(a.size)
+    elif a.cmd == "validate":
+        cmd_validate()
     else:
         cmd_export()
 

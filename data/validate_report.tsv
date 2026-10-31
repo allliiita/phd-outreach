@@ -1,44 +1,4 @@
-jerry-chen-bu	WARN email domain chen-lab.org not in official domains ['bu.edu'] (personal address from own homepage?)
-elizabeth-chen-brown	keywords too generic: ['machine learning']
-daniel-ritchid-brown	keywords too generic: ['machine learning', 'artificial intelligence']
-mehdi-saligane-brown	keywords too generic: ['artificial intelligence']
-georgia-gkioxari-caltech	WARN email domain gmail.com not in official domains ['caltech.edu'] (personal address from own homepage?)
-brad-mahon-cmu	WARN email domain rcbi.rochester.edu not in official domains ['cmu.edu'] (personal address from own homepage?)
-xuhai-orson-xu-columbia	keywords too generic: ['artificial intelligence']
-lena-mamykina-columbia	email om2196@cumc.columbia.edu: UNI letters 'om' do not match initials 'lm' (directory error?)
-jayadev-acharya-cornell	keywords too generic: ['machine learning']
-sarah-dean-cornell	keywords too generic: ['machine learning']
-peter-mcmahon-cornell	keywords too generic: ['machine learning']
-holden-lee-jhu	email hlee283@jhu.edu: UNI letters 'hlee' do not match initials 'hl' (directory error?)
-allen-liu-nyu	WARN email domain gmail.com not in official domains ['nyu.edu', 'nyulangone.org'] (personal address from own homepage?)
-allen-liu-nyu	email cliu568@gmail.com: UNI letters 'cliu' do not match initials 'al' (directory error?)
-dimitris-s-papailiopoulos-uw-madison	WARN email domain papail.io not in official domains ['wisc.edu'] (personal address from own homepage?)
-pedro-morgado-uw-madison	WARN email domain gmail.com not in official domains ['wisc.edu'] (personal address from own homepage?)
-dan-ma-duke	keywords too generic: ['artificial intelligence']
-rebecca-chung-hui-yang-duke	WARN email domain gmail.com not in official domains ['duke.edu'] (personal address from own homepage?)
-flavio-p-calmon-harvard	keywords too generic: ['machine learning', 'artificial intelligence']
-erin-chen-mit	WARN email domain yeclab.org not in official domains ['mit.edu'] (personal address from own homepage?)
-paul-c-blainey-mit	WARN email domain broadinstitute.org not in official domains ['mit.edu'] (personal address from own homepage?)
-weitao-yang-duke	keywords too generic: ['Machine Learning']
-julian-c-hong-ucsf	keywords too generic: ['Artificial Intelligence']
-yuanfang-guan-umich	email gyuanfan@umich.edu: no part of the name in address or quote (wrong person?)
-xiaoqiang-huang-umich	email xiaoqiah@umich.edu: no part of the name in address or quote (wrong person?)
-jianping-fu-umich	email jpfu@umich.edu: no part of the name in address or quote (wrong person?)
-yan-yu-washu	email yuy1@wustl.edu: no part of the name in address or quote (wrong person?)
-linjun-zhang-rutgers	keywords too generic: ['Machine Learning']
-mateo-d-az-uchicago	keywords too generic: ['machine learning']
-yun-yang-umd	keywords too generic: ['machine learning']
-edgar-dobriban-upenn	keywords too generic: ['machine learning']
-shichen-zhang-usf	keywords too generic: ['artificial intelligence']
-aryan-mokhtari-ut-austin	keywords too generic: ['machine learning', 'artificial intelligence']
-edison-thomaz-ut-austin	keywords too generic: ['Machine Learning']
-shan-yu-uva	keywords too generic: ['machine learning']
-gilbert-bernstein-uw	WARN email domain gilbertbernstein.com not in official domains ['uw.edu', 'washington.edu'] (personal address from own homepage?)
-peter-jin-washu	email jin810@wustl.edu: UNI letters 'jin' do not match initials 'pj' (directory error?)
-jingyi-shi-washu	email jshi22@wustl.edu: UNI letters 'jshi' do not match initials 'js' (directory error?)
-edward-han-washu	email ehan23@wustl.edu: UNI letters 'ehan' do not match initials 'eh' (directory error?)
-david-f-fouhey-nyu	possible duplicate person david fouhey @ new york university: ['david-f-fouhey-nyu', 'david-fouhey-nyu']
-arman-oganisian-brown	email arman_oganisian@brown.edu shared by ['arman-oganisian-brown', 'arman-organisian-brown']
-xiaomu-wei-cornell	email aprilwei@cornell.edu shared by ['xiaomu-wei-cornell', 'ling-wei-kong-cornell']
-david-f-fouhey-nyu	email david.fouhey@nyu.edu shared by ['david-f-fouhey-nyu', 'david-fouhey-nyu']
-qingyun-li-washu	email qingyunli@wustl.edu shared by ['qingyun-li-washu', 'tristan-qingyun-li-washu']
+b1-0003	WARN email local part chz2009 does not resemble the name
+b1-0010	WARN email domain chen-lab.org not in ['bu.edu']
+b1-0058	WARN email domain gmail.com not in ['duke.edu']
+b1-0214	WARN email local part lulu1 does not resemble the name
