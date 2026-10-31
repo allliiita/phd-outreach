@@ -21,3 +21,13 @@ Return the report as your reply (the coordinator saves it to `data/audit/report_
 `problem | evidence (names / units / numbers from the pack) | impact | proposed fix (a code check if it can
 be mechanical, else a playbook line) | confidence`. Then one line: "Biggest risk if we start emailing now: ...".
 Do not browse. Do not write files.
+
+## Batch 1 audit (2026-10-31) — what it found and what now prevents it
+- Site boilerplate as homepage (UCSF terms-of-use, Mount Sinai COI handbook, CMS editor links) and Mount Sinai
+  COI text as research -> outreach/batch1.py clean(): junk-URL regex + any homepage shared by >2 people blanked.
+- Same person under two names (Jason Ji = Zhicheng Ji) -> dedupe() on profile URL / homepage / email local
+  part / profile-URL name slug.
+- Blank, "of Instruction", affiliate titles and fit "?" -> own sheet "Check (title or fit)", never People.
+- Same-name authors' papers (Europe PMC / S2 match name + affiliation string only) -> only papers whose title
+  is on the person's own saved page are shown as theirs; others in a "check author" column; a fit resting on
+  such papers alone is flagged.

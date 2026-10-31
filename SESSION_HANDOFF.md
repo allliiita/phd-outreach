@@ -1,14 +1,20 @@
-# Session handoff (2026-10-31)
+# Session handoff (2026-10-31, batch 1 rebuild)
 
-Start here: docs/REQUIREMENTS.md (what the applicant wants + mistakes so far), then HANDOFF_PROMPT.md.
+Start: docs/REQUIREMENTS.md, then config/targets.yaml (bottom block = current scope, agreed with the applicant
+2026-10-31: 6 schools BU, Duke, USF, UCSF, CSHL, Mount Sinai; WashU/UVA/UMich/UPenn postponed; CS IN;
+PhD-advising young titles only; Chinese surnames; per-person fit A/B/C; priority NeuroAI > AI depts/initiatives
+> CS-type ML > molecular ML).
 
-State of data (branch deterministic-pipeline):
-- data/export/batch1.xlsx: first attempt (369 Chinese-surname candidates, 226 with email). Rows from
-  official directories (Duke, WashU, UVA, BU, USF) are usable; rows from paper search (data/roster/ps-*.jsonl,
-  UCSF / Mount Sinai / UMich / UPenn) are hints only: no titles, misses new faculty.
-- data/discovery/v2/*.jsonl: per-school department scouting with coverage status (UCSF, Mount Sinai, UMich,
-  most of UPenn blocked from the cloud sandbox).
-- docs/cshl_bioai.md: CSHL BioAI PhD facts and young PIs (contact PIs before applying; rolling from Dec 15).
-- Earlier CS work (data/roster/csr-*, CSRankings) is kept but out of scope (applicant does not want CS).
-Tools: outreach/{fetch,roster,enrich,papers,validate,score,shortlist,audit,papersource}.py; playbooks in agents/.
-Secrets (not in git): secrets/openalex_key (OpenAlex daily budget is small; Europe PMC needs no key).
+Pipeline (all in outreach/batch1.py; playbooks in agents/):
+1. grid scouting: agents/05b_grid_scout.md -> data/discovery/v3/<school>.jsonl
+2. rosters: agents/10b_roster_batch1.md (one worker per school) -> data/grid/<school>.jsonl + data/roster/
+   verify: agents/15_roster_verifier.md (fresh agent) -> data/grid/<school>.verdicts.jsonl; fix; code check
+3. python -m outreach.batch1 enrich | cards | (taggers: agents/26_fit_tagger.md, Haiku) | recards (Sonnet
+   second opinion) | validate | export -> data/export/batch1.xlsx
+4. auditor: agents/60_auditor.md (Sonnet). Findings and fixes listed at the end of that file.
+Access: config/browser_hosts.txt (hosts read in real Chromium; bot checks are never worked around).
+UMich, Penn Medicine/SEAS, UCSF dept sites, Moffitt, WashU MIR are challenge-blocked from the cloud.
+
+State: 57 People (A/B with verified email), 15 Need email (UCSF mostly), 42 Check, 125 Dropped (C).
+Open: associates' promotion year unverified; UCSF emails; BU Psych & Brain Sciences, Mount Sinai Psychiatry /
+Neurology, Duke DIBS not rostered; target 200-300 needs more schools (WashU first) or wider surnames.

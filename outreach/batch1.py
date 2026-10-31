@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from collections import defaultdict
@@ -178,11 +179,91 @@ def coverage() -> list[dict]:
         for v in jl(DATA / "grid" / f"{SLUG[inst]}.verdicts.jsonl"):
             for r in rows:
                 if r["school"] == inst and r["unit"] == v.get("unit"):
-                    r["verifier"] = v.get("verdict")
+                    r["verifier (first pass)"] = v.get("verdict")
+                    r["after fix"] = ("re-built; every person the verifier named as missing is now present (code check)"
+                                      if v.get("verdict") in ("FAIL", "FIXABLE") else "")
     for inst in t.get("postponed_schools", []):
         rows.append({"school": inst, "unit": "(all)", "status": "postponed (applicant)",
                      "note": f"scouted: data/discovery/v3/{SLUG[inst]}.jsonl"})
     return rows
+
+
+# ---- export-time cleanup (auditor 2026-10-31); ids in data/tag/people.jsonl stay frozen ----
+JUNK_URL = re.compile(r"terms-of-use|faculty-resources/handbook|omniupdate|safelinks|a-lab-like-no-other|"
+                      r"/login|wp-admin", re.I)
+BOILER = re.compile(r"physicians and scientists on the faculty of the icahn school", re.I)
+NOT_ADVISING = re.compile(r"of instruction|of the practice|teaching|affiliate|lecturer|instructor", re.I)
+
+
+def clean(ps: list[dict]) -> None:
+    """Blank homepages that are site boilerplate or shared by >2 people; drop boilerplate research text."""
+    from collections import Counter
+    n = Counter((p.get("homepage") or "").rstrip("/") for p in ps)
+    for p in ps:
+        hp = (p.get("homepage") or "").rstrip("/")
+        if hp and (JUNK_URL.search(hp) or n[hp] > 2):
+            p["homepage"] = ""
+        r = p.get("research") or {}
+        if BOILER.search(r.get("text") or ""):
+            p["research"] = {}
+
+
+def dedupe(ps: list[dict], tags: dict) -> list[dict]:
+    """Same person listed under two names (e.g. "Jason Ji" = Zhicheng Ji): same profile URL, homepage or
+    email local part at one institution. Keep the copy with an email; merge departments."""
+    from .validate import norm_name
+
+    def keyof(p: dict) -> set[str]:
+        slug = norm_name(re.sub(r"[._\-]+", " ", (p.get("profile_url") or "").rstrip("/").rsplit("/", 1)[-1]))
+        ks = {(p.get("profile_url") or "").rstrip("/").lower(), (p.get("homepage") or "").rstrip("/").lower(),
+              ((p.get("email") or {}).get("value") or "").split("@")[0].lower(), "n:" + norm_name(p["name"])}
+        if len(slug.split()) >= 2:
+            ks.add("n:" + slug)   # profile URL slug is a name: ".../person/Zhicheng.Ji" vs listed as "Jason Ji"
+        return {k for k in ks if k and k != "n:"}
+    out: list[dict] = []
+    for p in sorted(ps, key=lambda p: not (p.get("email") or {}).get("value")):
+        hit = next((q for q in out if q["institution"] == p["institution"] and keyof(q) & keyof(p)), None)
+        if hit:
+            hit["departments"] = list(dict.fromkeys(hit["departments"] + p["departments"]))
+            hit["groups"] = list(dict.fromkeys(hit.get("groups", []) + p.get("groups", [])))
+            hit.setdefault("aka", []).append(p["name"])
+            if tags.get(p["id"], {}).get("fit", "?") < tags.get(hit["id"], {}).get("fit", "?"):
+                tags[hit["id"]] = tags[p["id"]]
+        else:
+            out.append(p)
+    return out
+
+
+def own_text(p: dict) -> str:
+    from .fetch import SNAP, snapshot_path, visible_text
+    t = []
+    for u in {p.get("profile_url"), p.get("homepage"), p.get("pubs"), p.get("roster_url")}:
+        sp = snapshot_path(SNAP, u) if u else None
+        if sp and sp.exists():
+            t.append(visible_text(sp.read_text(errors="ignore")).lower())
+    return " ".join(t)
+
+
+def split_papers(p: dict) -> tuple[list[str], list[str]]:
+    """Confirmed = the title is on the person's own saved page; name+affiliation matches alone are unconfirmed
+    (Europe PMC / S2 can return a same-name author at the same school)."""
+    txt = own_text(p)
+    norm = lambda s: " ".join(re.sub(r"[^a-z0-9 ]", " ", s.lower()).split())
+    nt = norm(txt)
+    conf, unconf = [], []
+    for x in p.get("papers") or []:
+        (conf if norm(x["title"])[:60] and norm(x["title"])[:60] in nt else unconf).append(f'{x["title"]} ({x.get("year", "")})')
+    return conf, unconf
+
+
+def evidence(p: dict, card_re: dict) -> str:
+    """strong = research text / a paper confirmed on the own page / real profile text; weak = only papers
+    matched by name + affiliation (may be a same-name author); none."""
+    r = (p.get("research") or {}).get("text") or ""
+    prof = card_re.get("profile_text", "")
+    if len(r) > 80 or split_papers(p)[0] or (len(prof) > 300 and not BOILER.search(prof)):
+        return "strong"
+    return "weak" if p.get("papers") else "none"
 
 
 def check_note(p: dict) -> str:
@@ -191,6 +272,10 @@ def check_note(p: dict) -> str:
         notes.append("associate: confirm promoted 2020+")
     if "epidemiology" in (p["title"] + " " + (p.get("quote") or "")).lower():
         notes.append("appointment in Epidemiology & Biostatistics (excluded dept): your call")
+    if p.get("_weak"):
+        notes.append("fit based on name-matched papers only: check they are this person's")
+    if p.get("aka"):
+        notes.append(f"also listed as {', '.join(p['aka'])}")
     return "; ".join(notes)
 
 
@@ -228,15 +313,24 @@ def cmd_validate() -> None:
 
 def cmd_export() -> None:
     import openpyxl
-    ps = {p["id"]: p for p in jl(TAG / "people.jsonl")}
+    raw = jl(TAG / "people.jsonl")
     tags = {t["id"]: t for f in sorted((TAG / "out").glob("*.jsonl")) for t in jl(f)}
     tags.update({t["id"]: t for f in sorted((TAG / "re_out").glob("*.jsonl")) for t in jl(f)})   # second opinion wins
+    recard = {c["id"]: c for f in sorted((TAG / "re_in").glob("*.jsonl")) for c in jl(f)}
+    clean(raw)
+    ps = {p["id"]: p for p in dedupe(raw, tags)}
     bad = {l.split("\t")[0] for l in (DATA / "validate_report.tsv").read_text().splitlines()
            if l and not l.split("\t", 1)[1].startswith("WARN")} if (DATA / "validate_report.tsv").exists() else set()
     order = {"A": 0, "B": 1, "?": 2, "C": 3}
     rows = defaultdict(list)
     for pid, p in ps.items():
-        t = tags.get(pid, {"fit": "?"})
+        t = dict(tags.get(pid, {"fit": "?"}))
+        ev = evidence(p, recard.get(pid, {}))
+        if t.get("fit") in ("A", "B", "C") and ev == "none":
+            t["fit"], t["summary"] = "?", f"(no research evidence saved) {t.get('summary', '')}"
+        elif t.get("fit") in ("A", "B") and ev == "weak":
+            p["_weak"] = True
+        conf, unconf = split_papers(p)
         em = (p.get("email") or {}).get("value")
         rec = {"Priority": priority(t.get("theme", ""), set(p.get("groups") or [])), "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
@@ -244,20 +338,30 @@ def cmd_export() -> None:
                "Hook (your project)": t.get("hook", ""), "Email": em or "",
                "Email source": (p.get("email") or {}).get("evidence", {}).get("source_url", ""),
                "Homepage": p.get("homepage") or p.get("profile_url") or "",
-               "Paper 1": ((p.get("papers") or [{}])[0]).get("title", ""),
-               "Paper 2": ((p.get("papers") or [{}, {}])[1:2] or [{}])[0].get("title", ""),
+               "Paper 1 (on own page)": conf[0] if conf else "", "Paper 2 (on own page)": conf[1] if len(conf) > 1 else "",
+               "Papers by name match (check author)": " | ".join(unconf[:2]),
                "Official page": p.get("roster_url", ""), "Check": check_note(p)}
-        sheet = "Dropped (C)" if t.get("fit") == "C" else ("Need email" if not em or pid in bad else "People")
+        if t.get("fit") == "C":
+            sheet = "Dropped (C)"
+        elif not p["title"] or NOT_ADVISING.search(p["title"]) or t.get("fit") == "?":
+            sheet = "Check (title or fit)"
+        else:
+            sheet = "Need email" if not em or pid in bad else "People"
         rows[sheet].append(rec)
     for v in rows.values():
         v.sort(key=lambda r: (r.get("Priority", 9), order.get(r.get("Fit"), 2), r.get("School", ""), r.get("Name", "")))
     cshl = [r for r in jl(DATA / "roster" / "cshl-faculty.jsonl") if young_title(r.get("title_on_roster") or "")]
     rows["CSHL (any heritage)"] = [{"Name": r["name"], "Title (official page)": r["title_on_roster"],
                                    "Page": r.get("profile_url", "")} for r in cshl]
-    rows["Coverage"] = coverage()
+    summary = []
+    for inst in targets()["focus_schools"]:
+        k = lambda sh: sum(r.get("School") == inst for r in rows.get(sh, []))
+        summary.append({"school": inst, "unit": "(school total)", "status":
+                        f"people {k('People')} | need email {k('Need email')} | check {k('Check (title or fit)')} | dropped C {k('Dropped (C)')}"})
+    rows["Coverage"] = summary + coverage()
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name in ["People", "Need email", "Dropped (C)", "CSHL (any heritage)", "Coverage"]:
+    for name in ["People", "Need email", "Check (title or fit)", "Dropped (C)", "CSHL (any heritage)", "Coverage"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
         cols = list(dict.fromkeys(k for r in data for k in r)) or ["(empty)"]
