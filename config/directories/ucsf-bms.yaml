@@ -1,0 +1,22 @@
+institution: University of California San Francisco
+unit: Biomedical Sciences (BMS) PhD program faculty (Wayback 2026-07 copy, pages 0-12 and 26 only)
+urls:
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=1
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=2
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=3
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=4
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=5
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=6
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=7
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=8
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=9
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=10
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=11
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=12
+  - https://web.archive.org/web/20260710111852/https://bms.ucsf.edu/faculty?page=26
+item: article.person-teaser
+name: h2
+title: div.person-teaser__content > p
+profile: h2 a@href
+filter: all

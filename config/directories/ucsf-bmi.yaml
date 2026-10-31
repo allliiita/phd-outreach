@@ -1,0 +1,9 @@
+institution: University of California San Francisco
+unit: Biological and Medical Informatics (BMI) PhD program core+affiliate faculty (Wayback 2026-05 copy)
+urls: [https://web.archive.org/web/20260517152053/https://bmi.ucsf.edu/people/faculty]
+item: div.database-record
+name: h3
+title: p:nth-of-type(2)
+profile: a.database-image-link@href
+expect: 73
+filter: all

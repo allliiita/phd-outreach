@@ -1,0 +1,9 @@
+institution: University of California San Francisco
+unit: Chemistry and Chemical Biology (CCB) PhD program faculty (Wayback 2026 copy)
+urls: [https://web.archive.org/web/2026/https://ccb.ucsf.edu/people/faculty]
+item: div.database-record
+name: h3
+title: p:nth-of-type(2)
+profile: a.database-image-link@href
+expect: 45
+filter: all
