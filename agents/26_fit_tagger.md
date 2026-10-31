@@ -20,3 +20,12 @@ Theme rules: NeuroAI = ML on neural data, brain-inspired / neuro-AI models, comp
 connectomics, BCI decoding. AI-for-science = ML for molecules, proteins, materials, physics, genomics.
 medical-AI = ML on clinical data, medical imaging, EHR. stats-methods = statistical learning / inference
 methods. core-ML/CV = everything else in ML/AI (CV, NLP, RL, theory, LLMs, robotics learning).
+
+## Calibration (coordinator, 2026-10-31, after the first pass was too strict)
+- Statistical methodology (incl. statistical genetics / genomics METHODS, causal inference, Bayesian methods):
+  B with theme stats-methods (A if the methods are ML / statistical learning).
+- ML systems, efficient ML, ML hardware, LLM systems: A, core-ML/CV.
+- Computational neuroscience with models of neural data / decoding / BCI: B (A if it builds ML methods), NeuroAI.
+- Medical imaging with deep learning or reconstruction algorithms: B, medical-AI.
+- Pure wet-lab, clinical practice, health services, epidemiology without ML: C.
+Second-opinion cards (data/tag/re_in) add profile_text and homepage_text from saved pages; use them.

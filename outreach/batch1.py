@@ -133,6 +133,40 @@ def cmd_cards(size: int) -> None:
     print(f"{len(ps)} people -> {(len(ps) + size - 1) // size} card files in data/tag/in/")
 
 
+def page_text(url: str, name: str, n: int = 1500) -> str:
+    """Visible text of a saved snapshot, starting near the person's surname (no new fetch)."""
+    from .fetch import SNAP, snapshot_path, visible_text
+    if not url:
+        return ""
+    sp = snapshot_path(SNAP, url)
+    if not sp.exists():
+        return ""
+    v = visible_text(sp.read_text(errors="ignore"))
+    i = v.lower().find(name.split()[-1].lower())
+    return v[max(0, i - 100): max(0, i - 100) + n]
+
+
+def cmd_recards(ids_file: Path, size: int) -> None:
+    """Second-opinion cards: the first card plus profile / homepage text from saved snapshots."""
+    want = json.loads(ids_file.read_text())
+    ids = [i for v in want.values() for i in v]
+    ps = {p["id"]: p for p in jl(TAG / "people.jsonl")}
+    (TAG / "re_in").mkdir(parents=True, exist_ok=True)
+    (TAG / "re_out").mkdir(parents=True, exist_ok=True)
+    cards = []
+    for i in ids:
+        p = ps[i]
+        c = card(p)
+        c["profile_text"] = page_text(p.get("profile_url") or "", p["name"])
+        hp = p.get("homepage") or ""
+        c["homepage_text"] = page_text(hp, p["name"]) if hp and hp != p.get("profile_url") else ""
+        c["papers"] = [x["title"] for x in (p.get("papers") or [])[:6]]
+        cards.append(c)
+    for k in range(0, len(cards), size):
+        (TAG / "re_in" / f"r{k // size:02d}.jsonl").write_text("".join(json.dumps(c) + "\n" for c in cards[k:k + size]))
+    print(f"{len(cards)} recheck cards -> data/tag/re_in/")
+
+
 def coverage() -> list[dict]:
     t = targets()
     rows = []
@@ -196,6 +230,7 @@ def cmd_export() -> None:
     import openpyxl
     ps = {p["id"]: p for p in jl(TAG / "people.jsonl")}
     tags = {t["id"]: t for f in sorted((TAG / "out").glob("*.jsonl")) for t in jl(f)}
+    tags.update({t["id"]: t for f in sorted((TAG / "re_out").glob("*.jsonl")) for t in jl(f)})   # second opinion wins
     bad = {l.split("\t")[0] for l in (DATA / "validate_report.tsv").read_text().splitlines()
            if l and not l.split("\t", 1)[1].startswith("WARN")} if (DATA / "validate_report.tsv").exists() else set()
     order = {"A": 0, "B": 1, "?": 2, "C": 3}
@@ -237,8 +272,9 @@ def cmd_export() -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["rosters", "enrich", "cards", "validate", "export"])
+    ap.add_argument("cmd", choices=["rosters", "enrich", "cards", "recards", "validate", "export"])
     ap.add_argument("--size", type=int, default=40)
+    ap.add_argument("--ids", type=Path, help="recards: JSON {group: [ids]}")
     a = ap.parse_args()
     if a.cmd == "rosters":
         for p in rosters():
@@ -247,6 +283,8 @@ def main() -> None:
         cmd_enrich()
     elif a.cmd == "cards":
         cmd_cards(a.size)
+    elif a.cmd == "recards":
+        cmd_recards(a.ids, a.size)
     elif a.cmd == "validate":
         cmd_validate()
     else:
