@@ -1,2 +1,4 @@
 # one host per line; see outreach/fetch.py BROWSER_HOSTS
 cshl.edu
+icahn.mssm.edu
+comphealth.duke.edu
