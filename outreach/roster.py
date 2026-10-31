@@ -78,7 +78,7 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
 TITLE_WORD = re.compile(r"\b(professor|lecturer|instructor|scientist|faculty|chair|emerit\w*)\b", re.I)
 UP = "A-ZÀ-ÖØ-ÞĀ-Ž"   # capitals incl. accented ("Ünlü")
 # tokens: capitalised words, initials ("M."), nicknames in parentheses ("Xuezhou (Jack) Zhang")
-NAME_RE = re.compile(rf"^[{UP}][\w'’.\-]*(?: (?:[{UP}][\w'’.\-]*|\([^()]{{1,20}}\))){{1,4}}$")
+NAME_RE = re.compile(rf"^[{UP}][\w'’.\-]*(?: (?:[{UP}][\w'’.\-]*|\([^()]{{1,20}}\)|[\u0022\u201c][^\u0022\u201d]{{1,20}}[\u0022\u201d])){{1,4}}$")
 LAST_FIRST = re.compile(r"^([A-Z][\w'’\-]+(?: [A-Z][\w'’\-]+)?), ([A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]*)?)$")
 NOT_NAME = re.compile(r"\b(read|more|bio|profile|website|email|contact|faculty|people|department|research|news|view|"
                       r"statistics|science|university|school|center|institute|program|home|scholar|google|campus|linkedin|orcid|member|fellow|award|medal)\b", re.I)
