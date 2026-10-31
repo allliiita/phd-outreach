@@ -1,25 +1,29 @@
-# Paste this into Claude Code on your computer (inside the unzipped `phd-outreach` folder)
+# Prompt for the next agent (paste into Claude Code on your own computer, inside this repo)
 
 ```
-You are running my PhD-outreach system in this folder. Read CLAUDE.md, then agents/00_rules.md, and follow them exactly — they define the coordinator / stage-manager / worker / verifier hierarchy, the trust pyramid, and the sending rules.
+You are rebuilding batch 1 of my PhD-outreach professor list. Read docs/REQUIREMENTS.md first; it is the
+source of truth (what I want, who counts, the mistakes made so far, the deliverable). Then skim CLAUDE.md,
+config/targets.yaml, docs/cshl_bioai.md, and the existing tools in outreach/ (fetch.py saves page snapshots
+and extracts emails incl. obfuscated ones; roster.py scrapes a directory from CSS selectors or --auto;
+enrich.py fills email/homepage/research text/papers for roster rows; validate.py checks emails and quotes
+against saved snapshots). Reuse them; do not reinvent.
 
-Setup (do now, report results):
-1. python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt && python -m pytest -q
-2. Smoke-test the network tools: python -m outreach.fetch https://www.cmu.edu/dietrich/statistics-datascience/people/faculty/index.html --emails | head ; python -m outreach.papers "Weijing Tang" "Carnegie Mellon University"
-3. Move the pilot data in: mkdir -p data/people data/verdicts && cp data/pilot/people_*.jsonl data/people/ && cp data/pilot/verdicts_*.jsonl data/verdicts/ ; then python -m outreach.pipeline merge && python -m outreach.pipeline verdicts && python -m outreach.pipeline status
-   Re-run the pilot people through outreach.fetch so data/snapshots holds the real pages, and re-run merge: from now on every email and quote is checked against saved bytes.
-
-Then work through CLAUDE.md "Order of work":
-- Pilot = CMU Statistics & Data Science (already rostered) + Broad Institute (rostered) + one more institution of your choice. Show me every pilot record in a table before scaling; I will correct some, and you turn each correction into a validate.py check or a playbook line.
-- Build tests/gold/people.jsonl from the 30 records I approve, and pass tests/score_gold.py before scaling.
-- Then all institutions in config/institutions.yaml, departments → roster → profile → verify, 5–10 subagents in parallel. Prioritise departments in this order: Statistics, Biostatistics, Computational Biology / Biomedical Informatics, Data Science, CS (ML/CV/NLP/AI-for-science faculty), ECE/OR/Applied Math/Neuroscience (ML faculty only), institutes.
-- Start the email stage as soon as ~100 verified tier-A records exist; early-career faculty first. Writer and critic must be different subagents (critic on a different model if available). Run outreach.emailcheck on every draft.
-- Sending: create batches of 20 (python -m outreach.send batch), put them into Gmail as drafts (send drafts N) and tell me. I review and either send from Gmail or run `send approve N` myself in a terminal, after which you may run `send send N`. Never more than 40/day. If Gmail OAuth needs a login, pop the browser and wait for me.
-
-Every evening append to data/LOG.md: counts by stage, verifier pass rate per stage, errors found, and which new check prevents each. Ask me only for logins, batch approvals, and borderline-relevance calls (collect those into one list).
+Work target-first, as a grid:
+1. Build the grid: for each school in config/targets.yaml, list every department / institute of types T2–T8
+   from the school's official "departments" pages (medical school, engineering, arts & sciences, institutes).
+   Use one subagent per school in parallel. Each subagent returns rows
+   {school, department, type, faculty-list URL(s)} and an explicit status per type
+   (found / none at this school / blocked / not found + what it checked). Show me the grid before step 2.
+2. For each department, take the COMPLETE official faculty list (every rank page), with titles verbatim.
+   If a site blocks scripts, open it in the browser and save the page to data/snapshots/manual/.
+   Verify each roster: count matches the page, 3 random rows correct, no students/staff/emeritus.
+3. Keep young faculty (Assistant / Incoming Assistant / Associate since ~2020) with Chinese surnames.
+   Anyone on an official page counts, even with no papers.
+4. Enrich (email verbatim from an official page, homepage, one-line research summary, 1–2 recent papers if
+   found). Run validate.py. No email found -> list them separately; never construct an address.
+5. An independent auditor agent (different model, agents/60_auditor.md) checks a sample and the coverage
+   sheet before I see the result.
+Deliver data/export/batch1.xlsx (people + coverage sheet). Ask me only for logins and borderline calls.
+Existing data from earlier runs (data/roster, data/dossiers, data/people, data/export/batch1.xlsx) may be
+reused where a department's official list was actually scraped; treat paper-derived rows (ps-*) as hints only.
 ```
-
-Before you paste it:
-- Put your CV PDF at `assets/Lindsey_Ma_CV.pdf` (export the CV doc as PDF).
-- Check `config/applicant.yaml` (sender address, project one-liners).
-- For Gmail sending: Google Cloud Console → create project → enable Gmail API → OAuth client (Desktop) → download as `secrets/credentials.json`. The agent can walk you through it.
