@@ -1,17 +1,18 @@
 # Applicant's choices (2026-10-30). shortlist.py reads this file; edit here, not in code.
 heritage: chinese            # only Chinese-surname faculty in this round
 target_size: [200, 300]
-focus_schools:               # scouted department by department this round
+focus_schools:               # batch 1 (applicant, 2026-10-31)
   - Boston University
-  - Icahn School of Medicine at Mount Sinai
-  - University of Pennsylvania
-  - University of Virginia
   - Duke University
   - University of South Florida
-  - Washington University in St. Louis
-  - University of Michigan
   - University of California San Francisco
   - Cold Spring Harbor Laboratory
+  - Icahn School of Medicine at Mount Sinai
+postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
+  - Washington University in St. Louis
+  - University of Virginia
+  - University of Michigan
+  - University of Pennsylvania
 exclude_schools:             # "too competitive", "too remote", "not for me"
   - Harvard University
   - Massachusetts Institute of Technology
@@ -30,6 +31,10 @@ exclude_schools:             # "too competitive", "too remote", "not for me"
   - Purdue University
   - University of Notre Dame
   - Pennsylvania State University
-exclude_units: [biostatistics in schools of public health]
+exclude_units: [biostatistics in schools of public health, UCSF Epidemiology & Biostatistics]
 institutes_this_round: [Cold Spring Harbor Laboratory]   # other institutes postponed
-include_cs: false
+include_cs: true             # 2026-10-31: CS/ECE are the preferred home (goal: industry research scientist)
+# Who: assistant / incoming assistant / associate (promoted ~2020+) / independent fellow; Chinese surnames.
+# Fit (per person, not per department): A = develops ML methods or architectures (any domain, incl. pure AI/CV);
+# B = deep learning on bio / medical / neural data with method contributions; C = biology/clinic-first -> drop.
+# Theme tag: core-ML/CV | AI-for-science | NeuroAI | medical-AI.  Order: A before B.

@@ -67,7 +67,14 @@ def find_title(vis: str, name: str) -> str:
     return m.group(0).strip(" ,.") if m else ""
 
 
-YOUNG = {"incoming_assistant", "assistant", "associate", "research_faculty"}
+# Applicant (2026-10-31): only people who can take PhD students. Research-track, teaching, adjunct are out;
+# independent fellows (e.g. "CSHL Fellow") run their own groups and are in.
+YOUNG = {"incoming_assistant", "assistant", "associate"}
+FELLOW = re.compile(r"\b(cshl|independent|junior) fellow\b|\bfellow\b.*\b(lab|group)\b", re.I)
+
+
+def young_title(title: str) -> bool:
+    return position_class(title) in YOUNG or bool(FELLOW.search(title))
 
 
 def position_class(title: str) -> str:
@@ -395,7 +402,7 @@ def main() -> None:
     elif not a.all_ranks:   # applicant wants young faculty only: drop senior / non-advising titles before any fetch
         from .roster import faculty_like
         rows = [r for r in rows if faculty_like(r) and
-                (not r.get("title_on_roster") or position_class(r["title_on_roster"]) in YOUNG)]
+                (not r.get("title_on_roster") or young_title(r["title_on_roster"]))]
     from .surnames import PRIORITY, asian_tag
     for r in rows:
         r["heritage"] = r.get("heritage") or asian_tag(r["name"])
