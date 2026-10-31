@@ -1,0 +1,45 @@
+{"id": "b1-0200", "fit": "C", "theme": "medical-AI", "summary": "Clinical neuroradiology; image processing and analysis for the ABCD neuroimaging study.", "hook": ""}
+{"id": "b1-0201", "fit": "C", "theme": "medical-AI", "summary": "Clinical thoracic/cardiac radiology; MRI image quality studies, some AI-assisted segmentation.", "hook": ""}
+{"id": "b1-0203", "fit": "C", "theme": "other", "summary": "Biosphere-atmosphere interactions, carbon and hydrological cycles; teaching-track chemistry.", "hook": ""}
+{"id": "b1-0208", "fit": "A", "theme": "core-ML/CV", "summary": "Efficient high-performance systems for large-scale AI; GPU compression and collective communication.", "hook": ""}
+{"id": "b1-0216", "fit": "C", "theme": "other", "summary": "Industrial systems engineering; forecasting nursing-home staffing, health-survey and network science studies.", "hook": ""}
+{"id": "b1-0219", "fit": "B", "theme": "core-ML/CV", "summary": "Intelligent wireless systems joining communication, sensing and AI; radar-based sensing.", "hook": ""}
+{"id": "b1-0222", "fit": "C", "theme": "other", "summary": "Polymer and materials engineering with multiscale modelling and data-driven tools.", "hook": ""}
+{"id": "b1-0223", "fit": "B", "theme": "medical-AI", "summary": "Cardiac and vascular biomechanics modelling with deep learning and physics-informed neural networks.", "hook": ""}
+{"id": "b1-0225", "fit": "C", "theme": "other", "summary": "Analog and mixed-signal integrated circuits, biosensor front-ends, bioelectronics.", "hook": ""}
+{"id": "b1-0232", "fit": "B", "theme": "core-ML/CV", "summary": "Mobile and wireless sensing for IoT and smart home; AI/LLM plus mobile computing.", "hook": ""}
+{"id": "b1-0233", "fit": "C", "theme": "other", "summary": "Chemistry education research on student affect and learning.", "hook": ""}
+{"id": "b1-0234", "fit": "C", "theme": "other", "summary": "Lymphatic vasculature biology and lymphatic valve molecular mechanisms.", "hook": ""}
+{"id": "b1-0235", "fit": "C", "theme": "other", "summary": "Immune regulation of heart failure after myocardial infarction; cardiovascular biology.", "hook": ""}
+{"id": "b1-0236", "fit": "C", "theme": "other", "summary": "Civil/transport engineering: urban drainage optimization and work-zone crash injury analysis.", "hook": ""}
+{"id": "b1-0237", "fit": "C", "theme": "other", "summary": "Human-robot interaction, robotics and augmented reality; designing and evaluating robot experiences.", "hook": ""}
+{"id": "b1-0082", "fit": "B", "theme": "NeuroAI", "summary": "Memory neuroscience; open-source Miniscope calcium-imaging recording and analysis tools.", "hook": "calcium imaging denoising"}
+{"id": "b1-0083", "fit": "B", "theme": "stats-methods", "summary": "Computational psychiatric genomics; new methods for single-nucleus data, e.g. Dreamlet differential expression.", "hook": ""}
+{"id": "b1-0085", "fit": "B", "theme": "AI-for-science", "summary": "Bioinformatics and systems-biology tools integrating omics data for Alzheimer disease.", "hook": ""}
+{"id": "b1-0088", "fit": "C", "theme": "other", "summary": "Genetics of coronary artery disease: variant function, macrophage networks, polygenic risk.", "hook": ""}
+{"id": "b1-0092", "fit": "C", "theme": "other", "summary": "Synaptic and neuronal cell biology of psychiatric risk genes.", "hook": ""}
+{"id": "b1-0094", "fit": "C", "theme": "other", "summary": "HDAC inhibitors and transcriptional regulation in immune cells; pharmacology.", "hook": ""}
+{"id": "b1-0097", "fit": "B", "theme": "AI-for-science", "summary": "Computational cancer genomics and proteomics; genetic dependency and precision oncology.", "hook": ""}
+{"id": "b1-0098", "fit": "C", "theme": "other", "summary": "Alzheimer disease molecular mechanisms, polyphenol nutrition, mouse models.", "hook": ""}
+{"id": "b1-0105", "fit": "C", "theme": "other", "summary": "Stem-cell derived neurons and molecular programs of neural development.", "hook": ""}
+{"id": "b1-0107", "fit": "C", "theme": "medical-AI", "summary": "Radiology and lung cancer screening programs; clinical imaging with some AI review.", "hook": ""}
+{"id": "b1-0113", "fit": "C", "theme": "other", "summary": "CRISPR-based genome and base editing technology development.", "hook": ""}
+{"id": "b1-0115", "fit": "C", "theme": "other", "summary": "Kidney and renal disease biology; zebrafish and mouse models.", "hook": ""}
+{"id": "b1-0117", "fit": "C", "theme": "other", "summary": "CRISPR and genomic technologies for microbial systems biology.", "hook": ""}
+{"id": "b1-0118", "fit": "B", "theme": "AI-for-science", "summary": "Network modeling and embedding of multiscale proteomic and gene interaction data in Alzheimer disease.", "hook": "Bayesian SBM on connectome"}
+{"id": "b1-0000", "fit": "C", "theme": "other", "summary": "Neuronal migration and brain development genes; Alzheimer splicing.", "hook": ""}
+{"id": "b1-0003", "fit": "B", "theme": "AI-for-science", "summary": "Computational biomedicine; single-cell data integration methods such as CellDiffusion plus aging omics.", "hook": ""}
+{"id": "b1-0004", "fit": "C", "theme": "other", "summary": "Communication research: online media audiences, social media analytics, health misperceptions.", "hook": ""}
+{"id": "b1-0008", "fit": "C", "theme": "other", "summary": "Probability: stochastic PDEs such as the hyperbolic Phi^4_2 model.", "hook": ""}
+{"id": "b1-0010", "fit": "C", "theme": "other", "summary": "Neocortical long-range networks and cell types in mouse neuroscience.", "hook": ""}
+{"id": "b1-0011", "fit": "B", "theme": "AI-for-science", "summary": "Systems genomics and regulatory genomics for brain-related disease biomarkers.", "hook": ""}
+{"id": "b1-0013", "fit": "C", "theme": "other", "summary": "Biosensors and CRISPR-based diagnostics for precision medicine.", "hook": ""}
+{"id": "b1-0016", "fit": "C", "theme": "NeuroAI", "summary": "Human visual attention studied with fMRI and TMS; population response models.", "hook": ""}
+{"id": "b1-0024", "fit": "B", "theme": "stats-methods", "summary": "Methods for epidemiology, EHR, genetics and functional genomics data; Alzheimer genetics.", "hook": ""}
+{"id": "b1-0026", "fit": "A", "theme": "core-ML/CV", "summary": "Reliable, fast systems from machine learning systems to cloud platforms.", "hook": ""}
+{"id": "b1-0030", "fit": "C", "theme": "medical-AI", "summary": "Critical care clinical research and outcomes studies.", "hook": ""}
+{"id": "b1-0036", "fit": "C", "theme": "other", "summary": "Programming languages and differential privacy; Bayesian error localization.", "hook": ""}
+{"id": "b1-0037", "fit": "A", "theme": "core-ML/CV", "summary": "Machine learning systems and datacenter/cloud computing.", "hook": ""}
+{"id": "b1-0038", "fit": "C", "theme": "other", "summary": "Numerical analysis of quantum algorithms and open quantum systems.", "hook": ""}
+{"id": "b1-0039", "fit": "C", "theme": "other", "summary": "C. elegans aging, neuron-glia signaling and MESH1 biochemistry.", "hook": ""}
+{"id": "b1-0120", "fit": "B", "theme": "AI-for-science", "summary": "Transcriptomic network models of neurodegenerative disease at single-cell level.", "hook": ""}

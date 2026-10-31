@@ -1,0 +1,45 @@
+{"id": "b1-0207", "fit": "B", "theme": "core-ML/CV", "summary": "Instructional-track faculty listing data science, image processing, machine learning, deep learning.", "hook": ""}
+{"id": "b1-0210", "fit": "?", "theme": "other", "summary": "No research text on card; Mathematics and Statistics department only.", "hook": ""}
+{"id": "b1-0211", "fit": "C", "theme": "other", "summary": "Chemistry department; no research text, presumed chemistry lab.", "hook": ""}
+{"id": "b1-0212", "fit": "A", "theme": "core-ML/CV", "summary": "Interpretable machine learning, mixed-integer programming, large-scale optimization.", "hook": ""}
+{"id": "b1-0214", "fit": "?", "theme": "other", "summary": "No research text on card; Mathematics and Statistics department only.", "hook": ""}
+{"id": "b1-0215", "fit": "C", "theme": "other", "summary": "Applied operations research, numeric methods, scheduling.", "hook": ""}
+{"id": "b1-0217", "fit": "C", "theme": "other", "summary": "Chemistry department group; no ML content on card.", "hook": ""}
+{"id": "b1-0220", "fit": "C", "theme": "other", "summary": "Data modeling, data warehousing, information systems, deductive databases; instructional faculty.", "hook": ""}
+{"id": "b1-0221", "fit": "A", "theme": "core-ML/CV", "summary": "Deep learning, machine learning, image analysis, computational geometry.", "hook": "BioCLIP/EfficientNet CV"}
+{"id": "b1-0228", "fit": "C", "theme": "other", "summary": "Neuroregeneration and neuroprotection; axon regeneration wet-lab biology.", "hook": ""}
+{"id": "b1-0229", "fit": "C", "theme": "other", "summary": "Data center networking, congestion control, energy-efficient networking, computer architecture teaching.", "hook": ""}
+{"id": "b1-0239", "fit": "C", "theme": "other", "summary": "Heat transfer, cryopreservation, microfabrication.", "hook": ""}
+{"id": "b1-0084", "fit": "C", "theme": "other", "summary": "Clinical radiologist; abdominal imaging fellowship, board certified, teaching.", "hook": ""}
+{"id": "b1-0086", "fit": "C", "theme": "other", "summary": "Cardiology, pediatrics and population health appointments; no ML content on card.", "hook": ""}
+{"id": "b1-0091", "fit": "B", "theme": "medical-AI", "summary": "Appointed in AI and Human Health, with psychiatry, neuroscience and genomics; no research text.", "hook": ""}
+{"id": "b1-0102", "fit": "C", "theme": "other", "summary": "Clinical radiology physician; body imaging fellowship; no research content.", "hook": ""}
+{"id": "b1-0103", "fit": "?", "theme": "other", "summary": "No research text on card; Pharmacological Sciences only.", "hook": ""}
+{"id": "b1-0111", "fit": "C", "theme": "other", "summary": "Clinical neuroradiologist; residency and fellowship training described.", "hook": ""}
+{"id": "b1-0114", "fit": "B", "theme": "AI-for-science", "summary": "Biophysics, computer simulation, drug design, protein folding, structural biology; AI-in-medicine training area.", "hook": ""}
+{"id": "b1-0005", "fit": "B", "theme": "AI-for-science", "summary": "Space plasma physics of Mars and magnetosphere; paper on machine-learning closure for fluid modeling.", "hook": ""}
+{"id": "b1-0007", "fit": "C", "theme": "other", "summary": "Earth and environment; one deep-learning paper on green roof optimization.", "hook": ""}
+{"id": "b1-0009", "fit": "C", "theme": "other", "summary": "Control of nonlinear phenomena and bifurcations.", "hook": ""}
+{"id": "b1-0014", "fit": "?", "theme": "other", "summary": "Education school faculty fellow in computing; Imaginative Computing, no research detail.", "hook": ""}
+{"id": "b1-0017", "fit": "C", "theme": "other", "summary": "Geometry and Physics group in mathematics.", "hook": ""}
+{"id": "b1-0022", "fit": "C", "theme": "other", "summary": "Dependable Computing Laboratory; no ML content on card.", "hook": ""}
+{"id": "b1-0027", "fit": "C", "theme": "other", "summary": "Geometry and Physics group in mathematics.", "hook": ""}
+{"id": "b1-0122", "fit": "?", "theme": "other", "summary": "No research text on card; radiology MD/PhD, profile unavailable.", "hook": ""}
+{"id": "b1-0128", "fit": "C", "theme": "other", "summary": "Stem cell biology, regenerative medicine and neuroscience appointments; no ML content.", "hook": ""}
+{"id": "b1-0131", "fit": "?", "theme": "other", "summary": "No research text on card; Pharmacological Sciences only.", "hook": ""}
+{"id": "b1-0138", "fit": "C", "theme": "other", "summary": "Mechanisms of oxygen and metabolite sensing in mammals.", "hook": ""}
+{"id": "b1-0139", "fit": "?", "theme": "other", "summary": "Psychiatry associate professor (PsyD); no research text on card.", "hook": ""}
+{"id": "b1-0143", "fit": "?", "theme": "other", "summary": "Bioengineering and therapeutic sciences; no research text on card.", "hook": ""}
+{"id": "b1-0146", "fit": "C", "theme": "other", "summary": "Psychiatry; child behavioral health programs, clinical training lead.", "hook": ""}
+{"id": "b1-0147", "fit": "C", "theme": "other", "summary": "Engineering and understanding gene regulation, functional genomics, tissue biology; genetics lab.", "hook": ""}
+{"id": "b1-0150", "fit": "C", "theme": "other", "summary": "Radiology MD; diagnostic radiology residency, clinical profile.", "hook": ""}
+{"id": "b1-0151", "fit": "?", "theme": "other", "summary": "Radiology MD; no research text on card.", "hook": ""}
+{"id": "b1-0159", "fit": "?", "theme": "other", "summary": "Neurology MD/PhD; no research text on card.", "hook": ""}
+{"id": "b1-0165", "fit": "?", "theme": "other", "summary": "Neurology MD; no research text on card.", "hook": ""}
+{"id": "b1-0172", "fit": "?", "theme": "other", "summary": "Psychiatry; no research text on card.", "hook": ""}
+{"id": "b1-0177", "fit": "?", "theme": "other", "summary": "Radiology and Biomedical Imaging PhD; no research text on card.", "hook": ""}
+{"id": "b1-0179", "fit": "?", "theme": "other", "summary": "Neurology listing but papers are on recommender systems; likely wrong-author match, unclear.", "hook": ""}
+{"id": "b1-0180", "fit": "?", "theme": "other", "summary": "Psychiatry MD; no research text on card.", "hook": ""}
+{"id": "b1-0183", "fit": "?", "theme": "other", "summary": "Neurology MD; no research text on card.", "hook": ""}
+{"id": "b1-0185", "fit": "C", "theme": "other", "summary": "Psychiatry; community care programs, clinical and wellness work.", "hook": ""}
+{"id": "b1-0191", "fit": "?", "theme": "other", "summary": "Neurology; no research text on card.", "hook": ""}
