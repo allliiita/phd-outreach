@@ -1,0 +1,9 @@
+institution: Boston University
+unit: Graduate Program for Neuroscience (faculty)
+urls: [https://www.bu.edu/neuro/people/neuroscience-faculty/]
+item: li.has-title
+name: p.profile-name
+title: p.profile-title
+profile: a@href
+filter: all
+expect: 111

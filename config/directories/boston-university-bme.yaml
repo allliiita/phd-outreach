@@ -1,0 +1,11 @@
+institution: Boston University
+unit: Biomedical Engineering
+urls:
+  - https://www.bu.edu/eng/academics/departments-and-divisions/biomedical-engineering/people/?department=biomedical-engineering&affiliation=primary-affiliated-faculty&layout=list&num=1
+  - https://www.bu.edu/eng/academics/departments-and-divisions/biomedical-engineering/people/?department=biomedical-engineering&affiliation=primary-affiliated-faculty&layout=list&num=2
+item: li.bu-filtering-result-item
+name: h4.bu-filtering-result-item-title a
+title: div.bu-filtering-result-item-title
+profile: h4.bu-filtering-result-item-title a@href
+filter: all
+expect: 93          # page says 93 results (primary & affiliated faculty filter); staff rows dropped by code

@@ -1,0 +1,8 @@
+institution: Boston University
+unit: Chemistry
+urls: [https://www.bu.edu/chemistry/people/faculty/]
+item: li.profile-item
+name: .profile-name
+title: .profile-title
+profile: a.profile-link@href
+filter: all

@@ -1,0 +1,9 @@
+institution: Boston University
+unit: Mathematics & Statistics
+urls: [https://www.bu.edu/math/people/faculty/]
+item: li.profile-item
+name: .profile-name
+title: .profile-title
+profile: a.profile-link@href
+filter: all
+expect: 58

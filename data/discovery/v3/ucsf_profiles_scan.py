@@ -12,11 +12,12 @@ def scan(dept,perpage=100):
     t=requests.get(u,headers={'User-Agent':UA},timeout=60).text
     n=int(re.search(r'Search Results \((\d+)\)',t).group(1))
     req=re.search(r'id="txtSearchRequest" name="txtSearchRequest" value="([^"]*)"',t).group(1)
-    res=rows(t);page=1
-    if len(res)<n:
-        u2="https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=&exactphrase=false&perpage=%d&offset=0&page=1&totalpages=1&searchrequest=%s&sortby=&sortdirection=&showcolumns=11"%(perpage,up.quote(req,safe=''))
-        t=requests.get(u2,headers={'User-Agent':UA},timeout=60).text
-        res=rows(t)
+    res=rows(t)
+    if len(res)<n:  # first page holds only 15 rows: page through ALL pages (perpage=100, page=1..ceil(n/100))
+        tp=-(-n//perpage);res=[]
+        for pg in range(1,tp+1):
+            u2="https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=&exactphrase=false&perpage=%d&offset=0&page=%d&totalpages=%d&searchrequest=%s&sortby=&sortdirection=&showcolumns=11"%(perpage,pg,tp,up.quote(req,safe=''))
+            res+=rows(requests.get(u2,headers={'User-Agent':UA},timeout=60).text)
     return n,res
 if __name__=="__main__":
     for d in sys.argv[1:]:
