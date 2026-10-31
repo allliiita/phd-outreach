@@ -1,0 +1,9 @@
+institution: Cold Spring Harbor Laboratory
+unit: CSHL Faculty (Research)
+urls: [https://www.cshl.edu/research/faculty-staff/]
+item: div.list > div.col-sm-4
+name: p.facultyname
+title: p.faculty-title
+profile: a@href
+filter: all
+expect: 91          # 106 tiles, 15 have no name (fellows/section tiles; see below)

@@ -27,6 +27,17 @@ _last: dict[str, float] = {}
 _locks: dict[str, threading.Lock] = {}
 _guard = threading.Lock()
 MIN_GAP = 2.0  # seconds between requests to the same host
+# Hosts that refuse our self-identifying UA but serve a normal browser (no challenge): read them the way a
+# person would, in Chromium with its default UA. A bot-check / challenge page is never worked around.
+BROWSER_HOSTS = ROOT / "config" / "browser_hosts.txt"
+CHALLENGE = re.compile(r"performing security verification|you have been blocked|access denied|verify you are human|captcha", re.I)
+
+
+def browser_host(host: str) -> bool:
+    if not BROWSER_HOSTS.exists():
+        return False
+    names = [l.strip() for l in BROWSER_HOSTS.read_text().splitlines() if l.strip() and not l.startswith("#")]
+    return any(host == n or host.endswith("." + n) for n in names)
 
 
 def snapshot_path(root: Path, url: str) -> Path:
@@ -39,6 +50,14 @@ def get(url: str, refresh: bool = False) -> str:
     if p.exists() and not refresh:
         return p.read_text(errors="ignore")
     host = urlparse(url).netloc
+    if browser_host(host):
+        text = render(url, browser_ua=True)
+        if not text or CHALLENGE.search(visible_text(text)[:600]):
+            raise RuntimeError(f"browser host served no page or a challenge (not retried): {url}")
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(text)
+        p.with_suffix(".url").write_text(url)
+        return text
     with _guard:
         lock = _locks.setdefault(host, threading.Lock())
     with lock:  # polite: one request at a time per host, MIN_GAP apart (threads fan out across hosts)
@@ -74,7 +93,7 @@ def get(url: str, refresh: bool = False) -> str:
 _pw_lock = threading.Lock()
 
 
-def render(url: str) -> str | None:
+def render(url: str, browser_ua: bool = False) -> str | None:
     """Headless Chromium (pre-installed Playwright). Serialised: one browser page at a time."""
     try:
         from playwright.sync_api import sync_playwright
@@ -84,7 +103,7 @@ def render(url: str) -> str | None:
         exe = "/opt/pw-browsers/chromium"
         b = pw.chromium.launch(**({"executable_path": exe} if Path(exe).is_file() else {}))
         try:
-            pg = b.new_page(user_agent=UA)
+            pg = b.new_page() if browser_ua else b.new_page(user_agent=UA)
             pg.goto(url, wait_until="networkidle", timeout=30000)
             return pg.content()
         except Exception:  # noqa: BLE001
