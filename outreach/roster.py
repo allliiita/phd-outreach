@@ -76,10 +76,12 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
 
 
 TITLE_WORD = re.compile(r"\b(professor|lecturer|instructor|scientist|faculty|chair|emerit\w*)\b", re.I)
-NAME_RE = re.compile(r"^[A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]*){1,3}$")
+UP = "A-ZÀ-ÖØ-ÞĀ-Ž"   # capitals incl. accented ("Ünlü")
+# tokens: capitalised words, initials ("M."), nicknames in parentheses ("Xuezhou (Jack) Zhang")
+NAME_RE = re.compile(rf"^[{UP}][\w'’.\-]*(?: (?:[{UP}][\w'’.\-]*|\([^()]{{1,20}}\))){{1,4}}$")
 LAST_FIRST = re.compile(r"^([A-Z][\w'’\-]+(?: [A-Z][\w'’\-]+)?), ([A-Z][\w'’.\-]+(?: [A-Z][\w'’.\-]*)?)$")
 NOT_NAME = re.compile(r"\b(read|more|bio|profile|website|email|contact|faculty|people|department|research|news|view|"
-                      r"statistics|science|university|school|center|institute|program|home)\b", re.I)
+                      r"statistics|science|university|school|center|institute|program|home|scholar|google|campus|linkedin|orcid)\b", re.I)
 
 
 NOT_FACULTY = re.compile(r"year enrolled|ph\.?d\.? (student|candidate)|graduate student|doctoral (student|candidate)|"
@@ -109,12 +111,14 @@ def _sig(el) -> str:
     return el.name + ("." + el["class"][0] if el.get("class") else "")
 
 
-DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.d\.|scd|md|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
+DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|ph\.?d|p\.h\.d|sc\.?d|dr\.?sc|m\.?d|m\.?eng|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|ph\.d\.|scd|md|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
 DEGREE_CAPS = re.compile(r"(?:,?\s+(?:PhD|Ph\.D\.|ScD|MD|MPH|DrPH|MBBS|FACMI|MS|MA|MSc|MSHP|MSCE|MBA|MPhil|RN|PharmD|[A-Z]{2,6}))+$")   # trailing all-caps credentials   # "Jane Doe MD" (case-sensitive)
 
 
 def clean_name(t: str) -> str:
-    return DEGREE_CAPS.sub("", DEGREE.sub("", t)).strip(" ,")
+    t = DEGREE.sub("", t).strip(" ,")
+    u = DEGREE_CAPS.sub("", t).strip(" ,")
+    return u if " " in u else t   # an all-caps surname is a name, not a credential ("Julia TCW")
 
 
 def _name_in(el):
