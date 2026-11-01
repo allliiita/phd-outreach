@@ -1,0 +1,8 @@
+institution: Boston University
+unit: Psychological & Brain Sciences
+urls: [https://www.bu.edu/psych/people/faculty/]
+item: li.profile-item
+name: .profile-name
+title: .profile-title
+profile: a@href
+filter: all
