@@ -36,11 +36,11 @@ TODAY = date.today().isoformat()
 CLASS_RULES = [  # first match wins; order matters
     (r"emerit", "emeritus"),
     (r"teaching|lecturer|instructor|of the practice|clinical", "teaching"),
-    (r"adjunct|affiliate|courtesy|visiting|postdoc|in residence", "other"),
+    (r"adjunct|affiliate|courtesy|visiting|postdoc", "other"),   # UC "in Residence" is a regular PI series (not here)
     (r"incoming|starting (in )?(fall|spring|january|july)", "incoming_assistant"),
     (r"research (assistant |associate )?professor|research scientist|senior scientist", "research_faculty"),
-    (r"assistant professor", "assistant"),
-    (r"associate professor", "associate"),
+    (r"assistant professor|\basst\.? prof", "assistant"),     # UCSF Profiles: "Asst Professor In Residence"
+    (r"associate professor|\bassoc\.? prof", "associate"),
     (r"professor|chair\b|university professor", "full"),
     (r"core (institute )?member|principal investigator|investigator|group leader|lab head|fellow\b", "institute_pi"),
 ]

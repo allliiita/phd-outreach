@@ -17,3 +17,9 @@ def test_names():
 def test_not_names():
     for t in ["Google Scholar", "Tampa Campus", "NAE Member", "IEEE Fellow", "NAS Member"]:
         assert NOT_NAME.search(t)
+
+
+def test_uc_titles():
+    from outreach.enrich import young_title
+    assert young_title("Asst Professor In Residence") and young_title("Assoc Professor")
+    assert not young_title("Asst Adjunct Professor") and not young_title("HS Asst Clinical Professor")
