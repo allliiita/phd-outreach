@@ -1,0 +1,18 @@
+institution: Icahn School of Medicine at Mount Sinai
+unit: "PhD Biomedical Sciences: Artificial Intelligence training area"
+urls:
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=0
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=10
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=20
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=30
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=40
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=50
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=60
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=70
+- https://faculty.icahn.mssm.edu/results?trainingAreaId=0000149900091230503091&selectedFilter=training&tab=faculty&start=80
+item: div.space-x-3.border-b
+name: a.cursor-pointer
+title: p.font-semibold
+profile: a.cursor-pointer@href
+filter: all
+expect: 87
