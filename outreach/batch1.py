@@ -192,6 +192,7 @@ def coverage() -> list[dict]:
 JUNK_URL = re.compile(r"terms-of-use|faculty-resources/handbook|omniupdate|safelinks|a-lab-like-no-other|"
                       r"/login|wp-admin", re.I)
 BOILER = re.compile(r"physicians and scientists on the faculty of the icahn school", re.I)
+BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance", re.I)   # applicant: no business schools
 NOT_ADVISING = re.compile(r"of instruction|of the practice|teaching|affiliate|lecturer|instructor", re.I)
 
 
@@ -341,7 +342,8 @@ def cmd_export() -> None:
             if d.get("lab_site"):
                 p["homepage"] = d["lab_site"]
             if not (p.get("email") or {}).get("value") and (d.get("email") or {}).get("value"):
-                p["email"] = {"value": d["email"]["value"], "evidence": {"source_url": d["email"].get("url", "")}}
+                p["email"] = {"value": d["email"]["value"], "evidence": {"source_url": d["email"].get("url", "")},
+                              "source": d["email"].get("source", "page")}
             # dossier fit may only DROP a person for facts (not a PI, wrong person, not ML at all); a different
             # reading of scope is shown, not applied: the fit rules live in agents/26_fit_tagger.md
             hard = re.search(r"affiliate|not a pi|staff|wrong person|not faculty|leaving|left", (d.get("fit_reason") or "") +
@@ -356,7 +358,8 @@ def cmd_export() -> None:
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
                "Fit": t.get("fit"), "Theme": t.get("theme", ""), "Research (1 line)": t.get("summary", ""),
                "Hook (your project)": t.get("hook", ""), "Email": em or "",
-               "Email source": (p.get("email") or {}).get("evidence", {}).get("source_url", ""),
+               "Email source": ("(corresponding author in a paper) " if (p.get("email") or {}).get("source") == "paper" else "")
+                   + (p.get("email") or {}).get("evidence", {}).get("source_url", ""),
                "Homepage": p.get("homepage") or p.get("profile_url") or "",
                "Paper 1 (on own page)": conf[0] if conf else "", "Paper 2 (on own page)": conf[1] if len(conf) > 1 else "",
                "Papers by name match (check author)": " | ".join(unconf[:2]),
@@ -364,10 +367,17 @@ def cmd_export() -> None:
                "Lab site read": "yes" if d else "", "Recruiting (own words)": ((d.get("recruiting") or {}).get("status", "") + ": " +
                    ((d.get("recruiting") or {}).get("quote") or "")[:200]) if d.get("recruiting") else "",
                "Start year": (d.get("start_year") or {}).get("year", "") if isinstance(d.get("start_year"), dict) else "",
+               "How they want to be contacted (own words)": " | ".join(
+                   (x.get("quote") if isinstance(x, dict) else str(x)) for x in d.get("contact_prefs") or [])[:500],
                "Hook (dossier)": d.get("hook", ""), "Red flags": "; ".join(d.get("red_flags") or []),
                "Check": check_note(p)}
+        sy = (d.get("start_year") or {}).get("year") if isinstance(d.get("start_year"), dict) else None
+        if BUSINESS.search(" ".join(p["departments"])):
+            continue
         if t.get("fit") == "C":
             sheet = "Dropped (C)"
+        elif t.get("fit") in ("A", "B") and sy and int(sy) < 2019 and position_class(p["title"] or "") != "assistant":
+            sheet = "Strong fit, not young"
         elif not p["title"] or NOT_ADVISING.search(p["title"]) or t.get("fit") == "?":
             sheet = "Check (title or fit)"
         else:
@@ -386,7 +396,8 @@ def cmd_export() -> None:
     rows["Coverage"] = summary + coverage()
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name in ["People", "Need email", "Check (title or fit)", "Dropped (C)", "CSHL (any heritage)", "Coverage"]:
+    for name in ["People", "Need email", "Strong fit, not young", "Check (title or fit)", "Dropped (C)",
+                 "CSHL (any heritage)", "Coverage"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
         cols = list(dict.fromkeys(k for r in data for k in r)) or ["(empty)"]
