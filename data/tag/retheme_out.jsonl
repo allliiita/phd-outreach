@@ -1,0 +1,72 @@
+{"id": "b1-0001", "theme": "NeuroAI", "changed": false, "why": "fMRI mental-state decoding and whole-brain predictors"}
+{"id": "b1-0002", "theme": "core-ML/CV", "changed": false, "why": "Vision/ML; generalization and efficiency main, not evaluation-focused"}
+{"id": "b1-0003", "theme": "AI-for-science", "changed": false, "why": "Single-cell data integration methods and aging omics"}
+{"id": "b1-0012", "theme": "NeuroAI", "changed": true, "why": "Voltage-imaging denoising and neural dynamics imaging; not clinical"}
+{"id": "b1-0018", "theme": "trustworthy-ML", "changed": true, "why": "Interpretability of NLP models is the stated central research aim"}
+{"id": "b1-0021", "theme": "core-ML/CV", "changed": false, "why": "ML and computer vision across recognition and applications"}
+{"id": "b1-0025", "theme": "core-ML/CV", "changed": false, "why": "ML algorithm development with performance guarantees"}
+{"id": "b1-0028", "theme": "NeuroAI", "changed": false, "why": "Brain-body motor control with video-based neural encoding"}
+{"id": "b1-0031", "theme": "core-ML/CV", "changed": false, "why": "Robot learning of lip motion; physical AI"}
+{"id": "b1-0033", "theme": "medical-AI", "changed": false, "why": "ML and LLMs on EHR data for cardiovascular risk"}
+{"id": "b1-0035", "theme": "medical-AI", "changed": false, "why": "Quantitative MRI reconstruction and AI image analysis"}
+{"id": "b1-0046", "theme": "AI-for-science", "changed": false, "why": "AI methods for biomedical and single-cell data"}
+{"id": "b1-0048", "theme": "AI-for-science", "changed": false, "why": "Sequence-to-function genomics models and rare-variant methods"}
+{"id": "b1-0052", "theme": "medical-AI", "changed": false, "why": "Cytometry outcome prediction in transplant and cancer studies"}
+{"id": "b1-0053", "theme": "AI-for-science", "changed": false, "why": "Autonomous microscopy for 2D materials; site AI-security list conflicts"}
+{"id": "b1-0055", "theme": "medical-AI", "changed": false, "why": "RL decision support for ECMO clinical management"}
+{"id": "b1-0056", "theme": "medical-AI", "changed": false, "why": "Ultrasound imaging with deep learning applications"}
+{"id": "b1-0057", "theme": "AI-for-science", "changed": false, "why": "Dimensionality reduction methods for single-cell RNA-seq"}
+{"id": "b1-0060", "theme": "stats-methods", "changed": false, "why": "Sampling and MCMC for Bayesian inference; selective inference passing"}
+{"id": "b1-0061", "theme": "stats-methods", "changed": false, "why": "Gaussian process surrogate modeling for computer experiments"}
+{"id": "b1-0065", "theme": "AI-for-science", "changed": false, "why": "Mostly single-cell methods; one AI-agent network paper"}
+{"id": "b1-0066", "theme": "core-ML/CV", "changed": true, "why": "Thin card; only offline diffusion-policy RL paper title"}
+{"id": "b1-0071", "theme": "AI-for-science", "changed": false, "why": "ML for single-cell and spatial genomics in tumors"}
+{"id": "b1-0073", "theme": "stats-methods", "changed": false, "why": "Biostatistics sample-size and variance-estimation methods"}
+{"id": "b1-0075", "theme": "AI-for-science", "changed": false, "why": "Single-cell TWAS methods and LLM preprocessing for omics"}
+{"id": "b1-0080", "theme": "medical-AI", "changed": false, "why": "Speech-based clinical screening and clinical AI governance"}
+{"id": "b1-0083", "theme": "stats-methods", "changed": false, "why": "Statistical-genetics and single-nucleus differential expression methods"}
+{"id": "b1-0085", "theme": "AI-for-science", "changed": false, "why": "Omics bioinformatics and systems biology for Alzheimer disease"}
+{"id": "b1-0087", "theme": "medical-AI", "changed": false, "why": "Deep learning in cardiovascular and retinal clinical imaging"}
+{"id": "b1-0097", "theme": "AI-for-science", "changed": false, "why": "Computational cancer genomics and precision oncology"}
+{"id": "b1-0114", "theme": "AI-for-science", "changed": false, "why": "Structural biology, molecular dynamics and AI pharmacology"}
+{"id": "b1-0118", "theme": "AI-for-science", "changed": false, "why": "Network modeling of multi-omics data in Alzheimer disease"}
+{"id": "b1-0120", "theme": "AI-for-science", "changed": false, "why": "Single-cell transcriptomic network models of neurodegeneration"}
+{"id": "b1-0124", "theme": "medical-AI", "changed": false, "why": "Deep learning in cardiovascular imaging and radiograph detection"}
+{"id": "b1-0143", "theme": "other", "changed": false, "why": "Vague site themes spanning AI, representations and collective intelligence"}
+{"id": "b1-0149", "theme": "medical-AI", "changed": false, "why": "Diffusion and quantitative MRI for neurodevelopment"}
+{"id": "b1-0152", "theme": "NeuroAI", "changed": false, "why": "Adaptive deep brain stimulation and neural dynamics of motor learning"}
+{"id": "b1-0163", "theme": "AI-for-science", "changed": false, "why": "Single-cell atlases of developing brain; deep learning on genomes"}
+{"id": "b1-0170", "theme": "medical-AI", "changed": false, "why": "Computational tools and RAG/LLMs for the cancer clinic"}
+{"id": "b1-0171", "theme": "medical-AI", "changed": false, "why": "Anatomy-aware vision-language AI for CT cancer detection"}
+{"id": "b1-0175", "theme": "medical-AI", "changed": false, "why": "Breast imaging deep learning and AI risk stratification"}
+{"id": "b1-0178", "theme": "AI-for-science", "changed": false, "why": "Foundation-model methods for single-cell and spatial genomics"}
+{"id": "b1-0195", "theme": "medical-AI", "changed": false, "why": "AI and computer vision in digital pathology for prostate cancer"}
+{"id": "b1-0198", "theme": "medical-AI", "changed": false, "why": "MR spectroscopy methods and ML for glioma recurrence"}
+{"id": "b1-0199", "theme": "medical-AI", "changed": false, "why": "MRI sequence development and AI prediction from brain MRI"}
+{"id": "b1-0205", "theme": "trustworthy-ML", "changed": true, "why": "Card centers on trustworthy ML and OOD generalization"}
+{"id": "b1-0206", "theme": "trustworthy-ML", "changed": true, "why": "Adaptive attacks and spoofing-detector benchmarks; ML security dominant"}
+{"id": "b1-0208", "theme": "core-ML/CV", "changed": false, "why": "Efficient systems for large-scale AI and HPC communication"}
+{"id": "b1-0209", "theme": "stats-methods", "changed": false, "why": "Knockoff-based inference for statistical genetics"}
+{"id": "b1-0210", "theme": "stats-methods", "changed": true, "why": "Site themes: statistical computing, MCMC, biostatistics; no ML focus"}
+{"id": "b1-0212", "theme": "trustworthy-ML", "changed": true, "why": "Summary leads with interpretable ML; optimization secondary"}
+{"id": "b1-0218", "theme": "trustworthy-ML", "changed": true, "why": "Adversarial ML and differential privacy are stated core interests"}
+{"id": "b1-0221", "theme": "core-ML/CV", "changed": false, "why": "Deep learning and image analysis; no clearer theme"}
+{"id": "b1-0223", "theme": "medical-AI", "changed": false, "why": "Cardiac biomechanics with deep learning and PINNs"}
+{"id": "b1-0226", "theme": "core-ML/CV", "changed": false, "why": "Robotics perception and edge AI for field autonomy"}
+{"id": "b1-0227", "theme": "core-ML/CV", "changed": false, "why": "ML and math for human-robot teaming in space"}
+{"id": "b1-0231", "theme": "medical-AI", "changed": false, "why": "Energy-efficient edge AI for medical image computing"}
+{"id": "b1-0232", "theme": "core-ML/CV", "changed": false, "why": "Wireless sensing and AI/LLM mobile computing"}
+{"id": "b1-0240", "theme": "NeuroAI", "changed": true, "why": "Site themes describe brain decoding of mental states"}
+{"id": "b1-0242", "theme": "core-ML/CV", "changed": false, "why": "Geometry processing and applied optimal transport for ML"}
+{"id": "b1-0245", "theme": "stats-methods", "changed": false, "why": "Longitudinal statistical method and software development; clinical also"}
+{"id": "b1-0248", "theme": "stats-methods", "changed": false, "why": "Experimental design, causal inference and survey sampling"}
+{"id": "b1-0251", "theme": "medical-AI", "changed": false, "why": "Explainable deep model for clinical radionecrosis identification"}
+{"id": "b1-0254", "theme": "stats-methods", "changed": false, "why": "Graph clustering algorithms with statistical fundamental limits"}
+{"id": "b1-0255", "theme": "medical-AI", "changed": false, "why": "Virtual imaging trials for breast imaging AI; clinical domain"}
+{"id": "b1-0256", "theme": "medical-AI", "changed": false, "why": "Deep learning for synthetic CT and medical image registration"}
+{"id": "b1-0258", "theme": "medical-AI", "changed": false, "why": "LLM agents and dose calculation for radiotherapy planning"}
+{"id": "b1-0260", "theme": "medical-AI", "changed": false, "why": "Dose prediction and LLM agents for radiotherapy planning"}
+{"id": "b1-0261", "theme": "medical-AI", "changed": false, "why": "RL and LLM agents for radiotherapy treatment planning"}
+{"id": "b1-0264", "theme": "medical-AI", "changed": false, "why": "Deep learning in cardiovascular and retinal clinical imaging"}
+{"id": "b1-0270", "theme": "medical-AI", "changed": false, "why": "Clinical ML for equitable care; bias auditing secondary to domain"}
+{"id": "b1-0274", "theme": "other", "changed": false, "why": "Conflicting card: turbulent-flow simulation vs traffic AI"}
