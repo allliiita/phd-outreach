@@ -78,7 +78,7 @@ def roster_groups() -> dict[str, str]:
 def priority(theme: str, groups: set[str]) -> int:
     """Applicant's order (config/targets.yaml `priority`): NeuroAI, then AI departments / initiatives,
     then CS-type ML, then molecular / bio ML."""
-    if theme == "NeuroAI":
+    if theme in ("NeuroAI", "trustworthy-ML"):   # tied first (applicant 2026-11-02)
         return 1
     if any("G2" in g for g in groups):
         return 2
@@ -278,6 +278,16 @@ def evidence(p: dict, card_re: dict) -> str:
     return "weak" if p.get("papers") else "none"
 
 
+G1_DEPT = re.compile(r"computer science|computing|electrical|ece\b|statistic|data science|bellini|mechanical|"
+                     r"systems engineering|industrial|materials|mathematics", re.I)
+
+
+def degree_home(p: dict) -> str:
+    """Can this advisor admit through a CS / ECE / Statistics / Data Science-type PhD? (goal: AI researcher)"""
+    hits = [d for d in p["departments"] if G1_DEPT.search(d)]
+    return f"AI-type dept: {hits[0][:45]}" if hits else "check which PhD program can admit (not a CS/Stat/DS dept)"
+
+
 def check_note(p: dict) -> str:
     notes = []
     if position_class(p["title"] or "") == "associate":
@@ -334,10 +344,14 @@ def cmd_export() -> None:
     raw = jl(TAG / "people.jsonl")
     tags = {t["id"]: t for f in sorted((TAG / "out").glob("*.jsonl")) for t in jl(f)}
     tags.update({t["id"]: t for f in sorted((TAG / "re_out").glob("*.jsonl")) for t in jl(f)})   # second opinion wins
+    for r in jl(TAG / "retheme_out.jsonl"):   # theme pass after "trustworthy-ML" was added (2026-11-02)
+        if r["id"] in tags and r.get("theme"):
+            tags[r["id"]] = {**tags[r["id"]], "theme": r["theme"]}
     recard = {c["id"]: c for f in sorted((TAG / "re_in").glob("*.jsonl")) for c in jl(f)}
     clean(raw)
     ps = {p["id"]: p for p in dedupe(raw, tags)}
     dos = {d["id"]: d for f in sorted((DATA / "dossier_out").glob("*.jsonl")) for d in jl(f)}
+    dblp = {d["id"]: d for d in jl(DATA / "dblp.jsonl")}
     unver = defaultdict(list)   # dossier quotes not found on their saved page (data/dossier_check.json)
     if (DATA / "dossier_check.json").exists():
         for i, field, why, _ in json.loads((DATA / "dossier_check.json").read_text()):
@@ -354,6 +368,7 @@ def cmd_export() -> None:
         elif t.get("fit") in ("A", "B") and ev == "weak":
             p["_weak"] = True
         conf, unconf = split_papers(p)
+        db = dblp.get(pid, {})
         d = dos.get(pid, {})
         if d:
             dp = [f'{x.get("quote") or x.get("title")}' for x in d.get("papers") or [] if isinstance(x, dict)]
@@ -375,7 +390,10 @@ def cmd_export() -> None:
         em = (p.get("email") or {}).get("value")
         rec = {"Priority": priority(t.get("theme", ""), set(p.get("groups") or [])), "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
-               "Fit": t.get("fit"), "Theme": t.get("theme", ""), "Research (1 line)": t.get("summary", ""),
+               "Fit": t.get("fit"), "Theme": t.get("theme", ""),
+               "Top-ML papers 2023-26 (dblp)": db.get("ml_top", "") if db.get("pid") else "",
+               "dblp venues": ", ".join(f"{k} {v}" for k, v in (db.get("venues_23_26") or {}).items())[:120],
+               "Degree home": degree_home(p), "Research (1 line)": t.get("summary", ""),
                "Hook (your project)": t.get("hook", ""), "Email": em or "",
                "Email source": ("(corresponding author in a paper) " if (p.get("email") or {}).get("source") == "paper" else "")
                    + (p.get("email") or {}).get("evidence", {}).get("source_url", ""),
@@ -405,7 +423,9 @@ def cmd_export() -> None:
             sheet = "Need email" if not em or pid in bad else "People"
         rows[sheet].append(rec)
     for v in rows.values():
-        v.sort(key=lambda r: (r.get("Priority", 9), order.get(r.get("Fit"), 2), r.get("School", ""), r.get("Name", "")))
+        v.sort(key=lambda r: (r.get("Priority", 9), not str(r.get("Recruiting (own words)") or "").startswith("Yes"),
+                              -(r.get("Top-ML papers 2023-26 (dblp)") or 0), order.get(r.get("Fit"), 2),
+                              r.get("School", ""), r.get("Name", "")))
     cshl = [r for r in jl(DATA / "roster" / "cshl-faculty.jsonl") if young_title(r.get("title_on_roster") or "")]
     rows["CSHL (any heritage)"] = [{"Name": r["name"], "Title (official page)": r["title_on_roster"],
                                    "Page": r.get("profile_url", "")} for r in cshl]

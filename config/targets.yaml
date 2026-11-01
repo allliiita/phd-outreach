@@ -41,4 +41,7 @@ include_cs: true             # 2026-10-31: CS/ECE are the preferred home (goal: 
 # Priority (applicant, confirmed 2026-10-31), then A before B inside each tier:
 #   1 NeuroAI (any department)  2 member of an AI department / cross-department AI initiative (grid group G2)
 #   3 CS / ECE / Statistics / data-science / other-engineering ML (G1)  4 molecular / protein / other bio ML (G3)
-priority: [NeuroAI, G2, G1, G3]
+priority: [[NeuroAI, trustworthy-ML], G2, G1, G3]   # 2026-11-02: trustworthy ML ties NeuroAI for first
+# Within a tier: own site says recruiting > more 2023-26 top-ML-venue papers (data/dblp.jsonl) > A before B.
+# Degree home matters (goal: AI research scientist): prefer advisors who can admit through CS / ECE / Statistics /
+# Data Science PhD programs; avoid wet-lab umbrella programs. Young faculty only (applicant wants advisors she can talk to).
