@@ -2,3 +2,5 @@ b1-0003	WARN email local part chz2009 does not resemble the name
 b1-0010	WARN email domain chen-lab.org not in ['bu.edu']
 b1-0058	WARN email domain gmail.com not in ['duke.edu']
 b1-0214	WARN email local part lulu1 does not resemble the name
+b1-0240	email artlee@bu.edu shared by ['b1-0240', 'b1-0001']
+b1-0001	email artlee@bu.edu shared by ['b1-0240', 'b1-0001']
