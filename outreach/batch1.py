@@ -391,6 +391,8 @@ def cmd_export() -> None:
             continue
         if t.get("fit") == "C":
             sheet = "Dropped (C)"
+        elif (d.get("recruiting") or {}).get("status") == "No":
+            sheet = "Says not recruiting"
         elif t.get("fit") in ("A", "B") and sy and int(sy) < 2019 and position_class(p["title"] or "") != "assistant":
             sheet = "Strong fit, not young"
         elif not p["title"] or NOT_ADVISING.search(p["title"]) or t.get("fit") == "?":
@@ -413,7 +415,7 @@ def cmd_export() -> None:
                            for u in jl(DATA / "grid" / f"{SLUG[inst]}.units.jsonl")]
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name in ["People", "Need email", "Strong fit, not young", "Check (title or fit)", "Dropped (C)",
+    for name in ["People", "Need email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
                  "CSHL (any heritage)", "Coverage", "Unit census"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
