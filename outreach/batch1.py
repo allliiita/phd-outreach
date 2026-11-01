@@ -296,6 +296,8 @@ def check_note(p: dict) -> str:
         notes.append("appointment in Epidemiology & Biostatistics (excluded dept): your call")
     if p.get("_weak"):
         notes.append("fit based on name-matched papers only: check they are this person's")
+    if p.get("_dblp_recheck"):
+        notes.append(p["_dblp_recheck"])
     if p.get("_fit_disagree"):
         notes.append(p["_fit_disagree"])
     if p.get("aka"):
@@ -411,7 +413,10 @@ def cmd_export() -> None:
         sy = (d.get("start_year") or {}).get("year") if isinstance(d.get("start_year"), dict) else None
         if BUSINESS.search(" ".join(p["departments"])):
             continue
-        if t.get("fit") == "C":
+        if t.get("fit") == "C" and (db.get("ml_top") or 0) >= 2:
+            sheet = "Check (title or fit)"
+            p["_dblp_recheck"] = f"tagged C but dblp shows {db['ml_top']} top-ML papers 2023-26: re-check fit"
+        elif t.get("fit") == "C":
             sheet = "Dropped (C)"
         elif (d.get("recruiting") or {}).get("status") == "No":
             sheet = "Says not recruiting"

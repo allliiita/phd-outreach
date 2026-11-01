@@ -102,8 +102,12 @@ def match() -> None:
             a, match = ok[0], "affiliation/homepage"
         elif len(by_title) == 1:
             a, match = by_title[0], "shared paper title"
-        elif not ok and len(cands) == 1 and not re.search(r"\d{4}$", cands[0]):
-            a, match = cands[0], "unique dblp name (unnumbered), unverified"
+        elif not ok and len(cands) == 1 and not re.search(r"\d{4}$", cands[0]) and \
+                re.search(r"computer|comput|electrical|statistic|data science|bellini|engineering|mathematics",
+                          " ".join(p["departments"]), re.I):
+            # unique dblp name is trusted only in CS-type departments: common Chinese names in biology /
+            # medicine are often a different, not-yet-disambiguated author (Xin Duan, Alexander Lam, 2026-11-02)
+            a, match = cands[0], "unique dblp name (unnumbered), CS-type dept"
         else:
             out.append({"id": p["id"], "pid": None, "match": f"none ({len(cands)} dblp candidates)"})
             continue
