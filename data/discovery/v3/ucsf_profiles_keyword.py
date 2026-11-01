@@ -1,8 +1,11 @@
 """UCSF-wide Profiles keyword search -> data/roster/ucsf-keyword.jsonl. Run from repo root."""
+from collections import Counter
 import re,json,sys,html,unicodedata,requests,urllib.parse as up
 sys.path.insert(0,'.');sys.path.insert(0,'data/discovery/v3')
 from outreach.surnames import asian_tag
-from ucsf_profiles_roster import rows2
+def rows2(t):
+    pat=re.compile(r"<input type=\"hidden\" id=\"(https://researcherprofiles.org/profile/\d+)\" value=\"<div style='font-size:13px;font-weight:bold'>([^<]*)</div>\s*<br/><br/><u>Title:?</u>\s*<br/>([^<]*?)\s*<br/><br/><u>Institution</u>\s*<br/>([^<]*?)\s*<br/><br/><u>Department</u>\s*<br/>([^<]*?)\s*<br/><br/><u>Division</u>\s*<br/>([^<]*?)\s*<br/><br/><u>Researcher Type</u>\s*<br/>([^\"]*?)\"")
+    return [m.groups() for m in pat.finditer(t)]
 UA="Mozilla/5.0 (academic-directory-research; contact via applicant email)"
 INST="https://researcherprofiles.org/profile/171351"
 KW=["machine learning","deep learning","artificial intelligence","neural network","computer vision","foundation model","large language model","computational neuroscience","medical imaging AI"]
@@ -23,16 +26,21 @@ def search(kw):
         u2="https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=%s&exactphrase=false&perpage=100&offset=0&page=%d&totalpages=%d&searchrequest=%s&sortby=&sortdirection=&showcolumns=11"%(up.quote(kw),pg,tp,up.quote(req,safe=''))
         allr+=rows2(requests.get(u2,headers={'User-Agent':UA},timeout=60).text)
     return u,n,allr
-kept={};stats={}
+kept={};stats={};cand={}
 for kw in KW:
     u,n,r=search(kw);ids={x[0] for x in r};stats[kw]=(n,len(ids))
     for pid,name,title,inst,dept,div,rt in r:
         name=html.unescape(name).strip();title=html.unescape(title).strip();dept=html.unescape(dept).strip()
-        if pid in kept or not young(title) or asian_tag(re.sub(r",.*","",name))!="chinese":continue
+        if pid in kept or pid in cand or not young(title) or asian_tag(re.sub(r",.*","",name))!="chinese":continue
         if re.search(r"biostat|epidemiolog|business|haas",dept+" "+div,re.I):continue
         if norm(re.sub(r",.*","",name)) in have or norm(name) in have:continue
-        kept[pid]={"name":name,"institution":"University of California San Francisco","department":dept,"title_on_roster":title,"roster_url":u,"profile_url":pid,"quote":f"{name} | {title} | {dept} | {div} | {rt}","keyword":kw}
+        cand[pid]={"name":name,"institution":"University of California San Francisco","department":dept,"title_on_roster":title,"roster_url":u,"profile_url":pid,"quote":f"{name} | {title} | {dept} | {div} | {rt}","keyword":kw}
+KEEP=re.compile(r"bioengineering|computational precision|computational health|pharmaceutical chem",re.I)
+LAB=re.compile(r"radiolog|neurolog",re.I)
+for pid,o in cand.items():
+    if KEEP.search(o['department']):kept[pid]=o
 with open('data/roster/ucsf-keyword.jsonl','w') as f:
     for o in kept.values():f.write(json.dumps(o)+"\n")
-print(stats);print(len(kept))
+json.dump(list(cand.values()),open('data/discovery/v3/ucsf_keyword_all_candidates.json','w'),indent=0)
+print(stats);print(len(cand),len(kept));print(Counter(o['department'] for o in cand.values()))
 from collections import Counter;print(Counter(o['department'] for o in kept.values()))
