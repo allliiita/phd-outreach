@@ -31,7 +31,7 @@ exclude_schools:             # "too competitive", "too remote", "not for me"
   - Purdue University
   - University of Notre Dame
   - Pennsylvania State University
-exclude_units: [biostatistics in schools of public health, UCSF Epidemiology & Biostatistics]
+exclude_units: [biostatistics in schools of public health, UCSF Epidemiology & Biostatistics, clinical departments, business schools]   # docs/coverage_logic.md
 institutes_this_round: [Cold Spring Harbor Laboratory]   # other institutes postponed
 include_cs: true             # 2026-10-31: CS/ECE are the preferred home (goal: industry research scientist)
 # Who: assistant / incoming assistant / associate (promoted ~2020+) / independent fellow; Chinese surnames.
