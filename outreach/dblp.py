@@ -97,7 +97,10 @@ def match() -> None:
                     any(u.rstrip("/").lower() in hp for u in rec["urls"]):
                 ok.append(a)
         known = {norm(x["title"]) for x in p.get("papers") or []}
-        by_title = [a for a in cands if known & {norm(t) for t in titles.get(a, [])}]
+        # a shared title is proof only for a disambiguated dblp author: an unnumbered common name ("Yan Li", 206
+        # candidates) is dblp's bucket of unassigned papers (UCSF radiologist matched 27 ML papers, 2026-11-02)
+        by_title = [a for a in cands if known & {norm(t) for t in titles.get(a, [])}
+                    and (re.search(r"\d{4}$", a) or len(cands) <= 2)]
         if len(ok) == 1:
             a, match = ok[0], "affiliation/homepage"
         elif len(by_title) == 1:
