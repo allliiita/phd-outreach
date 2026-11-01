@@ -1,0 +1,19 @@
+institution: Boston University
+unit: Center for Systems Neuroscience
+urls:
+  - https://www.bu.edu/csn/people/faculty/?num=1
+  - https://www.bu.edu/csn/people/faculty/?num=2
+  - https://www.bu.edu/csn/people/faculty/?num=3
+  - https://www.bu.edu/csn/people/faculty/?num=4
+  - https://www.bu.edu/csn/people/faculty/?num=5
+  - https://www.bu.edu/csn/people/faculty/?num=6
+  - https://www.bu.edu/csn/people/faculty/?num=7
+  - https://www.bu.edu/csn/people/faculty/?num=8
+  - https://www.bu.edu/csn/people/faculty/?num=9
+  - https://www.bu.edu/csn/people/faculty/?num=10
+  - https://www.bu.edu/csn/people/faculty/?num=11
+item: div.bu-filtering-result-item-content
+name: h4.bu-filtering-result-item-title
+title: p
+profile: a@href
+filter: all
