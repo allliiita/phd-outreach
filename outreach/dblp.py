@@ -46,6 +46,7 @@ def run() -> None:
         want[ascii_name(p["name"])].append(p)
     persons: dict[str, dict] = {}            # dblp author string -> {notes, urls}
     pubs: dict[str, Counter] = defaultdict(Counter)
+    titles: dict[str, list] = defaultdict(list)
     curl = subprocess.Popen(["curl", "-sL", DUMP], stdout=subprocess.PIPE)
     stream = _Entities(gzip.GzipFile(fileobj=curl.stdout))
     ctx = iterparse(stream, events=("end",))
@@ -67,11 +68,22 @@ def run() -> None:
                         venue = el.findtext("booktitle") or el.findtext("journal") or ""
                         for a in hit:
                             pubs[a][venue] += 1
+                            titles[a].append(el.findtext("title") or "")
             el.clear()
             n += 1
             if n % 2_000_000 == 0:
                 print(f"{n:,} records", flush=True)
     curl.wait()
+    (DATA / "dblp_raw.json").write_text(json.dumps({"persons": persons, "pubs": pubs, "titles": titles}))
+    match()
+
+
+def match() -> None:
+    """Pick the dblp author for each person from data/dblp_raw.json (no re-download needed to change rules)."""
+    raw = json.loads((DATA / "dblp_raw.json").read_text())
+    persons, pubs, titles = raw["persons"], {k: Counter(v) for k, v in raw["pubs"].items()}, raw["titles"]
+    people = [json.loads(l) for l in (DATA / "tag" / "people.jsonl").read_text().splitlines() if l.strip()]
+    norm = lambda t: " ".join(re.sub(r"[^a-z0-9 ]", " ", t.lower()).split())[:60]
     out = []
     for p in people:
         k = ascii_name(p["name"])
@@ -84,10 +96,14 @@ def run() -> None:
             if any(w in " ".join(rec["notes"]).lower() for w in words) or \
                     any(u.rstrip("/").lower() in hp for u in rec["urls"]):
                 ok.append(a)
+        known = {norm(x["title"]) for x in p.get("papers") or []}
+        by_title = [a for a in cands if known & {norm(t) for t in titles.get(a, [])}]
         if len(ok) == 1:
             a, match = ok[0], "affiliation/homepage"
-        elif not ok and len(cands) == 1 and not re.search(r"\d{4}$", cands[0]) and cands[0] not in persons:
-            a, match = cands[0], "unique name, unverified"
+        elif len(by_title) == 1:
+            a, match = by_title[0], "shared paper title"
+        elif not ok and len(cands) == 1 and not re.search(r"\d{4}$", cands[0]):
+            a, match = cands[0], "unique dblp name (unnumbered), unverified"
         else:
             out.append({"id": p["id"], "pid": None, "match": f"none ({len(cands)} dblp candidates)"})
             continue
@@ -125,4 +141,5 @@ class _Entities:
 
 
 if __name__ == "__main__":
-    run()
+    import sys
+    match() if sys.argv[1:] == ["match"] else run()
