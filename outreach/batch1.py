@@ -323,6 +323,10 @@ def cmd_export() -> None:
     clean(raw)
     ps = {p["id"]: p for p in dedupe(raw, tags)}
     dos = {d["id"]: d for f in sorted((DATA / "dossier_out").glob("*.jsonl")) for d in jl(f)}
+    unver = defaultdict(list)   # dossier quotes not found on their saved page (data/dossier_check.json)
+    if (DATA / "dossier_check.json").exists():
+        for i, field, why, _ in json.loads((DATA / "dossier_check.json").read_text()):
+            unver[i].append(f"{field}: {why}")
     bad = {l.split("\t")[0] for l in (DATA / "validate_report.tsv").read_text().splitlines()
            if l and not l.split("\t", 1)[1].startswith("WARN")} if (DATA / "validate_report.tsv").exists() else set()
     order = {"A": 0, "B": 1, "?": 2, "C": 3}
@@ -370,7 +374,7 @@ def cmd_export() -> None:
                "How they want to be contacted (own words)": " | ".join(
                    (x.get("quote") if isinstance(x, dict) else str(x)) for x in d.get("contact_prefs") or [])[:500],
                "Hook (dossier)": d.get("hook", ""), "Red flags": "; ".join(d.get("red_flags") or []),
-               "Check": check_note(p)}
+               "Check": "; ".join(x for x in [check_note(p)] + [f"dossier {u}, re-check" for u in unver.get(pid, [])] if x)}
         sy = (d.get("start_year") or {}).get("year") if isinstance(d.get("start_year"), dict) else None
         if BUSINESS.search(" ".join(p["departments"])):
             continue
