@@ -203,7 +203,7 @@ def coverage() -> list[dict]:
 JUNK_URL = re.compile(r"terms-of-use|faculty-resources/handbook|omniupdate|safelinks|a-lab-like-no-other|"
                       r"/login|wp-admin", re.I)
 BOILER = re.compile(r"physicians and scientists on the faculty of the icahn school", re.I)
-BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance", re.I)   # applicant: no business schools
+BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance|kunshan", re.I)   # applicant: no business schools; Duke Kunshan is out of scope
 NOT_ADVISING = re.compile(r"of instruction|of the practice|teaching|affiliate|lecturer|instructor", re.I)
 
 

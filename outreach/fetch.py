@@ -105,6 +105,8 @@ def render(url: str, browser_ua: bool = False) -> str | None:
         try:
             pg = b.new_page() if browser_ua else b.new_page(user_agent=UA)
             pg.goto(url, wait_until="networkidle", timeout=30000)
+            if browser_ua:
+                pg.wait_for_timeout(3000)   # lists filled in by JS after the network goes quiet (Duke DIBS)
             return pg.content()
         except Exception:  # noqa: BLE001
             return None
