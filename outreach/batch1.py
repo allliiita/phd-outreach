@@ -49,7 +49,7 @@ def rosters() -> list[Path]:
     seen, out = set(), []
     for g in grid():
         r = g.get("roster")
-        if g.get("status") == "done" and r and r not in seen and (ROOT / r).exists():
+        if g.get("status") in ("done", "partial") and r and r not in seen and (ROOT / r).exists():
             seen.add(r)
             out.append(ROOT / r)
     return out
@@ -110,8 +110,15 @@ def people() -> list[dict]:
                 continue
             by[k] = {**d, "departments": [d["department"]], "groups": [grp.get(p.name, "")], "title": pos}
     out = sorted(by.values(), key=lambda d: (d["institution"], d["name"]))
-    for i, d in enumerate(out):
-        d["id"] = f"b1-{i:04d}"
+    # ids are stable: tags and dossiers are keyed by them, so people already listed keep theirs
+    old = {(o["name"].lower().strip(), o["institution"]): o["id"] for o in jl(TAG / "people.jsonl")}
+    nxt = 1 + max([int(i.split("-")[1]) for i in old.values()] or [-1])
+    for d in out:
+        k = (d["name"].lower().strip(), d["institution"])
+        if k in old:
+            d["id"] = old[k]
+        else:
+            d["id"], nxt = f"b1-{nxt:04d}", nxt + 1
     return out
 
 
@@ -125,13 +132,17 @@ def card(d: dict) -> dict:
 
 
 def cmd_cards(size: int) -> None:
+    """Cards only for people without a tag yet (new rosters); everyone is rewritten to people.jsonl."""
     ps = people()
     (TAG / "in").mkdir(parents=True, exist_ok=True)
     (TAG / "out").mkdir(parents=True, exist_ok=True)
+    tagged = {t["id"] for f in (TAG / "out").glob("*.jsonl") for t in jl(f)}
     (TAG / "people.jsonl").write_text("".join(json.dumps(p, default=str) + "\n" for p in ps))
-    for i in range(0, len(ps), size):
-        (TAG / "in" / f"b{i // size:02d}.jsonl").write_text("".join(json.dumps(card(p)) + "\n" for p in ps[i:i + size]))
-    print(f"{len(ps)} people -> {(len(ps) + size - 1) // size} card files in data/tag/in/")
+    new = [p for p in ps if p["id"] not in tagged]
+    k0 = len(list((TAG / "in").glob("*.jsonl")))
+    for i in range(0, len(new), size):
+        (TAG / "in" / f"b{k0 + i // size:02d}.jsonl").write_text("".join(json.dumps(card(p)) + "\n" for p in new[i:i + size]))
+    print(f"{len(ps)} people, {len(new)} new -> card files from b{k0:02d} in data/tag/in/")
 
 
 def page_text(url: str, name: str, n: int = 1500) -> str:
