@@ -1,0 +1,11 @@
+{"unit": "School of Biological Sciences PhD (Biological Sciences)", "kind": "phd_program", "source": "https://www.cshl.edu/gradschool", "decision": "covered", "grid_unit": "CSHL Faculty (Research)"}
+{"unit": "PhD in Biological and Artificial Intelligence (BioAI)", "kind": "phd_program", "source": "https://www.cshl.edu/phd-program/bioai-phd-program/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)", "reason": "BioAI faculty are the same SBS research faculty; co-directors Kinney, Zador"}
+{"unit": "SBS Research Faculty list", "kind": "department", "source": "https://www.cshl.edu/phd-program/research-faculty/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)"}
+{"unit": "SBS Non-Research Faculty (press/Banbury/DNALC/meetings directors)", "kind": "department", "source": "https://www.cshl.edu/phd-program/non-research-faculty/", "decision": "out_of_scope", "reason": "administrators/historians, no research labs"}
+{"unit": "Cancer Center", "kind": "center", "source": "https://www.cshl.edu/research/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)"}
+{"unit": "Neuroscience / NeuroAI", "kind": "center", "source": "https://www.cshl.edu/research/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)"}
+{"unit": "Simons Center for Quantitative Biology", "kind": "center", "source": "https://www.cshl.edu/research/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)"}
+{"unit": "Genomics", "kind": "center", "source": "https://www.cshl.edu/research/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)"}
+{"unit": "Plant Biology", "kind": "center", "source": "https://www.cshl.edu/research/", "decision": "covered", "grid_unit": "CSHL Faculty (Research)", "reason": "faculty in the same list; low ML yield"}
+{"unit": "Clinical/Translational fellows programs (Northwell)", "kind": "initiative", "source": "https://www.cshl.edu/research/", "decision": "out_of_scope", "reason": "clinical fellowships, no PhD labs"}
+{"unit": "CSHL Press, DNA Learning Center, Banbury Center, Meetings & Courses", "kind": "center", "source": "https://www.cshl.edu/research/", "decision": "out_of_scope", "reason": "non-research divisions"}
