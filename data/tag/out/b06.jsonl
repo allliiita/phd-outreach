@@ -1,0 +1,36 @@
+{"id": "b1-0240", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0241", "fit": "C", "theme": "other", "summary": "Human-computer interaction, human-AI interaction, graphics, AR/VR.", "hook": ""}
+{"id": "b1-0242", "fit": "A", "theme": "core-ML/CV", "summary": "Differential geometry and topology for graphics; machine learning applications of optimal transport.", "hook": ""}
+{"id": "b1-0243", "fit": "C", "theme": "other", "summary": "Biophysics of neurotransmitter release using electrophysiology and calcium imaging at crayfish neuromuscular junction.", "hook": ""}
+{"id": "b1-0244", "fit": "C", "theme": "other", "summary": "Family and cultural aspects of chronic illness and disability; clinical psychology research.", "hook": ""}
+{"id": "b1-0245", "fit": "B", "theme": "stats-methods", "summary": "Clinical psychology of mood disturbance plus statistical method and software development for longitudinal data.", "hook": ""}
+{"id": "b1-0246", "fit": "C", "theme": "other", "summary": "CT dose and image quality assessment in clinical radiology.", "hook": ""}
+{"id": "b1-0247", "fit": "C", "theme": "other", "summary": "Neural engineering, diffusion imaging and focused ultrasound stimulation trials.", "hook": ""}
+{"id": "b1-0248", "fit": "B", "theme": "stats-methods", "summary": "Experimental design, causal inference, survey sampling and missing data.", "hook": ""}
+{"id": "b1-0249", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0250", "fit": "C", "theme": "other", "summary": "Medical health physics practice guidelines; radiation safety.", "hook": ""}
+{"id": "b1-0251", "fit": "B", "theme": "medical-AI", "summary": "Explainable deep model for radionecrosis identification after radiosurgery for brain metastases.", "hook": ""}
+{"id": "b1-0252", "fit": "C", "theme": "other", "summary": "Motion analysis for radiotherapy and image registration evaluation datasets.", "hook": ""}
+{"id": "b1-0253", "fit": "C", "theme": "other", "summary": "Dose verification for stereotactic radiation therapy plans.", "hook": ""}
+{"id": "b1-0254", "fit": "A", "theme": "stats-methods", "summary": "Optimal, fast, robust community detection and graph clustering algorithms, with fundamental limits.", "hook": "Bayesian stochastic block models on a connectome"}
+{"id": "b1-0255", "fit": "B", "theme": "medical-AI", "summary": "Virtual imaging trials workflow software and evaluation of AI for breast tomosynthesis.", "hook": ""}
+{"id": "b1-0256", "fit": "B", "theme": "medical-AI", "summary": "Deep learning for synthetic CT, real-time liver image registration, and radiogenomic explainable AI.", "hook": ""}
+{"id": "b1-0257", "fit": "B", "theme": "medical-AI", "summary": "Fundus lesion segmentation feature representation (single paper title).", "hook": ""}
+{"id": "b1-0258", "fit": "B", "theme": "medical-AI", "summary": "Large language model agents for radiotherapy treatment planning; photon dose calculation.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0259", "fit": "C", "theme": "other", "summary": "PET/CT clinical utility in cancer treatment decisions; imaging appropriateness criteria.", "hook": ""}
+{"id": "b1-0260", "fit": "B", "theme": "medical-AI", "summary": "Dose prediction models with physics-informed priors; LLM agents for radiotherapy planning.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0261", "fit": "B", "theme": "medical-AI", "summary": "Reinforcement learning, LLM agents and self-supervised model predictive control for radiotherapy planning.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0262", "fit": "C", "theme": "other", "summary": "Radiotherapy trials whitepaper, MRI radiomics variation, Monte Carlo beam models.", "hook": ""}
+{"id": "b1-0263", "fit": "C", "theme": "other", "summary": "Astatine-211 radiopharmaceuticals for prostate cancer therapy.", "hook": ""}
+{"id": "b1-0264", "fit": "B", "theme": "medical-AI", "summary": "Deep learning in cardiovascular and retinal imaging; LLMs for imaging report classification.", "hook": ""}
+{"id": "b1-0265", "fit": "C", "theme": "other", "summary": "Biomaterials and bioengineering to control muscle stem cell regeneration.", "hook": ""}
+{"id": "b1-0266", "fit": "C", "theme": "other", "summary": "Liver disease clinical cohort and health-services studies.", "hook": ""}
+{"id": "b1-0267", "fit": "C", "theme": "other", "summary": "Airway and lung stem cell biology and regeneration.", "hook": ""}
+{"id": "b1-0268", "fit": "C", "theme": "other", "summary": "Fluorescence microscopy binders and transcriptional condensates.", "hook": ""}
+{"id": "b1-0269", "fit": "C", "theme": "other", "summary": "Molecular mechanisms of aging, genetic determinants of complex traits, gene regulatory networks.", "hook": ""}
+{"id": "b1-0270", "fit": "A", "theme": "medical-AI", "summary": "Machine learning methods for improving and equalizing clinical care; auditing algorithmic bias.", "hook": ""}
+{"id": "b1-0271", "fit": "C", "theme": "other", "summary": "Kinase inhibitor design; clinical trial listing in neuro-oncology.", "hook": ""}
+{"id": "b1-0272", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0273", "fit": "C", "theme": "other", "summary": "Structural biology and cryo-EM.", "hook": ""}
+{"id": "b1-0274", "fit": "?", "theme": "other", "summary": "Roster says traffic operation and AI for mobility; research text describes turbulent flow simulation; conflicting.", "hook": ""}
+{"id": "b1-0275", "fit": "?", "theme": "other", "summary": "Roster mentions infrastructure resilience and deep reinforcement learning; research text describes turbulent flows; conflicting.", "hook": ""}
