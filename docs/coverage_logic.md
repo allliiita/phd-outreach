@@ -18,6 +18,13 @@ Clinical departments (medicine, pediatrics, surgery, ophthalmology, psychiatry s
 health, UCSF Epidemiology & Biostatistics, business schools. Sites behind a bot check are recorded as blocked,
 never worked around. Schools the applicant postponed: WashU, UVA, UMich, UPenn.
 
+## Unit census (completeness of UNITS, not people) — agents/07_unit_census.md
+Before rostering, and again before a list is final, an independent agent enumerates every unit from the
+school's official lists — the graduate school's list of all PhD programs (every unit that can admit a PhD
+student is on it), schools & departments pages, the centers & institutes directory, and 2023–2026 news of
+new AI / data / computing units — and marks each covered / out of scope (why) / added. Output:
+data/grid/<slug>.units.jsonl -> "Unit census" sheet. A unit marked "added" goes into the grid as todo.
+
 ## Every unit ends with a status (Coverage sheet)
 done (N rows, verifier verdict) | partial (why) | blocked (URL) | none at this school | skipped (applicant).
 Gaps are found by reading the Coverage sheet top-down: a school without a G1/G2 row is the first place to look.

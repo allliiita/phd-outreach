@@ -409,10 +409,12 @@ def cmd_export() -> None:
         summary.append({"school": inst, "unit": "(school total)", "status":
                         f"people {k('People')} | need email {k('Need email')} | check {k('Check (title or fit)')} | dropped C {k('Dropped (C)')}"})
     rows["Coverage"] = summary + coverage()
+    rows["Unit census"] = [{"school": inst, **u} for inst in targets()["focus_schools"]
+                           for u in jl(DATA / "grid" / f"{SLUG[inst]}.units.jsonl")]
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
     for name in ["People", "Need email", "Strong fit, not young", "Check (title or fit)", "Dropped (C)",
-                 "CSHL (any heritage)", "Coverage"]:
+                 "CSHL (any heritage)", "Coverage", "Unit census"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
         cols = list(dict.fromkeys(k for r in data for k in r)) or ["(empty)"]
