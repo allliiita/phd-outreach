@@ -7,6 +7,8 @@ Never work around a bot check: record the list page as blocked.
 
 ## Official lists to enumerate (fetch each; record the URL)
 1. Graduate school / registrar list of ALL PhD programs (every unit that can admit PhD students is here).
+   MANDATORY: if the page is JS-rendered, add its host to config/browser_hosts.txt; if it 404s, find the
+   graduate catalog / bulletin (often a PDF). Do not substitute the departments page (Duke/USF 2026-11-01).
 2. University "schools and colleges" page, and each relevant school's "departments" page.
 3. Research office "centers and institutes" directory.
 4. News 2023–2026: "new school / college / institute / center / department" + AI, data science, computing.

@@ -1,0 +1,22 @@
+{"unit": "Computer Science", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Computer Science"}
+{"unit": "Pierre R. Lamond ECE", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Electrical & Computer Engineering"}
+{"unit": "Statistical Science", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Statistical Science"}
+{"unit": "Thomas Lord MEMS", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Mechanical Eng & Materials Science"}
+{"unit": "Civil and Environmental Engineering", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Civil & Environmental Engineering"}
+{"unit": "Biomedical Engineering", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Biomedical Engineering"}
+{"unit": "Mathematics", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Mathematics"}
+{"unit": "Biostatistics & Bioinformatics", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Biostatistics & Bioinformatics (SOM)"}
+{"unit": "Biochemistry", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Biochemistry"}
+{"unit": "Molecular Genetics and Microbiology", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Molecular Genetics & Microbiology"}
+{"unit": "Neurobiology", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Neurobiology"}
+{"unit": "Pharmacology & Cancer Biology", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Pharmacology & Cancer Biology"}
+{"unit": "Psychology & Neuroscience", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Psychology & Neuroscience (primary)"}
+{"unit": "Chemistry", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Chemistry"}
+{"unit": "Duke Institute for Brain Sciences", "kind": "institute", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "DIBS network faculty"}
+{"unit": "Discovery AI / AI Health / Comp & Digital Health", "kind": "initiative", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Duke Discovery AI community"}
+{"unit": "Athena NSF AI Institute for Edge Computing", "kind": "institute", "source": "https://wraltechwire.com/tag/athena/", "decision": "covered", "grid_unit": "Electrical & Computer Engineering", "reason": "faculty sit in ECE/CS"}
+{"unit": "Computational Biology & Bioinformatics PhD; UPGG", "kind": "phd_program", "source": "https://scholars.duke.edu/organizations", "decision": "covered", "grid_unit": "Computational Biology & Bioinformatics PhD program"}
+{"unit": "Rhodes Information Initiative at Duke (iiD, Data+)", "kind": "initiative", "source": "https://scholars.duke.edu/organizations", "decision": "added", "reason": "university data-science hub; no own roster seen, faculty mostly affiliated"}
+{"unit": "Cell Biology; Integrative Immunobiology; Population Health Sciences", "kind": "department", "source": "https://scholars.duke.edu/organizations", "decision": "out_of_scope", "reason": "wet-lab/clinical/population health, not AI homes"}
+{"unit": "SOM clinical departments (Medicine, Neurology, Surgery, Anesthesiology, etc.)", "kind": "school", "source": "https://scholars.duke.edu/organizations", "decision": "out_of_scope", "reason": "clinical"}
+{"unit": "Fuqua, Law, Divinity, Sanford, Nicholas, Arts & Sciences humanities/social/Physics/Economics, Duke Global Health, Duke Quantum Center, DKU", "kind": "school", "source": "https://scholars.duke.edu/organizations", "decision": "out_of_scope", "reason": "business/law/humanities/policy/environment/public health/non-AI"}
