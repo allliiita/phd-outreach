@@ -1,0 +1,552 @@
+[
+{
+"name": "Ernest Lee",
+"institution": "University of California San Francisco",
+"department": "Dermatology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/208650568",
+"quote": "Ernest Lee | Assistant Professor | Dermatology | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Leo Liu",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/30198468",
+"quote": "Leo Liu | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Christina Chen",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/386396630",
+"quote": "Christina Chen | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Mark Zhao",
+"institution": "University of California San Francisco",
+"department": "Surgery",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/531058331",
+"quote": "Mark Zhao | Assistant Professor | Surgery | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Qihui Lyu",
+"institution": "University of California San Francisco",
+"department": "Radiation Oncology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/485649746",
+"quote": "Qihui Lyu | Assistant Professor | Radiation Oncology | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Carrie Chan",
+"institution": "University of California San Francisco",
+"department": "Family Health Care Nursing",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/32072140",
+"quote": "Carrie Chan | Associate Professor | Family Health Care Nursing | School of Nursing | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Anita Ho",
+"institution": "University of California San Francisco",
+"department": "Institute for Health & Aging",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/255243017",
+"quote": "Anita Ho | Associate Professor | Institute for Health & Aging | School of Nursing | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Alice Chan",
+"institution": "University of California San Francisco",
+"department": "Pediatrics",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/196391",
+"quote": "Alice Chan | Associate Professor | Pediatrics | School of Medicine | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Katherine Wai",
+"institution": "University of California San Francisco",
+"department": "Otolaryngology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/196351",
+"quote": "Katherine Wai | Assistant Professor | Otolaryngology | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Jonathan Lu",
+"institution": "University of California San Francisco",
+"department": "Ophthalmology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/436197652",
+"quote": "Jonathan Lu | Assistant Professor | Ophthalmology | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Yingning Wang",
+"institution": "University of California San Francisco",
+"department": "Institute for Health & Aging",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/175137",
+"quote": "Yingning Wang | Associate Professor | Institute for Health & Aging | School of Nursing | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Jin Ge",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/196042",
+"quote": "Jin Ge | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Hui Lin",
+"institution": "University of California San Francisco",
+"department": "Radiation Oncology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/217485915",
+"quote": "Hui Lin | Assistant Professor | Radiation Oncology | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Bruce Wang",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/189047",
+"quote": "Bruce Wang | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Diana Kwong",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/196167",
+"quote": "Diana Kwong | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Ursula Lang",
+"institution": "University of California San Francisco",
+"department": "Pathology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/188793",
+"quote": "Ursula Lang | Assistant Professor | Pathology | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Jason Chan",
+"institution": "University of California San Francisco",
+"department": "Radiation Oncology",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/189967",
+"quote": "Jason Chan | Associate Professor | Radiation Oncology | School of Medicine | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Alexandra Lee",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/23263677",
+"quote": "Alexandra Lee | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Benjamin Huang",
+"institution": "University of California San Francisco",
+"department": "Pediatrics",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/184750",
+"quote": "Benjamin Huang | Assistant Professor | Pediatrics | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Huimin Geng",
+"institution": "University of California San Francisco",
+"department": "Laboratory Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/193808",
+"quote": "Huimin Geng | Associate Professor | Laboratory Medicine | School of Medicine | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Alfred Chung",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/130125340",
+"quote": "Alfred Chung | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "machine learning"
+},
+{
+"name": "David Huang",
+"institution": "University of California San Francisco",
+"department": "Ob/Gyn, Reproductive Sciences",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=machine%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/539889839",
+"quote": "David Huang | Assistant Professor | Ob/Gyn, Reproductive Sciences | School of Medicine | Assistant Professor",
+"keyword": "machine learning"
+},
+{
+"name": "Neal Yuan",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/175527",
+"quote": "Neal Yuan | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Cornelia Ding",
+"institution": "University of California San Francisco",
+"department": "Pathology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/51417560",
+"quote": "Cornelia Ding | Assistant Professor | Pathology | School of Medicine | Assistant Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Meghan Shan",
+"institution": "University of California San Francisco",
+"department": "Ophthalmology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/123872378",
+"quote": "Meghan Shan | Assistant Professor | Ophthalmology | School of Medicine | Assistant Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Victoria Tang",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/173825",
+"quote": "Victoria Tang | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Huiming Dong",
+"institution": "University of California San Francisco",
+"department": "Radiation Oncology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/172813527",
+"quote": "Huiming Dong | Assistant Professor | Radiation Oncology | School of Medicine | Assistant Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Peter I-Kung Wu",
+"institution": "University of California San Francisco",
+"department": "Orthopaedic Surgery",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/30198464",
+"quote": "Peter I-Kung Wu | Associate Professor | Orthopaedic Surgery | School of Medicine | Associate Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Mindy Ju",
+"institution": "University of California San Francisco",
+"department": "Pediatrics",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/33508938",
+"quote": "Mindy Ju | Associate Professor | Pediatrics | School of Medicine | Associate Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Aileen Chang",
+"institution": "University of California San Francisco",
+"department": "Dermatology",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/176275",
+"quote": "Aileen Chang | Associate Professor | Dermatology | School of Medicine | Associate Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Patricia Zheng",
+"institution": "University of California San Francisco",
+"department": "Orthopaedic Surgery",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=deep%20learning&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/190169",
+"quote": "Patricia Zheng | Associate Professor | Orthopaedic Surgery | School of Medicine | Associate Professor",
+"keyword": "deep learning"
+},
+{
+"name": "Becky Long",
+"institution": "University of California San Francisco",
+"department": "Surgery - Fresno",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/771390730",
+"quote": "Becky Long | Assistant Professor | Surgery - Fresno | School of Medicine | Assistant Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Odmara Barreto Chang",
+"institution": "University of California San Francisco",
+"department": "Anesthesia",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/186224",
+"quote": "Odmara Barreto Chang | Associate Professor | Anesthesia | School of Medicine | Associate Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Margaret Lin-Martore",
+"institution": "University of California San Francisco",
+"department": "Emergency Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/195639",
+"quote": "Margaret Lin-Martore | Associate Professor | Emergency Medicine | School of Medicine | Associate Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Albert Liu",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/176959",
+"quote": "Albert Liu | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Lisa Deng",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/19628875",
+"quote": "Lisa Deng | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Guo-Hao Lin",
+"institution": "University of California San Francisco",
+"department": "Orofacial Sciences",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/176016",
+"quote": "Guo-Hao Lin | Associate Professor | Orofacial Sciences | School of Dentistry | Associate Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Hannah Gu",
+"institution": "University of California San Francisco",
+"department": "Pediatrics",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/539889836",
+"quote": "Hannah Gu | Assistant Professor | Pediatrics | School of Medicine | Assistant Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Christopher Lee",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=artificial%20intelligence&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/510657670",
+"quote": "Christopher Lee | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "artificial intelligence"
+},
+{
+"name": "Tina Chen",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=neural%20network&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/371173159",
+"quote": "Tina Chen | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "neural network"
+},
+{
+"name": "Simon Fung",
+"institution": "University of California San Francisco",
+"department": "Ophthalmology",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=computer%20vision&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/605012710",
+"quote": "Simon Fung | Associate Professor | Ophthalmology | School of Medicine | Associate Professor",
+"keyword": "computer vision"
+},
+{
+"name": "Jonathan Chou",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/174340",
+"quote": "Jonathan Chou | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Michael Li",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/307396164",
+"quote": "Michael Li | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Michael Lee",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/283976150",
+"quote": "Michael Lee | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Melisa Wong",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/187183",
+"quote": "Melisa Wong | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Christine Hsieh",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/188525",
+"quote": "Christine Hsieh | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Yew Song Cheng",
+"institution": "University of California San Francisco",
+"department": "Otolaryngology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/471620124",
+"quote": "Yew Song Cheng | Assistant Professor | Otolaryngology | School of Medicine | Assistant Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Carissa Chu",
+"institution": "University of California San Francisco",
+"department": "Urology",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/173859",
+"quote": "Carissa Chu | Assistant Professor | Urology | School of Medicine | Assistant Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Jeffrey Cheng",
+"institution": "University of California San Francisco",
+"department": "Dermatology",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/174868",
+"quote": "Jeffrey Cheng | Associate Professor | Dermatology | School of Medicine | Associate Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Michael Cheng",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=foundation%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/307396167",
+"quote": "Michael Cheng | Associate Professor | Medicine | School of Medicine | Associate Professor",
+"keyword": "foundation model"
+},
+{
+"name": "Victoria Chu",
+"institution": "University of California San Francisco",
+"department": "Pediatrics",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=large%20language%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/378826643",
+"quote": "Victoria Chu | Assistant Professor | Pediatrics | School of Medicine | Assistant Professor",
+"keyword": "large language model"
+},
+{
+"name": "Owen Huang",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=large%20language%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/225489241",
+"quote": "Owen Huang | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "large language model"
+},
+{
+"name": "Marianna Kong",
+"institution": "University of California San Francisco",
+"department": "Family Community Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=large%20language%20model&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/195751",
+"quote": "Marianna Kong | Associate Professor | Family Community Medicine | School of Medicine | Associate Professor",
+"keyword": "large language model"
+},
+{
+"name": "Shih-Chuan Chou",
+"institution": "University of California San Francisco",
+"department": "Emergency Medicine",
+"title_on_roster": "Associate Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=medical%20imaging%20AI&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/504926440",
+"quote": "Shih-Chuan Chou | Associate Professor | Emergency Medicine | School of Medicine | Associate Professor",
+"keyword": "medical imaging AI"
+},
+{
+"name": "Mike Cheng",
+"institution": "University of California San Francisco",
+"department": "Medicine",
+"title_on_roster": "Assistant Professor",
+"roster_url": "https://profiles.ucsf.edu/search/default.aspx?searchtype=people&searchfor=medical%20imaging%20AI&exactphrase=false&institution=https://researcherprofiles.org/profile/171351&classuri=http://xmlns.com/foaf/0.1/Person&new=true",
+"profile_url": "https://researcherprofiles.org/profile/51417570",
+"quote": "Mike Cheng | Assistant Professor | Medicine | School of Medicine | Assistant Professor",
+"keyword": "medical imaging AI"
+}
+]
