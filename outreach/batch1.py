@@ -320,7 +320,11 @@ def cmd_validate() -> None:
         ini = "".join(t[0] for t in norm_name(p["name"]).split())
         if not any(t in local for t in toks) and not local.startswith(ini[:2]):
             out.append((p["id"], f"WARN email local part {local} does not resemble the name"))
-    out += [(i, f"email {em} shared by {ids}") for em, ids in seen.items() if len(ids) > 1 for i in ids]
+    names = {p["id"]: p["name"] for p in jl(TAG / "people.jsonl")}
+    for em, ids in seen.items():
+        if len(ids) > 1:   # same surname = same person listed twice (merged at export), else a real conflict
+            same = len({norm_name(names[i]).split()[-1] for i in ids}) == 1
+            out += [(i, f"{'WARN ' if same else ''}email {em} shared by {ids}") for i in ids]
     (DATA / "validate_report.tsv").write_text("".join(f"{i}\t{m}\n" for i, m in out))
     print(f"{len(out)} problems ({sum(not m.startswith('WARN') for _, m in out)} hard) -> data/validate_report.tsv")
 
