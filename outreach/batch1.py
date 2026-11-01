@@ -274,6 +274,8 @@ def check_note(p: dict) -> str:
         notes.append("appointment in Epidemiology & Biostatistics (excluded dept): your call")
     if p.get("_weak"):
         notes.append("fit based on name-matched papers only: check they are this person's")
+    if p.get("_fit_disagree"):
+        notes.append(p["_fit_disagree"])
     if p.get("aka"):
         notes.append(f"also listed as {', '.join(p['aka'])}")
     return "; ".join(notes)
@@ -319,6 +321,7 @@ def cmd_export() -> None:
     recard = {c["id"]: c for f in sorted((TAG / "re_in").glob("*.jsonl")) for c in jl(f)}
     clean(raw)
     ps = {p["id"]: p for p in dedupe(raw, tags)}
+    dos = {d["id"]: d for f in sorted((DATA / "dossier_out").glob("*.jsonl")) for d in jl(f)}
     bad = {l.split("\t")[0] for l in (DATA / "validate_report.tsv").read_text().splitlines()
            if l and not l.split("\t", 1)[1].startswith("WARN")} if (DATA / "validate_report.tsv").exists() else set()
     order = {"A": 0, "B": 1, "?": 2, "C": 3}
@@ -331,6 +334,23 @@ def cmd_export() -> None:
         elif t.get("fit") in ("A", "B") and ev == "weak":
             p["_weak"] = True
         conf, unconf = split_papers(p)
+        d = dos.get(pid, {})
+        if d:
+            dp = [f'{x.get("quote") or x.get("title")}' for x in d.get("papers") or [] if isinstance(x, dict)]
+            conf = (dp + conf)[:2]
+            if d.get("lab_site"):
+                p["homepage"] = d["lab_site"]
+            if not (p.get("email") or {}).get("value") and (d.get("email") or {}).get("value"):
+                p["email"] = {"value": d["email"]["value"], "evidence": {"source_url": d["email"].get("url", "")}}
+            # dossier fit may only DROP a person for facts (not a PI, wrong person, not ML at all); a different
+            # reading of scope is shown, not applied: the fit rules live in agents/26_fit_tagger.md
+            hard = re.search(r"affiliate|not a pi|staff|wrong person|not faculty|leaving|left", (d.get("fit_reason") or "") +
+                             " ".join(d.get("red_flags") or []), re.I)
+            if d.get("fit") and d["fit"] != t.get("fit"):
+                if hard or d["fit"] in ("A", "B") and t.get("fit") in ("?", "C"):
+                    t["fit"] = d["fit"]
+                else:
+                    p["_fit_disagree"] = f'dossier reader says {d["fit"]}: {d.get("fit_reason", "")[:120]}'
         em = (p.get("email") or {}).get("value")
         rec = {"Priority": priority(t.get("theme", ""), set(p.get("groups") or [])), "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
@@ -340,7 +360,12 @@ def cmd_export() -> None:
                "Homepage": p.get("homepage") or p.get("profile_url") or "",
                "Paper 1 (on own page)": conf[0] if conf else "", "Paper 2 (on own page)": conf[1] if len(conf) > 1 else "",
                "Papers by name match (check author)": " | ".join(unconf[:2]),
-               "Official page": p.get("roster_url", ""), "Check": check_note(p)}
+               "Official page": p.get("roster_url", ""),
+               "Lab site read": "yes" if d else "", "Recruiting (own words)": ((d.get("recruiting") or {}).get("status", "") + ": " +
+                   ((d.get("recruiting") or {}).get("quote") or "")[:200]) if d.get("recruiting") else "",
+               "Start year": (d.get("start_year") or {}).get("year", "") if isinstance(d.get("start_year"), dict) else "",
+               "Hook (dossier)": d.get("hook", ""), "Red flags": "; ".join(d.get("red_flags") or []),
+               "Check": check_note(p)}
         if t.get("fit") == "C":
             sheet = "Dropped (C)"
         elif not p["title"] or NOT_ADVISING.search(p["title"]) or t.get("fit") == "?":
