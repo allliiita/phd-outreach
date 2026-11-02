@@ -12,7 +12,7 @@
 {"id": "b1-0046", "theme": "AI-for-science", "changed": false, "why": "AI methods for biomedical and single-cell data"}
 {"id": "b1-0048", "theme": "AI-for-science", "changed": false, "why": "Sequence-to-function genomics models and rare-variant methods"}
 {"id": "b1-0052", "theme": "medical-AI", "changed": false, "why": "Cytometry outcome prediction in transplant and cancer studies"}
-{"id": "b1-0053", "theme": "AI-for-science", "changed": false, "why": "Autonomous microscopy for 2D materials; site AI-security list conflicts"}
+{"id": "b1-0053", "theme": "trustworthy-ML", "changed": true, "why": "coordinator: AI security / trustworthy AI (dossier site themes)"}
 {"id": "b1-0055", "theme": "medical-AI", "changed": false, "why": "RL decision support for ECMO clinical management"}
 {"id": "b1-0056", "theme": "medical-AI", "changed": false, "why": "Ultrasound imaging with deep learning applications"}
 {"id": "b1-0057", "theme": "AI-for-science", "changed": false, "why": "Dimensionality reduction methods for single-cell RNA-seq"}
