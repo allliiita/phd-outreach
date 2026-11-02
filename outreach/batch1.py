@@ -187,9 +187,10 @@ def cmd_recards(ids_file: Path, size: int) -> None:
         c["homepage_text"] = page_text(hp, p["name"]) if hp and hp != p.get("profile_url") else ""
         c["papers"] = [x["title"] for x in (p.get("papers") or [])[:6]]
         cards.append(c)
+    k0 = len(list((TAG / "re_in").glob("*.jsonl")))   # never overwrite earlier recheck files
     for k in range(0, len(cards), size):
-        (TAG / "re_in" / f"r{k // size:02d}.jsonl").write_text("".join(json.dumps(c) + "\n" for c in cards[k:k + size]))
-    print(f"{len(cards)} recheck cards -> data/tag/re_in/")
+        (TAG / "re_in" / f"r{k0 + k // size:02d}.jsonl").write_text("".join(json.dumps(c) + "\n" for c in cards[k:k + size]))
+    print(f"{len(cards)} recheck cards -> data/tag/re_in/ from r{k0:02d}")
 
 
 def coverage() -> list[dict]:

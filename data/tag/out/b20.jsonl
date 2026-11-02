@@ -1,0 +1,27 @@
+{"id": "b1-0662", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0663", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0664", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0665", "fit": "C", "theme": "other", "summary": "Visualization research on SVG chart layout reuse; no ML in card.", "hook": ""}
+{"id": "b1-0666", "fit": "B", "theme": "NeuroAI", "summary": "Auditory attention and MEG studies; infant visual-cortex variability and loudness perception papers.", "hook": "EEG decoding"}
+{"id": "b1-0667", "fit": "C", "theme": "other", "summary": "HCI and social computing on discourse, content moderation and collective action; no ML method.", "hook": ""}
+{"id": "b1-0668", "fit": "C", "theme": "other", "summary": "Computer architecture and hardware acceleration; quantum-chemistry perspective; no ML in card.", "hook": ""}
+{"id": "b1-0669", "fit": "C", "theme": "other", "summary": "Neurobiology of social fear and anxiety with fMRI connectivity; clinical, no ML.", "hook": ""}
+{"id": "b1-0670", "fit": "B", "theme": "medical-AI", "summary": "Health informatics: NLP and visual analytics of Reddit and digital traces for health behavior.", "hook": ""}
+{"id": "b1-0671", "fit": "C", "theme": "other", "summary": "Digital humanities and search systems over newspapers and government PDFs; ML not stated.", "hook": ""}
+{"id": "b1-0672", "fit": "?", "theme": "other", "summary": "Conic-programming power-system reference; ML not confirmed by card text.", "hook": ""}
+{"id": "b1-0673", "fit": "B", "theme": "medical-AI", "summary": "Multi-modal EHR integration and ML clinical predictive models for cardiac arrest and pregnancy care.", "hook": ""}
+{"id": "b1-0674", "fit": "C", "theme": "other", "summary": "Cyber-physical resilience and anomaly detection for manufacturing systems; no ML stated.", "hook": ""}
+{"id": "b1-0675", "fit": "C", "theme": "other", "summary": "Child development and technology research; co-design of mobile health tools; no ML.", "hook": ""}
+{"id": "b1-0676", "fit": "A", "theme": "core-ML/CV", "summary": "Learning theory, high-dimensional statistics and quantum tomography; test-set contamination of training data.", "hook": ""}
+{"id": "b1-0677", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0678", "fit": "A", "theme": "core-ML/CV", "summary": "NLP and AI systems for scientific text; agentic abstention, RL for agentic VQA, long-form QA evaluation.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0679", "fit": "C", "theme": "other", "summary": "Sign-language, language-development and neurolinguistics research; no ML.", "hook": ""}
+{"id": "b1-0680", "fit": "B", "theme": "medical-AI", "summary": "Generative AI and foundation models for biomedical imaging and Hi-C chromatin structure.", "hook": "BioCLIP/EfficientNet fusion (CV)"}
+{"id": "b1-0681", "fit": "A", "theme": "core-ML/CV", "summary": "Deep learning theory; representation learning, reinforcement learning and data selection.", "hook": ""}
+{"id": "b1-0682", "fit": "A", "theme": "trustworthy-ML", "summary": "Distributed systems and PL; recent papers audit LLM gender bias and refusal stochasticity.", "hook": ""}
+{"id": "b1-0683", "fit": "A", "theme": "stats-methods", "summary": "Distributional learning with generative and diffusion models; causal inference and simulation-based inference.", "hook": ""}
+{"id": "b1-0684", "fit": "C", "theme": "other", "summary": "HCI, security and privacy research on youth AI safety and family-facing safeguards; no ML method stated.", "hook": ""}
+{"id": "b1-0685", "fit": "C", "theme": "other", "summary": "Octopus and bee nervous-system aging and death; omics and behavior; no ML.", "hook": ""}
+{"id": "b1-0686", "fit": "B", "theme": "stats-methods", "summary": "Statistical causal inference with continuous treatments; doubly robust inference.", "hook": ""}
+{"id": "b1-0687", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0688", "fit": "C", "theme": "other", "summary": "Neuroethology of corpse-directed behaviors in bees; no ML.", "hook": ""}

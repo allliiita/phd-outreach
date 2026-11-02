@@ -1,0 +1,35 @@
+{"id": "b1-0627", "fit": "C", "theme": "other", "summary": "Qualitative sociology of land-use and development; no ML in card.", "hook": ""}
+{"id": "b1-0628", "fit": "A", "theme": "core-ML/CV", "summary": "Reinforcement-learning theory: policy-gradient methods for constrained MDPs and Markov games.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0629", "fit": "C", "theme": "other", "summary": "Neurodevelopmental motor circuits and Down syndrome with molecular genetics; no ML.", "hook": ""}
+{"id": "b1-0630", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0631", "fit": "A", "theme": "core-ML/CV", "summary": "Representation learning and LLMs for marketing, finance and healthcare; KV-cache compression on reasoning.", "hook": ""}
+{"id": "b1-0632", "fit": "C", "theme": "other", "summary": "Social-science research on labor-market discrimination; no ML in card.", "hook": ""}
+{"id": "b1-0633", "fit": "C", "theme": "other", "summary": "Phase-change heat transfer, thermal measurement and cooling of data centers; no ML.", "hook": ""}
+{"id": "b1-0634", "fit": "C", "theme": "other", "summary": "Soil biogeochemistry: arsenite oxidation by manganese oxides and soil organic sulfur; no ML.", "hook": ""}
+{"id": "b1-0635", "fit": "C", "theme": "other", "summary": "Control, dynamical systems and formal methods for cyber-physical systems; no ML in card.", "hook": ""}
+{"id": "b1-0636", "fit": "B", "theme": "NeuroAI", "summary": "Brain-network analysis of fMRI and quasiperiodic brain activity patterns (QPPLab software).", "hook": "EEG decoding; connectome"}
+{"id": "b1-0637", "fit": "B", "theme": "NeuroAI", "summary": "Computational models and data science for multimodal neuroimaging (fMRI, LFP/EEG, optical) to decode brain activity.", "hook": "EEG decoding; connectome"}
+{"id": "b1-0638", "fit": "A", "theme": "AI-for-science", "summary": "Explainable ML with augmentation, ensembles and active/transfer learning for materials discovery.", "hook": ""}
+{"id": "b1-0639", "fit": "A", "theme": "core-ML/CV", "summary": "Computer vision and ML for multisensory perception: sight, sound and touch; acoustic rendering.", "hook": ""}
+{"id": "b1-0640", "fit": "C", "theme": "other", "summary": "Accounting professor; papers on philosophy, linguistics and artificial-agent intention; no ML.", "hook": ""}
+{"id": "b1-0641", "fit": "A", "theme": "AI-for-science", "summary": "Fire-protection engineer; paper uses LLMs for data-scarce learning of polymer properties.", "hook": ""}
+{"id": "b1-0642", "fit": "B", "theme": "medical-AI", "summary": "Brain-biomarker studies and numeric vs embedding pipelines for clinical risk prediction.", "hook": ""}
+{"id": "b1-0643", "fit": "A", "theme": "core-ML/CV", "summary": "ML, NLP and multimodal agentic AI; hallucination benchmark, data selection, curriculum learning.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0644", "fit": "B", "theme": "stats-methods", "summary": "Biostatistics methods (quantile regression, Bayesian fine mapping) integrated with generative AI and LLM agents.", "hook": ""}
+{"id": "b1-0645", "fit": "C", "theme": "other", "summary": "Counseling and special-education research on culturally responsive interventions; no ML.", "hook": ""}
+{"id": "b1-0646", "fit": "C", "theme": "other", "summary": "Management research on innovation and careers; AI-patent identification paper is measurement, not ML.", "hook": ""}
+{"id": "b1-0647", "fit": "B", "theme": "other", "summary": "Applies ML, causal inference and field experiments to K-12 teaching practices and online collaboration.", "hook": ""}
+{"id": "b1-0648", "fit": "B", "theme": "NeuroAI", "summary": "Memory cognition in aging and clinical groups; EEG decoding of visual working memory.", "hook": "EEG decoding"}
+{"id": "b1-0649", "fit": "C", "theme": "other", "summary": "Quantum information theory: quantum cryptography, communication and algorithms; no ML.", "hook": ""}
+{"id": "b1-0650", "fit": "?", "theme": "other", "summary": "No research text or papers on card.", "hook": ""}
+{"id": "b1-0651", "fit": "C", "theme": "other", "summary": "Chatbot-delivered health interventions for new mothers in randomized trials; no ML methods.", "hook": ""}
+{"id": "b1-0652", "fit": "C", "theme": "other", "summary": "Addiction neuroscience: oxycodone craving, cocaine relapse and striatal proteomics in rats.", "hook": ""}
+{"id": "b1-0653", "fit": "C", "theme": "other", "summary": "Hydrogel substrates for microgreen cultivation; bioengineering materials, no ML.", "hook": ""}
+{"id": "b1-0654", "fit": "C", "theme": "other", "summary": "Public-relations research on employee engagement, issue publics and country reputation; no ML.", "hook": ""}
+{"id": "b1-0655", "fit": "A", "theme": "trustworthy-ML", "summary": "Trustworthy ML: interpretable DNNs, robust foundation models, OOD generalization, uncertainty quantification.", "hook": "LLM circuit tracing / probing (interpretability)"}
+{"id": "b1-0656", "fit": "C", "theme": "other", "summary": "Psycholinguistics and child language development; automated language-sample analysis paper.", "hook": ""}
+{"id": "b1-0657", "fit": "A", "theme": "AI-for-science", "summary": "AI for spatial data: continual meta-learning for dynamical systems in environmental ecosystems.", "hook": ""}
+{"id": "b1-0658", "fit": "C", "theme": "other", "summary": "Communication research on local news agenda and teen-pregnancy social media content; no ML.", "hook": ""}
+{"id": "b1-0659", "fit": "A", "theme": "trustworthy-ML", "summary": "AI for security (malware, vulnerability detection) and improving robustness of ML models.", "hook": ""}
+{"id": "b1-0660", "fit": "C", "theme": "other", "summary": "Materials physics: correlated electronic systems, low-dimensional materials, nanophotonics; no ML.", "hook": ""}
+{"id": "b1-0661", "fit": "B", "theme": "medical-AI", "summary": "Computer-vision mixture-of-experts for ovarian follicle rupture imaging and pill detection.", "hook": "BioCLIP/EfficientNet fusion (CV)"}
