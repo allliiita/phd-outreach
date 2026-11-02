@@ -1,0 +1,11 @@
+institution: University of Washington
+unit: Materials Science & Engineering
+urls:
+  - "https://engr.washington.edu/facultyfinder?dept=mse&page=0"
+  - "https://engr.washington.edu/facultyfinder?dept=mse&page=1"
+  - "https://engr.washington.edu/facultyfinder?dept=mse&page=2"
+item: table#results tbody tr
+name: td:nth-of-type(2) b
+title: td:nth-of-type(3)
+profile: td:nth-of-type(2) b a@href
+filter: all

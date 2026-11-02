@@ -1,0 +1,8 @@
+institution: University of Washington
+unit: Allen School adjunct faculty
+urls: [https://www.cs.washington.edu/people/adjunct/]
+item: div.elementor-element-270fad46
+name: p.elementor-heading-title a
+title: div.elementor-widget-heading:nth-of-type(2) p.elementor-heading-title
+profile: p.elementor-heading-title a@href
+filter: all
