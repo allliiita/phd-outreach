@@ -1,0 +1,9 @@
+{"unit": "Computer Science and Engineering", "verdict": "PASS", "page_count": 76, "roster_rows": 76, "note": "Recounted 216 cards in cached faculty page; Department=CSE 76 matches; all roster names on page. Includes emeriti/lecturers; few odd names (Bailey, Graziani, Hutton, Moulds, Jullig, Paranjape) are lecturers/emeriti. Dropped from other depts: Long (Distinguished Research Prof, CSE-related), Westphal (Assoc Adjunct, CSE) filed under Baskin dept"}
+{"unit": "Electrical & Computer Engineering", "verdict": "PASS", "page_count": 36, "roster_rows": 36, "note": "count matches 36; 1 Assistant Specialist (non-faculty) kept. Dropped under dept 'Baskin School of Engineering': L. Ferrari (Research Prof ECE), F. Giraldo (Adjunct)"}
+{"unit": "Statistics", "verdict": "PASS", "page_count": 15, "roster_rows": 15, "note": "matches"}
+{"unit": "Applied Mathematics", "verdict": "PASS", "page_count": 17, "roster_rows": 17, "note": "matches; Katznelson/Lecturer kept"}
+{"unit": "Biomolecular Engineering", "verdict": "PASS", "page_count": 29, "roster_rows": 29, "note": "matches"}
+{"unit": "Computational Media", "verdict": "PASS", "page_count": 28, "roster_rows": 28, "note": "matches; 8 lecturers + Executive Director + Dean-type staff kept"}
+{"unit": "Psychology", "verdict": "PASS", "page_count": 53, "roster_rows": 53, "note": "p-name cards 53 = roster 53"}
+{"unit": "Linguistics", "verdict": "PASS", "page_count": 23, "roster_rows": 23, "note": "roster 23 on page; page has 52 p-name incl grad students (correctly excluded)"}
+{"unit": "Genomics Institute (members: core, associate, affiliate, research investigators)", "verdict": "PASS", "page_count": 69, "roster_rows": 69, "note": "all names appear in page text; 4 Research Scientist rows non-faculty"}
