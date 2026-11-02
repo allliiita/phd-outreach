@@ -25,8 +25,8 @@ def check_one(d: dict, p: Person) -> list[str]:
     body, subj = d["body"], d["subject"]
     low = (subj + "\n" + body).lower()
     words = len(body.split())
-    if not 110 <= words <= 230:
-        errs.append(f"length {words} words (want 130-200)")
+    if not 200 <= words <= 320:
+        errs.append(f"length {words} words (want 230-300; docs/email_playbook.md)")
     for b in BANNED:
         if b in low:
             errs.append(f"banned phrase: {b!r}")
