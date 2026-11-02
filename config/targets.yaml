@@ -8,12 +8,19 @@ focus_schools:               # batch 1 (applicant, 2026-10-31)
   - University of California San Francisco
   - Cold Spring Harbor Laboratory
   - Icahn School of Medicine at Mount Sinai
+  # batch 2 (applicant, 2026-11-02): schools hiring many young AI faculty
+  - Johns Hopkins University
+  - University of Central Florida
+  - Cornell University            # Ithaca + Cornell Tech (NYC); Weill Cornell only for its AI/computational units
 postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
   - Washington University in St. Louis
   - University of Virginia
   - University of Michigan
   - University of Pennsylvania
+  - Columbia University           # later (applicant 2026-11-02)
 exclude_schools:             # "too competitive", "too remote", "not for me"
+  - University of Southern California   # 2026-11-02: LA, safety
+  - Emory University                    # 2026-11-02: not wanted
   - Harvard University
   - Massachusetts Institute of Technology
   - Yale University

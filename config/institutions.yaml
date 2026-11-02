@@ -34,6 +34,7 @@ institutions:
   - {name: New York University, aliases: [NYU], email_domains: [nyu.edu, nyulangone.org]}
   - {name: University of Pennsylvania, aliases: [UPenn, Penn], email_domains: [upenn.edu, pennmedicine.upenn.edu]}
   - {name: Yale University, aliases: [Yale], email_domains: [yale.edu]}
+  - {name: University of Central Florida, aliases: [UCF], email_domains: [ucf.edu]}
   - {name: Johns Hopkins University, aliases: [JHU], email_domains: [jhu.edu, jh.edu, jhmi.edu]}
   - {name: California Institute of Technology, csrankings: "California Inst. of Technology", aliases: [Caltech], email_domains: [caltech.edu]}
   - {name: University of Chicago, aliases: [UChicago], email_domains: [uchicago.edu]}
