@@ -173,7 +173,9 @@ def judge(o: dict, inst: str, rec: dict | None = None) -> tuple[bool, list[str],
     if t.get("ok") and (not YOUNG_TITLE.search(tv) and "incoming" not in tv.lower() or NOT_YOUNG.search(t.get("value") or "")):
         why.append(f"title: not assistant/associate ({t.get('value')})")
     nb = o.get("no_block") or {}
-    if not nb.get("ok"):
+    if not nb.get("ok") and unread(nb):   # empty quote = the agent could not read the page, not a refusal
+        why.append(f"unread no_block: {(nb.get('url') or '')[:80]}")
+    elif not nb.get("ok"):
         why.append(f"no_block: {(nb.get('quote') or '')[:100]}")
     elif nb.get("quote") and BLOCK.search(nb["quote"]):
         why.append(f"no_block: quote says {nb['quote'][:80]}")
