@@ -197,7 +197,7 @@ def coverage() -> list[dict]:
                                       if v.get("verdict") in ("FAIL", "FIXABLE") else "")
     for inst in t.get("postponed_schools", []):
         rows.append({"school": inst, "unit": "(all)", "status": "postponed (applicant)",
-                     "note": f"scouted: data/discovery/v3/{SLUG[inst]}.jsonl"})
+                     "note": f"scouted: data/discovery/v3/{SLUG[inst]}.jsonl" if inst in SLUG else "not scouted yet"})
     return rows
 
 
@@ -417,7 +417,9 @@ def cmd_export() -> None:
         pr = priority(t.get("theme", ""), set(p.get("groups") or []))
         if (db.get("ml_top") or 0) >= 3:   # applicant 2026-11-02: >=3 top-ML papers 2023-26 -> one tier up
             pr = max(1, pr - 1)
-        rec = {"Priority": pr, "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
+        b1 = {"Boston University", "Duke University", "University of South Florida", "University of California San Francisco",
+              "Cold Spring Harbor Laboratory", "Icahn School of Medicine at Mount Sinai"}
+        rec = {"Batch": 1 if p["institution"] in b1 else 2, "Priority": pr, "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
                "Fit": t.get("fit"), "Theme": t.get("theme", ""),
                "Top-ML papers 2023-26 (dblp)": db.get("ml_top", "") if db.get("pid") else "",
@@ -468,12 +470,14 @@ def cmd_export() -> None:
         k = lambda sh: sum(r.get("School") == inst for r in rows.get(sh, []))
         summary.append({"school": inst, "unit": "(school total)", "status":
                         f"people {k('People')} | need email {k('Need email')} | check {k('Check (title or fit)')} | dropped C {k('Dropped (C)')}"})
+    rows["People (batch 2)"] = [r for r in rows.get("People", []) if r.get("Batch") == 2]
+    rows["People"] = [r for r in rows.get("People", []) if r.get("Batch") == 1]
     rows["Coverage"] = summary + coverage()
     rows["Unit census"] = [{"school": inst, **u} for inst in targets()["focus_schools"]
                            for u in jl(DATA / "grid" / f"{SLUG[inst]}.units.jsonl")]
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name in ["People", "Need email", "Apply directly, don't email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
+    for name in ["People", "People (batch 2)", "Need email", "Apply directly, don't email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
                  "CSHL (any heritage)", "Coverage", "Unit census"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
