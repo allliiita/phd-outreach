@@ -180,6 +180,8 @@ def judge(o: dict, inst: str, rec: dict | None = None) -> tuple[bool, list[str],
     em = (o.get("email") or {})
     val = (em.get("value") or "").strip().lower() or None
     rec = rec or {}
+    if isinstance(rec.get("email"), dict):   # enrich stores {"value", "evidence"}
+        rec = {**rec, "email": rec["email"].get("value")}
     if not val and rec.get("email") and rec["id"] not in hard_validate_fail():
         val = str(rec["email"]).lower()   # found earlier on an official directory page; validate.py checked the snapshot
     elif not val:
@@ -208,7 +210,7 @@ def cmd_check() -> None:
                 continue
             ok, why, em = judge(o, r["institution"], r)
             res.append({"id": r["id"], "name": r["name"], "institution": r["institution"], "pass": ok, "why": why,
-                        "email": em, "email_changed": bool(em and r.get("email") and em != str(r["email"]).lower()),
+                        "email": em, "email_changed": bool(em and r.get("email") and em != str((r["email"] or {}).get("value") if isinstance(r["email"], dict) else r["email"]).lower()),
                         "title": (o.get("title") or {}).get("value"), "ml_quote": (o.get("does_ml") or {}).get("quote"),
                         "official_page": (o.get("at_school") or {}).get("url")})
     res = list({x["id"]: x for x in res}.values())
