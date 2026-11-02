@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Neuroscience (Solomon H. Snyder Dept)
+urls: [https://neuroscience.jhu.edu/research/faculty]
+item: ul.facultylist > li
+name: span.name
+title: div.infocontainer > span:nth-of-type(2)
+profile: a@href
+filter: all
+expect: 125

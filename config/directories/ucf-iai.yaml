@@ -1,0 +1,9 @@
+institution: University of Central Florida
+unit: UCF Institute of Artificial Intelligence
+urls: [https://ai.ucf.edu/people/faculty/]
+item: div.tmm_member
+name: div.tmm_names
+title: div.tmm_job
+profile: a.tmm_sociallink@href
+filter: all
+expect: 25

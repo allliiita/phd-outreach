@@ -1,0 +1,9 @@
+institution: University of Central Florida
+unit: Materials Science & Engineering
+urls: [https://mse.ucf.edu/facultystaff/]
+item: div.eael-filterable-gallery-item-wrap
+name: h2.fg-item-title
+title: div.fg-item-content
+profile: a@href
+filter: all
+skip_titles: ['^(Laboratory Manager|Graduate Services|Academic Program|Administrative|Academic Support)']
