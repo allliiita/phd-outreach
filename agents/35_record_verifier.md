@@ -14,7 +14,8 @@ with the exact URL fetched and a verbatim quote from that page:
                  Quote a full sentence about their research, never a paper title. If the official page has no research
                  text, open the lab site (from the page's links or a WebSearch) before answering.
 4. email       — the address appears verbatim on one of their pages (official or lab); null if not found
-5. no_block    — the pages do NOT say "not accepting PhD students" or "do not email" (if they do, quote it)
+5. no_block    — the pages do NOT say "not accepting PhD students" or "do not email" (if they do, quote it).
+                 Silence = ok=true with quote "". ok=false ONLY with a quoted sentence.
 
 Write data/verify/out/<batch>.jsonl, one line per professor:
 {"id", "at_school":{"ok":bool,"url","quote"}, "title":{"ok":bool,"value","url","quote"},
