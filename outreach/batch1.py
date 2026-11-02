@@ -390,7 +390,10 @@ def cmd_export() -> None:
                 else:
                     p["_fit_disagree"] = f'dossier reader says {d["fit"]}: {d.get("fit_reason", "")[:120]}'
         em = (p.get("email") or {}).get("value")
-        rec = {"Priority": priority(t.get("theme", ""), set(p.get("groups") or [])), "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
+        pr = priority(t.get("theme", ""), set(p.get("groups") or []))
+        if (db.get("ml_top") or 0) >= 3:   # applicant 2026-11-02: >=3 top-ML papers 2023-26 -> one tier up
+            pr = max(1, pr - 1)
+        rec = {"Priority": pr, "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
                "Fit": t.get("fit"), "Theme": t.get("theme", ""),
                "Top-ML papers 2023-26 (dblp)": db.get("ml_top", "") if db.get("pid") else "",
