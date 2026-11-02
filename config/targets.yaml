@@ -26,6 +26,7 @@ postponed_schools:           # scouted (data/discovery/v3) but not rostered this
   - University of Michigan
   - University of Pennsylvania
   - Columbia University           # later (applicant 2026-11-02)
+  - Canada (UBC, SFU, Waterloo)   # discussed 2026-11-02; US first
 exclude_schools:             # "too competitive", "too remote", "not for me"
   - University of Southern California   # 2026-11-02: LA, safety
   - Emory University                    # 2026-11-02: not wanted

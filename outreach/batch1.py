@@ -439,6 +439,7 @@ def cmd_export() -> None:
                "Lab site read": "yes" if d else "", "Recruiting (own words)": ((d.get("recruiting") or {}).get("status", "") + ": " +
                    ((d.get("recruiting") or {}).get("quote") or "")[:200]) if d.get("recruiting") else "",
                "Start year": (d.get("start_year") or {}).get("year", "") if isinstance(d.get("start_year"), dict) else "",
+               "PhD students in lab": (d.get("lab_size") or {}).get("phd", "") if isinstance(d.get("lab_size"), dict) else "",
                "How they want to be contacted (own words)": " | ".join(
                    (x.get("quote") if isinstance(x, dict) else str(x)) for x in d.get("contact_prefs") or [])[:500],
                "Hook (dossier)": d.get("hook", ""), "Red flags": "; ".join(d.get("red_flags") or []),
@@ -463,7 +464,10 @@ def cmd_export() -> None:
             sheet = "Need email" if not em or pid in bad else "People"
         rows[sheet].append(rec)
     for v in rows.values():
-        v.sort(key=lambda r: (r.get("Priority", 9), not str(r.get("Recruiting (own words)") or "").startswith("Yes"),
+        def open_door(r):   # recruiting OR small group (<= 8 PhD students): tied, applicant 2026-11-02
+            n = r.get("PhD students in lab")
+            return str(r.get("Recruiting (own words)") or "").startswith("Yes") or (isinstance(n, int) and n <= 8)
+        v.sort(key=lambda r: (r.get("Priority", 9), not open_door(r),
                               -(r.get("Top-ML papers 2023-26 (dblp)") or 0), order.get(r.get("Fit"), 2),
                               r.get("School", ""), r.get("Name", "")))
     cshl = [r for r in jl(DATA / "roster" / "cshl-faculty.jsonl") if young_title(r.get("title_on_roster") or "")]
