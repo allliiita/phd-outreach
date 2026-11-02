@@ -15,6 +15,12 @@ Pipeline (all in outreach/batch1.py; playbooks in agents/):
 Access: config/browser_hosts.txt (hosts read in real Chromium; bot checks are never worked around).
 UMich, Penn Medicine/SEAS, UCSF dept sites, Moffitt, WashU MIR are challenge-blocked from the cloud.
 
-State: 57 People (A/B with verified email), 15 Need email (UCSF mostly), 42 Check, 125 Dropped (C).
+State (superseded): 57 People (A/B with verified email), 15 Need email (UCSF mostly), 42 Check, 125 Dropped (C).
 Open: associates' promotion year unverified; UCSF emails; BU Psych & Brain Sciences, Mount Sinai Psychiatry /
 Neurology, Duke DIBS not rostered; target 200-300 needs more schools (WashU first) or wider surnames.
+
+## Update 2026-11-02: list v1 frozen
+data/export/list_v1_2026-11-02.xlsx (git tag list-v1): People 61 (batch 1) + People (batch 2) 46, Need email 24,
+Apply directly (don't email) 7. Batch 2 = JHU, UCF, Cornell, Rockefeller (JHU blocked pages saved by the applicant into
+data/snapshots/manual/). Unit census sheet covers every school. Side task running: docs/ai_lab_phd_sources.md (where top-AI-lab
+researchers did their PhDs). Next: decide email pilot (10 profs) vs more schools (Rutgers, Stony Brook, NJIT; Columbia later).
