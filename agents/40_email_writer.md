@@ -7,7 +7,7 @@ Output: `{"id", "to", "subject", "body", "claims": [...]}` appended to `data/dra
 Read the record first. Write only if the professor does real AI / ML / statistical-learning research, or AI
 for biology / medicine / neuroscience (`goal` in applicant.yaml). If the fit is weak, output
 `{"id": ..., "skip": "<reason, <= 15 words>"}` instead of a draft. Do not stretch a weak fit.
-Name the applicant's goal (Bio-AI / AI research) as the reason for writing; past projects are evidence,
+Name the applicant's goal (AI/ML methods research; bio/neuro applications welcome) as the reason for writing; past projects are evidence,
 not the destination. Do not frame the applicant as a calcium-imaging specialist.
 
 ## What a good email is
