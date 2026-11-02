@@ -1,0 +1,8 @@
+institution: University of Maryland
+unit: Fischell Department of Bioengineering
+urls: ['https://bioe.umd.edu/clark/facultydir?nfilter=A', 'https://bioe.umd.edu/clark/facultydir?nfilter=B', 'https://bioe.umd.edu/clark/facultydir?nfilter=C', 'https://bioe.umd.edu/clark/facultydir?nfilter=D', 'https://bioe.umd.edu/clark/facultydir?nfilter=E', 'https://bioe.umd.edu/clark/facultydir?nfilter=F', 'https://bioe.umd.edu/clark/facultydir?nfilter=G', 'https://bioe.umd.edu/clark/facultydir?nfilter=H', 'https://bioe.umd.edu/clark/facultydir?nfilter=I', 'https://bioe.umd.edu/clark/facultydir?nfilter=J', 'https://bioe.umd.edu/clark/facultydir?nfilter=K', 'https://bioe.umd.edu/clark/facultydir?nfilter=L', 'https://bioe.umd.edu/clark/facultydir?nfilter=M', 'https://bioe.umd.edu/clark/facultydir?nfilter=N', 'https://bioe.umd.edu/clark/facultydir?nfilter=O', 'https://bioe.umd.edu/clark/facultydir?nfilter=P', 'https://bioe.umd.edu/clark/facultydir?nfilter=Q', 'https://bioe.umd.edu/clark/facultydir?nfilter=R', 'https://bioe.umd.edu/clark/facultydir?nfilter=S', 'https://bioe.umd.edu/clark/facultydir?nfilter=T', 'https://bioe.umd.edu/clark/facultydir?nfilter=U', 'https://bioe.umd.edu/clark/facultydir?nfilter=V', 'https://bioe.umd.edu/clark/facultydir?nfilter=W', 'https://bioe.umd.edu/clark/facultydir?nfilter=X', 'https://bioe.umd.edu/clark/facultydir?nfilter=Y', 'https://bioe.umd.edu/clark/facultydir?nfilter=Z']
+filter: all
+item: div.faculty_row
+name: div.field-directory-name-title-wrapper a
+title: div.field-directory-name-title-wrapper
+profile: a@href

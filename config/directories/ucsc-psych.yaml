@@ -1,0 +1,8 @@
+institution: University of California Santa Cruz
+unit: Psychology
+urls: [https://psychology.ucsc.edu/people/faculty/]
+item: div.section-item.h-card.wrap
+name: span.p-name
+title: ul.item-info > li:first-child ul.inline-list li
+profile: a.u-url@href
+filter: all

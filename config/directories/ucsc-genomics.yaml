@@ -1,0 +1,8 @@
+institution: University of California Santa Cruz
+unit: UC Santa Cruz Genomics Institute (members)
+urls: [https://genomics.ucsc.edu/team/]
+item: div.wp-block-group:has(> h3.wp-block-heading)
+name: h3.wp-block-heading
+title: p
+profile: h3 a@href
+filter: all
