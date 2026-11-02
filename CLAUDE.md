@@ -1,67 +1,72 @@
-# PhD outreach system — orchestrator instructions
+# PhD advisor list — coordinator rules
 
-You are the **coordinator**. You do not research professors yourself; you dispatch subagents, run the deterministic checks, and keep `data/` consistent. Read `agents/00_rules.md` before anything else.
+Deliverable: one verified list of young, PhD-advising ML faculty for Lindsey Ma (`config/applicant.yaml`), Fall 2027.
+Scope lives in ONE place: `config/targets.yaml` (schools, institutes and how they admit, heritage, young titles, fit, priority).
+No other file restates scope. Emails are a later stage and are never sent without the human (see Sending).
 
-## Goal
-A verified database of AI / ML / statistics / comp-bio faculty and independent PIs at ~57 US universities and ~20 institutes (`config/institutions.yaml`), and ≥800 personalised, human-approved emails sent from it for Fall 2027 PhD applications. Accuracy beats speed: a wrong email address or invented paper is worse than a missing row.
+## The coordinator (the main session) does not do the work
+- It writes kickoffs, spawns agents, reads their artifacts, re-runs their evidence commands, and logs decisions.
+- It never edits code or `data/` by hand. Code and data change only through an agent's commit that passed verification.
+  Coordinator-owned files: this file, `docs/decisions.tsv`, kickoff texts. Nothing else.
+- It does not ask the human about reversible work. It asks only for: logins / pages only her computer can open,
+  irreversible actions, and scope changes (adding/removing schools, relaxing a rule). Never ask for passwords in chat.
 
-## Pipeline (deterministic first; LLM only where judgement is needed)
-```
-seed      CS: python -m outreach.csrankings            (no LLM; young + ML-venue filter, heritage order)
-          other units: an agent writes config/directories/<slug>.yaml ONCE (use `roster --probe URL`),
-          then python -m outreach.roster --all         (no LLM; count check vs `expect`)
-enrich    python -m outreach.enrich data/roster/X.jsonl  (no LLM; <=3 pages/person, email by regex,
-          links, research paragraph, recruiting lines, papers via OpenAlex/S2) -> data/dossiers/X.jsonl
-judge     NONE by default: outreach/score.py ranks by Bio-AI lexicon (no LLM). The email writer decides
-          write/skip per person, so the LLM only reads people we actually email.
-assemble  python -m outreach.judge assemble X -> data/people/X.jsonl; then pipeline merge (validate.py)
-email     writer + critic (separate skill), emailcheck.py, human batch approval, send.py
-```
-Applicant scope: **young faculty only** (assistant / incoming / recent associate) and **Chinese / Asian surnames
-first** (`outreach/surnames.py`, deliberately loose). The goal is enough well-matched professors to email,
-not a complete census: skip a unit or person when it costs more than it is worth.
-Verifier agents (30_verifier.md) only spot-check judgement fields on a sample; facts are checked by code.
-**Auditor** (agents/60_auditor.md, Sonnet, independent): after every stage run `python -m outreach.audit`
-and give the pack to a fresh auditor agent. It looks for systemic problems (wrong targets, junk data, funnel
-anomalies, ranking, cost). Every accepted finding becomes a code check or playbook line, as with verifiers.
+## Done predicate (`python -m coverage.check`, exit 0 = done; never relaxed to declare victory)
+1. Units: every BIG unit of every in-scope school is `done` (roster count verified) or `alt` (covered by an
+   alternate source). BIG = on the graduate school's PhD-program list, a whole department/school, an AI / data /
+   NeuroAI unit created 2022+, or a unit where probes show many ML faculty. `blocked` is never terminal.
+2. Recall: every in-scope person an independent probe finds is in the people ledger, or in
+   `data/coverage/explained.jsonl` with a reason.
+3. Funnel: every person in the people ledger ends in exactly one outcome (listed / rejected with reason). No silent loss.
+4. Precision: every listed row passes record verification (quotes and email found on saved snapshots).
+The 250-300 target is an outcome, not the predicate. If 1-4 hold and the list is short, scope is too narrow:
+report that to the human as a scope decision; do not loosen checks.
 
-## Trust pyramid (where errors are stopped, cheapest first)
-1. **Schema** `outreach/schema.py` — a field without a verbatim source quote cannot be stored; emails must appear inside their quote.
-2. **Deterministic checks** `outreach/validate.py`, `outreach/emailcheck.py` — email domain is the institution's, email and quotes are present in the saved page snapshot (`data/snapshots/`, written by `outreach/fetch.py`), dedupe, title/class consistency, banned phrases.
-3. **Independent verifier agents** — blind re-check against live pages; sampling rate set by `outreach/trust.py`.
-4. **Playbooks** in `agents/`.
-5. **Human** — reviews samples, approves every send batch.
+## Ledgers
+- Units: `data/grid/<school>.jsonl` (status) + `data/grid/<school>.units.jsonl` (census). States:
+  found -> done | blocked -> alt. Alternates, in order: real browser, Wayback, PhD-program page, CSRankings / NSF / NIH,
+  new-faculty news, last: page saved by the human (`data/snapshots/manual/`, batched into one request).
+- People: `python -m coverage.ledger` builds one row per (school, person) from all rosters, with the evidence
+  for each gate (faculty, young title, heritage, does ML, fit, recruiting, email) and one outcome.
 
-When a verifier or the human finds an error: fix the record AND push the lesson down the pyramid — a new check in validate.py if it can be checked mechanically, otherwise a line in the relevant playbook. Add the case to `tests/gold/`.
+## Roles (each unit of work: one owner agent + one verifier that is not the author)
+| Role | Does | Verified by |
+|---|---|---|
+| Census scout (per school) | lists BIG units from official lists | a second scout lists independently; diff resolved line by line |
+| Roster worker (per unit) | writes `config/directories/<slug>.yaml`; `outreach.roster` scrapes | script count == page count |
+| Probes (scripts, no LLM) | CSRankings, NSF CAREER, NIH early-career -> `data/probes/` | `coverage.check` recall section |
+| Miss investigator | finds WHY a probe hit is missing (which unit / which gate) and fixes that stage | regression test that fails before the fix |
+| Eligibility judge | does ML? fit A/B/C | two judges on different models; disagreement -> third |
+| Record verifier | `agents/35_record_verifier.md` + `outreach/verify.py` | code checks quotes on snapshots |
+| Auditor (end of each phase) | reads `docs/decisions.tsv` + artifacts, flags risk | n/a |
+Models: workers `sonnet`; verifiers and judges a different model from the author (`opus` or `haiku`); scripts first.
 
-## Tools workers must use
-- Fetch pages with `python -m outreach.fetch URL` (text), `--emails` (all emails in raw HTML incl. obfuscated/cloudflare), `--links`. This saves snapshots so quotes are checkable. Use the browser only for JS-rendered directories; then save the page text to `data/snapshots/manual/`.
-- Papers: `python -m outreach.papers "Name" "Institution"` (OpenAlex). Exit code 2 = ambiguous author → disambiguate with the homepage, never pick blindly.
-- Never scrape Google Scholar. Record its URL only if linked from an official page.
+## Kickoff contract (every spawn)
+Goal (the human's goal in one line) / scope: exact files it may write and must not touch / actions it must not take /
+the EVIDENCE that proves done (commands + expected output). If the evidence can't be named, the unit isn't scoped.
+Workers commit on their own branch or worktree; the coordinator merges only after re-running the evidence.
+Read the diff or artifact, never only the summary. Retry by cause; after two failed retries drop and replan.
 
-## Order of work
-1. CS via CSRankings for all institutions (done: data/roster/csr-*.jsonl), enrich, judge.
-2. Statistics / Biostatistics / Comp-bio / Data-science units: one YAML per directory, young titles only.
-3. Email stage as soon as ~100 tier-A records with email exist, ordered by heritage priority then fit.
+## Phases (status kept in `docs/decisions.tsv`)
+1. Subtract: remove one-off code and stale docs; keep fetch, schema, roster, enrich, verify, validate, surnames, config.
+2. Instruments: ledgers + probes + `coverage.check`; baseline for all in-scope schools.
+3. Pilot: one school (Cornell) to a passing check before fan-out.
+4. Fan-out: one owner per school, <=10 agents in flight.
+5. Estimate missing people (Lincoln-Petersen on two independent probes); export the list.
 
-## Data layout
-- `data/departments.jsonl`, `data/roster/<inst>.jsonl`, `data/people/<batch>.jsonl` (worker output), `data/verdicts/<batch>.jsonl`
-- `python -m outreach.pipeline merge | verdicts | status | export` → `data/people.jsonl`, `data/status.json`, `data/export/professors.xlsx`
-- `data/drafts.jsonl` → `data/batches/NNN.json` → `data/sent.jsonl`
-
-## Sending — hard rules
-- You never send without a human-approved batch. `python -m outreach.send approve N` requires a human at an interactive terminal; do not try to work around it.
-- Default delivery is **Gmail drafts** (`send drafts N`): the human presses send. Use `send send N` only after the human approves that batch.
-- ≤40 emails/day, ≤2 per department per day, nobody emailed twice, no follow-ups without the human asking.
-- Before the first batch: confirm `config/applicant.yaml` sender and CV path with the human, and send one test email to the applicant's own address.
-
-## Login / permissions
-If a step needs a login (Gmail OAuth, a site behind sign-in), stop and ask the human to sign in; never type passwords. Gmail API setup: `secrets/credentials.json` (OAuth desktop client from Google Cloud Console), first run opens a browser for consent.
+## Every correction becomes structure
+When a verifier, auditor, or the human finds an error: fix the stage that caused it (not the record by hand), and add a
+test or check that fails on the old behavior. Docs are the last resort. Keep the table below current.
+| Rule | Enforced by |
+|---|---|
+| names with credentials ("Wu PhD") keep their surname | test in `tests/` (phase 2) |
+| a blocked BIG unit fails the build | `coverage.check` units section |
+| a probe hit without ledger row or reason fails | `coverage.check` recall section |
 
 ## Token budget
-- Never let an agent browse for facts code can extract. Agents get compact files, not pages.
-- No bulk LLM judging. LLM reads a person only when writing their email.
-- Filter command output (`| tail`), update SESSION_HANDOFF.md after each stage.
+Scripts over agents. Agents get file paths, not pasted pages. Command output through `| tail`. Summaries <= 10 lines.
+Spawn fresh agents with consolidated briefs instead of long-running chats.
 
-## Reporting
-Keep a running `data/LOG.md`: per day, what ran, counts, verifier pass rates, errors found and which check/playbook line now prevents them.
+## Sending (hard rules, unchanged)
+Never send without a human-approved batch (`outreach.send approve` needs her terminal). Gmail drafts by default.
+<=40/day, <=2 per department per day, nobody twice, no follow-ups unless asked.

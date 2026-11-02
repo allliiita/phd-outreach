@@ -1,0 +1,6 @@
+ts	phase	decision	why	evidence	result
+2026-11-02T16:15:06Z	scope	branch rebuild-coverage from deterministic-pipeline	keep snapshots, rosters, verified records	commit 4978806	done
+2026-11-02T16:15:06Z	scope	focus 21 schools; 8 institutes in (5 counted under partner school); 6 postponed; 7 excluded; 19 universities held	applicant decisions 2026-11-02	config/targets.yaml	done
+2026-11-02T16:15:06Z	baseline	funnel + CSRankings diff before rebuild	find systematic misses	18 young CN ML at focus schools absent from all rosters; Cornell CS/UMD CS/JHU DSAI blocked; UCSD catalog 8/41; 17 lost to name-suffix bug	open
+2026-11-02T16:15:06Z	probes	OpenAlex/S2/OpenReview unavailable from cloud; use CSRankings + NSF CAREER + NIH	429 key-required / 429 / 403	curl checks	done
+2026-11-02T16:15:06Z	process	coordinator wrote code itself; reverted to dispatch-only and wrote rules into CLAUDE.md	applicant correction: do not drift from architecture	CLAUDE.md	done
