@@ -44,7 +44,8 @@ Models: workers `sonnet`; verifiers and judges a different model from the author
 ## Kickoff contract (every spawn)
 Goal (the human's goal in one line) / scope: exact files it may write and must not touch / actions it must not take /
 the EVIDENCE that proves done (commands + expected output). If the evidence can't be named, the unit isn't scoped.
-Workers commit on their own branch or worktree; the coordinator merges only after re-running the evidence.
+Every kickoff names the base SHA; the worker's first step is `git log -1` and, if HEAD is not that SHA,
+`git reset --hard <SHA>` (a worktree once started from `main` and wasted a run). Workers commit on their own branch or worktree; the coordinator merges only after re-running the evidence.
 Read the diff or artifact, never only the summary. Retry by cause; after two failed retries drop and replan.
 
 ## Phases (status kept in `docs/decisions.tsv`)
@@ -62,6 +63,7 @@ test or check that fails on the old behavior. Docs are the last resort. Keep the
 | names with credentials ("Wu PhD") keep their surname | test in `tests/` (phase 2) |
 | a blocked BIG unit fails the build | `coverage.check` units section |
 | a probe hit without ledger row or reason fails | `coverage.check` recall section |
+| a worker starts from the wrong base | base SHA check in every kickoff |
 
 ## Token budget
 Scripts over agents. Agents get file paths, not pasted pages. Command output through `| tail`. Summaries <= 10 lines.
