@@ -1,0 +1,15 @@
+{"unit": "Computer Science", "verdict": "PASS", "page_count": 71, "roster_rows": 71, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Electrical & Computer Engineering", "verdict": "PASS", "page_count": 58, "roster_rows": 58, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Statistics & Data Science (SDMSS)", "verdict": "FIXABLE", "page_count": 84, "roster_rows": 84, "note": "84=84; Coordinator-titled faculty confirmed present; 2 blank titles (Yunge Wang, David Vogel); shared file with Math line"}
+{"unit": "Industrial Engineering & Management Systems", "verdict": "FIXABLE", "page_count": 34, "roster_rows": 34, "note": "34=34; Julia Pet-Armacost blank title (Associate Dean, admin) - drop or fill"}
+{"unit": "Mathematics (SDMSS)", "verdict": "FIXABLE", "page_count": 84, "roster_rows": 84, "note": "same file as Statistics (84); 2 blank titles (Yunge Wang, David Vogel)"}
+{"unit": "Mechanical & Aerospace Engineering", "verdict": "PASS", "page_count": 76, "roster_rows": 76, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Biomedical Engineering (within MAE)", "verdict": "PASS", "page_count": 18, "roster_rows": 18, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Materials Science & Engineering", "verdict": "FIXABLE", "page_count": 47, "roster_rows": 47, "note": "47=47 vs page; 16 rows have no rank (dept/affiliation as title, e.g. Shoenfeld Office of Research, Cho, Kar); tag affiliated or drop non-faculty"}
+{"unit": "CREOL Optics & Photonics (ML faculty only)", "verdict": "FIXABLE", "page_count": 82, "roster_rows": 82, "note": "82=82; 7 blank titles incl non-faculty: Bruce H. Chai President, Hans P. Jenssen Vice President, Eichenholz (industry), Stickley Retired, Wolf; drop/tag"}
+{"unit": "Burnett School of Biomedical Sciences (computational faculty)", "verdict": "PASS", "page_count": 60, "roster_rows": 60, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Psychology (computational/cognitive; Human Factors & Cognitive PhD)", "verdict": "PASS", "page_count": 78, "roster_rows": 78, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "UCF Institute of Artificial Intelligence", "verdict": "PASS", "page_count": 25, "roster_rows": 25, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Institute for Simulation & Training / Modeling & Simulation PhD", "verdict": "FIXABLE", "page_count": 34, "roster_rows": 34, "note": "34=34 vs ist.ucf.edu/faculty; 4 blank-title staff-like rows (Fogel, Eakins, McDaniel, Smith) - drop"}
+{"unit": "Fall 2025 new faculty: CECS (39 hires, 7 departments)", "verdict": "PASS", "page_count": 39, "roster_rows": 39, "note": "names/titles match page; count matches; no non-faculty found"}
+{"unit": "Fall 2025 new faculty: Computer Science (19 hires: 12 TT + 7 lecturers)", "verdict": "PASS", "page_count": 19, "roster_rows": 19, "note": "names/titles match page; count matches; no non-faculty found"}

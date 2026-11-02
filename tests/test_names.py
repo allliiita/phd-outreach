@@ -5,7 +5,7 @@ CASES = {"Xuezhou (Jack) Zhang": "Xuezhou (Jack) Zhang", "Wei-Lun (Harry) Chao":
          "M. Selim Ünlü": "M. Selim Ünlü", "Julia TCW": "Julia TCW", "Dr.Sc. Ara Nazarian": "Ara Nazarian",
          "P.h.D. Boqing Gong": "Boqing Gong", "Sc.D. Solomon Eisenberg": "Solomon Eisenberg",
          "M.D. Ann McKee": "Ann McKee", "M.Eng Ed Solovey": "Ed Solovey", "Jane Doe, PhD": "Jane Doe",
-         "Ying Ma": "Ying Ma"}
+         "Ying Ma": "Ying Ma", "Marten van Schijndel": "Marten van Schijndel", "Ana de la Cruz": "Ana de la Cruz"}
 
 
 def test_names():
