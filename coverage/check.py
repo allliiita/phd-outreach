@@ -76,6 +76,15 @@ def explained() -> set[tuple]:
             if e.get("school") and e.get("name") and e.get("reason")}
 
 
+def _truncated(school: str, key: tuple, name: str, known: set) -> bool:
+    """NSF award PI names are cut at 29 characters ('Cristian Danescu-Niculescu-Mi'): match the cut surname as a prefix."""
+    if len(name) < 28 or len(key) != 2:
+        return False
+    a, b = key
+    return any(s == school and len(k) == 2 and any(x == a and y != b and y.startswith(b) or x == b and y != a and y.startswith(a)
+                                                   for x, y in (k, k[::-1])) for s, k in known)
+
+
 def recall(ledger: list[dict]) -> dict[tuple, dict]:
     """(school, name_key) -> {name, probes: {probe: year}} for probe hits found nowhere."""
     known = {(r["school"], tuple(r["key"])) for r in ledger} | explained()
@@ -83,7 +92,7 @@ def recall(ledger: list[dict]) -> dict[tuple, dict]:
     for p in PROBES:
         for h in jl(DATA / "probes" / f"{p}.jsonl"):
             k = (h["school"], scope.name_key(h["name"]))
-            if k not in known:
+            if k not in known and not _truncated(h["school"], k[1], h["name"], {x for x in known}):
                 m = miss.setdefault(k, {"school": h["school"], "name": h["name"], "probes": {}, "url": h.get("source_url")})
                 m["probes"][p] = h.get("year")
     return miss

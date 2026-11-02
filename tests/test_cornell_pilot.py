@@ -31,3 +31,19 @@ def test_first_names_that_look_like_degrees_are_kept():
     assert clean_name("Dr. Wen Li") == "Wen Li"
     assert clean_name("Prof. Wen Li") == "Wen Li"
     assert clean_name("Wen Li, PhD") == "Wen Li"
+
+
+def test_nsf_truncated_pi_name_matches_ledger_person(tmp_path, monkeypatch):
+    # NSF cuts PI names at 29 chars: "Cristian Danescu-Niculescu-Mi" is Cristian Danescu-Niculescu-Mizil (ledger row exists)
+    ledger = [{"school": "Cornell University", "key": list(scope.name_key("Cristian Danescu-Niculescu-Mizil"))}]
+    (tmp_path / "probes").mkdir()
+    (tmp_path / "probes" / "nsf_career.jsonl").write_text(json.dumps(
+        {"name": "Cristian Danescu-Niculescu-Mi", "school": "Cornell University", "year": 2018, "source_url": "u"}) + "\n")
+    (tmp_path / "coverage").mkdir()
+    monkeypatch.setattr(check, "DATA", tmp_path)
+    assert check.recall(ledger) == {}
+    # a short name is never prefix-matched
+    (tmp_path / "probes" / "nsf_career.jsonl").write_text(json.dumps(
+        {"name": "Wen Su", "school": "Cornell University", "year": 2018, "source_url": "u"}) + "\n")
+    ledger = [{"school": "Cornell University", "key": list(scope.name_key("Wen Sun"))}]
+    assert len(check.recall(ledger)) == 1

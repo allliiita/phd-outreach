@@ -68,8 +68,15 @@ def outcome(res: dict | None) -> str:
     return "open"
 
 
+def title_overrides() -> dict[tuple[str, tuple], dict]:
+    """(school, name_key) -> {title, source_url} from data/coverage/titles.jsonl (written by coverage.titles from profile pages).
+    Kept beside the rosters so a re-scrape of a roster does not lose a title that had to be fetched from the profile."""
+    return {(t["school"], scope.name_key(t["name"])): t for t in jl(DATA / "coverage" / "titles.jsonl") if t.get("title")}
+
+
 def build() -> list[dict]:
     people: dict[tuple, dict] = {}
+    tit = title_overrides()
     for f in roster_files():
         for r in jl(f):
             if not r.get("name"):
@@ -81,6 +88,8 @@ def build() -> list[dict]:
             if k == ("", ""):
                 continue
             p = people.setdefault((school, k), {"school": school, "name": r["name"], "key": list(k), "rows": []})
+            if not r.get("title_on_roster") and (school, k) in tit:
+                r = {**r, "title_on_roster": tit[(school, k)]["title"], "title_source": tit[(school, k)].get("source_url")}
             p["rows"].append({"unit": r.get("department"), "file": f.name, "title": r.get("title_on_roster") or "",
                               "url": r.get("profile_url") or r.get("roster_url"), "gate": scope.gate(r),
                               "old_keep": _old_keep(r), "institution": r.get("institution"),
@@ -89,7 +98,10 @@ def build() -> list[dict]:
     out = []
     for (school, k), p in sorted(people.items(), key=lambda x: (x[0][0], x[0][1])):
         ok = [r for r in p["rows"] if r["gate"] is None]
-        first = (ok or p["rows"])[0]
+        titled = [r for r in p["rows"] if r["title"]]
+        if titled:   # a title shown somewhere beats "no title" elsewhere: Professor in ORIE + untitled in CAM = senior, out
+            ok = [r for r in ok if r["title"]]
+        first = (ok or titled or p["rows"])[0]
         in_scope = bool(ok)
         gates = sorted({r["gate"] for r in p["rows"] if r["gate"]})
         row = {"school": school, "name": scope.bare_name(p["name"]), "key": p["key"], "in_scope": in_scope,
