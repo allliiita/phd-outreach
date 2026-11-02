@@ -13,6 +13,12 @@ focus_schools:               # batch 1 (applicant, 2026-10-31)
   - University of Central Florida
   - Cornell University            # Ithaca + Cornell Tech (NYC); Weill Cornell only for its AI/computational units
   - Rockefeller University        # added by applicant 2026-11-02; heads of lab (Assistant Professor = young PI)
+  # batch 3 (applicant, 2026-11-02): strong placement into top AI labs (OpenReview tally)
+  - University of Washington      # Seattle (NOT WashU, which stays excluded)
+  - University of California San Diego
+  - University of Maryland
+  - Georgia Institute of Technology
+  - University of California Irvine
 postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
   - Washington University in St. Louis
   - University of Virginia
@@ -22,6 +28,7 @@ postponed_schools:           # scouted (data/discovery/v3) but not rostered this
 exclude_schools:             # "too competitive", "too remote", "not for me"
   - University of Southern California   # 2026-11-02: LA, safety
   - Emory University                    # 2026-11-02: not wanted
+  - Rutgers University                  # 2026-11-02: applicant hesitant (campus)
   - Harvard University
   - Massachusetts Institute of Technology
   - Yale University

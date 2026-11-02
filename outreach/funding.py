@@ -22,7 +22,9 @@ INST_WORDS = {"Boston University": "boston univ", "Duke University": "duke", "Un
               "University of California San Francisco": "san francisco", "Cold Spring Harbor Laboratory": "cold spring",
               "Icahn School of Medicine at Mount Sinai": "mount sinai", "Johns Hopkins University": "johns hopkins",
               "University of Central Florida": "central florida", "Cornell University": "cornell",
-              "Rockefeller University": "rockefeller"}
+              "Rockefeller University": "rockefeller", "University of Washington": "university of washington",
+              "University of California San Diego": "san diego", "University of Maryland": "maryland",
+              "Georgia Institute of Technology": "georgia tech", "University of California Irvine": "irvine"}
 
 
 def nsf(name: str, inst: str) -> list[dict]:

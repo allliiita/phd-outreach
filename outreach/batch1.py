@@ -29,7 +29,9 @@ SLUG = {"Boston University": "boston-university", "Duke University": "duke", "Un
         "Icahn School of Medicine at Mount Sinai": "mount-sinai", "Washington University in St. Louis": "washu",
         "University of Virginia": "uva", "University of Michigan": "umich", "University of Pennsylvania": "upenn",
         "Johns Hopkins University": "jhu", "University of Central Florida": "ucf", "Cornell University": "cornell",
-        "Rockefeller University": "rockefeller"}
+        "Rockefeller University": "rockefeller", "University of Washington": "uw",
+        "University of California San Diego": "ucsd", "University of Maryland": "umd",
+        "Georgia Institute of Technology": "gatech", "University of California Irvine": "uci"}
 
 
 def targets() -> dict:
@@ -419,7 +421,8 @@ def cmd_export() -> None:
             pr = max(1, pr - 1)
         b1 = {"Boston University", "Duke University", "University of South Florida", "University of California San Francisco",
               "Cold Spring Harbor Laboratory", "Icahn School of Medicine at Mount Sinai"}
-        rec = {"Batch": 1 if p["institution"] in b1 else 2, "Priority": pr, "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
+        b2 = {"Johns Hopkins University", "University of Central Florida", "Cornell University", "Rockefeller University"}
+        rec = {"Batch": 1 if p["institution"] in b1 else 2 if p["institution"] in b2 else 3, "Priority": pr, "School": p["institution"], "Department(s)": "; ".join(dict.fromkeys(p["departments"])), "Name": p["name"],
                "Title (official page)": p["title"], "Rank": position_class(p["title"]) if p["title"] else "",
                "Fit": t.get("fit"), "Theme": t.get("theme", ""),
                "Top-ML papers 2023-26 (dblp)": db.get("ml_top", "") if db.get("pid") else "",
@@ -470,6 +473,7 @@ def cmd_export() -> None:
         k = lambda sh: sum(r.get("School") == inst for r in rows.get(sh, []))
         summary.append({"school": inst, "unit": "(school total)", "status":
                         f"people {k('People')} | need email {k('Need email')} | check {k('Check (title or fit)')} | dropped C {k('Dropped (C)')}"})
+    rows["People (batch 3)"] = [r for r in rows.get("People", []) if r.get("Batch") == 3]
     rows["People (batch 2)"] = [r for r in rows.get("People", []) if r.get("Batch") == 2]
     rows["People"] = [r for r in rows.get("People", []) if r.get("Batch") == 1]
     rows["Coverage"] = summary + coverage()
@@ -477,7 +481,7 @@ def cmd_export() -> None:
                            for u in jl(DATA / "grid" / f"{SLUG[inst]}.units.jsonl")]
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name in ["People", "People (batch 2)", "Need email", "Apply directly, don't email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
+    for name in ["People", "People (batch 2)", "People (batch 3)", "Need email", "Apply directly, don't email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
                  "CSHL (any heritage)", "Coverage", "Unit census"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
