@@ -1,0 +1,9 @@
+institution: Rockefeller University
+unit: Heads of Laboratory
+urls: [https://www.rockefeller.edu/our-scientists/heads-of-laboratories/]
+item: div.ru-expandable-grid__unit--profile
+name: h3.ru-teaser__heading
+title: div.ru-teaser__teaser-text p
+profile: a.ru-expandable-grid__link-overlay@href
+filter: all
+expect: 73          # page tiles 73 (links 146/2); page prose says 74 faculty / 72 labs
