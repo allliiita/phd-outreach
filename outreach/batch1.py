@@ -31,7 +31,8 @@ SLUG = {"Boston University": "boston-university", "Duke University": "duke", "Un
         "Johns Hopkins University": "jhu", "University of Central Florida": "ucf", "Cornell University": "cornell",
         "Rockefeller University": "rockefeller", "University of Washington": "uw",
         "University of California San Diego": "ucsd", "University of Maryland": "umd",
-        "Georgia Institute of Technology": "gatech", "University of California Irvine": "uci"}
+        "Georgia Institute of Technology": "gatech", "University of California Irvine": "uci",
+        "University of California Santa Cruz": "ucsc"}
 
 
 def targets() -> dict:
