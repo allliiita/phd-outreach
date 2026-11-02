@@ -5,3 +5,5 @@ ts	phase	decision	why	evidence	result
 2026-11-02T16:15:06Z	probes	OpenAlex/S2/OpenReview unavailable from cloud; use CSRankings + NSF CAREER + NIH	429 key-required / 429 / 403	curl checks	done
 2026-11-02T16:15:06Z	process	coordinator wrote code itself; reverted to dispatch-only and wrote rules into CLAUDE.md	applicant correction: do not drift from architecture	CLAUDE.md	done
 2026-11-02T16:17:53Z	subtract	discarded phase-1 run; relaunch with base-SHA check	worktree was created from main (28ed311), not rebuild-coverage	commit 3201e4f parent 28ed311	reverted
+2026-11-02T16:20:56Z	subtract	merged phase 1: 24 files deleted (13 modules, 3 tools, 5 playbooks, 3 stale docs)	less to read, nothing obsolete to copy	commit 4c22cb2; pytest 15 passed; fetch/roster/verify/validate --help rc=0 (re-run by coordinator)	done
+2026-11-02T16:20:56Z	subtract	open follow-ups: config/targets.yaml line-1 comment names deleted shortlist.py; batch1+progress kept (verify imports batch1)	left for the next agent that edits config / verify	phase-1 report	open
