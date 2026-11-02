@@ -87,3 +87,14 @@ Only schools with evidence in this pass; absence = "not found in this limited se
 - Third-party aggregator data (**[agg]**) not verified against personal homepages. Google search-result summaries (not full pages) support several statements marked above.
 - Carnegie/MacroPolo measure NeurIPS authors by country/institution, not frontier-lab hires by PhD school; Carnegie data is self-reported and incomplete.
 - Not found: any per-school hiring counts for the named labs; no data for BU, UCF, USF, UCSF, Mount Sinai, Rockefeller, Rutgers, Stony Brook, NJIT, UCSD, UMD, Northeastern, and thin data for JHU, NYU, Duke. Next step if needed: scrape OpenReview/Semantic Scholar affiliations or department placement pages.
+
+## Appendix (2026-11-02): dblp-affiliation route (outreach/labsource.py)
+- 3,833 dblp persons list a top-lab affiliation; 899 homepages tried (≤120/lab); PhD school extracted for 209; only 26
+  have a PhD year ≥2018 in the extracted sentence. dblp affiliations skew to senior / long-tenured staff, so this route
+  says little about RECENT hires. Overall top schools in the 209: MIT, CMU, Stanford, Berkeley, UW, Cambridge, Cornell, UIUC.
+- Examples from her candidate schools (verified on own homepage): Columbia → Google DeepMind (David Pfau; Kimberly
+  Stachenfeld, NeuroAI); JHU → Google DeepMind (Elizabeth Salesky, advisor Matt Post); Cornell → Meta FAIR (Chuan Guo,
+  advisor Kilian Weinberger; Yixuan Li, advisor John Hopcroft); Duke → Apple MLR (Joseph Futoma); BU → NVIDIA (Soham Sinha,
+  advisor Rich West); NYU → Meta FAIR / DeepMind (Kyunghyun Cho, Yann LeCun students); Georgia Tech → DeepMind (Jie Tan).
+- Better data needs OpenReview education histories (recent, structured): tools/openreview_export.py on the applicant's own
+  computer (OpenReview challenges cloud IPs).

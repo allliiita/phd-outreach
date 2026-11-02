@@ -1,0 +1,1008 @@
+{
+ "n": 899,
+ "found": 209,
+ "overall": [
+  [
+   "Massachusetts Institute of Technology",
+   11
+  ],
+  [
+   "Carnegie Mellon University",
+   11
+  ],
+  [
+   "Stanford University",
+   8
+  ],
+  [
+   "UC Berkeley",
+   8
+  ],
+  [
+   "University of Washington",
+   6
+  ],
+  [
+   "University of Cambridge",
+   6
+  ],
+  [
+   "Cornell University",
+   6
+  ],
+  [
+   "Cambridge",
+   5
+  ],
+  [
+   "University of Illinois",
+   4
+  ],
+  [
+   "Nanyang Technological University",
+   3
+  ],
+  [
+   "Princeton",
+   3
+  ],
+  [
+   "Mila",
+   2
+  ],
+  [
+   "Columbia University",
+   2
+  ],
+  [
+   "Duke University",
+   2
+  ],
+  [
+   "University of Southern California",
+   2
+  ],
+  [
+   "Education University",
+   2
+  ],
+  [
+   "Arizona State University",
+   2
+  ],
+  [
+   "UCSD",
+   2
+  ],
+  [
+   "California Institute of Technology",
+   2
+  ],
+  [
+   "Indian Institute of Technology",
+   2
+  ],
+  [
+   "Seoul National University",
+   2
+  ],
+  [
+   "Harvard University",
+   2
+  ],
+  [
+   "New York University",
+   2
+  ],
+  [
+   "University College",
+   2
+  ],
+  [
+   "Computer Science University",
+   2
+  ],
+  [
+   "University of Utah",
+   2
+  ],
+  [
+   "National University",
+   2
+  ],
+  [
+   "University of California, Santa",
+   2
+  ],
+  [
+   "UCLA",
+   2
+  ],
+  [
+   "The University",
+   2
+  ],
+  [
+   "University of Wisconsin-Madison",
+   2
+  ],
+  [
+   "Purdue University",
+   2
+  ],
+  [
+   "University of Edinburgh",
+   2
+  ],
+  [
+   "Tsinghua University",
+   2
+  ],
+  [
+   "Language Technologies Institute",
+   2
+  ],
+  [
+   "Johns Hopkins University",
+   2
+  ],
+  [
+   "Ben Gurion University",
+   1
+  ],
+  [
+   "University of New South Wales",
+   1
+  ],
+  [
+   "United States Cyprus Education Princeton University",
+   1
+  ],
+  [
+   "NC State University",
+   1
+  ],
+  [
+   "Simons Laufer Mathematical Sciences Institute",
+   1
+  ],
+  [
+   "Cornell",
+   1
+  ],
+  [
+   "Education Princeton University",
+   1
+  ],
+  [
+   "Rensselaer Polytechnic Institute",
+   1
+  ],
+  [
+   "University of Technology, Munich",
+   1
+  ],
+  [
+   "University of Ottawa, Canada",
+   1
+  ],
+  [
+   "Gold Education North Carolina State University",
+   1
+  ],
+  [
+   "Goethe University",
+   1
+  ],
+  [
+   "Body Administration Industry Advisory Board Institute",
+   1
+  ],
+  [
+   "Indiana University",
+   1
+  ],
+  [
+   "University of Massachusetts Related Web Titles Chair",
+   1
+  ],
+  [
+   "Northwestern University",
+   1
+  ],
+  [
+   "Texas Tech University",
+   1
+  ],
+  [
+   "Tampere University",
+   1
+  ],
+  [
+   "Zhejiang University",
+   1
+  ],
+  [
+   "University of Rostock",
+   1
+  ],
+  [
+   "Hong Kong University",
+   1
+  ],
+  [
+   "University of Toronto",
+   1
+  ],
+  [
+   "Boston University",
+   1
+  ],
+  [
+   "Aalto University",
+   1
+  ]
+ ],
+ "by_lab": {
+  "Google Research": [
+   [
+    "Stanford University",
+    3
+   ],
+   [
+    "Massachusetts Institute of Technology",
+    2
+   ],
+   [
+    "University of Cambridge",
+    2
+   ],
+   [
+    "Ben Gurion University",
+    1
+   ],
+   [
+    "University of New South Wales",
+    1
+   ],
+   [
+    "United States Cyprus Education Princeton University",
+    1
+   ],
+   [
+    "NC State University",
+    1
+   ],
+   [
+    "Mila",
+    1
+   ],
+   [
+    "Simons Laufer Mathematical Sciences Institute",
+    1
+   ],
+   [
+    "Cornell",
+    1
+   ],
+   [
+    "Columbia University",
+    1
+   ],
+   [
+    "University of Washington",
+    1
+   ],
+   [
+    "Duke University",
+    1
+   ],
+   [
+    "Education Princeton University",
+    1
+   ],
+   [
+    "University of Southern California",
+    1
+   ]
+  ],
+  "Microsoft Research": [
+   [
+    "Carnegie Mellon University",
+    4
+   ],
+   [
+    "Massachusetts Institute of Technology",
+    2
+   ],
+   [
+    "UC Berkeley",
+    2
+   ],
+   [
+    "Cornell University",
+    2
+   ],
+   [
+    "Tsinghua University",
+    2
+   ],
+   [
+    "University of New South Wales",
+    1
+   ],
+   [
+    "Computer Engineering University",
+    1
+   ],
+   [
+    "University of Maryland, College",
+    1
+   ],
+   [
+    "University of Edinburgh",
+    1
+   ],
+   [
+    "Shanghai Jiao Tong University",
+    1
+   ],
+   [
+    "Weizmann Institute",
+    1
+   ],
+   [
+    "University of Washington",
+    1
+   ],
+   [
+    "Cambridge",
+    1
+   ],
+   [
+    "Oxford",
+    1
+   ],
+   [
+    "University of Munich",
+    1
+   ]
+  ],
+  "IBM Research": [
+   [
+    "Massachusetts Institute of Technology",
+    2
+   ],
+   [
+    "University of Cambridge",
+    1
+   ],
+   [
+    "Cornell University",
+    1
+   ],
+   [
+    "University of Ottawa, Canada",
+    1
+   ],
+   [
+    "UCSD",
+    1
+   ],
+   [
+    "California Institute of Technology",
+    1
+   ],
+   [
+    "Indian Institute of Technology",
+    1
+   ],
+   [
+    "Gold Education North Carolina State University",
+    1
+   ],
+   [
+    "Goethe University",
+    1
+   ],
+   [
+    "Seoul National University",
+    1
+   ],
+   [
+    "Body Administration Industry Advisory Board Institute",
+    1
+   ],
+   [
+    "Carnegie Mellon University",
+    1
+   ],
+   [
+    "Indiana University",
+    1
+   ],
+   [
+    "University of Massachusetts Related Web Titles Chair",
+    1
+   ],
+   [
+    "Northwestern University",
+    1
+   ]
+  ],
+  "Apple MLR": [
+   [
+    "Arizona State University",
+    2
+   ],
+   [
+    "Massachusetts Institute of Technology",
+    1
+   ],
+   [
+    "Duke University",
+    1
+   ],
+   [
+    "University of Southern California",
+    1
+   ],
+   [
+    "Stanford University",
+    1
+   ],
+   [
+    "North Carolina State University",
+    1
+   ],
+   [
+    "University of Washington",
+    1
+   ],
+   [
+    "Education University",
+    1
+   ]
+  ],
+  "NVIDIA Research": [
+   [
+    "Computer Science University",
+    2
+   ],
+   [
+    "Stanford University",
+    2
+   ],
+   [
+    "New York University",
+    1
+   ],
+   [
+    "Texas Tech University",
+    1
+   ],
+   [
+    "Nanyang Technological University",
+    1
+   ],
+   [
+    "Tampere University",
+    1
+   ],
+   [
+    "Indian Institute of Technology",
+    1
+   ],
+   [
+    "University College",
+    1
+   ],
+   [
+    "Zhejiang University",
+    1
+   ],
+   [
+    "University of Rostock",
+    1
+   ],
+   [
+    "Hong Kong University",
+    1
+   ],
+   [
+    "University of Toronto",
+    1
+   ],
+   [
+    "Boston University",
+    1
+   ],
+   [
+    "University of Washington",
+    1
+   ],
+   [
+    "Aalto University",
+    1
+   ]
+  ],
+  "Toyota Research Institute": [
+   [
+    "New York University",
+    1
+   ],
+   [
+    "Massachusetts Institute of Technology",
+    1
+   ]
+  ],
+  "Meta FAIR": [
+   [
+    "Princeton",
+    3
+   ],
+   [
+    "UC Berkeley",
+    3
+   ],
+   [
+    "University of Illinois",
+    2
+   ],
+   [
+    "Massachusetts Institute of Technology",
+    2
+   ],
+   [
+    "University of California, Santa",
+    2
+   ],
+   [
+    "Carnegie Mellon University",
+    2
+   ],
+   [
+    "Nanyang Technological University",
+    2
+   ],
+   [
+    "Cornell University",
+    2
+   ],
+   [
+    "Brown University",
+    1
+   ],
+   [
+    "Computer Engineering University",
+    1
+   ],
+   [
+    "National University",
+    1
+   ],
+   [
+    "Senior Lecturer The University",
+    1
+   ],
+   [
+    "UCLA",
+    1
+   ],
+   [
+    "University of Texas",
+    1
+   ],
+   [
+    "NYU",
+    1
+   ]
+  ],
+  "Amazon": [
+   [
+    "Massachusetts Institute of Technology",
+    4
+   ],
+   [
+    "University of Washington",
+    2
+   ],
+   [
+    "Carnegie Mellon University",
+    2
+   ],
+   [
+    "National University",
+    1
+   ],
+   [
+    "Princeton University",
+    1
+   ],
+   [
+    "Johns Hopkins University",
+    1
+   ],
+   [
+    "University of Oregon",
+    1
+   ],
+   [
+    "Peking University",
+    1
+   ],
+   [
+    "Federal University",
+    1
+   ],
+   [
+    "University of Southern California Master",
+    1
+   ],
+   [
+    "University of Waterloo",
+    1
+   ],
+   [
+    "University of Leipzig",
+    1
+   ],
+   [
+    "University of Wisconsin",
+    1
+   ],
+   [
+    "Courant Institute",
+    1
+   ],
+   [
+    "Gran Sasso Science Institute",
+    1
+   ]
+  ],
+  "Allen Institute (Ai2)": [
+   [
+    "Language Technologies Institute",
+    1
+   ],
+   [
+    "Senior Research Scientist Allen Institute",
+    1
+   ],
+   [
+    "Allen Institute",
+    1
+   ],
+   [
+    "Carnegie Mellon University",
+    1
+   ],
+   [
+    "Seoul National University",
+    1
+   ],
+   [
+    "Massachusetts Institute of Technology",
+    1
+   ]
+  ],
+  "Google DeepMind": [
+   [
+    "Cambridge",
+    3
+   ],
+   [
+    "University of Cambridge",
+    2
+   ],
+   [
+    "University of Alberta",
+    1
+   ],
+   [
+    "UK Education University",
+    1
+   ],
+   [
+    "New York University",
+    1
+   ],
+   [
+    "Harvard University",
+    1
+   ],
+   [
+    "Columbia",
+    1
+   ],
+   [
+    "Object Segmentation The University",
+    1
+   ],
+   [
+    "Carnegie Mellon University",
+    1
+   ],
+   [
+    "Caltech",
+    1
+   ],
+   [
+    "University of Michigan",
+    1
+   ],
+   [
+    "University College",
+    1
+   ],
+   [
+    "California Institute of Technology",
+    1
+   ],
+   [
+    "Education Vanderbilt University",
+    1
+   ],
+   [
+    "Johns Hopkins University",
+    1
+   ]
+  ],
+  "Flatiron Institute": [
+   [
+    "UC Berkeley",
+    1
+   ],
+   [
+    "PhD Thesis University",
+    1
+   ],
+   [
+    "Science Simons Observatory Flatiron Institute",
+    1
+   ]
+  ]
+ },
+ "advisors": [
+  [
+   "Bob Fabry Richard Fateman (United States Cyprus Education Princeton University)",
+   1
+  ],
+  [
+   "Vincent Conitzer (Simons Laufer Mathematical Sciences Institute)",
+   1
+  ],
+  [
+   "Eric Lander Martin Nowak (Education Princeton University)",
+   1
+  ],
+  [
+   "Vikram Adve Website (Education University)",
+   1
+  ],
+  [
+   "Kayvon Fatahalian (Stanford University)",
+   1
+  ],
+  [
+   "Baoxin Li (Arizona State University)",
+   1
+  ],
+  [
+   "Lang Tong (Cornell University)",
+   1
+  ],
+  [
+   "Eckhardt Hoenig (Goethe University)",
+   1
+  ],
+  [
+   "Ziwei Liu (Nanyang Technological University)",
+   1
+  ],
+  [
+   "Pascale Fung (Zhejiang University)",
+   1
+  ],
+  [
+   "Heung-Yeung Shum (Hong Kong University)",
+   1
+  ],
+  [
+   "Rich West (Boston University)",
+   1
+  ],
+  [
+   "Nathan Ratliff (University of Washington)",
+   1
+  ],
+  [
+   "Zhi-Pei Liang (Computer Engineering University)",
+   1
+  ],
+  [
+   "Victor Zue (Massachusetts Institute of Technology)",
+   1
+  ],
+  [
+   "Kai-Wei Chang (UCLA)",
+   1
+  ],
+  [
+   "William Wang (University of California, Santa)",
+   1
+  ],
+  [
+   "Antonio Torralba (Massachusetts Institute of Technology)",
+   1
+  ],
+  [
+   "Christos Faloutsos (Carnegie Mellon University)",
+   1
+  ],
+  [
+   "Kyunghyun Cho (NYU)",
+   1
+  ],
+  [
+   "Yun S. Song. (UC Berkeley)",
+   1
+  ],
+  [
+   "Philip S. Yu (University of Illinois)",
+   1
+  ],
+  [
+   "Chris Manning (Stanford University)",
+   1
+  ],
+  [
+   "Nam Sung Kim (University of Wisconsin-Madison)",
+   1
+  ],
+  [
+   "Owen Holland (University of Essex)",
+   1
+  ],
+  [
+   "Kilian Weinberger (Cornell University)",
+   1
+  ],
+  [
+   "Jitendra Malik (UC Berkeley)",
+   1
+  ],
+  [
+   "Pr. Maxine Eskenazi (Cambridge)",
+   1
+  ],
+  [
+   "John E. Hopcroft (Cornell University)",
+   1
+  ],
+  [
+   "Ben Bederson (University of Maryland, College)",
+   1
+  ],
+  [
+   "Philip Wadler (University of Edinburgh)",
+   1
+  ],
+  [
+   "Jason D. Hartline (Shanghai Jiao Tong University)",
+   1
+  ],
+  [
+   "Manuel Blum (Carnegie Mellon University)",
+   1
+  ],
+  [
+   "Michael I. Jordan (UC Berkeley)",
+   1
+  ],
+  [
+   "Robert Kleinberg (Cornell University)",
+   1
+  ],
+  [
+   "Raj Reddy Hsiao-Wuen Hon (Education National Taiwan University)",
+   1
+  ],
+  [
+   "Zhi-Ming Ma (Shandong University)",
+   1
+  ],
+  [
+   "David Hawking (Australian National University)",
+   1
+  ],
+  [
+   "Gunhee Kim (Allen Institute)",
+   1
+  ],
+  [
+   "David Sontag (Massachusetts Institute of Technology)",
+   1
+  ],
+  [
+   "Mike Shou (National University)",
+   1
+  ],
+  [
+   "Karthik Narasimhan (Princeton University)",
+   1
+  ],
+  [
+   "Zachary C. Lipton (Carnegie Mellon University)",
+   1
+  ],
+  [
+   "Umut Acar (Carnegie Mellon University)",
+   1
+  ],
+  [
+   "Matthias Katzfuss (University of Wisconsin)",
+   1
+  ],
+  [
+   "Daniel Jackson (Massachusetts Institute of Technology)",
+   1
+  ],
+  [
+   "Zhihai He. (University of Missouri)",
+   1
+  ],
+  [
+   "Madhusudan Parthasarathy (University of Illinois)",
+   1
+  ],
+  [
+   "Yalin Wang. My (Arizona State University)",
+   1
+  ],
+  [
+   "Yann LeCun (New York University)",
+   1
+  ],
+  [
+   "Pradeep Ravikumar (Carnegie Mellon University)",
+   1
+  ],
+  [
+   "Tobin R. Sosnick Karl (Education Vanderbilt University)",
+   1
+  ],
+  [
+   "Pietro Li\u00f2 (University of Cambridge)",
+   1
+  ],
+  [
+   "Matt Post (Johns Hopkins University)",
+   1
+  ],
+  [
+   "Steve Blackburn (The Australian National University)",
+   1
+  ],
+  [
+   "Greg Turk (Georgia Tech)",
+   1
+  ],
+  [
+   "Graham Neubig (Language Technologies Institute)",
+   1
+  ],
+  [
+   "Yair Weiss. (Hebrew University)",
+   1
+  ],
+  [
+   "Johanna Moore (University of Edinburgh)",
+   1
+  ],
+  [
+   "Vivek Srikumar (University of Utah)",
+   1
+  ]
+ ]
+}
