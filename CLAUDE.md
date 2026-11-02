@@ -24,8 +24,8 @@ report that to the human as a scope decision; do not loosen checks.
 
 ## Ledgers
 - Units: `data/grid/<school>.jsonl` (status) + `data/grid/<school>.units.jsonl` (census). States:
-  found -> done | blocked -> alt. Alternates, in order: real browser, Wayback, PhD-program page, CSRankings / NSF / NIH,
-  new-faculty news, last: page saved by the human (`data/snapshots/manual/`, batched into one request).
+  found -> done | blocked -> alt. Alternates, in order: real browser, Wayback, PhD-program page, a school-wide directory filtered by
+  department, new-faculty news, last: page saved by the human (`data/snapshots/manual/`, batched into one request).
 - People: `python -m coverage.ledger` builds one row per (school, person) from all rosters, with the evidence
   for each gate (faculty, young title, heritage, does ML, fit, recruiting, email) and one outcome.
 
@@ -64,6 +64,7 @@ test or check that fails on the old behavior. Docs are the last resort. Keep the
 | a blocked BIG unit fails the build | `coverage.check` units section |
 | a probe hit without ledger row or reason fails | `coverage.check` recall section |
 | a worker starts from the wrong base | base SHA check in every kickoff |
+| probes (CSRankings/NSF/NIH) are leads, never roster rows: a person needs a current official or own page | test: ledger ignores probe-sourced rosters |
 
 ## Token budget
 Scripts over agents. Agents get file paths, not pasted pages. Command output through `| tail`. Summaries <= 10 lines.
