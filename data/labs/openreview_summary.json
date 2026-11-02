@@ -73,10 +73,6 @@
    22
   ],
   [
-   "Columbia",
-   22
-  ],
-  [
    "Princeton",
    21
   ],
@@ -103,6 +99,10 @@
   [
    "UCL",
    15
+  ],
+  [
+   "Columbia",
+   14
   ],
   [
    "National University of Singapore",
@@ -154,6 +154,10 @@
   ],
   [
    "Imperial College London",
+   8
+  ],
+  [
+   "UBC",
    8
   ],
   [
@@ -239,10 +243,6 @@
   [
    "Hong Kong University of Science and Technology",
    6
-  ],
-  [
-   "University of California, Irvine",
-   5
   ]
  ],
  "recent_by_lab": {
@@ -368,15 +368,15 @@
     7
    ],
    [
-    "Columbia",
-    7
-   ],
-   [
     "UPenn",
     7
    ],
    [
     "Montreal/Mila",
+    6
+   ],
+   [
+    "Columbia",
     6
    ],
    [
@@ -538,11 +538,11 @@
     6
    ],
    [
-    "Columbia",
+    "Cornell",
     6
    ],
    [
-    "Cornell",
+    "UCLA",
     6
    ]
   ],
@@ -933,10 +933,6 @@
    2
   ],
   [
-   "Columbia",
-   2
-  ],
-  [
    "University of Wisconsin - Madison",
    2
   ],
@@ -1010,6 +1006,10 @@
   ],
   [
    "Ben Gurion University of the Negev, Technion",
+   1
+  ],
+  [
+   "Columbia",
    1
   ],
   [
@@ -1359,11 +1359,11 @@
    2
   ],
   [
-   "Purang Abolmaesumi (Columbia)",
+   "Purang Abolmaesumi (UBC)",
    2
   ],
   [
-   "Sidney Fels (Columbia)",
+   "Sidney Fels (UBC)",
    2
   ],
   [

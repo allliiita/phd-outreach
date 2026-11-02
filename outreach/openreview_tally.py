@@ -40,7 +40,7 @@ CANON = [(r"massachusetts institute of technology|\bmit\b", "MIT"), (r"carnegie 
          (r"southern california|\busc\b", "USC"), (r"texas,? (?:at )?austin|utexas", "UT Austin"), (r"san diego|ucsd", "UCSD"),
          (r"los angeles|ucla", "UCLA"), (r"johns hopkins", "Johns Hopkins"), (r"maryland", "U Maryland"),
          (r"cornell", "Cornell"), (r"princeton", "Princeton"), (r"new york university|\bnyu\b", "NYU"),
-         (r"columbia", "Columbia"), (r"oxford", "Oxford"), (r"cambridge(?!.*mass)", "Cambridge"),
+         (r"british columbia", "UBC"), (r"columbia", "Columbia"), (r"oxford", "Oxford"), (r"cambridge(?!.*mass)", "Cambridge"),
          (r"eth|swiss federal", "ETH Zurich"), (r"epfl|lausanne", "EPFL"), (r"toronto", "Toronto"),
          (r"university college london|\bucl\b", "UCL"), (r"montreal|mila", "Montreal/Mila"), (r"mcgill", "McGill"),
          (r"harvard", "Harvard"), (r"michigan", "U Michigan"), (r"pennsylvania|upenn", "UPenn"),
