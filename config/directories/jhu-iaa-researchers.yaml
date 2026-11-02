@@ -1,0 +1,8 @@
+institution: Johns Hopkins University
+unit: Institute for Assured Autonomy
+urls: ['https://iaa.jhu.edu/researchers/']
+item: tr
+name: td.name a
+profile: td.name a@href
+filter: all
+require: '^(?!.*Applied Physics Laboratory)'

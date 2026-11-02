@@ -1,0 +1,7 @@
+institution: Johns Hopkins University
+unit: Institute for Assured Autonomy
+urls: ['https://iaa.jhu.edu/iaa-members/']
+item: "td[style*='width: 100%']"
+name: a
+profile: a@href
+filter: all

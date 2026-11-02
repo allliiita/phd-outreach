@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Mathematical Institute for Data Science (MINDS)
+urls: ['https://www.minds.jhu.edu/faculty/']
+item: figure.wp-caption
+name: figcaption b
+title: figcaption
+profile: figcaption a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

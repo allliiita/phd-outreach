@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Applied Mathematics & Statistics
+urls: ['https://engineering.jhu.edu/ams/faculty/']
+item: div.entity_header
+name: .entity_name
+title: .entity_title
+profile: a.entity_name_link@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

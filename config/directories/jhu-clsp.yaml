@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Center for Language and Speech Processing
+urls: ['https://www.clsp.jhu.edu/faculty']
+item: div.faculty-member-card
+name: h3
+title: h6
+profile: h3 a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
