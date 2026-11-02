@@ -1,0 +1,10 @@
+institution: University of Maryland
+unit: Linguistics
+urls: ["https://ling.umd.edu/people?page=0", "https://ling.umd.edu/people?page=1", "https://ling.umd.edu/people?page=2", "https://ling.umd.edu/people?page=3", "https://ling.umd.edu/people?page=4", "https://ling.umd.edu/people?page=5"]
+filter: all
+item: div.contact--feed__result
+name: h3
+title: p.contact--feed__unit
+profile: a.contact--feed__a@href
+skip_titles: ['graduate student', 'alumn', '^staff']
+expect: 52

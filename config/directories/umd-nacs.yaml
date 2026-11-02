@@ -1,0 +1,8 @@
+institution: University of Maryland
+unit: Neuroscience and Cognitive Science (NACS)
+urls: ["https://nacs.umd.edu/facultystaff/UM%20Faculty", "https://nacs.umd.edu/facultystaff/Emeriti%20Faculty", "https://nacs.umd.edu/facultystaff/Adjunct%20Faculty"]
+filter: all
+item: tbody tr
+name: td.views-field-field-position-title a
+title: td.views-field-field-position-title
+profile: td.views-field-field-position-title a@href

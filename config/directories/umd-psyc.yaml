@@ -1,0 +1,9 @@
+institution: University of Maryland
+unit: Psychology
+urls: ["https://psyc.umd.edu/people/faculty"]
+filter: all
+item: tbody tr
+name: strong p a
+title: strong p i
+profile: strong p a@href
+expect: 68
