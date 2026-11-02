@@ -1,0 +1,930 @@
+[
+ {
+  "id": "b1-0002",
+  "name": "Boqing Gong",
+  "own_advisors": [
+   "Fei Sha"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0012",
+  "name": "Lei Tian",
+  "own_advisors": [
+   "Laura Waller",
+   "George Barbastathis"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0018",
+  "name": "Sophie Hao",
+  "own_advisors": [
+   "Tal Linzen",
+   "Robert Frank",
+   "Dana Angluin"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0282",
+  "name": "Angelina Wang",
+  "own_advisors": [
+   "Olga Russakovsky"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0283",
+  "name": "Chang Su",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0284",
+  "name": "Chengxi Zang",
+  "own_advisors": [
+   "Fei Wang",
+   "Wenwu Zhu",
+   "Peng Cui"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0285",
+  "name": "Christina Lee Yu",
+  "own_advisors": [
+   "Devavrat Shah",
+   "Asuman E. Ozdaglar"
+  ],
+  "n_advisees": 1,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0288",
+  "name": "Diana Cai",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0294",
+  "name": "Kaitlyn Zhou",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0295",
+  "name": "Kan Chen",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0296",
+  "name": "Kyra Gan",
+  "own_advisors": [
+   "Andrew Li",
+   "Zachary Lipton",
+   "Sridhar Tayur"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0300",
+  "name": "Qingyu Zhao",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0301",
+  "name": "Ruihao Zhu",
+  "own_advisors": [
+   "David Simchi-Levi"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0302",
+  "name": "Tianyi Chen",
+  "own_advisors": [
+   "Georgios B. Giannakis"
+  ],
+  "n_advisees": 4,
+  "advisees_at_labs": 1,
+  "examples": [
+   "~Han_Shen3@Alibaba Group (Senior Algorithm Eng)"
+  ],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0304",
+  "name": "Weinan Sun",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0305",
+  "name": "Weishen Pan",
+  "own_advisors": [
+   "Fei Wang",
+   "Changshui Zhang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0307",
+  "name": "Yifan Peng",
+  "own_advisors": [
+   "Zhiyong Lu",
+   "Cathy Wu",
+   "Vijay Shanker"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0308",
+  "name": "Yiye Zhang",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0310",
+  "name": "Yu Jiang",
+  "own_advisors": [
+   "Changying Li"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0311",
+  "name": "Yuchen Wu",
+  "own_advisors": [
+   "Andrea Montanari"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0312",
+  "name": "Yunan Yang",
+  "own_advisors": [
+   "Russel Caflisch",
+   "Bjorn Engquist"
+  ],
+  "n_advisees": 4,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0031",
+  "name": "Boyuan Chen",
+  "own_advisors": [
+   "Hod Lipson"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0033",
+  "name": "Chuan Hong",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0254",
+  "name": "Jiaming Xu",
+  "own_advisors": [
+   "Elchanan Mossel",
+   "Elchanan Mossel",
+   "Bruce Hajek"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0048",
+  "name": "Jichun Xie",
+  "own_advisors": [
+   "T. Tony Cai",
+   "Hongzhe Li"
+  ],
+  "n_advisees": 1,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0052",
+  "name": "Lin Lin",
+  "own_advisors": [
+   "Raphael Gottardo",
+   "Mike West"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0053",
+  "name": "Neil Gong",
+  "own_advisors": [
+   "Dawn Song"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0055",
+  "name": "Pan Xu",
+  "own_advisors": [
+   "Anima Anandkumar",
+   "Adam Wierman",
+   "Quanquan Gu"
+  ],
+  "n_advisees": 3,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0060",
+  "name": "Sifan Liu",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0061",
+  "name": "Simon Mak",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0065",
+  "name": "Wenpin Hou",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0260",
+  "name": "Yang Sheng",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0071",
+  "name": "Yi Zhang",
+  "own_advisors": [
+   "Jun Song"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0075",
+  "name": "Zhicheng Ji",
+  "own_advisors": [
+   "Hongkai Ji"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0080",
+  "name": "Baihan Lin",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0083",
+  "name": "Donghoon Lee",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0087",
+  "name": "Hao Chih Lee",
+  "own_advisors": [
+   "Joel Dudley",
+   "Ge Yang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0264",
+  "name": "Hao-Chih Lee",
+  "own_advisors": [
+   "Joel Dudley",
+   "Ge Yang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0097",
+  "name": "Kuan-Lin Huang",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0124",
+  "name": "Xueyan Mei",
+  "own_advisors": [
+   "Zahi Fayad"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0316",
+  "name": "Chaowei Xiao",
+  "own_advisors": [
+   "Mingyan Liu"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0321",
+  "name": "Haoyang Cao",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0322",
+  "name": "Holden Lee",
+  "own_advisors": [
+   "Sanjeev Arora"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 3
+ },
+ {
+  "id": "b1-0325",
+  "name": "Jennifer Hu",
+  "own_advisors": [
+   "Roger P. Levy",
+   "Tomer Ullman"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0328",
+  "name": "Kechen Zhang",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0329",
+  "name": "Laixi Shi",
+  "own_advisors": [
+   "Yuejie Chi"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0331",
+  "name": "Luhuan Wu",
+  "own_advisors": [
+   "David Blei",
+   "John Patrick Cunningham"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0332",
+  "name": "Peirong Liu",
+  "own_advisors": [
+   "Marc Niethammer"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0338",
+  "name": "Tianmin Shu",
+  "own_advisors": [
+   "Joshua B. Tenenbaum",
+   "Antonio Torralba",
+   "Song-Chun Zhu"
+  ],
+  "n_advisees": 6,
+  "advisees_at_labs": 1,
+  "examples": [
+   "~Chuanyang_Jin2@Meta (Intern)"
+  ],
+  "lineage_placing": 4
+ },
+ {
+  "id": "b1-0342",
+  "name": "Yiqun Chen",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0348",
+  "name": "Ziyang Li",
+  "own_advisors": [
+   "Mayur Naik"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0350",
+  "name": "Zongwei Zhou",
+  "own_advisors": [
+   "Alan Yuille",
+   "Jianming Liang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 3
+ },
+ {
+  "id": "b1-0143",
+  "name": "Brian Cheung",
+  "own_advisors": [
+   "Bruno Olshausen",
+   "Tomaso A Poggio"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0149",
+  "name": "Congyu Liao",
+  "own_advisors": [
+   "Kawin Setsompop",
+   "Jianhui Zhong"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0171",
+  "name": "Kang Wang",
+  "own_advisors": [
+   "Peter Doerschuk"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0175",
+  "name": "Maggie Chung",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0198",
+  "name": "Yan Li",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0199",
+  "name": "Yang Yang",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0355",
+  "name": "Di Wu",
+  "own_advisors": [
+   "Joshua San Miguel"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0358",
+  "name": "HanQin Cai",
+  "own_advisors": [
+   "Wotao Yin",
+   "Jian-Feng Cai",
+   "Weiyu Xu"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0359",
+  "name": "Hao Zheng",
+  "own_advisors": [
+   "Ahmed Louri"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0363",
+  "name": "Jialin Liu",
+  "own_advisors": [
+   "Wotao Yin"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0374",
+  "name": "Mengxin Zheng",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0375",
+  "name": "Qian Lou",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0380",
+  "name": "Rui Xie",
+  "own_advisors": [
+   "Ping Ma",
+   "Tharuvai Sriram"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0382",
+  "name": "Ser Nam Lim",
+  "own_advisors": [],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0390",
+  "name": "Tong Wu",
+  "own_advisors": [
+   "Anna Scaglione",
+   "Changhong Zhao",
+   "Yingjun Zhang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0396",
+  "name": "Wu Lin",
+  "own_advisors": [
+   "Roger Baker Grosse",
+   "Alireza Makhzani",
+   "Emtiyaz Khan",
+   "Mark Schmidt"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0399",
+  "name": "Xinyu Chen",
+  "own_advisors": [
+   "Nicolas Saunier",
+   "Lijun Sun"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0400",
+  "name": "Xishun Liao",
+  "own_advisors": [
+   "Jiaqi Ma"
+  ],
+  "n_advisees": 1,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0404",
+  "name": "Yu Tian",
+  "own_advisors": [
+   "Christos Davatzikos",
+   "MacLean Nasrallah",
+   "Mengyu Wang",
+   "Tobias Elze",
+   "Gustavo Carneiro"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0405",
+  "name": "Yue Wang",
+  "own_advisors": [
+   "Shaofeng Zou"
+  ],
+  "n_advisees": 5,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0410",
+  "name": "Yuzhang Shang",
+  "own_advisors": [
+   "Yan Yan"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0411",
+  "name": "Zhenyi Wang",
+  "own_advisors": [
+   "Heng Huang",
+   "Mingchen Gao"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0205",
+  "name": "Fengchun Qiao",
+  "own_advisors": [
+   "Xi Peng"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0206",
+  "name": "Guangjing Wang",
+  "own_advisors": [
+   "Qiben Yan"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0274",
+  "name": "Hao Zhou",
+  "own_advisors": [
+   "Jorge Laval"
+  ],
+  "n_advisees": 1,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0209",
+  "name": "Jiaqi Gu",
+  "own_advisors": [
+   "Zihuai He",
+   "Guosheng Yin"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0212",
+  "name": "Kaixun Hua",
+  "own_advisors": [
+   "Yankai Cao",
+   "Dan Simovici"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0218",
+  "name": "Ning Wang",
+  "own_advisors": [
+   "Wenjing Lou",
+   "Thomas Hou"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0221",
+  "name": "Susana Lai-Yuen",
+  "own_advisors": [
+   "Yuan-Shin Lee"
+  ],
+  "n_advisees": 4,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0226",
+  "name": "Xiaomin Lin",
+  "own_advisors": [
+   "Miao Yu",
+   "Tinoosh Mohsenin",
+   "Cornelia Fermuller",
+   "Nikhil Chopra",
+   "yiannis Aloimonos"
+  ],
+  "n_advisees": 3,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0231",
+  "name": "Yi Sheng",
+  "own_advisors": [
+   "Weiwen Jiang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ },
+ {
+  "id": "b1-0232",
+  "name": "Yili Ren",
+  "own_advisors": [
+   "Jie Yang"
+  ],
+  "n_advisees": 0,
+  "advisees_at_labs": 0,
+  "examples": [],
+  "lineage_placing": 0
+ }
+]
