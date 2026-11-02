@@ -205,7 +205,7 @@ def coverage() -> list[dict]:
 JUNK_URL = re.compile(r"terms-of-use|faculty-resources/handbook|omniupdate|safelinks|a-lab-like-no-other|"
                       r"/login|wp-admin", re.I)
 BOILER = re.compile(r"physicians and scientists on the faculty of the icahn school", re.I)
-BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance|kunshan", re.I)   # applicant: no business schools; Duke Kunshan is out of scope
+BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance|kunshan|hotel administration|sc johnson|johnson graduate school", re.I)   # applicant: no business schools; Duke Kunshan is out of scope
 NO_COLD_EMAIL = re.compile(r"do not (?:e-?mail|contact|send)|don'?t (?:e-?mail|contact)|(?:cannot|can'?t|unable to|will not|won'?t) "
                            r"(?:respond|reply|answer|comment)|not (?:able to )?(?:respond|reply)|only (?:current|admitted)|"
                            r"no need to (?:e-?mail|contact)|outside (?:of )?(?:the )?official admissions", re.I)
