@@ -1,0 +1,11 @@
+institution: Cornell University
+unit: Computational Biology (graduate field)
+urls:
+  - "https://compbio.cornell.edu/people"
+item: div.expert-card-inner
+name: div.expert-card-front a.link
+title: div.expert-card-front p.department
+profile: div.expert-card-front a.link@href
+filter: all
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'

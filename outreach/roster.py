@@ -117,7 +117,7 @@ def _sig(el) -> str:
     return el.name + ("." + el["class"][0] if el.get("class") else "")
 
 
-DEGREE = re.compile(r"^(?:(?:dr|prof|professor|phd|p\.?h\.?d|sc\.?d|dr\.?sc|d\.?m\.?(?:d|sc)|m\.?d|m\.?eng|mph|drph)\.?,?\s+)+|(?:,\s*(?:phd|p\.?h\.?d|sc\.?d|d\.?m\.?(?:d|sc)|dr\.?sc|m\.?eng|m\.?sc|m\.?d|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays
+DEGREE = re.compile(r"^(?:(?:(?:dr|prof|professor|phd|mph|drph)\.?|(?:p\.?h\.d|sc\.d|dr\.sc|d\.m\.(?:d|sc)|m\.d|m\.eng)\.?),?\s+)+|(?:,\s*(?:phd|p\.?h\.?d|sc\.?d|d\.?m\.?(?:d|sc)|dr\.?sc|m\.?eng|m\.?sc|m\.?d|mph|ms|ma|drph)\.?)+$", re.I)   # suffix degrees only after a comma: "Ying Ma" stays; prefix M.D./M.Eng need a dot inside ("Meng Qi", "Md Rahman" are names)
 DEGREE_CAPS = re.compile(r"(?:,?\s+(?:PhD|Ph\.D\.|ScD|MD|MPH|DrPH|MBBS|FACMI|MS|MA|MSc|MSHP|MSCE|MBA|MPhil|RN|PharmD|[A-Z]{2,6}))+$")   # trailing all-caps credentials   # "Jane Doe MD" (case-sensitive)
 
 

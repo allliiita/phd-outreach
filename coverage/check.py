@@ -14,6 +14,7 @@ Run `python -m coverage.ledger` and `python -m coverage.probes` first; the check
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from collections import defaultdict
 
@@ -43,12 +44,18 @@ def units(school: str) -> list[str]:
         if c.get("decision") not in ("covered", "added"):
             continue
         gu = c.get("grid_unit")
-        parts = [gu] if gu in by_unit else [x.strip() for x in (gu or "").split(";") if x.strip()] or [gu]   # "A; B" = two units
+        parts = [gu] if gu in by_unit else split_units(gu) or [gu]   # "A; B" = two units
         for gu in parts:
             if gu not in seen:
                 seen.add(gu)
                 bad += _unit_problems(gu, by_unit.get(gu), c)
     return bad
+
+
+def split_units(gu: str | None) -> list[str]:
+    """'A; B' -> two grid units. A ';' inside parentheses belongs to the name: 'Robotics (field; members in CS/ECE)' is ONE unit
+    (2026-11-02: it was split into 'Robotics (field' + 'members in CS/ECE)' and could never match a grid row)."""
+    return [x.strip() for x in re.split(r";(?![^()]*\))", gu or "") if x.strip()]
 
 
 def _unit_problems(gu, rows, c) -> list[str]:

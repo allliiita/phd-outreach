@@ -1,0 +1,11 @@
+institution: Cornell University
+unit: "Biomedical Engineering"
+urls:
+  - "https://www.bme.cornell.edu/bme/faculty-staff"
+item: li.ce-block__people-list-item
+name: p.ce-block__people-list-person-name
+title: p.ce-block__people-list-person-title
+profile: a.ce-block__people-list-item-link@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

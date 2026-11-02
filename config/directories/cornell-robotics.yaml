@@ -1,0 +1,9 @@
+institution: Cornell University
+unit: "Robotics (field; members listed in CS/ECE/MAE)"
+urls:
+  - "https://robotics.cornell.edu/faculty"
+item: div.card.type-faculty
+name: h2
+profile: div.group-image a@href
+expect: 27
+filter: all

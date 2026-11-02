@@ -1,0 +1,13 @@
+institution: Cornell University
+unit: Statistics & Data Science
+urls:
+  - "https://stat.cornell.edu/directory?page=0"
+  - "https://stat.cornell.edu/directory?page=1"
+  - "https://stat.cornell.edu/directory?page=2"
+  - "https://stat.cornell.edu/directory?page=3"
+item: div.directory-card
+name: div.name
+title: div.position-titles
+profile: div.view-full-profile a@href
+expect: 65
+filter: all

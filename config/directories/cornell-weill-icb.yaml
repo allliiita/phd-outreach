@@ -1,0 +1,10 @@
+institution: Cornell University
+unit: Weill Cornell Institute for Computational Biomedicine
+urls:
+  - "https://gradschool.weill.cornell.edu/faculty?program=533"
+  - "https://gradschool.weill.cornell.edu/faculty?program=1641&page=0"
+  - "https://gradschool.weill.cornell.edu/faculty?program=1641&page=1"
+item: tbody tr
+name: td.views-field-title a
+profile: td.views-field-title a@href
+filter: all
