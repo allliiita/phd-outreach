@@ -7,7 +7,7 @@
 
 YAML keys: institution, unit, urls (list; paginated pages), item (CSS selector of one person block),
 name / title / profile (CSS selector inside the block; `sel@attr` reads an attribute), expect (row count),
-filter: all | ml_only, skip_titles: [regex, ...] (optional).
+filter: all | ml_only, skip_titles: [regex, ...] (optional), require: regex on block text (shared lists).
 Selector `.` means the item itself.
 """
 from __future__ import annotations
@@ -52,6 +52,8 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
             name = clean_name(_sel(it, cfg.get("name")))
             if not name:
                 continue
+            if cfg.get("require") and not re.search(cfg["require"], " ".join(it.get_text(" ").split())):
+                continue  # shared multi-department list: keep only this unit's rows
             prof = _sel(it, cfg.get("profile"))
             rows.append({
                 "name": name, "institution": cfg["institution"], "department": cfg["unit"],
