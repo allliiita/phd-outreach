@@ -1,0 +1,1745 @@
+{
+ "profiles": 3428,
+ "hires": 3209,
+ "interns_or_students": 189,
+ "recent_phd_hires": 1385,
+ "recent_hire_phd_schools": [
+  [
+   "CMU",
+   52
+  ],
+  [
+   "MIT",
+   50
+  ],
+  [
+   "Stanford",
+   48
+  ],
+  [
+   "Oxford",
+   42
+  ],
+  [
+   "UIUC",
+   37
+  ],
+  [
+   "ETH Zurich",
+   37
+  ],
+  [
+   "UC Berkeley",
+   37
+  ],
+  [
+   "U Washington",
+   36
+  ],
+  [
+   "Georgia Tech",
+   33
+  ],
+  [
+   "UT Austin",
+   31
+  ],
+  [
+   "USC",
+   27
+  ],
+  [
+   "UCSD",
+   26
+  ],
+  [
+   "U Michigan",
+   25
+  ],
+  [
+   "U Maryland",
+   25
+  ],
+  [
+   "UPenn",
+   24
+  ],
+  [
+   "Johns Hopkins",
+   23
+  ],
+  [
+   "Cambridge",
+   22
+  ],
+  [
+   "Columbia",
+   22
+  ],
+  [
+   "Princeton",
+   21
+  ],
+  [
+   "UCLA",
+   20
+  ],
+  [
+   "Cornell",
+   20
+  ],
+  [
+   "Toronto",
+   18
+  ],
+  [
+   "NYU",
+   17
+  ],
+  [
+   "Montreal/Mila",
+   15
+  ],
+  [
+   "UCL",
+   15
+  ],
+  [
+   "National University of Singapore",
+   13
+  ],
+  [
+   "Rutgers",
+   13
+  ],
+  [
+   "Tel Aviv University",
+   12
+  ],
+  [
+   "Seoul National University",
+   11
+  ],
+  [
+   "Technion, Technion",
+   10
+  ],
+  [
+   "University of Amsterdam",
+   10
+  ],
+  [
+   "Harvard",
+   10
+  ],
+  [
+   "California Institute of Technology",
+   10
+  ],
+  [
+   "Technical University Munich",
+   9
+  ],
+  [
+   "EPFL",
+   9
+  ],
+  [
+   "University of Edinburgh",
+   9
+  ],
+  [
+   "Texas A&M University",
+   9
+  ],
+  [
+   "Imperial College London",
+   8
+  ],
+  [
+   "Purdue University",
+   8
+  ],
+  [
+   "Korea Advanced Institute of Science & Technology",
+   8
+  ],
+  [
+   "Duke",
+   8
+  ],
+  [
+   "INRIA",
+   7
+  ],
+  [
+   "Northeastern",
+   7
+  ],
+  [
+   "McGill",
+   7
+  ],
+  [
+   "University of California, Santa Barbara",
+   7
+  ],
+  [
+   "University of Chicago",
+   7
+  ],
+  [
+   "Korea Advanced Institute of Science and Technology",
+   7
+  ],
+  [
+   "Eberhard-Karls-Universit\u00e4t T\u00fcbingen",
+   7
+  ],
+  [
+   "The Chinese University of Hong Kong",
+   7
+  ],
+  [
+   "Arizona State University",
+   7
+  ],
+  [
+   "UC Santa Barbara",
+   6
+  ],
+  [
+   "Rice University",
+   6
+  ],
+  [
+   "University of California, Davis",
+   6
+  ],
+  [
+   "Texas A&M University - College Station",
+   6
+  ],
+  [
+   "Washington University, Saint Louis",
+   6
+  ],
+  [
+   "University of Wisconsin - Madison",
+   6
+  ],
+  [
+   "UMass Amherst",
+   6
+  ],
+  [
+   "Stony Brook",
+   6
+  ],
+  [
+   "Hong Kong University of Science and Technology",
+   6
+  ],
+  [
+   "University of California, Irvine",
+   5
+  ]
+ ],
+ "recent_by_lab": {
+  "Apple": [
+   [
+    "CMU",
+    8
+   ],
+   [
+    "UT Austin",
+    7
+   ],
+   [
+    "Georgia Tech",
+    7
+   ],
+   [
+    "ETH Zurich",
+    5
+   ],
+   [
+    "Oxford",
+    4
+   ],
+   [
+    "UC Berkeley",
+    4
+   ],
+   [
+    "U Maryland",
+    4
+   ],
+   [
+    "Princeton",
+    3
+   ],
+   [
+    "EPFL",
+    3
+   ],
+   [
+    "U Washington",
+    3
+   ],
+   [
+    "MIT",
+    3
+   ],
+   [
+    "UIUC",
+    3
+   ]
+  ],
+  "Microsoft Research": [
+   [
+    "CMU",
+    7
+   ],
+   [
+    "Stanford",
+    7
+   ],
+   [
+    "Cambridge",
+    6
+   ],
+   [
+    "Johns Hopkins",
+    6
+   ],
+   [
+    "UC Berkeley",
+    5
+   ],
+   [
+    "Oxford",
+    4
+   ],
+   [
+    "Montreal/Mila",
+    3
+   ],
+   [
+    "UPenn",
+    3
+   ],
+   [
+    "U Washington",
+    3
+   ],
+   [
+    "Georgia Tech",
+    3
+   ],
+   [
+    "Princeton",
+    3
+   ],
+   [
+    "George Mason University",
+    3
+   ]
+  ],
+  "Meta (FAIR/GenAI)": [
+   [
+    "UIUC",
+    11
+   ],
+   [
+    "MIT",
+    10
+   ],
+   [
+    "U Washington",
+    9
+   ],
+   [
+    "CMU",
+    8
+   ],
+   [
+    "U Michigan",
+    7
+   ],
+   [
+    "Columbia",
+    7
+   ],
+   [
+    "UPenn",
+    7
+   ],
+   [
+    "Montreal/Mila",
+    6
+   ],
+   [
+    "U Maryland",
+    6
+   ],
+   [
+    "Tel Aviv University",
+    5
+   ],
+   [
+    "USC",
+    5
+   ],
+   [
+    "UC Berkeley",
+    5
+   ]
+  ],
+  "Amazon": [
+   [
+    "MIT",
+    7
+   ],
+   [
+    "U Michigan",
+    7
+   ],
+   [
+    "UIUC",
+    7
+   ],
+   [
+    "Johns Hopkins",
+    6
+   ],
+   [
+    "Oxford",
+    6
+   ],
+   [
+    "Stanford",
+    5
+   ],
+   [
+    "CMU",
+    5
+   ],
+   [
+    "UCLA",
+    4
+   ],
+   [
+    "USC",
+    4
+   ],
+   [
+    "UCSD",
+    4
+   ],
+   [
+    "Texas A&M University",
+    4
+   ],
+   [
+    "Arizona State University",
+    4
+   ]
+  ],
+  "Google DeepMind": [
+   [
+    "Oxford",
+    15
+   ],
+   [
+    "UC Berkeley",
+    11
+   ],
+   [
+    "ETH Zurich",
+    9
+   ],
+   [
+    "UCL",
+    9
+   ],
+   [
+    "MIT",
+    8
+   ],
+   [
+    "Cambridge",
+    8
+   ],
+   [
+    "Stanford",
+    8
+   ],
+   [
+    "UCSD",
+    6
+   ],
+   [
+    "NYU",
+    5
+   ],
+   [
+    "U Maryland",
+    5
+   ],
+   [
+    "CMU",
+    5
+   ],
+   [
+    "USC",
+    5
+   ]
+  ],
+  "Google (Research)": [
+   [
+    "CMU",
+    11
+   ],
+   [
+    "ETH Zurich",
+    9
+   ],
+   [
+    "UCSD",
+    9
+   ],
+   [
+    "Stanford",
+    9
+   ],
+   [
+    "UT Austin",
+    9
+   ],
+   [
+    "MIT",
+    8
+   ],
+   [
+    "UC Berkeley",
+    7
+   ],
+   [
+    "UIUC",
+    7
+   ],
+   [
+    "U Washington",
+    7
+   ],
+   [
+    "Oxford",
+    6
+   ],
+   [
+    "Columbia",
+    6
+   ],
+   [
+    "Cornell",
+    6
+   ]
+  ],
+  "IBM Research": [
+   [
+    "University of California, Irvine",
+    1
+   ],
+   [
+    "Universit\u00e4t Bern",
+    1
+   ],
+   [
+    "University of Rochester",
+    1
+   ],
+   [
+    "Harvard",
+    1
+   ],
+   [
+    "University of Texas, Dallas",
+    1
+   ],
+   [
+    "University of Edinburgh",
+    1
+   ],
+   [
+    "University of Warwick",
+    1
+   ],
+   [
+    "UPenn",
+    1
+   ],
+   [
+    "Iowa State University",
+    1
+   ],
+   [
+    "Institute for Theoretical Computer Science (IGI)",
+    1
+   ]
+  ],
+  "Toyota Research": [
+   [
+    "Georgia Tech",
+    2
+   ],
+   [
+    "MIT",
+    2
+   ],
+   [
+    "University of Bristol",
+    1
+   ],
+   [
+    "Idiap Research Institute",
+    1
+   ],
+   [
+    "Toyota Technological Institute at Chicago",
+    1
+   ],
+   [
+    "CentraleSupelec",
+    1
+   ],
+   [
+    "Technical University Munich",
+    1
+   ],
+   [
+    "Johns Hopkins",
+    1
+   ]
+  ],
+  "NVIDIA": [
+   [
+    "Stanford",
+    10
+   ],
+   [
+    "MIT",
+    9
+   ],
+   [
+    "Georgia Tech",
+    8
+   ],
+   [
+    "CMU",
+    8
+   ],
+   [
+    "ETH Zurich",
+    7
+   ],
+   [
+    "Cornell",
+    6
+   ],
+   [
+    "U Washington",
+    5
+   ],
+   [
+    "Toronto",
+    5
+   ],
+   [
+    "Princeton",
+    4
+   ],
+   [
+    "U Michigan",
+    4
+   ],
+   [
+    "California Institute of Technology",
+    4
+   ],
+   [
+    "USC",
+    4
+   ]
+  ],
+  "Ai2": [
+   [
+    "U Washington",
+    5
+   ],
+   [
+    "USC",
+    2
+   ],
+   [
+    "UCSD",
+    1
+   ],
+   [
+    "Seoul National University",
+    1
+   ],
+   [
+    "University of California, Santa Cruz",
+    1
+   ],
+   [
+    "MIT",
+    1
+   ],
+   [
+    "McGill",
+    1
+   ],
+   [
+    "ETH Zurich",
+    1
+   ],
+   [
+    "University of North Carolina, Chapel Hill",
+    1
+   ],
+   [
+    "UPenn",
+    1
+   ],
+   [
+    "Allen Institute for Artificial Intelligence",
+    1
+   ],
+   [
+    "Oxford",
+    1
+   ]
+  ],
+  "Genentech / Prescient": [
+   [
+    "Stanford",
+    2
+   ],
+   [
+    "UC Berkeley",
+    2
+   ],
+   [
+    "Cambridge",
+    1
+   ],
+   [
+    "UIUC",
+    1
+   ],
+   [
+    "Cornell",
+    1
+   ],
+   [
+    "KU Leuven",
+    1
+   ],
+   [
+    "Texas A&M",
+    1
+   ],
+   [
+    "Montreal/Mila",
+    1
+   ],
+   [
+    "Imperial College London, Imperial College London",
+    1
+   ],
+   [
+    "Sorbonne Universit\u00e9, ISIR",
+    1
+   ],
+   [
+    "UCLA",
+    1
+   ],
+   [
+    "Korea Advanced Institute of Science & Technology",
+    1
+   ]
+  ],
+  "Flatiron": [
+   [
+    "Ecole Normale Sup\u00e9rieure de Paris",
+    1
+   ],
+   [
+    "University of Connecticut",
+    1
+   ],
+   [
+    "Technion - Israel Institute of Technology",
+    1
+   ],
+   [
+    "UPenn",
+    1
+   ],
+   [
+    "NYU",
+    1
+   ],
+   [
+    "University of Colorado, Boulder",
+    1
+   ],
+   [
+    "Johns Hopkins",
+    1
+   ],
+   [
+    "Stanford",
+    1
+   ]
+  ],
+  "Isomorphic": [
+   [
+    "ETH Zurich",
+    1
+   ]
+  ],
+  "CZI / Biohub": [
+   [
+    "UT Austin",
+    1
+   ],
+   [
+    "IRISA, Universit\u00e9 Bretagne Sud",
+    1
+   ],
+   [
+    "University of California, Irvine",
+    1
+   ]
+  ]
+ },
+ "intern_current_schools": [
+  [
+   "Princeton",
+   9
+  ],
+  [
+   "U Washington",
+   9
+  ],
+  [
+   "UCL",
+   8
+  ],
+  [
+   "Georgia Tech",
+   6
+  ],
+  [
+   "Cornell",
+   5
+  ],
+  [
+   "Stanford",
+   5
+  ],
+  [
+   "USC",
+   5
+  ],
+  [
+   "Toronto",
+   5
+  ],
+  [
+   "MIT",
+   5
+  ],
+  [
+   "CMU",
+   5
+  ],
+  [
+   "U Maryland",
+   4
+  ],
+  [
+   "McGill",
+   4
+  ],
+  [
+   "UT Austin",
+   4
+  ],
+  [
+   "NYU",
+   4
+  ],
+  [
+   "UCLA",
+   4
+  ],
+  [
+   "ETH Zurich",
+   4
+  ],
+  [
+   "UIUC",
+   4
+  ],
+  [
+   "Montreal/Mila",
+   3
+  ],
+  [
+   "UC Berkeley",
+   3
+  ],
+  [
+   "EPFL",
+   3
+  ],
+  [
+   "Ben Gurion University of the Negev",
+   2
+  ],
+  [
+   "Oxford",
+   2
+  ],
+  [
+   "University of Science and Technology of China",
+   2
+  ],
+  [
+   "UPenn",
+   2
+  ],
+  [
+   "University of Illinois at Chicago",
+   2
+  ],
+  [
+   "Shanghai Jiao Tong University",
+   2
+  ],
+  [
+   "Columbia",
+   2
+  ],
+  [
+   "University of Wisconsin - Madison",
+   2
+  ],
+  [
+   "U Michigan",
+   2
+  ],
+  [
+   "Tel Aviv University",
+   2
+  ],
+  [
+   "Korea Advanced Institute of Science & Technology",
+   2
+  ],
+  [
+   "Duke",
+   2
+  ],
+  [
+   "Cambridge",
+   1
+  ],
+  [
+   "Beijing University of Posts and Telecommunications",
+   1
+  ],
+  [
+   "Hong Kong University of Science and Technology",
+   1
+  ],
+  [
+   "Boston University",
+   1
+  ],
+  [
+   "Dartmouth College",
+   1
+  ],
+  [
+   "Aalto University",
+   1
+  ],
+  [
+   "Google DeepMind",
+   1
+  ],
+  [
+   "Technische Universit\u00e4t Berlin",
+   1
+  ],
+  [
+   "Rutgers",
+   1
+  ],
+  [
+   "Universit\u00e9 de Montr\u00e9al",
+   1
+  ],
+  [
+   "University of Minnesota, Minneapolis",
+   1
+  ],
+  [
+   "University of Minnesota, Twin Cities",
+   1
+  ],
+  [
+   "Facebook",
+   1
+  ],
+  [
+   "Ben Gurion University of the Negev, Technion",
+   1
+  ],
+  [
+   "North Carolina State University",
+   1
+  ],
+  [
+   "UCSD",
+   1
+  ],
+  [
+   "National Yang Ming Chiao Tung University",
+   1
+  ],
+  [
+   "CNRS@CREATE",
+   1
+  ],
+  [
+   "University of Sydney",
+   1
+  ],
+  [
+   "Jagiellonian University Cracow",
+   1
+  ],
+  [
+   "CentraleSupelec",
+   1
+  ],
+  [
+   "Eberhard-Karls-Universit\u00e4t T\u00fcbingen",
+   1
+  ],
+  [
+   "Vanderbilt University",
+   1
+  ],
+  [
+   "University of Minnesota - Twin Cities",
+   1
+  ],
+  [
+   "Warsaw University of Technology",
+   1
+  ],
+  [
+   "University of Pittsburgh",
+   1
+  ],
+  [
+   "Weizmann Institute of Science",
+   1
+  ],
+  [
+   "Indian Institute of Science, Bangalore",
+   1
+  ]
+ ],
+ "advisors_of_recent_hires": [
+  [
+   "Andrew Zisserman (Oxford)",
+   7
+  ],
+  [
+   "Andreas Krause (ETH Zurich)",
+   6
+  ],
+  [
+   "Tom Rainforth (Oxford)",
+   5
+  ],
+  [
+   "Julian McAuley (UCSD)",
+   5
+  ],
+  [
+   "Heng Ji (UIUC)",
+   5
+  ],
+  [
+   "Ying Nian Wu (UCLA)",
+   5
+  ],
+  [
+   "Dimitris N. Metaxas (Rutgers)",
+   5
+  ],
+  [
+   "Hannaneh Hajishirzi (U Washington)",
+   4
+  ],
+  [
+   "Arnaud Doucet (Oxford)",
+   4
+  ],
+  [
+   "Yarin Gal (Oxford)",
+   4
+  ],
+  [
+   "Yoshua Bengio (Montreal/Mila)",
+   4
+  ],
+  [
+   "Max Welling (University of Amsterdam)",
+   4
+  ],
+  [
+   "Konrad Schindler (ETH Zurich)",
+   4
+  ],
+  [
+   "Antonio Torralba (MIT)",
+   4
+  ],
+  [
+   "Trevor Darrell (UC Berkeley)",
+   4
+  ],
+  [
+   "Sungroh Yoon (Seoul National University)",
+   4
+  ],
+  [
+   "Abhinav Shrivastava (U Maryland)",
+   4
+  ],
+  [
+   "Shimon Whiteson (Oxford)",
+   4
+  ],
+  [
+   "Muhao Chen (USC)",
+   4
+  ],
+  [
+   "Luc Van Gool (ETH Zurich)",
+   4
+  ],
+  [
+   "Song-Chun Zhu (UCLA)",
+   4
+  ],
+  [
+   "Ioannis Mitliagkas (Montreal/Mila)",
+   3
+  ],
+  [
+   "Ali Farhadi (U Washington)",
+   3
+  ],
+  [
+   "Li Fei-Fei (Stanford)",
+   3
+  ],
+  [
+   "Silvio Savarese (Stanford)",
+   3
+  ],
+  [
+   "Jia Deng (Princeton)",
+   3
+  ],
+  [
+   "Gaurav Sukhatme (USC)",
+   3
+  ],
+  [
+   "Angelika Steger (ETH Zurich)",
+   3
+  ],
+  [
+   "Mihaela van der Schaar (Cambridge)",
+   3
+  ],
+  [
+   "Luis Ceze (U Washington)",
+   3
+  ],
+  [
+   "Andrew Gordon Wilson (NYU)",
+   3
+  ],
+  [
+   "Gregory Valiant (Stanford)",
+   3
+  ],
+  [
+   "Adam Klivans (UT Austin)",
+   3
+  ],
+  [
+   "Kilian Q. Weinberger (Cornell)",
+   3
+  ],
+  [
+   "Tomas Lozano-Perez (MIT)",
+   3
+  ],
+  [
+   "Leslie Pack Kaelbling (MIT)",
+   3
+  ],
+  [
+   "Shie Mannor (Technion, Technion)",
+   3
+  ],
+  [
+   "Prateek Mittal (Princeton)",
+   3
+  ],
+  [
+   "Kilian Weinberger (Cornell)",
+   3
+  ],
+  [
+   "Graham Neubig (CMU)",
+   3
+  ],
+  [
+   "Kurt Keutzer (UC Berkeley)",
+   3
+  ],
+  [
+   "Andreas Geiger (Max Planck Institute for Intelligent Systems, Max-Planck Institute)",
+   3
+  ],
+  [
+   "Sanjeev Arora (Princeton)",
+   3
+  ],
+  [
+   "Jingrui He (UIUC)",
+   3
+  ],
+  [
+   "Shuiwang Ji (Texas A&M University - College Station)",
+   3
+  ],
+  [
+   "Tom Goldstein (U Maryland)",
+   3
+  ],
+  [
+   "Song Han (MIT)",
+   3
+  ],
+  [
+   "Bhiksha Raj (CMU)",
+   3
+  ],
+  [
+   "Pieter Abbeel (UC Berkeley)",
+   3
+  ],
+  [
+   "Andrea Vedaldi (Oxford)",
+   3
+  ],
+  [
+   "Yejin Choi (U Washington)",
+   3
+  ],
+  [
+   "Constantine Caramanis (UT Austin)",
+   3
+  ],
+  [
+   "Philip S. Yu (University of Illinois at Chicago)",
+   3
+  ],
+  [
+   "Lawrence Carin (Duke)",
+   3
+  ],
+  [
+   "Alan Yuille (Johns Hopkins)",
+   3
+  ],
+  [
+   "Furong Huang (U Maryland)",
+   3
+  ],
+  [
+   "Kris Kitani (CMU)",
+   3
+  ],
+  [
+   "Marc Pollefeys (ETH Zurich)",
+   3
+  ],
+  [
+   "Xiang Ren (USC)",
+   3
+  ],
+  [
+   "Jingbo Shang (UCSD)",
+   3
+  ],
+  [
+   "Rob Fergus (NYU)",
+   3
+  ],
+  [
+   "William Wang (UC Santa Barbara)",
+   3
+  ],
+  [
+   "Atlas Wang (UT Austin)",
+   2
+  ],
+  [
+   "ChengXiang Zhai (UIUC)",
+   2
+  ],
+  [
+   "Yee Whye Teh (Oxford)",
+   2
+  ],
+  [
+   "Regina Barzilay (MIT)",
+   2
+  ],
+  [
+   "Lior Wolf (Tel Aviv University)",
+   2
+  ],
+  [
+   "Rene Vidal (Johns Hopkins)",
+   2
+  ],
+  [
+   "Sham Kakade (U Washington)",
+   2
+  ],
+  [
+   "Ivan Laptev (INRIA)",
+   2
+  ],
+  [
+   "Adel Bibi (Oxford)",
+   2
+  ],
+  [
+   "Matthew B. Blaschko (KU Leuven)",
+   2
+  ],
+  [
+   "Purang Abolmaesumi (Columbia)",
+   2
+  ],
+  [
+   "Sidney Fels (Columbia)",
+   2
+  ],
+  [
+   "Matthew Gombolay (Georgia Tech)",
+   2
+  ],
+  [
+   "Sujay Sanghavi (UT Austin)",
+   2
+  ],
+  [
+   "John Duchi (Stanford)",
+   2
+  ],
+  [
+   "Marco Pavone (Stanford)",
+   2
+  ],
+  [
+   "Mohit Bansal (University of North Carolina, Chapel Hill)",
+   2
+  ],
+  [
+   "Anuj Karpatne (Virginia Tech)",
+   2
+  ]
+ ],
+ "advisors_of_interns": [
+  [
+   "Yejin Choi (U Washington)",
+   3
+  ],
+  [
+   "Noah A. Smith (U Washington)",
+   3
+  ],
+  [
+   "Pontus Stenetorp (UCL)",
+   3
+  ],
+  [
+   "Aaron Courville (Montreal/Mila)",
+   2
+  ],
+  [
+   "Saining Xie (NYU)",
+   2
+  ],
+  [
+   "Ankur Moitra (MIT)",
+   2
+  ],
+  [
+   "Thomas L. Griffiths (Princeton)",
+   1
+  ],
+  [
+   "Jonathan D. Cohen (Princeton)",
+   1
+  ],
+  [
+   "Ramin Zabih (Cornell)",
+   1
+  ],
+  [
+   "Asaf Shabtai (Ben Gurion University of the Negev)",
+   1
+  ],
+  [
+   "Ming Lin (U Maryland)",
+   1
+  ],
+  [
+   "Yiqun Xie (U Maryland)",
+   1
+  ],
+  [
+   "Chelsea Finn (Stanford)",
+   1
+  ],
+  [
+   "Erdem Biyik (USC)",
+   1
+  ],
+  [
+   "Stephen Tu (USC)",
+   1
+  ],
+  [
+   "Mark Coates (McGill)",
+   1
+  ],
+  [
+   "Devon Hjelm (Montreal/Mila)",
+   1
+  ],
+  [
+   "Sujay Sanghavi (UT Austin)",
+   1
+  ],
+  [
+   "Scott Shenker (UC Berkeley)",
+   1
+  ],
+  [
+   "Anna Korhonen (Cambridge)",
+   1
+  ],
+  [
+   "Ivan Vuli\u0107 (Cambridge)",
+   1
+  ],
+  [
+   "Edoardo Ponti (Cambridge)",
+   1
+  ],
+  [
+   "Nando de Freitas (Oxford)",
+   1
+  ],
+  [
+   "Kurt Keutzer (UC Berkeley)",
+   1
+  ],
+  [
+   "Qifeng Chen (Hong Kong University of Science and Technology)",
+   1
+  ],
+  [
+   "Humphrey Shi (Georgia Tech)",
+   1
+  ],
+  [
+   "Wen-Huang Cheng (Georgia Tech)",
+   1
+  ],
+  [
+   "Hong-Han Shuai (Georgia Tech)",
+   1
+  ],
+  [
+   "Yann LeCun (NYU)",
+   1
+  ],
+  [
+   "Mengye Ren (NYU)",
+   1
+  ],
+  [
+   "Honglak Lee (NYU)",
+   1
+  ],
+  [
+   "Michael Wellman (NYU)",
+   1
+  ],
+  [
+   "Brian Kulis (Boston University)",
+   1
+  ],
+  [
+   "Soroush Vosoughi (Dartmouth College)",
+   1
+  ],
+  [
+   "Wenke Lee (Georgia Tech)",
+   1
+  ],
+  [
+   "Baharan Mirzasoleiman (UCLA)",
+   1
+  ],
+  [
+   "Nhat Ho (UCLA)",
+   1
+  ],
+  [
+   "David Duvenaud (Toronto)",
+   1
+  ],
+  [
+   "Chris Maddison (Toronto)",
+   1
+  ],
+  [
+   "Ashish Khisti (Toronto)",
+   1
+  ],
+  [
+   "Alireza Makhzani (Toronto)",
+   1
+  ],
+  [
+   "Danilo Silva (Toronto)",
+   1
+  ],
+  [
+   "Frank R. Kschischang (Toronto)",
+   1
+  ],
+  [
+   "Luigi Acerbi (Aalto University)",
+   1
+  ],
+  [
+   "Samuel Kaski (Aalto University)",
+   1
+  ],
+  [
+   "Ryan Adams (Princeton)",
+   1
+  ],
+  [
+   "Antonio Torralba (Princeton)",
+   1
+  ],
+  [
+   "Vatsal Sharan (USC)",
+   1
+  ],
+  [
+   "Robin Jia (USC)",
+   1
+  ],
+  [
+   "Wengang Zhou (University of Science and Technology of China)",
+   1
+  ],
+  [
+   "Yan Lu (University of Science and Technology of China)",
+   1
+  ],
+  [
+   "Rob Fergus (NYU)",
+   1
+  ],
+  [
+   "Julia Vogt (ETH Zurich)",
+   1
+  ],
+  [
+   "Jeffrey Heer (U Washington)",
+   1
+  ],
+  [
+   "Aditi Krishnapriyan (UC Berkeley)",
+   1
+  ],
+  [
+   "Dongmian Zou (UC Berkeley)",
+   1
+  ],
+  [
+   "Ali Farhadi (U Washington)",
+   1
+  ],
+  [
+   "Klaus Robert Muller (Technische Universit\u00e4t Berlin)",
+   1
+  ],
+  [
+   "Sharon Levy (Rutgers)",
+   1
+  ],
+  [
+   "Judith Donath (MIT)",
+   1
+  ],
+  [
+   "Gregory Wornell (MIT)",
+   1
+  ],
+  [
+   "Emina Soljanin (MIT)",
+   1
+  ],
+  [
+   "Christopher Pal (Universit\u00e9 de Montr\u00e9al)",
+   1
+  ],
+  [
+   "Steven Wu (University of Minnesota, Minneapolis)",
+   1
+  ],
+  [
+   "Noah Snavely (Cornell)",
+   1
+  ],
+  [
+   "Amin Karbasi (MIT)",
+   1
+  ],
+  [
+   "Dan Spielman (MIT)",
+   1
+  ],
+  [
+   "Leslie Greengard (MIT)",
+   1
+  ],
+  [
+   "Risi Kondor (MIT)",
+   1
+  ],
+  [
+   "Cameron Musco (MIT)",
+   1
+  ],
+  [
+   "Philip S. Yu (University of Illinois at Chicago)",
+   1
+  ],
+  [
+   "Ranjay Krishna (Stanford)",
+   1
+  ],
+  [
+   "Jenq-Neng Hwang (Stanford)",
+   1
+  ],
+  [
+   "Dieter Fox (Stanford)",
+   1
+  ],
+  [
+   "Ali Farhadi (Stanford)",
+   1
+  ],
+  [
+   "Yongxin Chen (Georgia Tech)",
+   1
+  ],
+  [
+   "Zhouhan Lin (Georgia Tech)",
+   1
+  ],
+  [
+   "Quanshi Zhang (Georgia Tech)",
+   1
+  ],
+  [
+   "Ju Sun (University of Minnesota, Twin Cities)",
+   1
+  ],
+  [
+   "David Woodruff (CMU)",
+   1
+  ]
+ ],
+ "our_professors_as_advisors": {
+  "Chen Chen (University of Central Florida)": [
+   "Taojiannan Yang [PhD UCF] -> Amazon (hire)"
+  ]
+ },
+ "name_matches_other_school": {
+  "Yue Wang (University of Central Florida)": [
+   "Jiageng Mao [PhD USC] -> Google DeepMind (hire)"
+  ],
+  "Wei Wang (Icahn School of Medicine at Mount Sinai)": [
+   "Jun Huan [PhD None] -> Amazon (hire)",
+   "Roshni Iyer [PhD UCLA] -> Microsoft Research (hire)",
+   "Zijie Huang [PhD UCLA] -> Google (Research) (hire)"
+  ],
+  "Xin Li (Johns Hopkins University)": [
+   "Shan Jia [PhD Wuhan University] -> Google (Research) (hire)"
+  ],
+  "Hao Li (University of California San Francisco)": [
+   "Tianye Li [PhD USC] -> NVIDIA (hire)",
+   "Zhengfei Kuang [PhD Stanford] -> NVIDIA (hire)"
+  ],
+  "Boqing Gong (Boston University)": [
+   "YANDONG LI [PhD UCF] -> Google (Research) (hire)"
+  ],
+  "Chao Zhang (Boston University)": [
+   "Yuchen Zhuang [PhD Georgia Tech] -> Google DeepMind (hire)",
+   "Rongzhi Zhang [PhD Georgia Tech] -> Amazon (intern/student)"
+  ]
+ }
+}
