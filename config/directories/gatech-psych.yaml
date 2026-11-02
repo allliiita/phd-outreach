@@ -1,0 +1,8 @@
+institution: Georgia Institute of Technology
+unit: School of Psychology
+urls: ["https://psychology.gatech.edu/people/all-faculty"]
+item: tr.odd, tr.even
+name: td a
+profile: td a@href
+filter: all
+expect: 36

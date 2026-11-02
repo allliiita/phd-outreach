@@ -1,0 +1,9 @@
+institution: Georgia Institute of Technology
+unit: School of Mathematics
+urls: ["https://math.gatech.edu/people?field_job_type_tid=11"]
+item: div.views-row
+name: .profile-name
+title: .profile-title
+profile: .profile-name a@href
+filter: all
+expect: 77

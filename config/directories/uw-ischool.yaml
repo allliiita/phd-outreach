@@ -1,0 +1,8 @@
+institution: University of Washington
+unit: Information School (core faculty)
+urls: [https://ischool.uw.edu/people/faculty/core]
+item: article.card[data-type*="core"]
+name: h2 a
+title: p.small em
+profile: h2 a@href
+filter: all

@@ -1,0 +1,8 @@
+institution: University of Washington
+unit: Applied Mathematics
+urls: [https://amath.washington.edu/people/faculty]
+item: div.directory-item
+name: h2.directory-item__name a
+title: strong.directory-item__title
+profile: h2.directory-item__name a@href
+filter: all

@@ -1,0 +1,9 @@
+institution: Georgia Institute of Technology
+unit: School of Biological Sciences
+urls: ["https://biosciences.gatech.edu/people?field_last_name_value=&field_job_category_tid=19"]
+item: p.ppl-txt
+name: span.name
+title: span.title
+profile: span.name a@href
+filter: all
+expect: 82

@@ -1,0 +1,8 @@
+institution: University of Washington
+unit: Linguistics
+urls: [https://linguistics.washington.edu/people/faculty]
+item: div.views-row
+name: h3.field-content
+title: div.views-field-field-job-title
+profile: h3.field-content a@href
+filter: all

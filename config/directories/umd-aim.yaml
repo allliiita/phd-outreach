@@ -1,0 +1,9 @@
+institution: University of Maryland
+unit: AIM
+urls: ["https://aim.umd.edu/people", "https://aim.umd.edu/people?page=1", "https://aim.umd.edu/people?page=2", "https://aim.umd.edu/people?page=3", "https://aim.umd.edu/people?page=4", "https://aim.umd.edu/people?page=5", "https://aim.umd.edu/people?page=6", "https://aim.umd.edu/people?page=7", "https://aim.umd.edu/people?page=8", "https://aim.umd.edu/people?page=9", "https://aim.umd.edu/people?page=10", "https://aim.umd.edu/people?page=11", "https://aim.umd.edu/people?page=12", "https://aim.umd.edu/people?page=13", "https://aim.umd.edu/people?page=14", "https://aim.umd.edu/people?page=15", "https://aim.umd.edu/people?page=16", "https://aim.umd.edu/people?page=17", "https://aim.umd.edu/people?page=18", "https://aim.umd.edu/people?page=19", "https://aim.umd.edu/people?page=20"]
+filter: all
+expect: 305
+item: div.item
+name: p.person-name
+title: div.person-text > div:not(.person-text-main-wrapper)
+profile: a.person-name@href
