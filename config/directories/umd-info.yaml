@@ -1,0 +1,9 @@
+institution: University of Maryland
+unit: College of Information (iSchool)
+urls: ['https://info.umd.edu/category/directory', 'https://info.umd.edu/directory/page/2/', 'https://info.umd.edu/directory/page/3/', 'https://info.umd.edu/directory/page/4/', 'https://info.umd.edu/directory/page/5/', 'https://info.umd.edu/directory/page/6/', 'https://info.umd.edu/directory/page/7/', 'https://info.umd.edu/directory/page/8/', 'https://info.umd.edu/directory/page/9/', 'https://info.umd.edu/directory/page/10/', 'https://info.umd.edu/directory/page/11/', 'https://info.umd.edu/directory/page/12/', 'https://info.umd.edu/directory/page/13/', 'https://info.umd.edu/directory/page/14/', 'https://info.umd.edu/directory/page/15/', 'https://info.umd.edu/directory/page/16/', 'https://info.umd.edu/directory/page/17/', 'https://info.umd.edu/directory/page/18/']
+filter: all
+item: div.col-lg-2
+name: p a
+title: p
+profile: p a@href
+skip_titles: ['student', 'postdoc', 'manager', 'coordinator', 'specialist', 'analyst', 'support assistant', 'administrative', 'officer', 'accountant', 'payroll', 'technician', 'designer', 'recruit', 'advisor', 'assistant to', 'librarian']
