@@ -52,6 +52,9 @@ def run(cfg_path: Path, refresh: bool = False) -> tuple[list[dict], list[str]]:
             name = clean_name(_sel(it, cfg.get("name")))
             if not name:
                 continue
+            m = LAST_FIRST.match(name)
+            if m:   # "Huang, Furong" -> "Furong Huang" (UMD directories, 2026-11-02); deterministic, survives re-runs
+                name = f"{m.group(2)} {m.group(1)}"
             if cfg.get("require") and not re.search(cfg["require"], " ".join(it.get_text(" ").split())):
                 continue  # shared multi-department list: keep only this unit's rows
             prof = _sel(it, cfg.get("profile"))

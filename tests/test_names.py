@@ -23,3 +23,9 @@ def test_uc_titles():
     from outreach.enrich import young_title
     assert young_title("Asst Professor In Residence") and young_title("Assoc Professor")
     assert not young_title("Asst Adjunct Professor") and not young_title("HS Asst Clinical Professor")
+
+
+def test_last_first():
+    from outreach.roster import LAST_FIRST
+    m = LAST_FIRST.match("Huang, Furong")
+    assert m and f"{m.group(2)} {m.group(1)}" == "Furong Huang"

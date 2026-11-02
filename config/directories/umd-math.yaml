@@ -1,0 +1,9 @@
+institution: University of Maryland
+unit: Mathematics (incl. Statistics program)
+urls: ["https://www-math.umd.edu/people/faculty.html"]
+filter: all
+item: div.el-item
+name: h3
+title: div.jl-width-expand
+profile: a@href
+expect: 88

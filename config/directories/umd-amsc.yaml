@@ -1,0 +1,8 @@
+institution: University of Maryland
+unit: AMSC (Applied Mathematics & Statistics, and Scientific Computation)
+urls: ["https://amsc.umd.edu/people/faculty/faculty-listing.html"]
+filter: all
+item: div[data-rlta-element=button]
+name: h3
+title: h3
+expect: 179
