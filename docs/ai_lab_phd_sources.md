@@ -98,3 +98,33 @@ Only schools with evidence in this pass; absence = "not found in this limited se
   advisor Rich West); NYU → Meta FAIR / DeepMind (Kyunghyun Cho, Yann LeCun students); Georgia Tech → DeepMind (Jie Tan).
 - Better data needs OpenReview education histories (recent, structured): tools/openreview_export.py on the applicant's own
   computer (OpenReview challenges cloud IPs).
+
+## Main result (2026-11-02): OpenReview profiles collected by the applicant (outreach/openreview_tally.py)
+Pool: authors of accepted ICLR 2025 / NeurIPS 2024 / ICML 2025 papers whose current position is at a top lab (OpenAI/Anthropic excluded): 3428 profiles, 3209 staff, 189 interns/students; **1385 staff with a PhD finished 2020 or later**.
+
+### PhD schools of recent hires (PhD ≥ 2020)
+CMU 52, MIT 50, Stanford 48, Oxford 42, UIUC 37, ETH Zurich 37, UC Berkeley 37, U Washington 36, Georgia Tech 33, UT Austin 31, USC 27, UCSD 26, U Michigan 25, U Maryland 25, UPenn 24, Johns Hopkins 23, Cambridge 22, Princeton 21, UCLA 20, Cornell 20, Toronto 18, NYU 17, Montreal/Mila 15, UCL 15, Columbia 14, National University of Singapore 13, Rutgers 13, Tel Aviv University 12, Seoul National University 11, Technion, Technion 10, University of Amsterdam 10, Harvard 10, California Institute of Technology 10, Technical University Munich 9, EPFL 9
+
+### By lab (top 8)
+- Apple: CMU 8, UT Austin 7, Georgia Tech 7, ETH Zurich 5, Oxford 4, UC Berkeley 4, U Maryland 4, Princeton 3
+- Microsoft Research: CMU 7, Stanford 7, Cambridge 6, Johns Hopkins 6, UC Berkeley 5, Oxford 4, Montreal/Mila 3, UPenn 3
+- Meta (FAIR/GenAI): UIUC 11, MIT 10, U Washington 9, CMU 8, U Michigan 7, UPenn 7, Montreal/Mila 6, Columbia 6
+- Amazon: MIT 7, U Michigan 7, UIUC 7, Johns Hopkins 6, Oxford 6, Stanford 5, CMU 5, UCLA 4
+- Google DeepMind: Oxford 15, UC Berkeley 11, ETH Zurich 9, UCL 9, MIT 8, Cambridge 8, Stanford 8, UCSD 6
+- Google (Research): CMU 11, ETH Zurich 9, UCSD 9, Stanford 9, UT Austin 9, MIT 8, UC Berkeley 7, UIUC 7
+- IBM Research: University of California, Irvine 1, Universität Bern 1, University of Rochester 1, Harvard 1, University of Texas, Dallas 1, University of Edinburgh 1, University of Warwick 1, UPenn 1
+- Toyota Research: Georgia Tech 2, MIT 2, University of Bristol 1, Idiap Research Institute 1, Toyota Technological Institute at Chicago 1, CentraleSupelec 1, Technical University Munich 1, Johns Hopkins 1
+- NVIDIA: Stanford 10, MIT 9, Georgia Tech 8, CMU 8, ETH Zurich 7, Cornell 6, U Washington 5, Toronto 5
+- Ai2: U Washington 5, USC 2, UCSD 1, Seoul National University 1, University of California, Santa Cruz 1, MIT 1, McGill 1, ETH Zurich 1
+- Genentech / Prescient: Stanford 2, UC Berkeley 2, Cambridge 1, UIUC 1, Cornell 1, KU Leuven 1, Texas A&M 1, Montreal/Mila 1
+- Flatiron: Ecole Normale Supérieure de Paris 1, University of Connecticut 1, Technion - Israel Institute of Technology 1, UPenn 1, NYU 1, University of Colorado, Boulder 1, Johns Hopkins 1, Stanford 1
+- Isomorphic: ETH Zurich 1
+- CZI / Biohub: UT Austin 1, IRISA, Université Bretagne Sud 1, University of California, Irvine 1
+
+### Advisors with the most recent lab hires
+Andrew Zisserman (Oxford) 7, Andreas Krause (ETH Zurich) 6, Tom Rainforth (Oxford) 5, Julian McAuley (UCSD) 5, Heng Ji (UIUC) 5, Ying Nian Wu (UCLA) 5, Dimitris N. Metaxas (Rutgers) 5, Hannaneh Hajishirzi (U Washington) 4, Arnaud Doucet (Oxford) 4, Yarin Gal (Oxford) 4, Yoshua Bengio (Montreal/Mila) 4, Max Welling (University of Amsterdam) 4, Konrad Schindler (ETH Zurich) 4, Antonio Torralba (MIT) 4, Trevor Darrell (UC Berkeley) 4, Sungroh Yoon (Seoul National University) 4, Abhinav Shrivastava (U Maryland) 4, Shimon Whiteson (Oxford) 4, Muhao Chen (USC) 4, Luc Van Gool (ETH Zurich) 4, Song-Chun Zhu (UCLA) 4, Ioannis Mitliagkas (Montreal/Mila) 3, Ali Farhadi (U Washington) 3, Li Fei-Fei (Stanford) 3, Silvio Savarese (Stanford) 3, Jia Deng (Princeton) 3, Gaurav Sukhatme (USC) 3, Angelika Steger (ETH Zurich) 3, Mihaela van der Schaar (Cambridge) 3, Luis Ceze (U Washington) 3, Andrew Gordon Wilson (NYU) 3, Gregory Valiant (Stanford) 3, Adam Klivans (UT Austin) 3, Kilian Q. Weinberger (Cornell) 3, Tomas Lozano-Perez (MIT) 3, Leslie Pack Kaelbling (MIT) 3, Shie Mannor (Technion, Technion) 3, Prateek Mittal (Princeton) 3, Kilian Weinberger (Cornell) 3, Graham Neubig (CMU) 3
+
+### Our list (verified: hire's PhD school = professor's school)
+{"Chen Chen (University of Central Florida)": ["Taojiannan Yang [PhD UCF] -> Amazon (hire)"]}
+
+Caveats: only people who publish at ICLR/NeurIPS/ICML and keep an OpenReview profile; young advisors have few graduates yet, so absence is expected for them.
