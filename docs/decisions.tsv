@@ -13,3 +13,7 @@ ts	phase	decision	why	evidence	result
 2026-11-02T18:07:41Z	instruments	base-SHA rule caught a wrong worktree base again (started at 28ed311)	rule earns its place	phase-2 report	done
 2026-11-02T18:07:41Z	instruments	precision: snapshots are gitignored and absent here; final export re-runs record verification on fresh fetches	simplest fix, no new storage	.gitignore data/snapshots/	open
 2026-11-02T18:07:41Z	instruments	accepted agent choices: done = rows==page_count; out-of-scope ledger match counts as found; fit '?' stays open; ML-keyword filter on NSF/NIH	all consistent with the predicate	phase-2 report	done
+2026-11-02T18:40:58Z	pilot	Cornell pilot: units 0, recall 0, funnel 29 awaiting fit; 35 tests	pilot predicate (units+recall) met	commit d058f28; coordinator re-ran check + pytest	done
+2026-11-02T18:40:58Z	pilot	verifier (haiku): 3 issues; Wen Sun left Cornell (now Databricks) but was added via a CSRankings roster	CSRankings is stale; my CLAUDE.md listed probes as unit alternates	verifier report; wensun.github.io	fix
+2026-11-02T18:40:58Z	pilot	rule: probes are leads, never roster rows; removed probes from the alternates ladder	root cause was the spec, not the worker	CLAUDE.md	done
+2026-11-02T18:40:58Z	pilot	"Chromium not installed" claim was wrong; browser launches, cs.cornell.edu itself times out from cloud	keep alt-source path; no tooling change	coordinator test of outreach.fetch.render	done
