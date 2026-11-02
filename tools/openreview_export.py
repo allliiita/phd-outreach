@@ -5,7 +5,7 @@
 
 It reads the author lists of accepted ICLR 2025 / NeurIPS 2024 / ICML 2025 papers, then those authors' public
 OpenReview profiles (education + work history), and keeps people whose CURRENT position is at one of the labs below.
-Polite: one request per second. Takes ~1-2 hours; you can stop it any time, partial output is kept.
+~800 requests (profiles are fetched 50 at a time), 2 per second: about 7-10 minutes. Stop any time; partial output is kept.
 """
 import json
 import re
@@ -22,7 +22,7 @@ S.headers["User-Agent"] = "phd-applicant-research (personal use)"
 
 
 def get(path, **params):
-    time.sleep(1.0)
+    time.sleep(0.5)
     r = S.get(API + path, params=params, timeout=60)
     r.raise_for_status()
     return r.json()
