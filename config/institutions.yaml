@@ -50,6 +50,7 @@ institutions:
   - {name: Pennsylvania State University, aliases: [Penn State], email_domains: [psu.edu]}
   - {name: Rice University, aliases: [Rice], email_domains: [rice.edu]}
   - {name: University of California Santa Barbara, csrankings: "Univ. of California - Santa Barbara", aliases: [UCSB], email_domains: [ucsb.edu]}
+  - {name: University of California Santa Cruz, aliases: [UCSC], email_domains: [ucsc.edu]}
   - {name: University of California Irvine, csrankings: "Univ. of California - Irvine", aliases: [UCI], email_domains: [uci.edu]}
   - {name: University of California Davis, csrankings: "Univ. of California - Davis", aliases: [UC Davis], email_domains: [ucdavis.edu]}
   - {name: University of California San Francisco, aliases: [UCSF], email_domains: [ucsf.edu]}

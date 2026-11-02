@@ -39,6 +39,10 @@ ucsf_profiles_scan.py); page through every result page.
 3. Big list without titles (e.g. names only): still roster it; titles come from profiles later.
 Budget: ~90 tool calls. Cut losses on a unit after ~6 calls: mark it and move on.
 
+## Checkpointing (2026-11-02: five agents were cut off by a usage limit and lost their grid files)
+Write as you go: append the unit's grid line to data/grid/<slug>.jsonl (and its census line) IMMEDIATELY after each
+unit is rostered, not at the end. On start, run `python -m outreach.progress <slug>` and do only what it lists.
+
 ## Output
 Append one line per unit to data/grid/<slug>.jsonl:
 {"institution","unit","group":"G1..G4","urls":[...],"roster":"data/roster/<file>.jsonl","rows":N,
