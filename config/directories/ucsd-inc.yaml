@@ -1,0 +1,9 @@
+institution: University of California San Diego
+unit: Institute for Neural Computation (core faculty)
+urls: [https://inc.ucsd.edu/people/core-faculty.php]
+item: div.card.mb-4
+name: h3.card-title
+title: p.title
+profile: a@href
+filter: all
+expect: 19

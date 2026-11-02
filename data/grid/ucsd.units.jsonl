@@ -49,3 +49,5 @@
 {"unit": "Theatre and Dance", "kind": "phd_program", "source": "https://grad.ucsd.edu/admissions/programs/index.html", "decision": "out_of_scope", "reason": "arts"}
 {"unit": "Urban Studies & Planning", "kind": "phd_program", "source": "https://grad.ucsd.edu/admissions/programs/index.html", "decision": "out_of_scope", "reason": "social science"}
 {"unit": "Visual Arts", "kind": "phd_program", "source": "https://grad.ucsd.edu/admissions/programs/index.html", "decision": "out_of_scope", "reason": "arts"}
+{"unit": "Institute for Neural Computation", "kind": "institute", "source": "https://inc.ucsd.edu/", "decision": "covered", "grid_unit": "Institute for Neural Computation (core faculty)"}
+{"unit": "Hal\u0131c\u0131o\u011flu Data Science Institute", "kind": "institute", "source": "https://datascience.ucsd.edu/faculty/", "decision": "covered", "grid_unit": "School of Computing, Information and Data Sciences / HDSI"}

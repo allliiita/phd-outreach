@@ -1,0 +1,8 @@
+institution: University of Maryland
+unit: Electrical and Computer Engineering
+urls: ['https://ece.umd.edu/clark/facultydir?nfilter=A', 'https://ece.umd.edu/clark/facultydir?nfilter=B', 'https://ece.umd.edu/clark/facultydir?nfilter=C', 'https://ece.umd.edu/clark/facultydir?nfilter=D', 'https://ece.umd.edu/clark/facultydir?nfilter=E', 'https://ece.umd.edu/clark/facultydir?nfilter=F', 'https://ece.umd.edu/clark/facultydir?nfilter=G', 'https://ece.umd.edu/clark/facultydir?nfilter=H', 'https://ece.umd.edu/clark/facultydir?nfilter=I', 'https://ece.umd.edu/clark/facultydir?nfilter=J', 'https://ece.umd.edu/clark/facultydir?nfilter=K', 'https://ece.umd.edu/clark/facultydir?nfilter=L', 'https://ece.umd.edu/clark/facultydir?nfilter=M', 'https://ece.umd.edu/clark/facultydir?nfilter=N', 'https://ece.umd.edu/clark/facultydir?nfilter=O', 'https://ece.umd.edu/clark/facultydir?nfilter=P', 'https://ece.umd.edu/clark/facultydir?nfilter=Q', 'https://ece.umd.edu/clark/facultydir?nfilter=R', 'https://ece.umd.edu/clark/facultydir?nfilter=S', 'https://ece.umd.edu/clark/facultydir?nfilter=T', 'https://ece.umd.edu/clark/facultydir?nfilter=U', 'https://ece.umd.edu/clark/facultydir?nfilter=V', 'https://ece.umd.edu/clark/facultydir?nfilter=W', 'https://ece.umd.edu/clark/facultydir?nfilter=Y', 'https://ece.umd.edu/clark/facultydir?nfilter=Z']
+filter: all
+item: div.faculty_row
+name: div.field-directory-name-title-wrapper a
+title: div.field-directory-name-title-wrapper
+profile: a@href
