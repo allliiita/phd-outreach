@@ -21,7 +21,9 @@ robustness / distribution shift, interpretability, fairness, safety / security o
 NeuroAI = ML on neural data, brain-inspired / neuro-AI models, computational neuroscience with ML,
 connectomics, BCI decoding. AI-for-science = ML for molecules, proteins, materials, physics, genomics.
 medical-AI = ML on clinical data, medical imaging, EHR. stats-methods = statistical learning / inference
-methods. core-ML/CV = everything else in ML/AI (CV, NLP, RL, theory, LLMs, robotics learning).
+methods. core-ML/CV = everything else in ML/AI (CV, NLP, RL, theory, LLMs, robotics learning), INCLUDING
+efficient ML / ML systems (training & inference efficiency, compression, hardware-aware ML) and data-centric AI
+(data quality, data selection, curation, labeling) — both explicitly wanted by the applicant (2026-11-02): A.
 
 ## Calibration (coordinator, 2026-10-31, after the first pass was too strict)
 - Statistical methodology (incl. statistical genetics / genomics METHODS, causal inference, Bayesian methods):

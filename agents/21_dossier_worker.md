@@ -30,6 +30,9 @@ For each professor:
      journal page; affiliation must match) -> {"value","url","quote","source":"paper"}. Never construct.
    - hook: which applicant project (applicant.yaml `projects`) connects to which theme/paper, 1 sentence,
      or "" if nothing honest
+   - rising_star (applicant's model advisor: gshi.me): phd {institution, year}, postdoc {institution}, joined
+     {year}, industry tie (e.g. "Amazon Scholar", visiting researcher at a company), has a prospective-students
+     page (url) — each with url + quote; null if not on the pages
    - red_flags: moving, on leave, not taking students, not actually ML, wrong person
 4. If the first-pass fit/theme is wrong given what you read, give corrected fit (A/B/C) and why — using the A/B/C
    rules and Calibration in agents/26_fit_tagger.md (pure AI, ML systems, CV, robot learning are in scope: the

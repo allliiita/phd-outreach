@@ -10,6 +10,7 @@ applicant can become an AI research scientist. Departments are search handles; p
 | G2 | AI institutes, centers, initiatives, new AI departments | Duke Discovery AI, Duke AI Health, Mount Sinai Windreich AI dept, BU Hariri / CISE, UCSF Bakar / Computational Precision Health, joint Berkeley–UCSF programs | member / faculty lists |
 | G3 | NeuroAI homes | neuroscience / neurobiology depts and programs, CSHL | full list; keep only computational / ML people |
 | G4 | Molecular / biomedical computation | BME, chemistry, pharmacology, biostatistics & bioinformatics (in medical school), comp-bio PhD programs, imaging-AI centers | full list; keep only computational / ML people |
+| G1+ | AI-adjacent method departments (2026-11-02) | operations research / IEOR, information schools, linguistics (NLP), applied mathematics, computational cognitive science / psychology | full list; keep only ML / AI people |
 | + | New hires | "new faculty" news 2024–2026 of engineering / CS / data-science / medical schools | incoming assistant professors are often only there |
 | + | School-wide keyword search | only where the directory supports it (UCSF Profiles), restricted to G1–G4-type homes | keywords: machine learning, deep learning, AI, ... |
 
