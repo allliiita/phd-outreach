@@ -91,6 +91,7 @@ institutions:
   - {name: Whitehead Institute, kind: institute, email_domains: [wi.mit.edu, mit.edu], phd_path: "via MIT"}
   - {name: Arc Institute, kind: institute, email_domains: [arcinstitute.org], phd_path: "via Stanford / UCSF / Berkeley appointment"}
   - {name: Chan Zuckerberg Biohub, aliases: [CZ Biohub], kind: institute, email_domains: [czbiohub.org], phd_path: "via partner-university appointment"}
+  - {name: Rockefeller University, aliases: [Rockefeller], kind: institute, email_domains: [rockefeller.edu], phd_path: "own PhD program (David Rockefeller Graduate Program); Tri-I CBM", grants_phd: true}
   - {name: Memorial Sloan Kettering Cancer Center, aliases: [MSK, MSKCC], kind: institute, email_domains: [mskcc.org], phd_path: "own school (GSK) and Weill Cornell Tri-I", grants_phd: true}
   - {name: New York Genome Center, aliases: [NYGC], kind: institute, email_domains: [nygenome.org], phd_path: "via Columbia / Cornell / NYU appointment"}
   - {name: Jackson Laboratory, aliases: [JAX], kind: institute, email_domains: [jax.org], phd_path: "via UConn / Maine / Tufts programs"}

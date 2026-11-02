@@ -12,6 +12,7 @@ focus_schools:               # batch 1 (applicant, 2026-10-31)
   - Johns Hopkins University
   - University of Central Florida
   - Cornell University            # Ithaca + Cornell Tech (NYC); Weill Cornell only for its AI/computational units
+  - Rockefeller University        # added by applicant 2026-11-02; heads of lab (Assistant Professor = young PI)
 postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
   - Washington University in St. Louis
   - University of Virginia
