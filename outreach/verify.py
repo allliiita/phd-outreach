@@ -220,34 +220,76 @@ def cmd_check() -> None:
     print("fail reasons:", Counter(w.split(":")[0] for x in res for w in x["why"]).most_common())
 
 
+CLINICAL = re.compile(r"\b(medicine|neurology|neurosurgery|surgery|pediatrics|ophthalmology|psychiatry|anesthesiology|"
+                      r"nephrology|cardiology|oncology|dermatology|urology|obstetrics|orthopa\w*|emergency)\b", re.I)
+NONCLINICAL = re.compile(r"statist|bioinformatic|informatic|engineering|computer|computing|data|artificial intelligence|\bAI\b|"
+                         r"mathemat|genetic|genomic|neuroscience|biology", re.I)
+
+
+def scope_problem(title: str) -> str:
+    """Applicant's scope rules applied to the verified title (targets.yaml exclude_units): clinical-only appointments
+    and business-only appointments are out; a joint appointment with a non-clinical / non-business unit stays."""
+    from .batch1 import BUSINESS
+    t = re.sub(r"school of medicine|college of medicine|(icahn|weill)[^,;|]*", "", title, flags=re.I)
+    if CLINICAL.search(t) and not NONCLINICAL.search(t):
+        return f"scope: clinical-department appointment ({title[:60]})"
+    if BUSINESS.search(t) and not NONCLINICAL.search(t):
+        return f"scope: business-school appointment ({title[:60]})"
+    return ""
+
+
 def cmd_sheet(xlsx: Path) -> None:
+    """Send-ready list = verified records, ranked by the applicant's priority rules (batch1.priority + dblp bump),
+    then 'recruiting' on their own page, then top-ML papers. Extra columns from the earlier export when present."""
     import openpyxl
+    from .batch1 import priority
     ix = by_name()
-    res = {x["id"]: x for x in jl(V / "result.jsonl")}
+    ps = {p["id"]: p for p in jl(DATA / "tag" / "people.jsonl")}
+    tag = DATA / "tag"
+    tags = {t["id"]: t for f in sorted((tag / "out").glob("*.jsonl")) for t in jl(f)}
+    tags.update({t["id"]: t for f in sorted((tag / "re_out").glob("*.jsonl")) for t in jl(f)})
+    for r in jl(tag / "retheme_out.jsonl"):
+        if r["id"] in tags and r.get("theme"):
+            tags[r["id"]]["theme"] = r["theme"]
+    dblp = {d["id"]: d for d in jl(DATA / "dblp.jsonl")}
+    old = {}
+    if xlsx.exists():
+        for _, d in sheet_rows(xlsx):
+            p = find(d, ix)
+            if p:
+                old.setdefault(p["id"], d)
     ready, failed = [], []
-    for s, d in sheet_rows(xlsx):
-        p = find(d, ix)
-        x = res.get(p["id"]) if p else None
-        if not x:
-            continue
-        d = {**d, "Email": x["email"] or d.get("Email"), "Title (verified)": x["title"], "ML (own words)": x["ml_quote"]}
-        if x["pass"]:
-            ready.append(d)
+    for x in jl(V / "result.jsonl"):
+        p, t, db, o = ps.get(x["id"], {}), tags.get(x["id"], {}), dblp.get(x["id"], {}), old.get(x["id"], {})
+        pr = priority(t.get("theme", ""), set(p.get("groups") or []))
+        if (db.get("ml_top") or 0) >= 3:
+            pr = max(1, pr - 1)
+        rec = {"Priority": pr, "School": x["institution"], "Department(s)": "; ".join(dict.fromkeys(p.get("departments") or [])),
+               "Name": x["name"], "Title (verified)": x["title"], "Theme": t.get("theme", ""),
+               "Top-ML papers 2023-26 (dblp)": db.get("ml_top", "") if db.get("pid") else "",
+               "Email (verified)": x["email"], "Research (own words)": x["ml_quote"], "Official page": x["official_page"],
+               "Lab site": p.get("homepage") or o.get("Homepage"), "Recruiting (own words)": o.get("Recruiting (own words)"),
+               "How they want to be contacted": o.get("How they want to be contacted (own words)"),
+               "Hook (your project)": o.get("Hook (your project)") or t.get("hook", ""), "id": x["id"]}
+        scope = scope_problem(x.get("title") or "")
+        if x["pass"] and not scope:
+            ready.append(rec)
+        elif x["pass"]:
+            failed.append({**rec, "Why not": scope})
         else:
-            failed.append({**d, "Why not": "; ".join(x["why"])})
-    uniq = lambda rs: list({(r["Name"], r.get("School")): r for r in rs}.values())
-    ready = sorted(uniq(ready), key=lambda r: (r.get("Priority") or 99, r.get("Fit") or "Z"))
+            failed.append({**rec, "Why not": "; ".join(x["why"])})
+    ready.sort(key=lambda r: (r["Priority"], not r["Recruiting (own words)"], -(r["Top-ML papers 2023-26 (dblp)"] or 0)))
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name, rs in (("Send-ready (verified)", ready), ("Failed verification", uniq(failed))):
+    for name, rs in (("Send-ready (verified)", ready), ("Failed verification", failed)):
         ws = wb.create_sheet(name)
-        cols = list(dict.fromkeys(k for r in rs for k in r))
+        cols = list(dict.fromkeys(k for r in rs for k in r)) or ["Name"]
         ws.append(cols)
         for r in rs:
-            ws.append([str(r.get(c)) if isinstance(r.get(c), (list, dict)) else r.get(c) for c in cols])
+            ws.append([r.get(c) for c in cols])
     out = DATA / "export" / "send_ready.xlsx"
     wb.save(out)
-    print(f"{len(ready)} send-ready, {len(uniq(failed))} failed -> {out}")
+    print(f"{len(ready)} send-ready, {len(failed)} failed -> {out}")
 
 
 def cmd_retry(size: int = 10) -> None:
