@@ -25,11 +25,33 @@ focus_schools:               # batch 1 (applicant, 2026-10-31)
   - University of Pennsylvania
   - University of Massachusetts Amherst
   - University of California Santa Barbara
+  # batch 5 (applicant, 2026-11-02)
+  - New York University
 postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
   - Washington University in St. Louis
   - University of Virginia
   - Columbia University           # later (applicant 2026-11-02)
   - Canada (UBC, SFU, Waterloo)   # discussed 2026-11-02; US first
+  # 2026-11-02: never-decided universities, held by the applicant ("先暂缓")
+  - Stanford University
+  - University of California Berkeley
+  - University of California Los Angeles
+  - California Institute of Technology
+  - University of Chicago
+  - Toyota Technological Institute at Chicago
+  - Northwestern University
+  - University of California Davis
+  - Stony Brook University
+  - University of North Carolina at Chapel Hill
+  - Vanderbilt University
+  - Northeastern University
+  - University of Pittsburgh
+  - University of Utah
+  - Arizona State University
+  - University of Colorado Boulder
+  - Virginia Tech
+  - Dartmouth College
+  - University of Florida
 exclude_schools:             # "too competitive", "too remote", "not for me"
   - University of Southern California   # 2026-11-02: LA, safety
   - Emory University                    # 2026-11-02: not wanted
@@ -52,7 +74,27 @@ exclude_schools:             # "too competitive", "too remote", "not for me"
   - University of Notre Dame
   - Pennsylvania State University
 exclude_units: [biostatistics in schools of public health, UCSF Epidemiology & Biostatistics, clinical departments, business schools]   # docs/coverage_logic.md
-institutes_this_round: [Cold Spring Harbor Laboratory]   # other institutes postponed
+# Institutes (applicant, 2026-11-02). A PI counts only through a PhD program they can admit through.
+# via: partner school whose census this institute's PIs are counted under (not a separate school).
+institutes_this_round:
+  - {name: Cold Spring Harbor Laboratory, via: own school (BioAI PhD)}
+  - {name: Rockefeller University, via: own program}
+  - {name: Allen Institute for AI, via: University of Washington}       # only researchers with a UW appointment
+  - {name: Allen Institute, via: University of Washington}              # brain / cell science; NeuroAI
+  - {name: Salk Institute, via: University of California San Diego}     # computational PIs only
+  - {name: Arc Institute, via: University of California San Francisco}  # PIs with a UCSF appointment
+  - {name: Chan Zuckerberg Biohub, via: University of California San Francisco}
+  - {name: Memorial Sloan Kettering Cancer Center, via: own school + Tri-I Computational Biology & Medicine}
+institutes_postponed: [Gladstone Institutes, Fred Hutchinson Cancer Center, Institute for Systems Biology,
+                       New York Genome Center, Flatiron Institute, HHMI Janelia Research Campus]
+institutes_excluded:         # 2026-11-02: partner is an excluded school, remote, or wet-lab only
+  - Broad Institute                    # students only via MIT / Harvard
+  - Whitehead Institute                # via MIT
+  - Dana-Farber Cancer Institute       # via Harvard
+  - Scripps Research                   # few ML PIs
+  - Jackson Laboratory                 # remote, genetics
+  - Stowers Institute                  # remote, wet lab
+  - St. Jude Children's Research Hospital   # remote, clinical
 include_cs: true             # 2026-10-31: CS/ECE are the preferred home (goal: industry research scientist)
 # Who: assistant / incoming assistant / associate (promoted ~2020+) / independent fellow; Chinese surnames.
 # Fit (per person, not per department): A = develops ML methods or architectures (any domain, incl. pure AI/CV);
