@@ -464,9 +464,8 @@ def cmd_export() -> None:
             sheet = "Need email" if not em or pid in bad else "People"
         rows[sheet].append(rec)
     for v in rows.values():
-        def open_door(r):   # recruiting OR small group (<= 8 PhD students): tied, applicant 2026-11-02
-            n = r.get("PhD students in lab")
-            return str(r.get("Recruiting (own words)") or "").startswith("Yes") or (isinstance(n, int) and n <= 8)
+        def open_door(r):   # small-group tie (<= 8 PhD students) on hold: applicant wants to see lab sizes first
+            return str(r.get("Recruiting (own words)") or "").startswith("Yes")
         v.sort(key=lambda r: (r.get("Priority", 9), not open_door(r),
                               -(r.get("Top-ML papers 2023-26 (dblp)") or 0), order.get(r.get("Fit"), 2),
                               r.get("School", ""), r.get("Name", "")))
