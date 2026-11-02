@@ -45,6 +45,15 @@ def _page(dept: int, n: int, refresh: bool) -> str:
     return r.text
 
 
+def profile_href(href: str | None) -> str | None:
+    """Absolute href is used as is (never joined); an href that embeds a second URL (a pasted Google search, seen on
+    Abdelfattah's card) is not a profile page: None, so nothing downstream fetches or cites it."""
+    if not href:
+        return None
+    u = urljoin(URL, href)
+    return None if re.search(r"/https?://", u[8:]) else u
+
+
 def parse(html: str, url: str, unit: str) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     rows = []
@@ -58,7 +67,7 @@ def parse(html: str, url: str, unit: str) -> list[dict]:
         row = {"name": name, "institution": INSTITUTION, "department": unit,
                "title_on_roster": "; ".join(t for t in titles if t),
                "affiliation": " ".join(aff.get_text(" ").split()) if aff else "",
-               "roster_url": url, "profile_url": urljoin(URL, prof["href"]) if prof else None,
+               "roster_url": url, "profile_url": profile_href(prof["href"]) if prof else None,
                "quote": " ".join(main.get_text(" ").split())[:300] if main else "", "filter": "all"}
         if a:
             row["block_email"] = a["href"][7:].split("?")[0].strip()

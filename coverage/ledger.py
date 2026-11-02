@@ -26,6 +26,16 @@ from .scope import DATA, jl
 SKIP = ("csr-", "ps-", "scout-test")
 
 
+PROBE_HOSTS = ("csrankings.org", "api.nsf.gov", "nsf.gov/awardsearch", "reporter.nih.gov", "api.reporter.nih.gov")
+
+
+def probe_sourced(r: dict) -> bool:
+    """Probes (CSRankings / NSF / NIH) are leads, never roster rows: a person needs a current official or own page.
+    A roster row whose roster_url is a probe source (or whose department says CSRankings) is not evidence of faculty status."""
+    u = (r.get("roster_url") or "").lower()
+    return any(h in u for h in PROBE_HOSTS) or "csrankings" in (r.get("department") or "").lower()
+
+
 def roster_files() -> list:
     return [p for p in sorted((DATA / "roster").glob("*.jsonl"))
             if not p.name.startswith(SKIP) and p.name != "x.jsonl"]
@@ -79,7 +89,7 @@ def build() -> list[dict]:
     tit = title_overrides()
     for f in roster_files():
         for r in jl(f):
-            if not r.get("name"):
+            if not r.get("name") or probe_sourced(r):
                 continue
             school = scope.school_of(r.get("institution") or "")
             if not school:

@@ -47,3 +47,45 @@ def test_nsf_truncated_pi_name_matches_ledger_person(tmp_path, monkeypatch):
         {"name": "Wen Su", "school": "Cornell University", "year": 2018, "source_url": "u"}) + "\n")
     ledger = [{"school": "Cornell University", "key": list(scope.name_key("Wen Sun"))}]
     assert len(check.recall(ledger)) == 1
+
+
+def test_ledger_ignores_probe_sourced_rosters(tmp_path, monkeypatch):
+    # Wen Sun entered the ledger through a CSRankings-built roster though he left Cornell: probes are leads, never rosters
+    from coverage import ledger
+    (tmp_path / "roster").mkdir()
+    base = {"institution": "Cornell University", "title_on_roster": "Assistant Professor", "filter": "all"}
+    rows = {"cornell-x.jsonl": {**base, "name": "Real Person", "department": "CS", "roster_url": "https://www.cs.cornell.edu/people"},
+            "cornell-probe.jsonl": {**base, "name": "Gone Person", "department": "CS", "roster_url": "https://csrankings.org/"},
+            "cornell-probe2.jsonl": {**base, "name": "Nsf Person", "department": "CS",
+                                     "roster_url": "https://api.nsf.gov/services/v1/awards/1.json"}}
+    for f, r in rows.items():
+        (tmp_path / "roster" / f).write_text(json.dumps(r) + "\n")
+    monkeypatch.setattr(ledger, "DATA", tmp_path)
+    names = {p["name"] for p in ledger.build()}
+    assert "Real Person" in names and "Gone Person" not in names and "Nsf Person" not in names
+
+
+def test_titles_reject_past_phrasing():
+    from coverage.titles import title_near_name
+    assert title_near_name("Wen Sun was an assistant professor at Cornell. He is now a research scientist.", "Wen Sun") == ""
+    assert title_near_name("Jane Doe, formerly Assistant Professor of CS at X", "Jane Doe") == ""
+    assert title_near_name("Jane Doe is an Assistant Professor of CS at X", "Jane Doe").lower().startswith("assistant professor")
+
+
+def test_titles_set_rejects_past_title(tmp_path, monkeypatch):
+    import pytest
+    from coverage import titles
+    monkeypatch.setattr(titles, "DATA", tmp_path)
+    (tmp_path / "coverage").mkdir()
+    with pytest.raises(SystemExit):
+        titles.main(["--school", "Cornell University", "--set", "A B", "--title", "former assistant professor", "--url", "u"])
+    assert not (tmp_path / "coverage" / "titles.jsonl").exists()
+
+
+def test_bowers_absolute_profile_href_not_joined():
+    from coverage.bowers_dir import parse
+    html = ('<div class="directory-card"><div class="name">Abc Def</div><div class="view-full-profile">'
+            '<a href="https://www.google.com/search?q=x">p</a></div></div>')
+    assert parse(html, "u", "CS")[0]["profile_url"] == "https://www.google.com/search?q=x"
+    bad = html.replace("https://www.google.com/search?q=x", "https://www.duffield.cornell.edu/people/https://www.google.com/search?q=x-abc")
+    assert parse(bad, "u", "CS")[0]["profile_url"] is None

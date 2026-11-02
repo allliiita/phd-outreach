@@ -31,7 +31,7 @@ For every census row decided covered/added, `grid_unit` must equal ONE grid row'
 3. Wayback `https://web.archive.org/web/2026/<url>`: resets from the cloud proxy (also WebFetch refuses it). Try once, move on.
 4. College/graduate directory with a department filter: Cornell Bowers `https://bowers.cornell.edu/directory?department=15|16|17&page=N` (15 CS, 16 IS, 17 Stats) via `python -m coverage.bowers_dir` (bowers is in browser_hosts.txt, so use requests, not fetch.get). The unfiltered list omits people; a filter id is found in the form's `input[name=department]`.
    Weill: `https://gradschool.weill.cornell.edu/faculty?program=<id>` (ids in `select[name=program]`), table rows, no titles.
-5. CSRankings for CS: `python -m coverage.csr_unit --school S` writes `<slug>-csrankings.jsonl` (used beside a partial directory; it found Wen Sun).
+5. Probes (CSRankings / NSF / NIH) are leads, never roster rows (a CSRankings roster once added Wen Sun, who had left). Confirm each lead on a CURRENT official page or the person's own current homepage; the ledger ignores probe-sourced rosters.
 6. New-faculty news, NSF/NIH probes (already running in the recall check).
 7. Only then `data/coverage/human_requests.jsonl` `{school, unit, url, why}` for the human to save the page.
 A `.edu` host that answers `curl` with "unable to get local issuer certificate" is the SSL case in step 2.
@@ -39,6 +39,7 @@ A `.edu` host that answers `curl` with "unable to get local issuer certificate" 
 ## 3. Recall misses (probe hit not in the ledger)
 Find WHY, in this order: (a) in a unit you have not rostered: fix section 1; (b) name mismatch (credential, initials, 29-char NSF cut-off,
 nickname): fix the code with a test, or `--reason alias_of_ledger`; (c) person not in scope: `python -m coverage.explain --school S --name N --reason R --evidence URL`.
+Past-title rule: a stored title must be current. A page that says "was", "formerly", "prior to" is not evidence (`coverage.titles` rejects it); a person whose page says they now work elsewhere is `moved_institution`.
 Reasons: moved_institution, senior_title, not_phd_advising_title, postdoc_pre_independent (NIH K99), clinical_unit, out_of_scope_unit, alias_of_ledger.
 Evidence URL is a page you fetched (official page; NSF `api.nsf.gov/services/v1/awards/<id>.json`; `api.reporter.nih.gov/v2/projects/search`).
 Never explain with "not ML" (fit judges decide). Young and in scope but unrostered: `python -m coverage.add_person --school S --name N --url PROFILE`.

@@ -25,6 +25,14 @@ _STOP = re.compile(r"\s+(?:The|We|Our|My|His|Her|Dr|Research|Affiliations?|Publi
 _SELF = re.compile(r"(?:\bI am|\bI'm|\bis|\bjoined (?:Cornell )?as) (?:an? |the )?(?=" + TITLE.pattern.replace("(?i)", "") + ")", re.I)
 
 
+PAST = re.compile(r"\b(?:was|were|formerly|former|prior to|previously|ex-|until|left)\b", re.I)
+
+
+def is_past(text: str) -> bool:
+    """True when the phrase presents the position as past ('was an assistant professor', 'formerly ...', 'prior to ...')."""
+    return bool(PAST.search(text))
+
+
 def _clean(t: str) -> str:
     return _STOP.sub("", t).strip(" ,.")
 
@@ -40,11 +48,13 @@ def title_near_name(vis: str, name: str) -> str:
             continue
         for t in TITLE.finditer(win):
             if re.search(r"professor", t.group(0), re.I):
+                if is_past(win[max(0, t.start() - 40): t.end()]):
+                    return ""
                 return _clean(t.group(0))
     m = _SELF.search(vis[:6000])
     if m:
         t = TITLE.match(vis, m.end())
-        if t and re.search(r"professor", t.group(0), re.I):
+        if t and re.search(r"professor", t.group(0), re.I) and not is_past(vis[max(0, m.start() - 20): t.end()]):
             return _clean(t.group(0))
     return ""
 
@@ -60,6 +70,8 @@ def main(argv: list[str] | None = None) -> int:
     path = DATA / "coverage" / "titles.jsonl"
     if a.set:
         assert a.title and a.url, "--set needs --title and --url (the official page that shows it)"
+        if is_past(a.title):
+            raise SystemExit(f"refused: '{a.title}' is phrased as past; the stored title must be current")
         with path.open("a") as f:
             f.write(json.dumps({"school": a.school, "name": a.set, "title": a.title, "source_url": a.url}, ensure_ascii=False) + "\n")
         return 0
