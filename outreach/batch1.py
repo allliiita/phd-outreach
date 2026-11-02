@@ -66,13 +66,21 @@ def keep(r: dict) -> bool:
     return faculty_like(r) and (not t or young_title(t)) and asian_tag(r["name"]) == "chinese"
 
 
-def cmd_enrich() -> None:
-    for p in rosters():
-        n = sum(keep(r) for r in jl(p) if not str(r.get("name", "")).startswith("_"))
-        print(f"{p.name}: {n} young Chinese-surname rows", flush=True)
-        if n:
-            subprocess.run([sys.executable, "-m", "outreach.enrich", str(p), "--heritage", "chinese"],
-                           cwd=ROOT, check=False)
+def cmd_enrich(only_new: bool = True, workers: int = 8) -> None:
+    """Rosters run in parallel (different schools = different hosts; fetch.py still spaces requests to one host).
+    Papers come later from dblp and the dossier step, so enrich skips the slow, rate-limited paper APIs."""
+    from concurrent.futures import ThreadPoolExecutor
+    todo = [p for p in rosters() if any(keep(r) for r in jl(p) if "name" in r)
+            and not (only_new and (DATA / "dossiers" / p.name).exists())]
+    print(f"{len(todo)} rosters to enrich, {workers} at a time", flush=True)
+
+    def one(p):
+        r = subprocess.run([sys.executable, "-m", "outreach.enrich", str(p), "--heritage", "chinese", "--no-papers"],
+                           cwd=ROOT, capture_output=True, text=True)
+        return (r.stdout.strip().splitlines() or [p.name])[-1]
+    with ThreadPoolExecutor(workers) as ex:
+        for line in ex.map(one, todo):
+            print(line, flush=True)
 
 
 def roster_groups() -> dict[str, str]:
