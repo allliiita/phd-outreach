@@ -205,6 +205,7 @@ JUNK_URL = re.compile(r"terms-of-use|faculty-resources/handbook|omniupdate|safel
                       r"/login|wp-admin", re.I)
 BOILER = re.compile(r"physicians and scientists on the faculty of the icahn school", re.I)
 BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance|kunshan", re.I)   # applicant: no business schools; Duke Kunshan is out of scope
+SPH = re.compile(r"school of public health|bloomberg school", re.I)   # never-list: schools of public health
 NOT_ADVISING = re.compile(r"of instruction|of the practice|teaching|affiliate|lecturer|instructor", re.I)
 
 
@@ -415,7 +416,7 @@ def cmd_export() -> None:
                "Hook (dossier)": d.get("hook", ""), "Red flags": "; ".join(d.get("red_flags") or []),
                "Check": "; ".join(x for x in [check_note(p)] + [f"dossier {u}, re-check" for u in unver.get(pid, [])] if x)}
         sy = (d.get("start_year") or {}).get("year") if isinstance(d.get("start_year"), dict) else None
-        if BUSINESS.search(" ".join(p["departments"])):
+        if BUSINESS.search(" ".join(p["departments"])) or SPH.search(p["title"] or ""):
             continue
         if t.get("fit") == "C" and (db.get("ml_top") or 0) >= 2:
             sheet = "Check (title or fit)"
