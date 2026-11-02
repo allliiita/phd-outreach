@@ -151,6 +151,7 @@ def cmd_build_tags(insts: set[str] = BATCH3, size: int = 12) -> None:
              "lab_site": p.get("homepage"), "department": "; ".join(dict.fromkeys(p.get("departments") or []))}
             for p in jl(DATA / "tag" / "people.jsonl")
             if p["institution"] in insts and fits.get(p["id"]) in ("A", "B", "?") and p["id"] not in done]
+    rows.sort(key=lambda r: {"A": 0, "B": 1}.get(fits.get(r["id"]), 2))   # A/B first: send-ready sooner
     k0 = len(list((V / "in").glob("w*.jsonl")))
     for i in range(0, len(rows), size):
         (V / "in" / f"w{k0 + i // size:02d}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows[i:i + size]))
