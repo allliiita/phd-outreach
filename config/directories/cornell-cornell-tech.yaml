@@ -1,0 +1,8 @@
+institution: Cornell University
+unit: Cornell Tech Faculty
+urls: [https://tech.cornell.edu/people/faculty]
+item: div.people-item.grid__item
+name: p.people-item__name
+title: p.people-item__position
+profile: a.people-item__link@href
+filter: all

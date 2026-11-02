@@ -1,0 +1,9 @@
+institution: Cornell University
+unit: Weill Cornell Institute of AI for Digital Health
+urls: [https://phs.weill.cornell.edu/research-collaboration/divisions-institutes/institute-ai-digital-health/team]
+item: div.headshot-entry
+name: p.name
+title: p.title
+profile: p.description a@href
+filter: all
+skip_titles: ['post ?doc', 'phd (student|candidate)', 'research assistant', 'research manager']

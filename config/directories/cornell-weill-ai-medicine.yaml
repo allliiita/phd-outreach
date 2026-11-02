@@ -1,0 +1,8 @@
+institution: Cornell University
+unit: Weill Cornell AI to Advance Medicine (experts)
+urls: [https://ai.weill.cornell.edu/experts]
+item: div.teaser.teaser--person
+name: div.teaser--person__name
+title: div.teaser--person__pro-titles
+profile: a.teaser--person__research@href
+filter: all

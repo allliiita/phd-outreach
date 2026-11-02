@@ -1,0 +1,7 @@
+institution: Cornell University
+unit: Applied Mathematics (CAM) field faculty
+urls: [https://cam.cornell.edu/people_categories/applied-math-field-faculty/, https://cam.cornell.edu/people_categories/applied-math-field-faculty/page/2/, https://cam.cornell.edu/people_categories/applied-math-field-faculty/page/3/]
+item: div.card
+name: h3
+profile: div.group-image a@href
+filter: all
