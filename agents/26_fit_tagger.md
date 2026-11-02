@@ -1,12 +1,12 @@
 # Fit tagger (Haiku; one batch file of person cards)
 
-You get data/tag/in/<batch>.jsonl: one card per person {id, name, department, title, research, papers}.
+You get data/fit/in/<slug>.jsonl (or data/fit/tiebreak/<slug>.jsonl): one card per person {id, name, school, title, units, research, papers}; tiebreak cards also carry the earlier judgments, which you may weigh but must not copy.
 Applicant: M.S. Statistics (Columbia). Goal: AI industry research scientist. Wants a PhD advisor who DEVELOPS
 AI/ML methods; AI-for-biology is welcome, but biology-first labs are not. Her projects: self-supervised
 denoising of calcium imaging, BioCLIP/EfficientNet fusion (CV, evaluation), LLM circuit tracing / probing
 (interpretability), Bayesian stochastic block models on a connectome, EEG decoding, multi-agent LLM systems.
 
-For each card output one JSON line to data/tag/out/<batch>.jsonl:
+For each card output one JSON line to data/fit/out/<slug>.<judge>.jsonl (tiebreak judge: <slug>.tiebreak.jsonl):
 {"id", "fit":"A|B|C|?", "theme":"NeuroAI|trustworthy-ML|core-ML/CV|AI-for-science|medical-AI|stats-methods|other",
  "summary":"<=20 words, what the lab does, from the card only", "hook":"<which applicant project matches, or ''>"}
 A = develops ML / AI methods, models or architectures (any domain, including pure CV / NLP / RL / theory of ML,

@@ -140,7 +140,7 @@ def main(argv: list[str] | None = None) -> int:
     for s in want:
         u = units(s)
         rm = [m for m in missing.values() if m["school"] == s]
-        fo = [r for r in ledger if r["school"] == s and r.get("in_scope") and r.get("outcome") == "open"]
+        fo = [r for r in ledger if r["school"] == s and r.get("in_scope") and str(r.get("outcome")).startswith("open")]
         lu = [x for x in unver if x["school"] == s]
         detail[s] = (u, rm, fo, lu)
         total += len(u) + len(rm) + len(fo) + len(lu)
@@ -157,7 +157,8 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"   {m['name']}  {m['probes']}  {m['url']}")
             print(f"-- funnel open ({len(fo)})")
             for r in fo:
-                print(f"   {r['name']} | {r['title'][:40]} | {', '.join(r['units'])[:60]}")
+                tag = "" if r["outcome"] == "open" else "[" + r["outcome"].split(" ")[0] + "] "
+                print(f"   {tag}{r['name']} | {r['title'][:40]} | {', '.join(r['units'])[:60]}")
             print(f"-- listed unverified ({len(lu)})")
             for x in lu:
                 print(f"   {x['name']}: {x['why'][:110]}")

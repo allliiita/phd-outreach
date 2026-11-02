@@ -7,6 +7,8 @@ A person is in scope if ANY of their roster rows passes scope.gate(); the gate f
 Outcome (in scope only), from existing results, first match wins:
   data/verify/result.jsonl   pass + email -> listed | pass w/o email -> rejected:no email | fail -> rejected:<why>
   data/tag/out/*.jsonl       fit C -> rejected:not ML      (joined to data/tag/people.jsonl by id)
+  data/fit/decided.jsonl     fit C -> rejected:not ML | A/B -> open:verify (awaiting record verification)
+                             | '?' -> open:fit (judges could not tell); overrides data/tag results
   otherwise                  open
 Out of scope people keep a row (so a probe hit on them is "found") with outcome out_of_scope:<gate>.
 """
@@ -58,10 +60,13 @@ def results() -> dict[tuple[str, tuple], dict]:
     for v in jl(DATA / "verify" / "result.jsonl"):
         p = people.get(v["id"]) or v
         out.setdefault(key(p), {})["verify"] = v
+    for d in jl(DATA / "fit" / "decided.jsonl"):   # coverage.fit merge
+        k = (d["school"], scope.name_key(d["name"]))
+        out.setdefault(k, {}).update(fit=d["fit"], decided=True)
     for f in sorted(glob.glob(str(DATA / "tag" / "out" / "*.jsonl"))):
         for t in jl(f):
             p = people.get(t.get("id"))
-            if p:
+            if p and not out.get(key(p), {}).get("decided"):
                 out.setdefault(key(p), {})["fit"] = t.get("fit")
     return out
 
@@ -75,6 +80,8 @@ def outcome(res: dict | None) -> str:
         return "rejected:" + "; ".join(v.get("why") or ["failed verification"])[:160]
     if res.get("fit") == "C":
         return "rejected:not ML"
+    if res.get("decided"):
+        return "open:verify" if res["fit"] in ("A", "B") else "open:fit (fit ? after tiebreak: card too thin or judges split)"
     return "open"
 
 
