@@ -46,6 +46,8 @@ Goal (the human's goal in one line) / scope: exact files it may write and must n
 the EVIDENCE that proves done (commands + expected output). If the evidence can't be named, the unit isn't scoped.
 Every kickoff names the base SHA; the worker's first step is `git log -1` and, if HEAD is not that SHA,
 `git reset --hard <SHA>` (a worktree once started from `main` and wasted a run). Workers commit on their own branch or worktree; the coordinator merges only after re-running the evidence.
+Parallel school owners never edit shared code (`coverage/`, `outreach/`): they report bugs; one code worker fixes them.
+Shared jsonl ledgers merge as union (`.gitattributes`); `data/coverage/people.jsonl` is derived, rebuilt after each merge.
 Read the diff or artifact, never only the summary. Retry by cause; after two failed retries drop and replan.
 
 ## Phases (status kept in `docs/decisions.tsv`)

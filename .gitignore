@@ -8,3 +8,4 @@ assets/*.pdf
 data/seeds/
 data/*.log
 .claude/worktrees/
+data/coverage/people.jsonl

@@ -19,3 +19,5 @@ ts	phase	decision	why	evidence	result
 2026-11-02T18:40:58Z	pilot	"Chromium not installed" claim was wrong; browser launches, cs.cornell.edu itself times out from cloud	keep alt-source path; no tooling change	coordinator test of outreach.fetch.render	done
 2026-11-02T18:49:00Z	pilot	merged Cornell pilot + fix round: CSRankings roster removed, ledger ignores probe-sourced rosters, past-title rule, Wen Sun explained (Databricks)	verifier issues fixed at the stage that caused them	commit 6013c97; coordinator re-ran pytest 39 passed; Cornell units 0 recall 0 funnel 28	done
 2026-11-02T18:49:00Z	pilot	recipe agents/school_owner.md ready for fan-out; remaining Cornell open = 28 awaiting fit judging	pilot predicate met for units/recall	agents/school_owner.md	done
+2026-11-02T18:49:31Z	fanout	union-merge shared jsonl ledgers; people.jsonl derived (untracked); school owners may not edit shared code	parallel owners would conflict on shared files	.gitattributes, .gitignore, CLAUDE.md	done
+2026-11-02T18:49:31Z	fanout	pilot cost ~254k tokens for one school; fan-out reuses recipe+tools, expect less; watch per-school cost	token budget	pilot usage	open
