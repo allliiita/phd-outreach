@@ -13,3 +13,11 @@ Sheets: {'People': 61, 'People (batch 2)': 46, 'Need email': 24, "Apply directly
 Rules: young PhD-advising titles; Chinese surnames; fit A/B (C dropped); priority NeuroAI = trustworthy-ML > AI depts > CS-type ML >
 molecular; >=3 top-ML papers 2023-26 (dblp) moves up one tier; within tier: recruiting > top-ML papers > fit.
 Checks: roster verifiers per school; 713/719 dossier quotes found on saved pages; email validation (surname-only list-page emails rejected).
+
+## 2026-11-02 (record verification)
+- New stage: agents/35_record_verifier.md + outreach/verify.py. Agent reads each professor's own page; code confirms every
+  quote and the email are on the saved snapshot; scope rules (clinical / business) applied to the verified title.
+- Batches 1-2: 131 checked -> 80 send-ready; fails: not ML on own page 27, no public email 21, unreadable 8, scope 4.
+- Fixes pushed down: UCI comma name skipped domain check (canonical_institution + test); verifier misread ML systems /
+  neural decoding (playbook does_ml rules); unread vs "no" separated, retry pass; recards no longer overwrite files.
+- Batch 3: 272 tagged (card + second opinion); 205 A/B/? in verification (w00-w17).
