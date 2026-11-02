@@ -1,0 +1,35 @@
+{"id": "b1-0417", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0418", "fit": "C", "theme": "other", "summary": "Nonconvex network optimization and distributed algorithms; power-system optimization papers.", "hook": ""}
+{"id": "b1-0419", "fit": "A", "theme": "NeuroAI", "summary": "Probabilistic models and scalable inference for neural and behavior data.", "hook": "Bayesian latent models of neural data (connectome SBM, EEG decoding)"}
+{"id": "b1-0420", "fit": "A", "theme": "core-ML/CV", "summary": "Agent AI built on generative models, representation learning and reinforcement learning.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0421", "fit": "B", "theme": "AI-for-science", "summary": "Physics simulation and graphics algorithms, with scientific ML and cardiomyocyte classification papers.", "hook": ""}
+{"id": "b1-0422", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0423", "fit": "A", "theme": "core-ML/CV", "summary": "Tunes LLMs for biomedical retrieval and hierarchical text classification; ML for polymer enthalpy.", "hook": ""}
+{"id": "b1-0424", "fit": "C", "theme": "other", "summary": "Sustainable engineering and human well-being evaluation for systems; no ML on card.", "hook": ""}
+{"id": "b1-0425", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0426", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0427", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0428", "fit": "C", "theme": "other", "summary": "Visualization perception and cognition studies; no ML on card.", "hook": ""}
+{"id": "b1-0429", "fit": "B", "theme": "AI-for-science", "summary": "Label-free biological cell segmentation with segment anything (SAMCell).", "hook": "self-supervised denoising of calcium imaging"}
+{"id": "b1-0430", "fit": "B", "theme": "stats-methods", "summary": "Bayesian longitudinal models and ML variable-selection methods for psychology and mobile health.", "hook": ""}
+{"id": "b1-0431", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0432", "fit": "A", "theme": "AI-for-science", "summary": "Model reduction, data-driven modeling, scientific ML and multi-fidelity methods for engineering.", "hook": ""}
+{"id": "b1-0433", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0434", "fit": "C", "theme": "other", "summary": "Construction safety and behavior-based safety observation programs; no ML on card.", "hook": ""}
+{"id": "b1-0435", "fit": "B", "theme": "stats-methods", "summary": "Uncertainty quantification and ranking-and-selection for stochastic simulation and optimization.", "hook": ""}
+{"id": "b1-0436", "fit": "A", "theme": "core-ML/CV", "summary": "Adaptive online fault diagnosis with grafted composite decision trees; teaches AI/ML for nuclear engineering.", "hook": ""}
+{"id": "b1-0437", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0438", "fit": "A", "theme": "core-ML/CV", "summary": "Stochastic and nonlinear optimization algorithms with guarantees, applied to machine learning.", "hook": ""}
+{"id": "b1-0439", "fit": "A", "theme": "trustworthy-ML", "summary": "Safe robot control with learning and conformal uncertainty; LLM activation steering via control.", "hook": "LLM circuit tracing / probing (activation steering)"}
+{"id": "b1-0440", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0441", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0442", "fit": "C", "theme": "other", "summary": "Structure-property materials characterization and modeling; no ML on card.", "hook": ""}
+{"id": "b1-0443", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0444", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0445", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0446", "fit": "C", "theme": "other", "summary": "Mandarin scope rigidity linguistics; no ML on card.", "hook": ""}
+{"id": "b1-0447", "fit": "C", "theme": "other", "summary": "Psychology of meaningful lives and emotion across adulthood; no ML on card.", "hook": ""}
+{"id": "b1-0448", "fit": "A", "theme": "core-ML/CV", "summary": "Text-to-video and text-to-image generative models, bias detection and video editing.", "hook": ""}
+{"id": "b1-0449", "fit": "A", "theme": "core-ML/CV", "summary": "Embodied agents combining robot learning, RL and computer vision for human-interactive robots.", "hook": ""}
+{"id": "b1-0450", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0451", "fit": "A", "theme": "AI-for-science", "summary": "Machine-learned interatomic potentials; bias and effects of fine-tuning.", "hook": ""}

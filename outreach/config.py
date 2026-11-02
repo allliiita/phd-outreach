@@ -14,9 +14,21 @@ def institutions() -> dict:
     return yaml.safe_load((ROOT / "config" / "institutions.yaml").read_text())
 
 
+def _k(s: str) -> str:
+    return " ".join(s.lower().replace(",", " ").split())
+
+
+def canonical_institution(name: str) -> str:
+    """Official name from config/institutions.yaml ('University of California, Irvine' -> '... Irvine')."""
+    for inst in institutions()["institutions"]:
+        if _k(name) in [_k(inst["name"])] + [_k(a) for a in inst.get("aliases", [])]:
+            return inst["name"]
+    return name
+
+
 def institution_domains(name: str) -> list[str]:
     for inst in institutions()["institutions"]:
-        if inst["name"].lower() == name.lower() or name.lower() in [a.lower() for a in inst.get("aliases", [])]:
+        if inst["name"] == canonical_institution(name):
             return inst.get("email_domains", [])
     return []
 

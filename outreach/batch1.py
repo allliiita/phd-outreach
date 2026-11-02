@@ -17,7 +17,7 @@ from pathlib import Path
 
 import yaml
 
-from .config import ROOT
+from .config import ROOT, canonical_institution
 from .enrich import position_class, young_title
 from .roster import faculty_like
 from .surnames import asian_tag
@@ -114,6 +114,7 @@ def people() -> list[dict]:
                 continue
             if any("senior title" in x for x in d.get("problems") or []):
                 continue
+            d["institution"] = canonical_institution(d["institution"])
             k = (d["name"].lower().strip(), d["institution"])
             if k in by:
                 by[k]["departments"].append(d["department"])
@@ -124,7 +125,7 @@ def people() -> list[dict]:
             by[k] = {**d, "departments": [d["department"]], "groups": [grp.get(p.name, "")], "title": pos}
     out = sorted(by.values(), key=lambda d: (d["institution"], d["name"]))
     # ids are stable: tags and dossiers are keyed by them, so people already listed keep theirs
-    old = {(o["name"].lower().strip(), o["institution"]): o["id"] for o in jl(TAG / "people.jsonl")}
+    old = {(o["name"].lower().strip(), canonical_institution(o["institution"])): o["id"] for o in jl(TAG / "people.jsonl")}
     nxt = 1 + max([int(i.split("-")[1]) for i in old.values()] or [-1])
     for d in out:
         k = (d["name"].lower().strip(), d["institution"])

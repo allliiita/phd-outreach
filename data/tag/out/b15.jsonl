@@ -1,0 +1,35 @@
+{"id": "b1-0487", "fit": "B", "theme": "AI-for-science", "summary": "Computational methods for cell-specific gene regulatory networks and spatial domain identification in single-cell omics.", "hook": ""}
+{"id": "b1-0488", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0489", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0490", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0491", "fit": "A", "theme": "core-ML/CV", "summary": "Efficient ML algorithms, AI hardware accelerators and green AI across layers.", "hook": ""}
+{"id": "b1-0492", "fit": "C", "theme": "other", "summary": "DNA origami and protein assembly scaffolds; no ML on card.", "hook": ""}
+{"id": "b1-0493", "fit": "C", "theme": "other", "summary": "Semiconductor glass-core packaging reliability; no ML on card.", "hook": ""}
+{"id": "b1-0494", "fit": "B", "theme": "medical-AI", "summary": "Experimental design optimization for diffusion MRI microstructure imaging.", "hook": ""}
+{"id": "b1-0495", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0496", "fit": "C", "theme": "other", "summary": "Continuum robot compliance and spinal surgery; no ML on card.", "hook": ""}
+{"id": "b1-0497", "fit": "C", "theme": "other", "summary": "Silicon radiation detector materials; no ML on card.", "hook": ""}
+{"id": "b1-0498", "fit": "C", "theme": "other", "summary": "Soft active materials, hydrogels and mechanics; no ML on card.", "hook": ""}
+{"id": "b1-0499", "fit": "C", "theme": "other", "summary": "Chromatin nucleosome biology and ChIP-seq quantification pipeline; no ML.", "hook": ""}
+{"id": "b1-0500", "fit": "A", "theme": "AI-for-science", "summary": "Protein generative models for stability prediction and multi-objective sequence design.", "hook": ""}
+{"id": "b1-0501", "fit": "C", "theme": "other", "summary": "Nanocluster electrocatalysis and nanowire micropollutant removal; no ML on card.", "hook": ""}
+{"id": "b1-0502", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0503", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0504", "fit": "A", "theme": "stats-methods", "summary": "Causal discovery and causality-empowered ML, plus multi-agent RL and long-horizon planning.", "hook": "multi-agent LLM systems; white-box LLMs"}
+{"id": "b1-0505", "fit": "C", "theme": "other", "summary": "Cortical and thalamic dynamics of striatal activity in movement; biology first.", "hook": ""}
+{"id": "b1-0506", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0507", "fit": "C", "theme": "other", "summary": "Single-cell transcriptomics of tauopathy models; biology first.", "hook": ""}
+{"id": "b1-0508", "fit": "C", "theme": "other", "summary": "Actin droplet mechanics, amygdala circuits and alpha-synuclein binding; biology first.", "hook": ""}
+{"id": "b1-0509", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0510", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0511", "fit": "C", "theme": "other", "summary": "Philosophy of AI, physics and science; no ML methods on card.", "hook": ""}
+{"id": "b1-0512", "fit": "C", "theme": "medical-AI", "summary": "Peripheral artery disease clinical analysis and photoplethysmography features; no ML method on card.", "hook": ""}
+{"id": "b1-0513", "fit": "A", "theme": "core-ML/CV", "summary": "Learning-based dynamics models for robotic manipulation (review).", "hook": ""}
+{"id": "b1-0514", "fit": "C", "theme": "other", "summary": "Nanoparticle drug delivery and FHE bootstrapping hardware; no ML method on card.", "hook": ""}
+{"id": "b1-0515", "fit": "A", "theme": "core-ML/CV", "summary": "Systems for machine learning, IoT and privacy in human-computer interaction.", "hook": ""}
+{"id": "b1-0516", "fit": "C", "theme": "other", "summary": "Microbiome and metabolomics clinical translation; biology first.", "hook": ""}
+{"id": "b1-0517", "fit": "C", "theme": "other", "summary": "Pediatric transplant and hematopoietic stem cell studies; biology first.", "hook": ""}
+{"id": "b1-0518", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0519", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0520", "fit": "C", "theme": "other", "summary": "Data visualization literacy assessment in psychology; no ML on card.", "hook": ""}
+{"id": "b1-0521", "fit": "A", "theme": "core-ML/CV", "summary": "Optimization, sampling and no-regret learning theory for ML, including distribution shift and acceleration.", "hook": ""}

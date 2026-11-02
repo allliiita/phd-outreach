@@ -1,0 +1,35 @@
+{"id": "b1-0452", "fit": "A", "theme": "core-ML/CV", "summary": "Decision-focused diffusion models for stochastic optimization; deep metric learning on EHR for diabetes screening.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0453", "fit": "A", "theme": "core-ML/CV", "summary": "Systems for LLM serving, GUI agents and robot policy serving; large-scale data analytics.", "hook": ""}
+{"id": "b1-0454", "fit": "C", "theme": "other", "summary": "Ingestible probes for breath-based monitoring of microbiome drug metabolism; no ML on card.", "hook": ""}
+{"id": "b1-0455", "fit": "C", "theme": "other", "summary": "Itch and neuroimmune mechanisms in mice and skin disease; no ML on card.", "hook": ""}
+{"id": "b1-0456", "fit": "A", "theme": "core-ML/CV", "summary": "Computer vision, deep learning and robotics; lightweight anomaly detection for agricultural nutrient management.", "hook": ""}
+{"id": "b1-0457", "fit": "A", "theme": "NeuroAI", "summary": "Active learning of neural population dynamics using two-photon holographic optogenetics.", "hook": "EEG decoding / ML on neural data"}
+{"id": "b1-0458", "fit": "B", "theme": "other", "summary": "Bio-behavioral team dynamics with multimodal sensing and ML pipelines predicting team performance.", "hook": ""}
+{"id": "b1-0459", "fit": "A", "theme": "core-ML/CV", "summary": "Spectral orthogonal decomposition adaptation for diffusion models; plus a DNA mesoscopic model.", "hook": ""}
+{"id": "b1-0460", "fit": "A", "theme": "core-ML/CV", "summary": "Graph machine learning: anomaly detection, graph spectra and neural hyperedge prediction.", "hook": ""}
+{"id": "b1-0461", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0462", "fit": "B", "theme": "stats-methods", "summary": "Computational deconvolution of bulk RNA-seq and single-cell signatures, plus cancer biomarker studies.", "hook": ""}
+{"id": "b1-0463", "fit": "C", "theme": "other", "summary": "Runaway electron plasma physics; no ML on card.", "hook": ""}
+{"id": "b1-0464", "fit": "C", "theme": "other", "summary": "Programming languages, program analysis and compiler optimization; no ML on card.", "hook": ""}
+{"id": "b1-0465", "fit": "C", "theme": "other", "summary": "Engineering design and product development research methodology; no ML method on card.", "hook": ""}
+{"id": "b1-0466", "fit": "A", "theme": "AI-for-science", "summary": "Novel AI and ML algorithms for smart manufacturing, material inverse design and defect diagnostics.", "hook": ""}
+{"id": "b1-0467", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0468", "fit": "A", "theme": "stats-methods", "summary": "Time-series methods at the intersection of statistical modeling and deep learning; outbreak early warning.", "hook": ""}
+{"id": "b1-0469", "fit": "C", "theme": "other", "summary": "Financial engineering, stochastic optimization and energy risk; statistical learning only mentioned.", "hook": ""}
+{"id": "b1-0470", "fit": "A", "theme": "core-ML/CV", "summary": "Flash memory and ferroelectric devices for AI computation and radiation-hard storage.", "hook": ""}
+{"id": "b1-0471", "fit": "C", "theme": "other", "summary": "Economics and operations teaching on pricing, auctions and mechanism design; no ML.", "hook": ""}
+{"id": "b1-0472", "fit": "C", "theme": "other", "summary": "Three-dimensional imaging flow cytometry and single-cell volume microscopy; no ML on card.", "hook": ""}
+{"id": "b1-0473", "fit": "C", "theme": "other", "summary": "Soft intelligent materials from molecular switches and hydrogels; no ML on card.", "hook": ""}
+{"id": "b1-0474", "fit": "C", "theme": "other", "summary": "Experimental fracture mechanics and solid-state battery electrolytes; no ML.", "hook": ""}
+{"id": "b1-0475", "fit": "C", "theme": "other", "summary": "Developmental biology of cell migration; microscopy restoration papers are secondary.", "hook": ""}
+{"id": "b1-0476", "fit": "C", "theme": "other", "summary": "Mechanical intelligence and robotic linkage design; no ML on card.", "hook": ""}
+{"id": "b1-0477", "fit": "A", "theme": "core-ML/CV", "summary": "Methodologies and theories of machine learning and deep learning; recent focus on LLMs.", "hook": ""}
+{"id": "b1-0478", "fit": "A", "theme": "AI-for-science", "summary": "ML interatomic potentials and multi-agent LLM framework for catalyst design.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0479", "fit": "A", "theme": "trustworthy-ML", "summary": "Evaluates LLM faithfulness and safety under counterfactual medical evidence; medical readability.", "hook": ""}
+{"id": "b1-0480", "fit": "A", "theme": "AI-for-science", "summary": "Neural ODE and data-driven approximations for nonlinear PDEs; ANN spectroscopy for mosquito age.", "hook": ""}
+{"id": "b1-0481", "fit": "A", "theme": "stats-methods", "summary": "Federated EM for mixture models with unknown components; convex relaxations and CNN seed classification.", "hook": ""}
+{"id": "b1-0482", "fit": "A", "theme": "AI-for-science", "summary": "Operator learning framework for inverse problems with adaptive discretizations.", "hook": ""}
+{"id": "b1-0483", "fit": "B", "theme": "AI-for-science", "summary": "Structured adaptive boosting trees for detecting multicellular aggregates in intravital microscopy.", "hook": "calcium-imaging denoising (ML on biological imaging)"}
+{"id": "b1-0484", "fit": "B", "theme": "medical-AI", "summary": "Deep learning on clinical data: LLM epilepsy evaluation, GNN mortality prediction, sleep apnea monitoring.", "hook": ""}
+{"id": "b1-0485", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0486", "fit": "?", "theme": "other", "summary": "", "hook": ""}
