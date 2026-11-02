@@ -1,0 +1,30 @@
+{"id": "b1-0417", "fit": "C", "theme": "other", "summary": "Electronics lab engineer supporting circuit design and assembly; no research described.", "hook": ""}
+{"id": "b1-0418", "fit": "C", "theme": "other", "summary": "Nonconvex and distributed optimization for network and power systems; no ML in card.", "hook": ""}
+{"id": "b1-0422", "fit": "A", "theme": "AI-for-science", "summary": "Lab uses AI and machine learning for multi-scale design of metamaterials.", "hook": ""}
+{"id": "b1-0424", "fit": "C", "theme": "other", "summary": "Sustainable engineering and human well-being evaluation of systems; no ML.", "hook": ""}
+{"id": "b1-0425", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0426", "fit": "A", "theme": "core-ML/CV", "summary": "Machine learning theory and systems for machine learning, per directory research areas.", "hook": ""}
+{"id": "b1-0427", "fit": "C", "theme": "other", "summary": "Ethnographer studying climate data practices and critical data studies; no ML.", "hook": ""}
+{"id": "b1-0428", "fit": "C", "theme": "other", "summary": "Visual perception and cognition in data visualization; HCI without ML methods.", "hook": ""}
+{"id": "b1-0431", "fit": "C", "theme": "other", "summary": "Senior research engineer in nuclear and radiological engineering; no ML described.", "hook": ""}
+{"id": "b1-0433", "fit": "A", "theme": "core-ML/CV", "summary": "ML theory and computational finance research areas, per directory.", "hook": ""}
+{"id": "b1-0434", "fit": "C", "theme": "other", "summary": "Built environment, art and culture research; no ML described.", "hook": ""}
+{"id": "b1-0437", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0440", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0441", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0442", "fit": "C", "theme": "other", "summary": "Materials characterization and computational modeling of deformation and phase transformations; no ML.", "hook": ""}
+{"id": "b1-0443", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0444", "fit": "A", "theme": "core-ML/CV", "summary": "ML theory and game theory research areas, per directory; logistics and manufacturing.", "hook": ""}
+{"id": "b1-0445", "fit": "C", "theme": "other", "summary": "Parallel and cache-efficient algorithms and high-performance computing; no ML.", "hook": ""}
+{"id": "b1-0446", "fit": "B", "theme": "NeuroAI", "summary": "Cognition and computational neuroscience with Neuro AI research areas; Mandarin paper.", "hook": ""}
+{"id": "b1-0447", "fit": "C", "theme": "other", "summary": "Adult development, meaning in life and aging psychology; no ML.", "hook": ""}
+{"id": "b1-0450", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0454", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0455", "fit": "C", "theme": "other", "summary": "Molecular neuroscience of itch, pain and respiratory sensory neurons; no ML.", "hook": ""}
+{"id": "b1-0461", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0463", "fit": "A", "theme": "AI-for-science", "summary": "Scientific machine learning to enhance numerical solvers for plasma physics and HPC.", "hook": ""}
+{"id": "b1-0464", "fit": "C", "theme": "other", "summary": "Program analysis and compiler optimization in programming languages; no ML.", "hook": ""}
+{"id": "b1-0465", "fit": "C", "theme": "other", "summary": "Engineering design methodology and product development research; no ML methods described.", "hook": ""}
+{"id": "b1-0467", "fit": "A", "theme": "core-ML/CV", "summary": "AI, game theory, ML theory and robotics research areas, per directory.", "hook": ""}
+{"id": "b1-0469", "fit": "B", "theme": "stats-methods", "summary": "Financial engineering with statistical learning and stochastic optimization for energy and healthcare.", "hook": ""}
+{"id": "b1-0471", "fit": "C", "theme": "other", "summary": "Pricing, auctions and mechanism design in operations economics; no ML.", "hook": ""}

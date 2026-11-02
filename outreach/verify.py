@@ -115,11 +115,55 @@ def cmd_build(xlsx: Path, size: int = 12) -> None:
     print(f"{len(rows)} to verify -> data/verify/in/v{k0:02d}..; unmatched names: {miss}")
 
 
-def judge(o: dict, inst: str) -> tuple[bool, list[str], str | None]:
+UNREAD = re.compile(r"403|404|forbidden|blocked|login|sign in|no (research )?(description|content|text)|could ?n.t|unable|"
+                    r"not (load|read|available)|timeout|challenge", re.I)
+
+
+def unread(c: dict) -> bool:
+    """The agent could not read a page, as opposed to reading it and finding 'no'."""
+    q = (c.get("quote") or "").strip()
+    return not q or q.startswith("http") or bool(UNREAD.search(f"{q} {c.get('url') or ''}")) and len(q) < 120
+
+
+def hard_validate_fail() -> set[str]:
+    f = DATA / "validate_report.tsv"
+    return {l.split("\t")[0] for l in f.read_text().splitlines() if l and not l.split("\t", 1)[1].startswith("WARN")} \
+        if f.exists() else set()
+
+
+BATCH3 = {"University of Washington", "University of California San Diego", "University of Maryland",
+          "Georgia Institute of Technology", "University of California Irvine", "University of California Santa Cruz"}
+
+
+def final_fits() -> dict:
+    tag = DATA / "tag"
+    fits = {t["id"]: t.get("fit") for f in sorted((tag / "out").glob("*.jsonl")) for t in jl(f)}
+    fits.update({t["id"]: t.get("fit") for f in sorted((tag / "re_out").glob("*.jsonl")) for t in jl(f)})  # second opinion wins
+    return fits
+
+
+def cmd_build_tags(insts: set[str] = BATCH3, size: int = 12) -> None:
+    """Batch 3 straight from tags: A, B and '?' (no readable text yet; the verifier reads the page and decides)."""
+    fits = final_fits()
+    done = {r["id"] for f in (V / "in").glob("*.jsonl") for r in jl(f)}
+    rows = [{"id": p["id"], "name": p["name"], "institution": p["institution"], "title": p.get("title"),
+             "email": p.get("email"), "official_page": p.get("profile_url") or p.get("roster_url"),
+             "lab_site": p.get("homepage"), "department": "; ".join(dict.fromkeys(p.get("departments") or []))}
+            for p in jl(DATA / "tag" / "people.jsonl")
+            if p["institution"] in insts and fits.get(p["id"]) in ("A", "B", "?") and p["id"] not in done]
+    k0 = len(list((V / "in").glob("w*.jsonl")))
+    for i in range(0, len(rows), size):
+        (V / "in" / f"w{k0 + i // size:02d}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows[i:i + size]))
+    print(f"{len(rows)} batch-3 records -> data/verify/in/w{k0:02d}..")
+
+
+def judge(o: dict, inst: str, rec: dict | None = None) -> tuple[bool, list[str], str | None]:
     why = []
     for k in ("at_school", "title", "does_ml"):
         c = o.get(k) or {}
-        if not c.get("ok"):
+        if not c.get("ok") and unread(c):
+            why.append(f"unread {k}: {(c.get('quote') or c.get('url') or '')[:80]}")
+        elif not c.get("ok"):
             why.append(f"{k}: agent says no ({(c.get('quote') or c.get('url') or '')[:80]})")
         elif (e := quote_ok(c.get("url", ""), c.get("quote", ""))):
             why.append(f"{k}: {e}")
@@ -134,7 +178,10 @@ def judge(o: dict, inst: str) -> tuple[bool, list[str], str | None]:
         why.append(f"no_block: quote says {nb['quote'][:80]}")
     em = (o.get("email") or {})
     val = (em.get("value") or "").strip().lower() or None
-    if not val:
+    rec = rec or {}
+    if not val and rec.get("email") and rec["id"] not in hard_validate_fail():
+        val = str(rec["email"]).lower()   # found earlier on an official directory page; validate.py checked the snapshot
+    elif not val:
         why.append("email: not found on own page")
     else:
         pg = page(em.get("url", ""))
@@ -152,16 +199,18 @@ def judge(o: dict, inst: str) -> tuple[bool, list[str], str | None]:
 def cmd_check() -> None:
     ins = {r["id"]: r for f in (V / "in").glob("*.jsonl") for r in jl(f)}
     res = []
-    for f in sorted((V / "out").glob("*.jsonl")):
+    outs = sorted((V / "out").glob("*.jsonl"), key=lambda f: (f.name.startswith("retry"), f.name))   # retry pass wins
+    for f in outs:
         for o in jl(f):
             r = ins.get(o.get("id"))
             if not r:
                 continue
-            ok, why, em = judge(o, r["institution"])
+            ok, why, em = judge(o, r["institution"], r)
             res.append({"id": r["id"], "name": r["name"], "institution": r["institution"], "pass": ok, "why": why,
                         "email": em, "email_changed": bool(em and r.get("email") and em != str(r["email"]).lower()),
                         "title": (o.get("title") or {}).get("value"), "ml_quote": (o.get("does_ml") or {}).get("quote"),
                         "official_page": (o.get("at_school") or {}).get("url")})
+    res = list({x["id"]: x for x in res}.values())
     (V / "result.jsonl").write_text("".join(json.dumps(x) + "\n" for x in res))
     todo = sorted(set(ins) - {x["id"] for x in res})
     print(f"verified {len(res)}/{len(ins)}: pass {sum(x['pass'] for x in res)}, fail {sum(not x['pass'] for x in res)}, "
@@ -200,12 +249,30 @@ def cmd_sheet(xlsx: Path) -> None:
     print(f"{len(ready)} send-ready, {len(uniq(failed))} failed -> {out}")
 
 
+def cmd_retry(size: int = 10) -> None:
+    """Records the agent could not read (blocked / empty official page) -> new input files for a second pass that
+    must try the lab site and other official pages."""
+    ins = {r["id"]: r for f in (V / "in").glob("*.jsonl") for r in jl(f)}
+    done_retry = {r["id"] for f in (V / "in").glob("retry*.jsonl") for r in jl(f)}
+    ids = [x["id"] for x in jl(V / "result.jsonl") if not x["pass"] and any(w.startswith("unread") for w in x["why"])
+           and x["id"] not in done_retry]
+    k0 = len(list((V / "in").glob("retry*.jsonl")))
+    for i in range(0, len(ids), size):
+        (V / "in" / f"retry{k0 + i // size:02d}.jsonl").write_text("".join(json.dumps({**ins[j], "retry": True}) + "\n"
+                                                                         for j in ids[i:i + size]))
+    print(f"{len(ids)} unread records -> data/verify/in/retry{k0:02d}..")
+
+
 def main() -> None:
     cmd, *rest = sys.argv[1:] or ["check"]
     if cmd == "build":
         cmd_build(Path(rest[0]))
     elif cmd == "check":
         cmd_check()
+    elif cmd == "build-tags":
+        cmd_build_tags()
+    elif cmd == "retry":
+        cmd_retry()
     elif cmd == "sheet":
         cmd_sheet(Path(rest[0]))
 
