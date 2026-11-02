@@ -1,0 +1,41 @@
+{"id": "b1-0372", "fit": "C", "theme": "other", "summary": "Papers on perovskite halides, solar cells, high-entropy materials; no ML stated.", "hook": ""}
+{"id": "b1-0373", "fit": "C", "theme": "stats-methods", "summary": "Papers on smoothing spline ANOVA and moderation analysis in precision medicine; applied biostatistics, no ML stated.", "hook": ""}
+{"id": "b1-0374", "fit": "A", "theme": "trustworthy-ML", "summary": "Machine learning security: backdoor attacks and defenses, data privacy, robustness of large language models.", "hook": "LLM probing / safety"}
+{"id": "b1-0375", "fit": "A", "theme": "core-ML/CV", "summary": "Deep learning CV and NLP model compression, privacy-preserving ML, hardware accelerators.", "hook": "BioCLIP/EfficientNet efficiency"}
+{"id": "b1-0376", "fit": "C", "theme": "other", "summary": "Insulation systems, fault current and switch hardware for power electronics; no ML.", "hook": ""}
+{"id": "b1-0377", "fit": "C", "theme": "other", "summary": "Convex and global optimization for power and energy systems, microgrids; no ML stated.", "hook": ""}
+{"id": "b1-0378", "fit": "C", "theme": "other", "summary": "Neuromuscular control, human-robot interaction, biomechanics, rehabilitation technologies.", "hook": ""}
+{"id": "b1-0379", "fit": "C", "theme": "other", "summary": "Smart infrastructure data analytics for power systems and energy efficiency; no ML stated.", "hook": ""}
+{"id": "b1-0380", "fit": "B", "theme": "stats-methods", "summary": "Statistical sketching and sampling methods for streaming data, signal denoising, statistical machine learning.", "hook": "calcium imaging denoising"}
+{"id": "b1-0381", "fit": "C", "theme": "other", "summary": "Neurobiomechanics: neural biomarkers, human movement, exoskeletons, deep brain stimulation in Parkinson disease.", "hook": ""}
+{"id": "b1-0382", "fit": "A", "theme": "core-ML/CV", "summary": "Computer vision: image and video generation, visual-language representation, AI for augmented reality.", "hook": "BioCLIP/EfficientNet CV"}
+{"id": "b1-0383", "fit": "C", "theme": "stats-methods", "summary": "Industrial/organizational psychology; employee well-being with longitudinal models.", "hook": ""}
+{"id": "b1-0384", "fit": "C", "theme": "other", "summary": "Papers on diamond nanowires, graphene, infrared detectors; no ML.", "hook": ""}
+{"id": "b1-0385", "fit": "C", "theme": "other", "summary": "Multiphase thermal fluids, icing clouds, vertical lift vehicles experiments.", "hook": ""}
+{"id": "b1-0386", "fit": "C", "theme": "other", "summary": "Quantum computing: compilation, error mitigation, algorithm optimization, benchmarking.", "hook": ""}
+{"id": "b1-0387", "fit": "A", "theme": "trustworthy-ML", "summary": "Generalization and robustness of ML under distribution shift and unseen classes; applications in bioinformatics, neuroscience.", "hook": "distribution-shift robustness; connectome/EEG"}
+{"id": "b1-0388", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0389", "fit": "C", "theme": "other", "summary": "Materials reliability, failure physics, interconnect and packaging, nanotechnology.", "hook": ""}
+{"id": "b1-0390", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0391", "fit": "B", "theme": "AI-for-science", "summary": "Computational biology and machine learning: cancer transcriptomics, drug sensitivity, single-cell denoising, multi-omics integration.", "hook": "self-supervised denoising"}
+{"id": "b1-0392", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0393", "fit": "C", "theme": "other", "summary": "Functional materials-based sensors and actuators, bio-mimetic devices.", "hook": ""}
+{"id": "b1-0394", "fit": "C", "theme": "other", "summary": "Molecular mechanisms of lung cancer tumor progression; wet-lab first.", "hook": ""}
+{"id": "b1-0395", "fit": "C", "theme": "other", "summary": "Multiphysics modeling and simulation for nuclear fuels, reactor safety, thermal-hydraulics.", "hook": ""}
+{"id": "b1-0396", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0397", "fit": "C", "theme": "other", "summary": "Electrochemical materials, seawater electrolyzers, CO2 removal.", "hook": ""}
+{"id": "b1-0398", "fit": "A", "theme": "core-ML/CV", "summary": "Computer architecture, memory hierarchy, reliable systems, domain-specific architecture; no ML stated.", "hook": ""}
+{"id": "b1-0399", "fit": "A", "theme": "core-ML/CV", "summary": "Matrix computations, optimization and scientific machine learning; open tutorials on numerical linear algebra for ML.", "hook": ""}
+{"id": "b1-0400", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0401", "fit": "C", "theme": "other", "summary": "Security and privacy compliance of software supply chains; no ML stated.", "hook": ""}
+{"id": "b1-0402", "fit": "A", "theme": "AI-for-science", "summary": "Benchmarks for AI systems and physics simulations; neural graph ODE models for molecular dynamics.", "hook": "LLM evaluation; multi-agent LLM"}
+{"id": "b1-0403", "fit": "C", "theme": "other", "summary": "Data visualization and human-computer interaction; interactive systems for data analysis.", "hook": ""}
+{"id": "b1-0404", "fit": "B", "theme": "medical-AI", "summary": "Medical AI and computer vision research; seeking PhD students.", "hook": "BioCLIP/EfficientNet CV"}
+{"id": "b1-0405", "fit": "A", "theme": "core-ML/CV", "summary": "Reinforcement learning, machine learning, optimization and computer vision.", "hook": "multi-agent LLM / RL"}
+{"id": "b1-0406", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0407", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0408", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0409", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0410", "fit": "A", "theme": "core-ML/CV", "summary": "Dataset distillation and its evaluation, diffusion-based methods, robot action chunking.", "hook": "BioCLIP/EfficientNet evaluation"}
+{"id": "b1-0411", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0412", "fit": "C", "theme": "other", "summary": "Only paper is a multi-site laboratory dataset; no ML stated.", "hook": ""}

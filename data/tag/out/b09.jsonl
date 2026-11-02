@@ -1,0 +1,45 @@
+{"id": "b1-0282", "fit": "A", "theme": "trustworthy-ML", "summary": "Responsible AI; evaluation of large language model behavior and personalization.", "hook": "LLM evaluation / probing"}
+{"id": "b1-0283", "fit": "B", "theme": "medical-AI", "summary": "Graph-based EHR progression subphenotyping and transcriptomic network prediction with patient data.", "hook": ""}
+{"id": "b1-0284", "fit": "B", "theme": "medical-AI", "summary": "Machine learning for clinical prediction and agentic clinical trial design using real-world data.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0285", "fit": "A", "theme": "stats-methods", "summary": "Algorithm design, high-dimensional statistics, online learning, sequential decisions, network causal inference.", "hook": ""}
+{"id": "b1-0286", "fit": "C", "theme": "other", "summary": "Drosophila genetic mosaic analysis tools.", "hook": ""}
+{"id": "b1-0287", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0288", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0289", "fit": "C", "theme": "other", "summary": "Lymphatics-on-a-chip and organ-chip bioengineering of vascular and immune biology.", "hook": ""}
+{"id": "b1-0290", "fit": "B", "theme": "medical-AI", "summary": "AI and machine learning in clinical laboratory medicine, including preeclampsia prediction.", "hook": ""}
+{"id": "b1-0291", "fit": "C", "theme": "other", "summary": "Linguistics: phonological paradigms and ambiguity using experimental and corpus methods.", "hook": ""}
+{"id": "b1-0292", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0293", "fit": "C", "theme": "other", "summary": "Computer networks, architecture and systems co-design for data center communication; no ML stated.", "hook": ""}
+{"id": "b1-0294", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0295", "fit": "A", "theme": "stats-methods", "summary": "Statistical and ML methods for reliable, interpretable, robust causal reasoning in scientific and clinical data.", "hook": "Bayesian / statistical modeling"}
+{"id": "b1-0296", "fit": "A", "theme": "stats-methods", "summary": "Adaptive online algorithms and causal effect estimation for personalized treatment, including deep debiased estimators.", "hook": ""}
+{"id": "b1-0297", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0298", "fit": "C", "theme": "other", "summary": "Inventory and supply chain management; learning algorithms for inventory models.", "hook": ""}
+{"id": "b1-0299", "fit": "C", "theme": "other", "summary": "Human-centered study of generative AI in clinical evidence synthesis and expert work.", "hook": ""}
+{"id": "b1-0300", "fit": "B", "theme": "NeuroAI", "summary": "Computational methods on brain imaging and digital biomarkers for neurodevelopment and neurodegeneration.", "hook": "EEG decoding"}
+{"id": "b1-0301", "fit": "A", "theme": "core-ML/CV", "summary": "AI methods for operations; LLM optimization formulation, goal-conditioned robotic RL, regret minimization.", "hook": ""}
+{"id": "b1-0302", "fit": "A", "theme": "trustworthy-ML", "summary": "RLHF and bilevel RL methods; safety-capability trade-offs in fine-tuning LLMs.", "hook": "LLM probing"}
+{"id": "b1-0303", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0304", "fit": "B", "theme": "NeuroAI", "summary": "Biological and artificial intelligence; deep learning theories to understand hippocampus and improve AI.", "hook": ""}
+{"id": "b1-0305", "fit": "B", "theme": "medical-AI", "summary": "Machine learning and agentic frameworks for clinical prediction and laboratory medicine.", "hook": ""}
+{"id": "b1-0306", "fit": "C", "theme": "other", "summary": "Online algorithms and data-driven decision-making for operations and revenue management.", "hook": ""}
+{"id": "b1-0307", "fit": "A", "theme": "medical-AI", "summary": "Biomedical foundation models, LLMs for health text extraction, knowledge graphs for evidence synthesis.", "hook": "BioCLIP/CV fusion"}
+{"id": "b1-0308", "fit": "B", "theme": "medical-AI", "summary": "Health informatics and data science decision support; outcome prediction and health care delivery.", "hook": ""}
+{"id": "b1-0309", "fit": "C", "theme": "other", "summary": "Observational epidemiology, hospice care quality and health services research.", "hook": ""}
+{"id": "b1-0310", "fit": "B", "theme": "core-ML/CV", "summary": "Deep learning for 3D point cloud and thermal image segmentation, plant phenotyping.", "hook": "BioCLIP/EfficientNet CV"}
+{"id": "b1-0311", "fit": "A", "theme": "core-ML/CV", "summary": "Statistics, ML and game theory; diffusion models, high-dimensional statistics, sampling, mechanism design.", "hook": ""}
+{"id": "b1-0312", "fit": "A", "theme": "AI-for-science", "summary": "Numerical methods for inverse problems, neural operators, PDE-constrained optimization, optimal transport.", "hook": ""}
+{"id": "b1-0313", "fit": "B", "theme": "medical-AI", "summary": "Causal machine learning and target trial emulation on EHR for drug repurposing.", "hook": ""}
+{"id": "b1-0314", "fit": "A", "theme": "trustworthy-ML", "summary": "Principled ML algorithms for reliable, trustworthy, human-compatible AI.", "hook": "LLM probing / evaluation"}
+{"id": "b1-0315", "fit": "C", "theme": "other", "summary": "Neuronal RNA localization and local gene expression, wet-lab imaging.", "hook": ""}
+{"id": "b1-0316", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0317", "fit": "C", "theme": "other", "summary": "Interactive collaborative robot systems and human behavioral cues; human-robot interaction.", "hook": ""}
+{"id": "b1-0318", "fit": "C", "theme": "other", "summary": "Health services and real-world evidence research.", "hook": ""}
+{"id": "b1-0319", "fit": "C", "theme": "other", "summary": "Clinical epidemiology of HIV, diabetes and primary care.", "hook": ""}
+{"id": "b1-0320", "fit": "A", "theme": "trustworthy-ML", "summary": "Safe human-centered robotics: motion planning, adversarial RL, verifiable neural safety filters.", "hook": ""}
+{"id": "b1-0321", "fit": "A", "theme": "core-ML/CV", "summary": "Diffusion models, transfer learning sample complexity, optimal transport and policy gradients.", "hook": ""}
+{"id": "b1-0322", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}
+{"id": "b1-0323", "fit": "C", "theme": "other", "summary": "Cognitive neuroscience of memory and epilepsy patients.", "hook": ""}
+{"id": "b1-0324", "fit": "C", "theme": "other", "summary": "Spatial transcriptomics data accuracy and tissue biology; no ML stated.", "hook": ""}
+{"id": "b1-0325", "fit": "A", "theme": "trustworthy-ML", "summary": "Evaluation of language models, comprehension and theory of mind.", "hook": "LLM evaluation / probing"}
+{"id": "b1-0326", "fit": "?", "theme": "other", "summary": "Card has no research text or papers.", "hook": ""}

@@ -1,0 +1,45 @@
+{"id": "b1-0327", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0328", "fit": "B", "theme": "NeuroAI", "summary": "Theoretical and computational neuroscience; mathematical analysis and simulations of biophysical models and neuronal networks.", "hook": ""}
+{"id": "b1-0329", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0330", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0331", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0332", "fit": "B", "theme": "medical-AI", "summary": "Brain MRI imaging; paper on large heterogeneous 3D MRI dataset for self-supervised learning.", "hook": "self-supervised denoising of calcium imaging"}
+{"id": "b1-0333", "fit": "C", "theme": "other", "summary": "Wireless networking and mobile computing: 5G/6G millimeter wave architectures.", "hook": ""}
+{"id": "b1-0334", "fit": "C", "theme": "other", "summary": "Psychology and brain sciences; neural resources for object processing and working memory.", "hook": ""}
+{"id": "b1-0335", "fit": "C", "theme": "other", "summary": "Neurosurgery clinical research on brain metastases and spinal cord tumor outcomes.", "hook": ""}
+{"id": "b1-0336", "fit": "C", "theme": "other", "summary": "Wet-lab neurobiology of RNA processing and neurodegeneration in ALS/FTD.", "hook": ""}
+{"id": "b1-0337", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0338", "fit": "A", "theme": "core-ML/CV", "summary": "Machine social intelligence: Theory of Mind reasoning, social scene understanding, neurosymbolic embodied assistance, benchmarking human-like intelligence.", "hook": "multi-agent LLM systems"}
+{"id": "b1-0339", "fit": "C", "theme": "other", "summary": "Theoretical computer science: randomness extractors, complexity, coding theory, cryptography.", "hook": ""}
+{"id": "b1-0340", "fit": "C", "theme": "other", "summary": "Privacy research at HCI, security and accessibility intersection.", "hook": ""}
+{"id": "b1-0341", "fit": "C", "theme": "other", "summary": "Systems security: browser fingerprinting, vulnerability detection, program analysis.", "hook": ""}
+{"id": "b1-0342", "fit": "?", "theme": "stats-methods", "summary": "", "hook": ""}
+{"id": "b1-0343", "fit": "B", "theme": "stats-methods", "summary": "Statistical methods; tree-based kernel for densities applied to clustering DNase-seq profiles.", "hook": ""}
+{"id": "b1-0344", "fit": "C", "theme": "other", "summary": "Wet-lab functional genomics screens identifying chloride channels and ion channel physiology.", "hook": ""}
+{"id": "b1-0345", "fit": "C", "theme": "other", "summary": "Human-AI interaction, AI for social science, human-centered model evaluation, information seeking.", "hook": ""}
+{"id": "b1-0346", "fit": "A", "theme": "core-ML/CV", "summary": "Robot learning and autonomous manipulation; foundation-model datasets for medical robotics.", "hook": ""}
+{"id": "b1-0347", "fit": "A", "theme": "core-ML/CV", "summary": "Robot learning and autonomous manipulation; foundation-model datasets for medical robotics.", "hook": ""}
+{"id": "b1-0348", "fit": "A", "theme": "core-ML/CV", "summary": "Neurosymbolic methods integrating symbolic reasoning with learning; programming languages meets machine learning.", "hook": ""}
+{"id": "b1-0349", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0350", "fit": "B", "theme": "medical-AI", "summary": "Medical computer vision, language and graphics for early cancer detection; lung nodule detection, chest X-ray report generation.", "hook": "BioCLIP/EfficientNet fusion"}
+{"id": "b1-0351", "fit": "A", "theme": "core-ML/CV", "summary": "Computer vision, efficient deep learning and federated learning; resource-aware machine vision algorithms.", "hook": "BioCLIP/EfficientNet fusion"}
+{"id": "b1-0352", "fit": "C", "theme": "other", "summary": "Applied electromagnetics, photonics, thermal radiation engineering and nanomaterials.", "hook": ""}
+{"id": "b1-0353", "fit": "C", "theme": "other", "summary": "Integrated photonics, optical frequency combs, nonlinear optics for quantum sensing and spectroscopy.", "hook": ""}
+{"id": "b1-0354", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0355", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0356", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0357", "fit": "C", "theme": "other", "summary": "Computer architecture, hardware security and energy-efficient computing.", "hook": ""}
+{"id": "b1-0358", "fit": "A", "theme": "core-ML/CV", "summary": "Theoretical and algorithmic foundations of optimization, data science and machine learning.", "hook": ""}
+{"id": "b1-0359", "fit": "A", "theme": "core-ML/CV", "summary": "Computer architecture and parallel computing, with machine learning for efficient computing.", "hook": ""}
+{"id": "b1-0360", "fit": "C", "theme": "other", "summary": "Materials science, applied physics and nanophotonics.", "hook": ""}
+{"id": "b1-0361", "fit": "C", "theme": "other", "summary": "Biomechanics, motor adaptation and neuromechanics of gait and locomotion.", "hook": ""}
+{"id": "b1-0362", "fit": "C", "theme": "other", "summary": "Mechanical resonators; electrical engineering device physics.", "hook": ""}
+{"id": "b1-0363", "fit": "A", "theme": "AI-for-science", "summary": "Mathematics and AI: stable, explainable data-driven methods for optimization, differential equations, numerical linear algebra.", "hook": ""}
+{"id": "b1-0364", "fit": "B", "theme": "stats-methods", "summary": "Statistics: regularized aggregation, efficient graphical model algorithms, precision matrix estimation for brain networks.", "hook": "Bayesian stochastic block models on a connectome"}
+{"id": "b1-0365", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0366", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0367", "fit": "C", "theme": "other", "summary": "Wet-lab biochemistry of serine protease cascades in cancer.", "hook": ""}
+{"id": "b1-0368", "fit": "C", "theme": "other", "summary": "Super-resolution fluorescence imaging tools for biology and neuroscience.", "hook": ""}
+{"id": "b1-0369", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "b1-0370", "fit": "C", "theme": "other", "summary": "Wet-lab study of prostasin proteolytic cascade.", "hook": ""}
+{"id": "b1-0371", "fit": "C", "theme": "other", "summary": "Thermal energy storage and decarbonization.", "hook": ""}
