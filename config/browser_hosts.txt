@@ -5,3 +5,5 @@ comphealth.duke.edu
 gradschool.duke.edu
 dibs.duke.edu
 bowers.cornell.edu
+escience.washington.edu
+mse.gatech.edu
