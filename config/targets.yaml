@@ -20,11 +20,14 @@ focus_schools:               # batch 1 (applicant, 2026-10-31)
   - Georgia Institute of Technology
   - University of California Irvine
   - University of California Santa Cruz   # added by applicant 2026-11-02 (campus environment)
+  # batch 4 (applicant, 2026-11-02): UMich + UPenn moved from postponed; UMass Amherst + UCSB added
+  - University of Michigan
+  - University of Pennsylvania
+  - University of Massachusetts Amherst
+  - University of California Santa Barbara
 postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
   - Washington University in St. Louis
   - University of Virginia
-  - University of Michigan
-  - University of Pennsylvania
   - Columbia University           # later (applicant 2026-11-02)
   - Canada (UBC, SFU, Waterloo)   # discussed 2026-11-02; US first
 exclude_schools:             # "too competitive", "too remote", "not for me"
