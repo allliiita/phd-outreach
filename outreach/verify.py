@@ -158,6 +158,31 @@ def cmd_build_tags(insts: set[str] = BATCH3, size: int = 12) -> None:
     print(f"{len(rows)} batch-3 records -> data/verify/in/w{k0:02d}..")
 
 
+ML_TERMS = re.compile(r"machine learning|deep learning|\blearning\b|neural (net|network|model)|artificial intelligence|\bA\.?I\.?\b|"
+                      r"\bML\b|LLMs?\b|language models?|foundation models?|generative|reinforcement|computer vision|"
+                      r"\bvision\b|natural language|\bNLP\b|data[- ]driven|representation|transformer|diffusion model|"
+                      r"statistical (learning|inference)|bayesian|graph neural|federated|interpretab|explainab|"
+                      r"neurocomputing|neuromorphic|neural decod|brain-computer|\bBCI\b|data science|"
+                      r"robust(ness)? (of|in) (ml|models|ai)|adversarial|trustworthy", re.I)
+
+
+def about_person(url: str, quote: str, name: str) -> bool:
+    """The quote is about this person: written in the first person, or their surname / first name is within 600
+    characters on the page (a directory or news page can carry other people's research sentences)."""
+    if re.search(r"\b(I|my|we|our|me)\b", quote):
+        return True
+    pg = page(url)
+    if not pg:
+        return False
+    text, q = norm(pg[1]), norm(quote)
+    i = text.find(q)
+    if i < 0:
+        return True   # quote found only in raw HTML (meta / attributes): already checked by quote_ok
+    win = text[max(0, i - 600): i + len(q) + 600]
+    toks = [t for t in norm_name(name).split() if len(t) > 1]
+    return any(re.search(rf"\b{re.escape(t)}\b", win) for t in toks[-1:] + toks[:1])
+
+
 def judge(o: dict, inst: str, rec: dict | None = None) -> tuple[bool, list[str], str | None]:
     why = []
     for k in ("at_school", "title", "does_ml"):
@@ -168,6 +193,9 @@ def judge(o: dict, inst: str, rec: dict | None = None) -> tuple[bool, list[str],
             why.append(f"{k}: agent says no ({(c.get('quote') or c.get('url') or '')[:80]})")
         elif (e := quote_ok(c.get("url", ""), c.get("quote", ""))):
             why.append(f"{k}: {e}")
+    ml = o.get("does_ml") or {}
+    if ml.get("ok") and not ML_TERMS.search(ml.get("quote") or ""):
+        why.append(f"does_ml: quoted research has no ML term ({(ml.get('quote') or '')[:70]})")
     t = o.get("title") or {}
     tv = f'{t.get("value") or ""} {t.get("quote") or ""}'
     if t.get("ok") and (not YOUNG_TITLE.search(tv) and "incoming" not in tv.lower() or NOT_YOUNG.search(t.get("value") or "")):
@@ -225,21 +253,81 @@ def cmd_check() -> None:
 
 
 CLINICAL = re.compile(r"\b(medicine|neurology|neurosurgery|surgery|pediatrics|ophthalmology|psychiatry|anesthesiology|"
-                      r"nephrology|cardiology|oncology|dermatology|urology|obstetrics|orthopa\w*|emergency)\b", re.I)
+                      r"nephrology|cardiology|oncology|dermatology|urology|obstetrics|orthopa\w*|emergency|radiology|"
+                      r"pathology|radiation)\b", re.I)
 NONCLINICAL = re.compile(r"statist|bioinformatic|informatic|engineering|computer|computing|data|artificial intelligence|\bAI\b|"
                          r"mathemat|genetic|genomic|neuroscience|biology", re.I)
+SPH = re.compile(r"public health|epidemiolog|bloomberg|population health", re.I)
+SPH_BIOSTAT = {"Johns Hopkins University", "University of Maryland", "University of Washington", "Boston University",
+               "University of California San Diego"}   # Biostatistics there sits in the school of public health
+BUSINESS_X = re.compile(r"information systems|smith school|operations, technology|decision, operations", re.I)
 
 
-def scope_problem(title: str) -> str:
-    """Applicant's scope rules applied to the verified title (targets.yaml exclude_units): clinical-only appointments
-    and business-only appointments are out; a joint appointment with a non-clinical / non-business unit stays."""
+def scope_problem(title: str, departments: str = "", institution: str = "") -> str:
+    """Applicant's scope rules (targets.yaml exclude_units) on the verified title and roster departments: clinical-only
+    appointments, schools of public health and business-only appointments are out; a joint appointment with a
+    computing / engineering / statistics / AI unit in the TITLE keeps the person."""
     from .batch1 import BUSINESS
     t = re.sub(r"school of medicine|college of medicine|(icahn|weill)[^,;|]*", "", title, flags=re.I)
+    both = f"{title} | {departments}"
     if CLINICAL.search(t) and not NONCLINICAL.search(t):
         return f"scope: clinical-department appointment ({title[:60]})"
-    if BUSINESS.search(t) and not NONCLINICAL.search(t):
+    if SPH.search(both) or institution in SPH_BIOSTAT and re.search(r"biostatist", both, re.I) and not NONCLINICAL.search(
+            re.sub(r"biostatistic\w*", "", t, flags=re.I)):
+        return f"scope: school of public health ({(title + ' / ' + departments)[:70]})"
+    if (BUSINESS.search(t) or BUSINESS_X.search(both)) and not NONCLINICAL.search(re.sub(r"information systems|information management", "", t, flags=re.I)):
         return f"scope: business-school appointment ({title[:60]})"
     return ""
+
+
+TRUST = re.compile(r"trustworth|robust|adversar|fairness|\bfair\b|privacy|interpretab|explainab|safety|\bsafe\b|"
+                   r"uncertainty|calibrat|conformal|distribution shift|security|attack|reliab|accountab|alignment", re.I)
+JUNK_URL = re.compile(r"terms-of-use|privacy|#:~:text|/people/?$|/directory/?$|/faculty/?$|accessibility", re.I)
+KOREAN_GIVEN = re.compile(r"^(?:do|dong|hoon|hyun|hyeon|hyung|jae|jong|joon|jun|kyu|kyung|kyun|min|seok|seung|sung|soo|su|"
+                          r"woo|won|yeon|yeong|young|ik|eun|ji|hee|chan|gyu|geun|bum|beom|sang|tae|hwan|ho|in|il|ha|hye|na|"
+                          r"seon|sun|yoon|yun|yong|hak|nam|jin|mi)+$")
+AMBIGUOUS_SURNAME = {"lee", "lim", "chung", "kang", "shin", "jang", "cho", "ahn", "yoon", "han", "jung", "moon", "song",
+                     "ryu", "yoo", "hong", "kwon", "baek", "nam", "ha", "kim", "park", "choi"}
+
+
+def clean_url(u):
+    return None if not u or JUNK_URL.search(str(u)) else u
+
+
+def heritage_flag(name: str) -> str:
+    """Chinese-surname list is deliberately loose; Lee / Lim / Chung ... with a Korean-romanised given name may not be
+    Chinese-heritage (audit 2026-11-02). Flag and rank last within the tier, never drop."""
+    toks = norm_name(re.sub(r"\(.*?\)|[\"“”]", " ", name)).split()
+    if len(toks) < 2 or toks[-1] not in AMBIGUOUS_SURNAME:
+        return ""
+    given = toks[0].replace("-", "")
+    return "given name looks Korean" if given in ("dk",) or KOREAN_GIVEN.match(given) and len(given) >= 4 else ""
+
+
+def senior_results() -> dict:
+    out = {}
+    for f in sorted((V / "senior_out").glob("*.jsonl")) if (V / "senior_out").exists() else []:
+        for r in jl(f):
+            for k, q in (("phd_year", "phd"), ("associate_since", "since")):
+                ev = r.get(q) or {}
+                if r.get(k) and (quote_ok(ev.get("url", ""), ev.get("quote", "")) or str(r[k]) not in ev.get("quote", "")):
+                    r[k] = None   # unverifiable year = unknown
+            out[r["id"]] = r
+    return out
+
+
+def seniority(x: dict, sen: dict) -> str:
+    """Associate Professors are 'young' only if promoted ~2020+: associate_since >= 2019, or PhD >= 2012."""
+    if not re.search(r"associate", x.get("title") or "", re.I):
+        return ""
+    r = sen.get(x["id"])
+    if not r:
+        return "seniority: unknown (associate; not yet checked)"
+    if r.get("associate_since"):
+        return "" if r["associate_since"] >= 2019 else f"not young: associate since {r['associate_since']}"
+    if r.get("phd_year"):
+        return "" if r["phd_year"] >= 2012 else f"not young: PhD {r['phd_year']}"
+    return "seniority: unknown (associate; PhD / promotion year not on their pages)"
 
 
 def cmd_sheet(xlsx: Path) -> None:
@@ -262,27 +350,53 @@ def cmd_sheet(xlsx: Path) -> None:
             p = find(d, ix)
             if p:
                 old.setdefault(p["id"], d)
+    sen = senior_results()
     ready, failed = [], []
     for x in jl(V / "result.jsonl"):
         p, t, db, o = ps.get(x["id"], {}), tags.get(x["id"], {}), dblp.get(x["id"], {}), old.get(x["id"], {})
-        pr = priority(t.get("theme", ""), set(p.get("groups") or []))
+        theme = t.get("theme", "")
+        own = f'{x.get("ml_quote") or ""} {((p.get("research") or {}).get("text") or "")[:1500]}'
+        if theme == "trustworthy-ML" and not TRUST.search(own):   # audit 2026-11-02: theme lifted systems/robotics people
+            theme = "core-ML/CV"
+        pr = priority(theme, set(p.get("groups") or []))
         if (db.get("ml_top") or 0) >= 3:
             pr = max(1, pr - 1)
         rec = {"Priority": pr, "School": x["institution"], "Department(s)": "; ".join(dict.fromkeys(p.get("departments") or [])),
-               "Name": x["name"], "Title (verified)": x["title"], "Theme": t.get("theme", ""),
+               "Name": x["name"], "Title (verified)": x["title"], "Theme": theme,
                "Top-ML papers 2023-26 (dblp)": db.get("ml_top", "") if db.get("pid") else "",
                "Email (verified)": x["email"], "Research (own words)": x["ml_quote"], "Official page": x["official_page"],
-               "Lab site": p.get("homepage") or o.get("Homepage"), "Recruiting (own words)": o.get("Recruiting (own words)"),
+               "Lab site": clean_url(p.get("homepage") or o.get("Homepage")), "Recruiting (own words)": o.get("Recruiting (own words)"),
                "How they want to be contacted": o.get("How they want to be contacted (own words)"),
                "Hook (your project)": o.get("Hook (your project)") or t.get("hook", ""), "id": x["id"]}
-        scope = scope_problem(x.get("title") or "")
+        rec["Heritage check"] = heritage_flag(x["name"])
+        scope = scope_problem(x.get("title") or "", rec["Department(s)"], x["institution"])
+        if not scope and len(norm_name(x["name"]).split()) < 2:
+            scope = "name: single token (truncated roster name; duplicate of a full-name row?)"
+        rec["Associate: years"] = ""
+        if not scope and x["pass"]:
+            sc = seniority(x, sen)
+            if sc.startswith("seniority: unknown"):
+                rec["Associate: years"] = "PhD/promotion year not stated on their pages"
+            else:
+                scope = sc
         if x["pass"] and not scope:
             ready.append(rec)
         elif x["pass"]:
             failed.append({**rec, "Why not": scope})
         else:
             failed.append({**rec, "Why not": "; ".join(x["why"])})
-    ready.sort(key=lambda r: (r["Priority"], not r["Recruiting (own words)"], -(r["Top-ML papers 2023-26 (dblp)"] or 0)))
+    seen, uniq = {}, []
+    for r in ready:   # one row per mailbox (audit 2026-11-02: "Yun" and "Yun Yang" shared yy84@umd.edu)
+        k = (r["Email (verified)"] or "").lower()
+        if k in seen:
+            failed.append({**r, "Why not": f"duplicate of {seen[k]} (same email)"})
+            continue
+        seen[k] = r["Name"]
+        uniq.append(r)
+    ready = uniq
+    ready.sort(key=lambda r: (r["Priority"], bool(r["Heritage check"]), not r["Recruiting (own words)"],
+                              -(r["Top-ML papers 2023-26 (dblp)"] or 0)))
+    unsure = []
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
     no_email = [r for r in failed if r["Why not"] and all(w.strip().startswith("email") for w in r["Why not"].split(";"))]

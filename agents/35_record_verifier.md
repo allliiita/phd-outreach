@@ -26,3 +26,11 @@ After writing, the coordinator runs `python -m outreach.verify check` — every 
 
 Retry rows ({"retry": true}): the first pass could not read a page. Try, in order: the lab site, the department
 profile, the Google-Scholar-free personal homepage linked from either; never the same blocked URL twice.
+
+## Seniority check (Associate Professors only; input data/verify/senior_in/*.jsonl)
+The applicant wants young faculty: an Associate counts only if promoted ~2020 or later. For each row, find on the
+person's OWN pages (official profile, lab site, CV PDF linked from them) the year of their PhD and, if stated, the
+year they became Associate Professor. Write data/verify/senior_out/<same name>.jsonl:
+{"id", "phd_year": int|null, "phd": {"url","quote"}, "associate_since": int|null, "since": {"url","quote"}}
+Quotes verbatim from a page fetched with `python -m outreach.fetch URL` (PDF CVs work too). Not found = null; never
+guess from paper years.
