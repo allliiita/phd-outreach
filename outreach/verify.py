@@ -285,7 +285,11 @@ def cmd_sheet(xlsx: Path) -> None:
     ready.sort(key=lambda r: (r["Priority"], not r["Recruiting (own words)"], -(r["Top-ML papers 2023-26 (dblp)"] or 0)))
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name, rs in (("Send-ready (verified)", ready), ("Failed verification", failed)):
+    no_email = [r for r in failed if r["Why not"] and all(w.strip().startswith("email") for w in r["Why not"].split(";"))]
+    failed = [r for r in failed if r not in no_email]
+    no_email.sort(key=lambda r: (r["Priority"], -(r["Top-ML papers 2023-26 (dblp)"] or 0)))
+    for name, rs in (("Send-ready (verified)", ready), ("Verified, no official email", no_email),
+                     ("Failed verification", failed)):
         ws = wb.create_sheet(name)
         cols = list(dict.fromkeys(k for r in rs for k in r)) or ["Name"]
         ws.append(cols)
@@ -293,7 +297,7 @@ def cmd_sheet(xlsx: Path) -> None:
             ws.append([r.get(c) for c in cols])
     out = DATA / "export" / "send_ready.xlsx"
     wb.save(out)
-    print(f"{len(ready)} send-ready, {len(failed)} failed -> {out}")
+    print(f"{len(ready)} send-ready, {len(no_email)} verified without official email, {len(failed)} failed -> {out}")
 
 
 def cmd_retry(size: int = 10) -> None:
