@@ -1,6 +1,17 @@
 b1-0003	WARN email local part chz2009 does not resemble the name
 b1-0010	WARN email domain chen-lab.org not in ['bu.edu']
+b1-0285	WARN email local part cel85 does not resemble the name
+b1-0289	WARN email local part el767 does not resemble the name
+b1-0300	WARN email local part qiz4006 does not resemble the name
 b1-0058	WARN email domain gmail.com not in ['duke.edu']
+b1-0086	email eric.zhou@mssm.edu: matches surname only, may be another person with the same surname
+b1-0325	WARN email local part jennhu does not resemble the name
+b1-0355	WARN email local part di.wu does not resemble the name
+b1-0399	email chen.chen@crcv.ucf.edu: matches surname only, may be another person with the same surname
 b1-0214	WARN email local part lulu1 does not resemble the name
 b1-0240	WARN email artlee@bu.edu shared by ['b1-0240', 'b1-0001']
 b1-0001	WARN email artlee@bu.edu shared by ['b1-0240', 'b1-0001']
+b1-0346	WARN email zchiu@jhu.edu shared by ['b1-0346', 'b1-0347']
+b1-0347	WARN email zchiu@jhu.edu shared by ['b1-0346', 'b1-0347']
+b1-0351	WARN email chen.chen@crcv.ucf.edu shared by ['b1-0351', 'b1-0399']
+b1-0399	WARN email chen.chen@crcv.ucf.edu shared by ['b1-0351', 'b1-0399']

@@ -206,6 +206,9 @@ JUNK_URL = re.compile(r"terms-of-use|faculty-resources/handbook|omniupdate|safel
                       r"/login|wp-admin", re.I)
 BOILER = re.compile(r"physicians and scientists on the faculty of the icahn school", re.I)
 BUSINESS = re.compile(r"fuqua|questrom|business|management|accounting|marketing|finance|kunshan", re.I)   # applicant: no business schools; Duke Kunshan is out of scope
+NO_COLD_EMAIL = re.compile(r"do not (?:e-?mail|contact|send)|don'?t (?:e-?mail|contact)|(?:cannot|can'?t|unable to|will not|won'?t) "
+                           r"(?:respond|reply|answer|comment)|not (?:able to )?(?:respond|reply)|only (?:current|admitted)|"
+                           r"no need to (?:e-?mail|contact)|outside (?:of )?(?:the )?official admissions", re.I)
 SPH = re.compile(r"school of public health|bloomberg school", re.I)   # never-list: schools of public health
 NOT_ADVISING = re.compile(r"of instruction|of the practice|teaching|affiliate|lecturer|instructor", re.I)
 
@@ -315,6 +318,12 @@ def cmd_validate() -> None:
     from .fetch import SNAP, visible_text
     from .validate import email_appears_in, norm_name, snapshot_text
     out, seen = [], defaultdict(list)
+    manual = {}   # roster page url -> text of the page the applicant saved by hand (bot-checked sites)
+    for f in (DATA / "roster").glob("*.jsonl"):
+        for r in jl(f):
+            m = re.search(r"data/snapshots/manual/[\w.\-]+?\.pdf", r.get("source") or "")
+            if m and r.get("roster_url"):
+                manual[r["roster_url"]] = m.group(0).replace(".pdf", ".txt")
     for p in jl(TAG / "people.jsonl"):
         e = p.get("email") or {}
         em = (e.get("value") or "").lower()
@@ -322,6 +331,9 @@ def cmd_validate() -> None:
             continue
         seen[em].append(p["id"])
         snap = snapshot_text(SNAP, e.get("evidence", {}).get("source_url", ""))
+        man = manual.get(e.get("evidence", {}).get("source_url", "")) or manual.get(p.get("roster_url", ""))
+        if snap is None and man and (ROOT / man).exists():   # page the applicant saved in her own browser
+            snap = (ROOT / man).read_text(errors="ignore")
         if snap is None:
             out.append((p["id"], "email source page has no saved snapshot"))
         elif not (email_appears_in(em, snap) or email_appears_in(em, visible_text(snap))):
@@ -335,6 +347,15 @@ def cmd_validate() -> None:
         ini = "".join(t[0] for t in norm_name(p["name"]).split())
         if not any(t in local for t in toks) and not local.startswith(ini[:2]):
             out.append((p["id"], f"WARN email local part {local} does not resemble the name"))
+        parts = norm_name(p["name"]).split()
+        given = [t for t in parts[:-1] if len(t) >= 2]
+        src = e.get("evidence", {}).get("source_url", "")
+        on_list_page = src and src.split("?")[0].rstrip("/") == (p.get("roster_url") or "").split("?")[0].rstrip("/")
+        if on_list_page and given and not any(g in local for g in given) and not local.startswith(given[0][0]) \
+                and parts[-1] in local:
+            # surname-only match: common surnames (Chen, Wang, Li) give someone else's address (Xinyu Chen got
+            # chen.chen@crcv.ucf.edu, 2026-11-02)
+            out.append((p["id"], f"email {em}: matches surname only, may be another person with the same surname"))
     names = {p["id"]: p["name"] for p in jl(TAG / "people.jsonl")}
     for em, ids in seen.items():
         if len(ids) > 1:   # same surname = same person listed twice (merged at export), else a real conflict
@@ -426,6 +447,8 @@ def cmd_export() -> None:
             sheet = "Dropped (C)"
         elif (d.get("recruiting") or {}).get("status") == "No":
             sheet = "Says not recruiting"
+        elif NO_COLD_EMAIL.search(" ".join((x.get("quote") if isinstance(x, dict) else str(x)) for x in d.get("contact_prefs") or [])):
+            sheet = "Apply directly, don't email"   # own site asks not to be cold-emailed
         elif t.get("fit") in ("A", "B") and sy and int(sy) < 2019 and position_class(p["title"] or "") != "assistant":
             sheet = "Strong fit, not young"
         elif not p["title"] or NOT_ADVISING.search(p["title"]) or t.get("fit") == "?":
@@ -450,7 +473,7 @@ def cmd_export() -> None:
                            for u in jl(DATA / "grid" / f"{SLUG[inst]}.units.jsonl")]
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
-    for name in ["People", "Need email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
+    for name in ["People", "Need email", "Apply directly, don't email", "Strong fit, not young", "Says not recruiting", "Check (title or fit)", "Dropped (C)",
                  "CSHL (any heritage)", "Coverage", "Unit census"]:
         ws = wb.create_sheet(name)
         data = rows.get(name, [])
