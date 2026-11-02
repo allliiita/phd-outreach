@@ -1,0 +1,8 @@
+institution: University of Washington
+unit: Electrical & Computer Engineering
+urls: [https://www.ece.uw.edu/people/faculty/]
+item: div.stafftemplate--entry
+name: span.stafftemplate--name
+title: span.stafftemplate--title
+profile: span.stafftemplate--name a@href
+filter: all

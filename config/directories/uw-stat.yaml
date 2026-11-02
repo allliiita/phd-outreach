@@ -1,0 +1,8 @@
+institution: University of Washington
+unit: Statistics
+urls: [https://stat.uw.edu/people/faculty]
+item: div.faculty-column
+name: span.person-name
+title: div.views-field-field-position
+profile: span.person-name a@href
+filter: all

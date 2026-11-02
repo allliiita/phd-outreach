@@ -1,0 +1,9 @@
+institution: Georgia Institute of Technology
+unit: H. Milton Stewart School of Industrial and Systems Engineering
+urls: [https://www.isye.gatech.edu/people/faculty]
+item: div.card
+name: .person-name
+title: .person-type
+profile: .person-name a@href
+filter: all
+expect: 148

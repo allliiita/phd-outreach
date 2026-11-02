@@ -1,0 +1,9 @@
+institution: University of Washington
+unit: Paul G. Allen School of Computer Science & Engineering
+urls: [https://www.cs.washington.edu/people/faculty-members/]
+item: div.elementor-element-270fad46
+name: p.elementor-heading-title a
+title: div.elementor-widget-heading:nth-of-type(2) p.elementor-heading-title
+profile: p.elementor-heading-title a@href
+filter: all
+expect: 95
