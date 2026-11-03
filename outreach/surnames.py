@@ -19,6 +19,7 @@ tan tang tao teng tian tong tsai tsang tseng tso tu wan wang wei wen weng wong w
 xing xiong xu xue yan yang yao ye yi yin ying yip yong you yu yuan yue yun zang zeng zha zhai zhan zhang zhao
 zhen zheng zhong zhou zhu zhuang zhuo zong zou chan cheung chow fung ho hung kwong lo loh mak ngai poon siu tam
 tsui wai woo yau yee yeung yim yiu chiang chien chin chuang hsiao hsiung kao kuan lee liou tsao tsou wey
+goh ong koh teo chua yap toh ang low quek seah yeo chong yeh shih chuah foo kee khoo loke neo phua sim soh tay tee wee jhang jheng lien yen chiou shyu tung sze szeto au choy fong lui louie
 """.split())
 EAST_ASIAN = set("""
 kim park choi jung jeong kang cho yoon yun jang lim han oh seo shin kwon hwang ahn song hong jeon ko moon yang

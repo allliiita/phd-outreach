@@ -29,3 +29,10 @@ def test_last_first():
     from outreach.roster import LAST_FIRST
     m = LAST_FIRST.match("Huang, Furong")
     assert m and f"{m.group(2)} {m.group(1)}" == "Furong Huang"
+
+
+def test_sea_taiwan_hk_surnames_chinese():
+    from outreach.surnames import asian_tag
+    for n in ["Wei Khoo", "Ann Tan", "Bo Tsai", "Li Hsieh", "Ke Szeto", "Jo Phua", "Lindsey Ma"]:
+        assert asian_tag(n) == "chinese", n
+    assert asian_tag("John Smith") is None
