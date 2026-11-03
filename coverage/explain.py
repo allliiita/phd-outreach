@@ -28,16 +28,62 @@ import re
 import sys
 from urllib.parse import urlparse
 
-from .scope import DATA, jl, name_key
+from .scope import DATA, bare_name, jl, name_key
 
 REASONS = ("moved_institution", "senior_title", "not_phd_advising_title", "postdoc_pre_independent", "clinical_unit",
            "out_of_scope_unit", "alias_of_ledger")
 API_HOSTS = ("nsf.gov", "nih.gov")   # award / grant APIs: no department, so no proof of a unit
 
 
+_INVISIBLE = dict.fromkeys(map(ord, "\u200b\u200c\u200d\u2060\ufeff\u00ad"), None)   # zero-width / soft hyphen: dropped
+_SPACES = {"\u00a0": " ", "\u202f": " ", "\u2007": " ", "\u2009": " "}
+
+
 def norm(s: str) -> str:
-    s = (s or "").translate(str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " "}))
+    s = (s or "").translate(_INVISIBLE).translate(str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"',
+                                                                "\u2013": "-", "\u2014": "-", **_SPACES}))
     return " ".join(s.lower().split())
+
+
+def surname(name: str) -> str:
+    toks = bare_name(name).split()
+    return toks[-1] if toks else ""
+
+
+def has_surname(text: str, name: str) -> bool:
+    """The person's surname (accent-folded too) appears in the text: a nav header alone is not evidence about a person."""
+    import unicodedata
+    fold = lambda x: unicodedata.normalize("NFKD", norm(x)).encode("ascii", "ignore").decode()
+    sn = surname(name)
+    return bool(sn) and (norm(sn) in norm(text) or (bool(fold(sn)) and fold(sn) in fold(text)))
+
+
+# Units the targets always cover (docs/coverage_logic.md G1, G1+): never out_of_scope_unit
+ALWAYS_IN_SCOPE = re.compile(r"engineering|\bcs\b|\bcse\b|\bece\b|\beecs\b|\bee\b|computer|computing|cognitive science|"
+                             r"electrical|statistic|data science|\bdata\b|applied math|operations research|\bieor\b|"
+                             r"industrial|information|informatics|linguistic|machine learning|artificial intelligence", re.I)
+
+
+def institution_names(to: str) -> list[str]:
+    """Every name config/institutions.yaml knows for the institution `to` names (full name, aliases, csrankings); else [to]."""
+    from outreach.config import canonical_institution, institutions
+    c = canonical_institution(to)
+    for inst in institutions()["institutions"]:
+        if inst["name"] == c or norm(to) == norm(inst.get("csrankings", "")):
+            return [inst["name"], inst.get("csrankings", ""), *inst.get("aliases", [])]
+    return [to]
+
+
+def names_institution(quote: str, to: str) -> bool:
+    for n in institution_names(to):
+        if not norm(n):
+            continue
+        if len(n) <= 4 or n == n.upper():   # MIT, UW, CMU: whole word only
+            if re.search(rf"(?<![a-z0-9]){re.escape(norm(n))}(?![a-z0-9])", norm(quote)):
+                return True
+        elif contains(quote, n):
+            return True
+    return False
 
 
 def contains(text: str, needle: str) -> bool:
@@ -80,12 +126,18 @@ def structural(r: dict) -> str | None:
             return "NSF/NIH API pages carry no department"
         if not r.get("unit") or not contains(q, r["unit"]):
             return "quote must contain the --unit name"
+        if reason == "out_of_scope_unit" and ALWAYS_IN_SCOPE.search(r["unit"]):
+            return f"'{r['unit']}' is an engineering / CS / statistics / data / info / linguistics unit: always in scope"
     elif reason == "moved_institution":
-        if not r.get("to") or not contains(q, r["to"]):
+        if not r.get("to") or not names_institution(q, r["to"]):
             return "quote must name the new institution (--to)"
+        if not has_surname(q, r.get("name", "")):
+            return "quote must contain the person's surname"
     elif reason in ("senior_title", "not_phd_advising_title"):
         if not r.get("title") or not contains(q, r["title"]):
             return "quote must contain the title (--title)"
+        if not has_surname(q, r.get("name", "")):
+            return "quote must contain the person's surname"
     elif reason == "postdoc_pre_independent":
         if not r.get("fy") or r["fy"] < current_fy() - 1:
             return f"K99 fiscal year {r.get('fy')} is not active (need >= {current_fy() - 1})"
@@ -130,11 +182,14 @@ def _is_pi(proj: dict, name: str) -> bool:
 def check_k99(school: str, name: str, quote: str, reporter=reporter_projects):
     """-> (fiscal year, project url, error). Active K99 at this school, and no R00 for the same PI."""
     from .probes import org_school
-    last = name_key(name)[0]
+    last = surname(name)   # name_key is a SORTED tuple: [0] is not the last name
     ks = [p for p in reporter(last, ["K99"]) if _is_pi(p, name)]
     r00 = [p for p in reporter(last, ["R00"]) if _is_pi(p, name)]
     if r00:
-        return None, None, f"PI has an R00 ({r00[0].get('project_num')}): already independent"
+        org = (r00[0].get("organization") or {}).get("org_name") or "?"
+        home = org_school(org)
+        hint = (f"add_person ({home} is in scope)" if home else f'moved_institution --to "{org.title()}"')
+        return None, None, f"PI has an R00 ({r00[0].get('project_num')}) at {org}: already independent; use {hint}"
     need = current_fy() - 1
     cur = [p for p in ks if (p.get("fiscal_year") or 0) >= need and org_school((p.get("organization") or {}).get("org_name") or "") == school]
     if not cur:
