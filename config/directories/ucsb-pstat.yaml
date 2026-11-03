@@ -1,0 +1,9 @@
+institution: University of California Santa Barbara
+unit: Statistics and Applied Probability
+urls: [https://www.pstat.ucsb.edu/people/faculty]
+item: div.views-row
+name: h4 a
+title: div.inner
+profile: h4 a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

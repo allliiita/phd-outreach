@@ -1,0 +1,8 @@
+institution: University of California Santa Barbara
+unit: Electrical and Computer Engineering
+urls: [https://www.ece.ucsb.edu/people/faculty]
+item: div.views-row
+name: h3 a
+title: div.group-second
+profile: h3 a@href
+filter: all
