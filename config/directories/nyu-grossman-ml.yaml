@@ -1,0 +1,18 @@
+institution: New York University
+unit: "Grossman PhD training faculty (ML/AI, Computational Biology, Computational Neuroscience areas)"
+urls:
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AMachine%2BLearning%2Band%2BAI"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AMachine%2BLearning%2Band%2BAI&page=1"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AMachine%2BLearning%2Band%2BAI&page=2"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AMachine%2BLearning%2Band%2BAI&page=3"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AComputational%2BBiology"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AComputational%2BBiology&page=1"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AComputational%2BBiology&page=2"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ASystems%252C%2BCognitive%252C%2B%2526%2BComputational%2BNeuroscience"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ASystems%252C%2BCognitive%252C%2B%2526%2BComputational%2BNeuroscience&page=1"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ASystems%252C%2BCognitive%252C%2B%2526%2BComputational%2BNeuroscience&page=2"
+item: div.search-result--profile
+name: h2.search-result__title a
+title: div.search-result__content
+profile: h2.search-result__title a@href
+filter: all
