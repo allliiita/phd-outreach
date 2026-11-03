@@ -1,0 +1,74 @@
+{
+ "id": "chao-zhang-georgia-tech",
+ "name": "Chao Zhang",
+ "salutation": "Professor Zhang",
+ "surname": "Zhang",
+ "title": "Edenfield Early-Career Associate Professor",
+ "school": "Georgia Institute of Technology",
+ "units": [
+  "ML PhD Program Faculty",
+  "School of Computational Science and Engineering"
+ ],
+ "email": "chaozhang@gatech.edu",
+ "email_source": "https://cse.gatech.edu/people/chao-zhang",
+ "homepage": "http://chaozhang.org",
+ "research": {
+  "text": "Prospective students: I am always looking for strong and motivated students to join our group. If you are interested in working with me, you can either email me or fill out this form .",
+  "source_url": "http://chaozhang.org/"
+ },
+ "keywords": [
+  "Protein Language Models",
+  "Protein Fitness Landscape",
+  "Instruction Following Retrieval Models"
+ ],
+ "theme": "core-ML/CV",
+ "papers": [
+  {
+   "title": "Contrastive Fitness Learning: Reprogramming Protein Language Models for Low- N Learning of Protein Fitness Landscape",
+   "year": 2024,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "http://chaozhang.org",
+   "verified_in": "page",
+   "page_snippet": "ce on artificial intelligence aaai 2024 contrastive fitness learning reprogramming protein language models for low n learning of protein fitness landscape junming zhao chao zhang and yunan luo r"
+  },
+  {
+   "title": "BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers",
+   "year": 2024,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "http://chaozhang.org",
+   "verified_in": "page",
+   "page_snippet": "language processing emnlp findings 2024 bmretriever tuning large language models as better biomedical text retrievers ran xu wenqi shi yue yu yuchen zhuang y"
+  },
+  {
+   "title": "HiGen: Hierarchy-Aware Sequence Generation for Hierarchical Text Classification",
+   "year": 2024,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "http://chaozhang.org",
+   "verified_in": "page",
+   "page_snippet": "or computational linguistics naacl 2024 higen hierarchy aware sequence generation for hierarchical text classification vidit jain mukund rungta yuchen zhuang "
+  }
+ ],
+ "recruiting": {
+  "status": "Confirmed",
+  "quote": "Group Prospective students: I am always looking for strong and motivated students to join our group.",
+  "source_url": "http://chaozhang.org"
+ },
+ "matched_projects": [
+  {
+   "key": "arborphy",
+   "one_liner": "At Arborphy AI (advised by Prof. Tian Zheng, Columbia Statistics) I built and stress-tested a BioCLIP + EfficientNet fusion model for fine-grained plant species recognition, and found with a leakage-aware, multi-seed protocol that the fusion gains did not reliably beat a BioCLIP-only baseline.",
+   "overlap": [],
+   "weak": true
+  },
+  {
+   "key": "calcium",
+   "one_liner": "At Columbia's Center for Theoretical Neuroscience I worked on self-supervised denoising of two-photon calcium imaging (masking strategies combined with penalized matrix decomposition, with synthetic benchmarks built from real neuronal footprints).",
+   "overlap": [],
+   "weak": true
+  }
+ ],
+ "built_on": "2026-11-03"
+}

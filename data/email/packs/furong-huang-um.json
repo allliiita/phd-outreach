@@ -1,0 +1,72 @@
+{
+ "id": "furong-huang-um",
+ "name": "Furong Huang",
+ "salutation": "Professor Huang",
+ "surname": "Huang",
+ "title": "Associate Professor, Computer Science",
+ "school": "University of Maryland",
+ "units": [
+  "AIM",
+  "AMSC (Applied Mathematics & Statistics, and Scientific Computation)",
+  "Electrical and Computer Engineering",
+  "UMIACS"
+ ],
+ "email": "furongh@umd.edu",
+ "email_source": "https://aim.umd.edu/people/furong-huang",
+ "homepage": "https://www.cs.umd.edu/people/furongh",
+ "research": {
+  "text": "She specializes in trustworthy machine learning, AI for sequential decision-making, and high-dimensional statistics, applying theory to practical computing challenges. Her research focuses on creating reliable, interpretable models and developing algorithms that optimize performance while adhering to ethical and safety standards.",
+  "source_url": "https://umiacs.umd.edu/our-experts/faculty/furong-huang"
+ },
+ "keywords": [],
+ "theme": "trustworthy-ML",
+ "papers": [
+  {
+   "title": "Adversarial prompt and fine-tuning attacks threaten medical large language models",
+   "year": 2025,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "http://furong-huang.com/publications/",
+   "verified_in": "page",
+   "page_snippet": " 17417 copy trustworthy ai journal 2025 adversarial prompt and fine tuning attacks threaten medical large language models yifan yang qiao jin furong huang zhiyon"
+  },
+  {
+   "title": "A survey of recent methods for addressing AI fairness and bias in biomedicine",
+   "year": 2024,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "http://furong-huang.com/publications/",
+   "verified_in": "page",
+   "page_snippet": " 08925 copy trustworthy ai journal 2024 a survey of recent methods for addressing ai fairness and bias in biomedicine yifan yang mingquan lin han zhao yifan "
+  },
+  {
+   "title": "Unmasking and quantifying racial bias of large language models in medical report generation",
+   "year": 2024,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "http://furong-huang.com/publications/",
+   "verified_in": "page",
+   "page_snippet": " 06187 copy trustworthy ai journal 2024 unmasking and quantifying racial bias of large language models in medical report generation yifan yang xiaoyu liu qiao jin furong h"
+  }
+ ],
+ "recruiting": null,
+ "matched_projects": [
+  {
+   "key": "arborphy",
+   "one_liner": "At Arborphy AI (advised by Prof. Tian Zheng, Columbia Statistics) I built and stress-tested a BioCLIP + EfficientNet fusion model for fine-grained plant species recognition, and found with a leakage-aware, multi-seed protocol that the fusion gains did not reliably beat a BioCLIP-only baseline.",
+   "overlap": [
+    "evaluation"
+   ],
+   "weak": false
+  },
+  {
+   "key": "agents",
+   "one_liner": "I built a multi-agent system with blind cross-model verification and trust levels that gate each stage's autonomy on measured error rates.",
+   "overlap": [
+    "evaluation"
+   ],
+   "weak": false
+  }
+ ],
+ "built_on": "2026-11-03"
+}

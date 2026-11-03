@@ -1,0 +1,64 @@
+{
+ "id": "pan-li-georgia-tech",
+ "name": "Pan Li",
+ "salutation": "Professor Li",
+ "surname": "Li",
+ "title": "Assistant Professor",
+ "school": "Georgia Institute of Technology",
+ "units": [
+  "ML PhD Program Faculty",
+  "Machine Learning Center at Georgia Tech (ML@GT) affiliated faculty",
+  "School of Electrical and Computer Engineering"
+ ],
+ "email": "pli95@gatech.edu",
+ "email_source": "https://ml.gatech.edu/people/pan-li",
+ "homepage": "https://sites.google.com/view/panli-purdue/home",
+ "research": {
+  "text": "202 6 / 01 [Papers] One paper accepted by AISTATS, one paper accepted by WWW , and five papers (three papers led by our group + 2 collaborative papers) accepted by ICLR . Big congrats to relevant students and collaborators!",
+  "source_url": "https://sites.google.com/view/panli-purdue"
+ },
+ "keywords": [
+  "Geometric Deep Learning",
+  "Explainable AI",
+  "Universal Graph Structural Encoder"
+ ],
+ "theme": "core-ML/CV",
+ "papers": [
+  {
+   "title": "Powers of magnetic graph matrix: Fourier spectrum, walk compression, and applications",
+   "year": 2026,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "https://sites.google.com/view/panli-purdue/publications",
+   "verified_in": "page",
+   "page_snippet": "ation yinan huang david f gleich pan li powers of magnetic graph matrix fourier spectrum walk compression and applications pnas 2026 mufei li viraj shitole eli ch"
+  },
+  {
+   "title": "Towards Understanding Sensitive and Decisive Patterns in Explainable AI: A Case Study of Model Interpretation in Geometric Deep Learning",
+   "year": 2024,
+   "coauthors": [],
+   "venue": "",
+   "source_url": "https://sites.google.com/view/panli-purdue/publications",
+   "verified_in": "page",
+   "page_snippet": "ht jiajun zhu siqi miao rex ying pan li towards understanding sensitive and decisive patterns in explainable ai a case study of model interpretation in geometric deep learning nature machine intelligence deyu zou sh"
+  }
+ ],
+ "recruiting": null,
+ "matched_projects": [
+  {
+   "key": "flywire",
+   "one_liner": "In a course project I fit Bayesian stochastic block models to the FlyWire connectome to infer latent neuron types.",
+   "overlap": [
+    "graph"
+   ],
+   "weak": false
+  },
+  {
+   "key": "arborphy",
+   "one_liner": "At Arborphy AI (advised by Prof. Tian Zheng, Columbia Statistics) I built and stress-tested a BioCLIP + EfficientNet fusion model for fine-grained plant species recognition, and found with a leakage-aware, multi-seed protocol that the fusion gains did not reliably beat a BioCLIP-only baseline.",
+   "overlap": [],
+   "weak": true
+  }
+ ],
+ "built_on": "2026-11-03"
+}
