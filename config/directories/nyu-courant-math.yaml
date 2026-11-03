@@ -1,0 +1,13 @@
+institution: New York University
+unit: "Mathematics (Courant)"
+urls:
+  - "https://math.nyu.edu/dynamic/people/faculty/?type=1"
+  - "https://math.nyu.edu/dynamic/people/faculty/?type=2"
+  - "https://math.nyu.edu/dynamic/people/faculty/?type=6"
+item: a.people-link
+name: h2.name
+title: div.people-description div
+profile: .@href
+skip_titles:
+  - '(?i)emerit'
+filter: all

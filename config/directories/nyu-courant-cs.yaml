@@ -1,0 +1,9 @@
+institution: New York University
+unit: "Computer Science (Courant) PhD advisors"
+urls:
+  - "https://cs.nyu.edu/dynamic/people/faculty/type/21/"
+item: li.col-sm-6
+name: p.name
+title: p.title
+profile: p.name a@href
+filter: all
