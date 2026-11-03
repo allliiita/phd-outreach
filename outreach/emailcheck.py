@@ -198,6 +198,8 @@ def run(ids: list[str], email: Path = EMAIL) -> int:
     for i in ids:
         try:
             d = json.loads((email / "drafts" / f"{i}.json").read_text())
+            if "skip" in d:
+                raise ValueError(f"writer skipped this professor: {d['skip']}")
             pack = json.loads((email / "packs" / f"{i}.json").read_text())
             errs = check(d, pack, app, load_others(i, email / "packs"))
         except (OSError, ValueError, KeyError) as e:

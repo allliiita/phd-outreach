@@ -1,30 +1,43 @@
 # Email writer
 
-Input: one verified Person record (tier A) + `config/applicant.yaml`.
-Output: `{"id", "to", "subject", "body", "claims": [...]}` appended to `data/drafts.jsonl`.
+Input (file paths, do not paste): `data/email/packs/<id>.json` (one fact pack) + `config/applicant.yaml`.
+Output: `data/email/drafts/<id>.json` = `{"id", "to", "subject", "body", "claims": [{"para", "text", "source"}]}`.
+Then run `python -m outreach.emailcheck <id>` and fix every reason it prints (max 2 rounds). Do not edit the pack.
 
-## Step 0: write or skip (this replaces a separate judge pass)
-Read the record first. Write only if the professor does real AI / ML / statistical-learning research, or AI
-for biology / medicine / neuroscience (`goal` in applicant.yaml). If the fit is weak, output
-`{"id": ..., "skip": "<reason, <= 15 words>"}` instead of a draft. Do not stretch a weak fit.
-Name the applicant's goal (AI/ML methods research; bio/neuro applications welcome) as the reason for writing; past projects are evidence,
-not the destination. Do not frame the applicant as a calcium-imaging specialist.
+## Sources (the only facts you may use)
+- About the professor: the pack only (`papers[i].title/year/coauthors/venue`, `research.text`, `keywords`, `units`, `title`, `recruiting`).
+  If a fact is not in the pack, it is not in the email. Do not use memory, the web, or the abstract of a paper.
+- About the applicant: `config/applicant.yaml` only (`degree`, `interests`, `goal`, `projects[].one_liner`). Shorten, never add results.
+  Never claim publications, awards, or numbers not in the file. Never mention recommenders or recommendation letters.
+- If `matched_projects` has `weak: true` entries, prefer the other projects in applicant.yaml whose one_liner fits the paper honestly;
+  if none fits, write the connection as a question of method (what you did), not as shared subject matter.
 
-## What a good email is
-Short (130–200 words), specific, honest, easy to answer. The professor should be able to tell in 10 seconds who you are, why them, and what you are asking.
+## Format (fixed by the applicant; the checker enforces it)
+Subject: `PhD Inquiry – <Applicant Name> – <Topic of this professor>` (en dashes; topic from pack research/keywords, 3-8 words).
+Body = `Dear <pack.salutation>,` then exactly 6 paragraphs, then `Sincerely,` newline `<Applicant Name>`. Paragraphs separated by one blank line.
+1. "I am <name>, a prospective PhD applicant interested in <2-3 interests tied to this professor>. I hold <degree(s)> and have since focused on <relevant work>."
+2. "I recently read your <year> paper "<exact title>" (<co-authors/venue if in the pack>). I was particularly interested in <one specific idea in it>. This resonated with my experience <one applicant project>."
+   The title is copied character for character from `papers[i].title`, in quotation marks. The "specific idea" must be derivable from the title or
+   `research.text`; if the pack gives no more than the title, name the idea the title itself states and nothing deeper. Optionally one more pack item (second paper, a recruiting note).
+3. "My broad research interest lies in <...>. More specifically, I am interested in <...>. I see this as a direction I would like to develop further under supervision."
+4. 2-3 sentences of concrete evidence from a DIFFERENT applicant project than paragraph 2, then:
+   "I would be interested in learning how your research group approaches <...>. Would you be considering PhD students for 2027 entry?"
+5. "My CV and selected project portfolio are attached for your reference. I would be happy to share my academic transcript and a research concept note upon request."
+6. "Thank you for your time and consideration. I would appreciate the opportunity for a brief discussion if my research interests might be relevant to your ongoing work."
+Paragraphs 1-6 total 230-330 words.
 
-Structure:
-1. **Subject:** `Prospective PhD student (Fall 2027): <their specific topic> — <one-phrase hook from your work>`
-2. **Opening (1 sentence):** who you are — "I'm Lindsey Ma, finishing an M.S. in Statistics at Columbia and applying to PhD programs for Fall 2027."
-3. **Why them (2 sentences):** name ONE specific paper or project from the record (`recent_papers` / `notes`) and say concretely what in it connects to your work. Never praise generically ("your impressive work").
-4. **Why you (2–3 sentences):** pick the 1–2 applicant projects whose `matches` overlap their keywords. Use the one_liner content; you may shorten, never add results.
-5. **Ask (1 sentence):** whether they expect to take PhD students for Fall 2027 through <program>, and whether you could apply to work with them. If recruiting is Confirmed, acknowledge their posted note instead of asking whether they're recruiting.
-6. Sign-off with name, website. CV attached.
+## Claims
+Every sentence of paragraphs 1-4 that states something about the professor or the applicant has a claim:
+`{"para": 2, "text": "<the claim in your words>", "source": "<path>"}` where path is a pack field (`papers[0].title`, `research.text`, `keywords`, `units`)
+or an applicant field (`applicant.degree`, `applicant.interests`, `applicant.projects.<key>`). Paragraph 2 needs a `papers[i]` claim;
+paragraphs 2 and 4 each need an `applicant.projects.<key>` claim and the keys differ.
 
-## Hard rules (checked by `outreach.emailcheck`)
-- Every factual claim about the professor must be in the record (paper title, project, stated interest). List them in `claims` with the record field they come from.
-- Never claim publications, awards, or results not in applicant.yaml. Never mention recommendation letters.
-- Never say "I have read all your papers", "I am deeply passionate", "groundbreaking", "esteemed", "I hope this email finds you well".
-- Use their actual title + last name ("Dear Professor Tang," / for institute PIs without a professorship "Dear Dr. X,").
-- Do not mention other professors you are emailing.
-- Institute PIs: the ask names the university program through which they advise (record `institute.phd_path`). If none, ask whether they host PhD students from partner programs.
+## Be specific or say less
+The email must contain at least 2 words from the pack (research terms, paper concepts) that would not fit any other professor; the checker's swap test fails otherwise.
+If the pack is too thin to do that honestly, write `{"id", "skip": "<reason, <= 15 words>"}` to `data/email/drafts/<id>.json` instead of padding.
+
+## Banned
+"I hope this email finds you", "deeply passionate", "groundbreaking", "esteemed", "renowned", "I have read all", "your impressive work",
+"your inspiring work", "delve", "tapestry", "cutting-edge", "state-of-the-art", "world-class", "I am writing to express my", any mention of recommenders,
+"my publication", "my paper". No flattery, no mention of other professors, no claim that the applicant is a calcium-imaging specialist
+(goal: AI/ML methods research; bio/neuro applications welcome; past projects are evidence, not the destination).
