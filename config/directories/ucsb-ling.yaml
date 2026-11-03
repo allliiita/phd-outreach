@@ -1,0 +1,9 @@
+institution: University of California Santa Barbara
+unit: Linguistics
+urls: [https://www.linguistics.ucsb.edu/people]
+item: div.col-lg-4.equal-height
+name: h3 a
+title: div.views-field-field-title
+profile: h3 a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
