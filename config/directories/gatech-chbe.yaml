@@ -1,0 +1,10 @@
+institution: Georgia Institute of Technology
+unit: School of Chemical and Biomolecular Engineering
+urls:
+  - 'https://chbe.gatech.edu/directory1?field_person_category_target_id=1&field_person_category_target_id_1=All&title='
+item: div.directory-person
+name: .field--name-field-person-name
+title: .field--name-field-person-job-title-s-
+profile: a.directory-person-wrapper-link@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

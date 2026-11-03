@@ -1,0 +1,22 @@
+institution: Georgia Institute of Technology
+unit: George W. Woodruff School of Mechanical Engineering
+urls:
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=0'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=1'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=2'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=3'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=4'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=5'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=6'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=7'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=8'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=9'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=10'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=11'
+  - 'https://www.me.gatech.edu/faculty?field_last_name_value=&field_staff_group_target_id=All&field_all_research_areas_target_id=All&page=12'
+item: div.faculty__user-wrapper
+name: .faculty-name
+title: .faculty-title
+profile: .faculty-name a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
