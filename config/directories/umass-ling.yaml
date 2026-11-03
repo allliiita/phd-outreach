@@ -1,0 +1,9 @@
+institution: University of Massachusetts Amherst
+unit: Linguistics
+urls:
+  - "https://www.umass.edu/linguistics/faculty"
+item: div.teaser-item.profile
+name: a.title
+title: div.prof-title-role
+profile: a.title@href
+filter: all

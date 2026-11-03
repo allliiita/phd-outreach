@@ -1,0 +1,12 @@
+institution: University of Massachusetts Amherst
+unit: Neuroscience and Behavior
+urls:
+  - "https://www.umass.edu/neuroscience-behavior/about/directory?keyword=&field_profile_type_target_id%5B1%5D=1&page=0"
+  - "https://www.umass.edu/neuroscience-behavior/about/directory?keyword=&field_profile_type_target_id%5B1%5D=1&page=1"
+  - "https://www.umass.edu/neuroscience-behavior/about/directory?keyword=&field_profile_type_target_id%5B1%5D=1&page=2"
+  - "https://www.umass.edu/neuroscience-behavior/about/directory?keyword=&field_profile_type_target_id%5B1%5D=1&page=3"
+item: div.teaser-item.profile
+name: a.title
+title: div.prof-title-role
+profile: a.title@href
+filter: all

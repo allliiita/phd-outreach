@@ -1,0 +1,9 @@
+institution: University of Massachusetts Amherst
+unit: Psychological and Brain Sciences
+urls:
+  - "https://www.umass.edu/psychological-brain-sciences/faculty"
+item: div.teaser-item.profile
+name: a.title
+title: div.prof-title-role
+profile: a.title@href
+filter: all
