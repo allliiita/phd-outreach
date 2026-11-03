@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Institute for Computational Medicine
+urls: ['https://icm.jhu.edu/our-people/']
+item: "#et_pb_toggle_content_0 div.grid-item"
+name: h3
+title: div.team_content
+profile: a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

@@ -1,0 +1,8 @@
+institution: Johns Hopkins University
+unit: Biomedical Informatics & Data Science (SOM)
+urls: ['https://bids.jhmi.edu/about/faculty-and-board/']
+item: div.staff-member
+name: h3.staff-member-name
+title: div.staff-member-title
+profile: div.staff-member-website a@href
+filter: all

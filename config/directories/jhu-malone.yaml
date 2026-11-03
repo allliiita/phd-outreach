@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Malone Center
+urls: ['https://malonecenter.jhu.edu/people/']
+item: div.vc_grid-item-mini
+name: h4
+title: .pendari_people_title
+profile: h4 a@href
+filter: all
+skip_titles: ['postdoc', 'research engineer']

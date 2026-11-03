@@ -1,0 +1,34 @@
+institution: Johns Hopkins University
+unit: Data Science & AI Institute faculty
+urls:
+  - 'https://ai.jhu.edu/people/faculty/'
+  - 'https://ai.jhu.edu/people/faculty/page/2/'
+  - 'https://ai.jhu.edu/people/faculty/page/3/'
+  - 'https://ai.jhu.edu/people/faculty/page/4/'
+  - 'https://ai.jhu.edu/people/faculty/page/5/'
+  - 'https://ai.jhu.edu/people/faculty/page/6/'
+  - 'https://ai.jhu.edu/people/faculty/page/7/'
+  - 'https://ai.jhu.edu/people/faculty/page/8/'
+  - 'https://ai.jhu.edu/people/faculty/page/9/'
+  - 'https://ai.jhu.edu/people/faculty/page/10/'
+  - 'https://ai.jhu.edu/people/faculty/page/11/'
+  - 'https://ai.jhu.edu/people/faculty/page/12/'
+  - 'https://ai.jhu.edu/people/faculty/page/13/'
+  - 'https://ai.jhu.edu/people/faculty/page/14/'
+  - 'https://ai.jhu.edu/people/faculty/page/15/'
+  - 'https://ai.jhu.edu/people/faculty/page/16/'
+  - 'https://ai.jhu.edu/people/faculty/page/17/'
+  - 'https://ai.jhu.edu/people/faculty/page/18/'
+  - 'https://ai.jhu.edu/people/faculty/page/19/'
+  - 'https://ai.jhu.edu/people/faculty/page/20/'
+  - 'https://ai.jhu.edu/people/faculty/page/21/'
+  - 'https://ai.jhu.edu/people/faculty/page/22/'
+  - 'https://ai.jhu.edu/people/faculty/page/23/'
+  - 'https://ai.jhu.edu/people/faculty/page/24/'
+item: li.faculty_list_row
+name: h2.faculty_list_item_name
+title: div.faculty_list_item_title
+profile: a.faculty_list_card_link@href
+filter: all
+expect: 280
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

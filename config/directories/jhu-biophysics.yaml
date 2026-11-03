@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Biophysics (computational faculty)
+urls: ['https://biophysics.jhu.edu/people/']
+item: article.people
+name: h3
+title: div.position
+profile: h3 a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

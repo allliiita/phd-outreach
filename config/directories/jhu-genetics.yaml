@@ -1,0 +1,9 @@
+institution: Johns Hopkins University
+unit: Human Genetics / Genetic Medicine (computational faculty)
+urls: ['https://www.hopkinsmedicine.org/genetic-medicine/team']
+item: li.expert__item
+name: h3.name a
+title: div.title
+profile: h3.name a@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

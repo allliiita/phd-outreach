@@ -1,0 +1,12 @@
+institution: Johns Hopkins University
+unit: Biomedical Engineering
+urls:
+  - 'https://www.bme.jhu.edu/people/faculty/'
+  - 'https://www.bme.jhu.edu/people/faculty/?pg=2'
+  - 'https://www.bme.jhu.edu/people/faculty/?pg=3'
+item: div.zn-faculty-profile
+name: div.zn-name
+title: div.zn-position
+profile: a.zn-faculty-link@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
