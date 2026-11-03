@@ -1,0 +1,8 @@
+institution: Memorial Sloan Kettering Cancer Center
+unit: Computational Oncology (Epidemiology & Biostatistics)
+urls: [https://www.mskcc.org/departments/epidemiology-biostatistics/computational-oncology/members]
+item: div.msk-person.msk-person--standard
+name: div.msk-person__name
+title: div.msk-person__title
+profile: a@href
+skip_titles: ['^(?!.*(attending|chief|professor|member)).+$']
