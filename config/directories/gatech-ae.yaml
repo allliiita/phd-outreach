@@ -1,0 +1,10 @@
+institution: Georgia Institute of Technology
+unit: Daniel Guggenheim School of Aerospace Engineering
+urls:
+  - 'https://ae.gatech.edu/academic-faculty-1'
+item: div.directory-person
+name: .field--name-field-person-name
+title: .field--name-field-person-job-title-s-
+profile: a.directory-person-wrapper-link@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']

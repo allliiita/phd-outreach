@@ -1,0 +1,15 @@
+institution: Georgia Institute of Technology
+unit: School of Electrical and Computer Engineering
+urls:
+  - 'https://ece.gatech.edu/directory/faculty?page=0'
+  - 'https://ece.gatech.edu/directory/faculty?page=1'
+  - 'https://ece.gatech.edu/directory/faculty?page=2'
+  - 'https://ece.gatech.edu/directory/faculty?page=3'
+  - 'https://ece.gatech.edu/directory/faculty?page=4'
+  - 'https://ece.gatech.edu/directory/faculty?page=5'
+item: div.directory-person
+name: .field--name-field-person-name .field__item
+title: .field--name-field-person-official-job-title .field__item
+profile: a.directory-person-wrapper-link@href
+filter: all
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
