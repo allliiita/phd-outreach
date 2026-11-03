@@ -1,13 +1,15 @@
 """Fit stage plumbing (no judging). Judges are agents/26_fit_tagger.md run twice on different models.
 
   python -m coverage.fit cards --school S [--no-fetch]   # -> data/fit/in/<slug>.jsonl
+  python -m coverage.fit batches [-n 5]                  # open cards -> data/fit/batches/bNN.jsonl (mixed schools)
+  python -m coverage.fit merge                           # batch judge files data/fit/out/batch-bNN.<judge>.jsonl (no --school)
   python -m coverage.fit merge --school S                # data/fit/out/<slug>.<judge>.jsonl -> decided.jsonl / tiebreak
 
 cards: ledger people in scope, outcome open (open:title people wait for a title first), not yet decided. Research text comes
 from (first non-empty) a dossier, a data/tag/in card, or the person's profile page (outreach.fetch snapshot, then
 outreach.enrich.research_text). With fetching on, the card also gets `home`: the first ~800 chars of visible text after the nav
 of the person's own homepage / lab page (outreach.enrich.pick_links on the profile), and up to 3 paper titles from those pages.
-A card stays <= ~2000 chars of text (research 800 + home 800 + 3 titles x 120).
+A card stays <= 900 chars of text (research 480 + home 240 + 3 titles x 60).
 merge: two judge files agree on fit -> decided; disagree or either '?' -> data/fit/tiebreak/<slug>.jsonl for a
 third judge (data/fit/out/<slug>.tiebreak.jsonl), whose answer decides ('?' stays '?').
 """
@@ -22,9 +24,9 @@ from . import scope
 from .scope import DATA, SLUG, jl
 
 FIT = DATA / "fit"
-RESEARCH_MAX = 800
-HOME_MAX = 800
-PAPER_MAX = 120
+RESEARCH_MAX = 480
+HOME_MAX = 240
+PAPER_MAX = 60
 VALID = {"A", "B", "C", "?"}
 
 
@@ -218,12 +220,77 @@ def merge(school: str) -> dict:
     return {"decided": len(new), "tiebreak": len(tie), "waiting": waiting}
 
 
+def make_batches(n: int = 5) -> list[int]:
+    """Open cards from data/fit/in/*.jsonl (not decided) -> data/fit/batches/b01..bNN.jsonl, round-robin so every
+    batch mixes schools and sizes differ by at most 1."""
+    done = decided()
+    pools = []
+    for f in sorted(glob.glob(str(FIT / "in" / "*.jsonl"))):
+        pools.append([c for c in jl(f) if c["id"] not in done])
+    cards = []
+    while any(pools):   # interleave schools
+        for p in pools:
+            if p:
+                cards.append(p.pop(0))
+    out = [cards[i::n] for i in range(n)]
+    for i, b in enumerate(out, 1):
+        write_jsonl(FIT / "batches" / f"b{i:02d}.jsonl", b)
+    return [len(b) for b in out]
+
+
+def merge_batches() -> dict:
+    """Judge files data/fit/out/batch-bNN.<judge>.jsonl (ids carry the school slug). Two judges agree -> decided;
+    disagree (or either '?') -> decided with fit '?' and note 'judges disagree: X vs Y' (no third judge this round)."""
+    cards = {}
+    for f in glob.glob(str(FIT / "in" / "*.jsonl")):
+        cards.update({c["id"]: c for c in jl(f)})
+    got: dict[str, list] = {}
+    for f in sorted(glob.glob(str(FIT / "out" / "batch-b*.*.jsonl"))):
+        judge = f.rsplit("/", 1)[-1].split(".")[1]
+        if judge == "tiebreak":
+            continue
+        for j in jl(f):
+            if j.get("id") and j.get("fit") in VALID:
+                got.setdefault(j["id"], []).append((judge, j))
+    done = decided()
+    new, waiting = [], 0
+    for cid, js in got.items():
+        if cid in done or cid not in cards:
+            continue
+        js = list({j: x for j, x in js}.items())   # one line per judge
+        if len(js) < 2:
+            waiting += 1
+            continue
+        (ja, a), (jb, b) = js[0], js[1]
+        agree = a["fit"] == b["fit"] != "?"
+        first = a if a["fit"] != "?" or b["fit"] == "?" else b
+        row = {"id": cid, "school": cards[cid]["school"], "name": cards[cid]["name"],
+               "fit": a["fit"] if agree else "?", "theme": first.get("theme", ""), "summary": first.get("summary", ""),
+               "hook": first.get("hook", ""), "judges": [ja, jb]}
+        if not agree:
+            row["note"] = f"judges disagree: {a['fit']} vs {b['fit']}"
+        new.append(row)
+    if new:
+        write_jsonl(FIT / "decided.jsonl", list(done.values()) + new)
+    print(f"batches: decided +{len(new)} ({sum(1 for r in new if r.get('note'))} disagree), awaiting second judge {waiting}")
+    return {"decided": len(new), "waiting": waiting}
+
+
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["cards", "merge"])
-    ap.add_argument("--school", required=True)
+    ap.add_argument("cmd", choices=["cards", "merge", "batches"])
+    ap.add_argument("--school")
+    ap.add_argument("-n", type=int, default=5)
     ap.add_argument("--no-fetch", action="store_true")
     a = ap.parse_args(argv)
+    if a.cmd == "batches":
+        print(make_batches(a.n))
+        return
+    if a.cmd == "merge" and not a.school:
+        merge_batches()
+        return
+    if not a.school:
+        ap.error("--school required")
     school = next((s for s in scope.schools() if a.school.lower() in s.lower()), a.school)
     if a.cmd == "cards":
         cmd_cards(school, not a.no_fetch)

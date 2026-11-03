@@ -33,3 +33,4 @@ efficient ML / ML systems (training & inference efficiency, compression, hardwar
 - Medical imaging with deep learning or reconstruction algorithms: B, medical-AI.
 - Pure wet-lab, clinical practice, health services, epidemiology without ML: C.
 Second-opinion cards (data/tag/re_in) add profile_text and homepage_text from saved pages; use them.
+- Input is data/fit/batches/bNN.jsonl; output is data/fit/out/batch-bNN.<judge>.jsonl (one line per card id; ids carry the school slug).

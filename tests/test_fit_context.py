@@ -36,4 +36,4 @@ def test_card_gets_homepage_text_and_papers_and_stays_small(tmp_path, monkeypatc
     monkeypatch.setattr(F, "get", lambda u, *a, **k: pages[u])
     c = fit.build_cards(S, fetch=True)[0]
     assert c["home"].startswith("Wen Li I work on graph") and len(c["papers"]) == 3
-    assert len(c["research"]) + len(c["home"]) + sum(map(len, c["papers"])) <= 2000
+    assert len(c["research"]) + len(c["home"]) + sum(map(len, c["papers"])) <= 900

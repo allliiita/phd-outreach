@@ -67,3 +67,19 @@ def test_ledger_maps_decided(tmp_path, monkeypatch):
     assert out["Wen Li"] == "rejected:not ML"
     assert out["Ann Wu"] == out["Bo Xu"] == "open:verify"
     assert out["Cy Ma"].startswith("open:fit")
+
+
+def test_batch_merge_agree_and_disagree(tmp_path, monkeypatch):
+    monkeypatch.setattr(fit, "FIT", tmp_path / "fit")
+    cards = [{"id": f"cornell:p{i}", "name": f"P{i}", "school": S, "research": "x", "home": "", "papers": []} for i in range(3)]
+    _w(tmp_path / "fit" / "in" / "cornell.jsonl", cards)
+    assert fit.make_batches(2) == [2, 1]
+    j = lambda i, f: {"id": f"cornell:p{i}", "fit": f, "theme": "t", "summary": "s", "hook": "h"}
+    _w(tmp_path / "fit" / "out" / "batch-b01.opus.jsonl", [j(0, "A"), j(1, "A"), j(2, "B")])
+    _w(tmp_path / "fit" / "out" / "batch-b01.haiku.jsonl", [j(0, "A"), j(1, "C")])
+    r = fit.merge_batches()
+    d = fit.decided()
+    assert r == {"decided": 2, "waiting": 1}
+    assert d["cornell:p0"]["fit"] == "A" and "note" not in d["cornell:p0"]
+    assert d["cornell:p1"]["fit"] == "?" and d["cornell:p1"]["note"] == "judges disagree: C vs A"
+    assert "cornell:p2" not in d
