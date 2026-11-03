@@ -1,0 +1,10 @@
+institution: University of Pennsylvania
+unit: "Center for Biomedical Image Computing and Analytics (CBICA)"
+urls:
+  - "https://www.med.upenn.edu/cbica/faculty.html"
+  - "https://www.med.upenn.edu/cbica/affiliated-faculty.html"
+item: div.profile
+name: h3.name
+title: span.position
+profile: h3.name a@href
+filter: all
