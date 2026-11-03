@@ -1,0 +1,11 @@
+institution: New York University
+unit: "Center for Urban Science and Progress (Tandon)"
+urls:
+  - "https://engineering.nyu.edu/research/centers/cusp/people"
+item: article.node--type-profile
+name: h3 a span
+title: div.field--name-field-title
+profile: h3 a@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

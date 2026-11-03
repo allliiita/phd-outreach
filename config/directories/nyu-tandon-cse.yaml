@@ -1,0 +1,11 @@
+institution: New York University
+unit: "Computer Science and Engineering (Tandon)"
+urls:
+  - "https://engineering.nyu.edu/academics/departments/computer-science-and-engineering/people"
+item: article.node--type-profile
+name: h3 a span
+title: div.field--name-field-title
+profile: h3 a@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all
