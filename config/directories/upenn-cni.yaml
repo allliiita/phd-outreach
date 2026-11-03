@@ -1,0 +1,9 @@
+institution: University of Pennsylvania
+unit: "Computational Neuroscience Initiative"
+urls:
+  - "https://www.cni.upenn.edu/people"
+item: "strong:has(> a)"
+name: a
+title: em
+profile: a@href
+filter: all

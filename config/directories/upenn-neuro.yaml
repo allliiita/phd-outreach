@@ -1,0 +1,9 @@
+institution: University of Pennsylvania
+unit: "Neuroscience (PhD Graduate Group)"
+urls:
+  - "https://www.med.upenn.edu/apps/faculty/index.php/g20000342"
+item: td.member_name
+name: a
+title: div.member_title
+profile: a@href
+filter: all

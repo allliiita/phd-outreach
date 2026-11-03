@@ -1,0 +1,9 @@
+institution: University of Pennsylvania
+unit: "Epidemiology and Biostatistics (PhD graduate group; Biostatistics track)"
+urls:
+  - "https://www.med.upenn.edu/apps/faculty/index.php/g20000340"
+item: td.member_name
+name: a
+title: div.member_title
+profile: a@href
+filter: all

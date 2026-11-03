@@ -1,0 +1,11 @@
+institution: University of Pennsylvania
+unit: "Computer and Information Science"
+urls:
+  - "https://www.cis.upenn.edu/people/faculty/"
+item: div.col-item
+name: h3.card-headline
+title: div.body-copy strong
+profile: a.arrow@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all
