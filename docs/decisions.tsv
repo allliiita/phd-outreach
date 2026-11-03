@@ -49,3 +49,4 @@ ts	phase	decision	why	evidence	result
 2026-11-03T00:33:49Z	fanout	merged Duke: units 0, recall 1 (Furong Huang, blocked by K99 last-name bug -> code round 4), 12 open:title (scholars.duke.edu JS-only)	progress verified	merge c7abd09; pytest 62 + check	partial
 2026-11-03T00:36:38Z	fanout	merged UMass: units 0, recall 0, funnel 27 fit-pending; census 60 rows	school predicate met	merge 03f044f; pytest + check re-run	done
 2026-11-03T00:36:38Z	census	open: AI units marked out_of_scope by owners (UMass MassAITC, AI Hub) need the independent second census scout before final	BIG includes AI units created 2022+	umass.units.jsonl	open
+2026-11-03T00:38:30Z	fanout	merged UCSC: units 0, recall 0, funnel 0 (5 listed await re-verification)	school predicate met	merge 9ddfb3a; pytest + check	done
