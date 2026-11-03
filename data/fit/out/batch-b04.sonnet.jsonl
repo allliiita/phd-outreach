@@ -1,0 +1,83 @@
+{"id": "gatech:baoyun-ge", "fit": "C", "theme": "other", "summary": "Electric machines and power electronics lab.", "hook": ""}
+{"id": "uci:chan-david", "fit": "A", "theme": "core-ML/CV", "summary": "Conversational AI adapting to people, grounding language in multimodal context.", "hook": "multi-agent LLM systems"}
+{"id": "umass:ai-chengbo", "fit": "?", "theme": "other", "summary": "Transportation infrastructure AI lab; card too thin.", "hook": ""}
+{"id": "uw:andy-feng", "fit": "C", "theme": "other", "summary": "Thermal transport in extreme environments, semiconductor devices, clean energy.", "hook": ""}
+{"id": "jhu:chen-li", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "ucsb:chang-shiyu", "fit": "A", "theme": "core-ML/CV", "summary": "ML for vision and NLP; interpretable predictions; efficient LLMs via KV acceleration.", "hook": "LLM interpretability / probing"}
+{"id": "umich:anhong-guo", "fit": "C", "theme": "other", "summary": "Personal assistive technology systems; no ML evidence on card.", "hook": ""}
+{"id": "cornell:cheng-zhang", "fit": "?", "theme": "other", "summary": "Body sensing for interaction, health sensing, activity recognition; ML use unstated.", "hook": ""}
+{"id": "nyu:biyu-he", "fit": "B", "theme": "NeuroAI", "summary": "Neural and computational mechanisms of perception; image perturbation and neural geometry papers.", "hook": ""}
+{"id": "ucsf:boon-tee", "fit": "C", "theme": "other", "summary": "Neurology; frontotemporal dementia research.", "hook": ""}
+{"id": "usf:christian-tang", "fit": "C", "theme": "other", "summary": "Chemistry instruction faculty.", "hook": ""}
+{"id": "gatech:chen-zongchen", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "uci:thomas-yeh", "fit": "?", "theme": "other", "summary": "Generic department text only.", "hook": ""}
+{"id": "umich:ding-yanran", "fit": "C", "theme": "other", "summary": "Optimization-based control for legged robots, actuator design.", "hook": ""}
+{"id": "cornell:cindy-kao", "fit": "C", "theme": "other", "summary": "Wearable on-skin interfaces and fabrication.", "hook": ""}
+{"id": "nyu:cai-xinying", "fit": "C", "theme": "other", "summary": "Neuronal responses in macaque LIP; neurophysiology.", "hook": ""}
+{"id": "umass:chang-liu", "fit": "C", "theme": "other", "summary": "Biosensors and point-of-care diagnostic devices.", "hook": ""}
+{"id": "boston-university:lei-tian", "fit": "B", "theme": "AI-for-science", "summary": "Computational imaging systems; physics-informed neural network for vascular imaging.", "hook": ""}
+{"id": "mount-sinai:jason-liu", "fit": "?", "theme": "other", "summary": "Only boilerplate text.", "hook": ""}
+{"id": "ucsf:chang-victoria", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "uw:fu-kai", "fit": "C", "theme": "other", "summary": "Quantum defects in crystals, single-photon emitters.", "hook": ""}
+{"id": "jhu:dingchang-lin", "fit": "C", "theme": "other", "summary": "Materials science and engineering; no research text.", "hook": ""}
+{"id": "ucsf:chen-irene", "fit": "A", "theme": "trustworthy-ML", "summary": "ML methods for clinical care, equity, auditing bias in algorithmic models.", "hook": ""}
+{"id": "uw:guanghao-qi", "fit": "A", "theme": "stats-methods", "summary": "Multi-omic statistical and machine learning methods for genetic studies.", "hook": ""}
+{"id": "jhu:fei-lu", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "ucsf:cheng-qian", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "uw:karen-leung", "fit": "?", "theme": "other", "summary": "Leads robotics/AI/ML science hub; own research not described.", "hook": ""}
+{"id": "mount-sinai:peng-xing", "fit": "?", "theme": "other", "summary": "Only boilerplate text.", "hook": ""}
+{"id": "umass:chu-weiqi", "fit": "?", "theme": "other", "summary": "Math and statistics; no research text.", "hook": ""}
+{"id": "boston-university:tay-tuan", "fit": "C", "theme": "other", "summary": "Microglia in brain development, damage, Alzheimer disease.", "hook": ""}
+{"id": "nyu:chen-yu", "fit": "?", "theme": "other", "summary": "Mathematics; no research text.", "hook": ""}
+{"id": "umich:huang-ryan", "fit": "C", "theme": "other", "summary": "Computer systems: OS, cloud, distributed systems.", "hook": ""}
+{"id": "gatech:liu-nian", "fit": "C", "theme": "other", "summary": "Chemical and biomolecular engineering.", "hook": ""}
+{"id": "ucsb:qian-yu", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "usf:hye-yi", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "nyu:chen-zhibin", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "upenn:cui-qi", "fit": "C", "theme": "other", "summary": "Lab focused on treatments for glaucoma.", "hook": ""}
+{"id": "nyu:chenghe-guan", "fit": "C", "theme": "other", "summary": "Transportation system efficiency and equity.", "hook": ""}
+{"id": "upenn:dejian-ren", "fit": "C", "theme": "other", "summary": "Biology faculty; no ML evidence.", "hook": ""}
+{"id": "nyu:chiang-yi", "fit": "C", "theme": "other", "summary": "Computational geometry algorithms.", "hook": ""}
+{"id": "upenn:deng-yanxiang", "fit": "C", "theme": "other", "summary": "Spatial genomic profiling of chromatin and transcriptome; wet-lab.", "hook": ""}
+{"id": "nyu:chung-sohae", "fit": "C", "theme": "other", "summary": "Susceptibility-based MRI technique for thalamic imaging.", "hook": ""}
+{"id": "upenn:ding-yun", "fit": "C", "theme": "other", "summary": "Genetic and neural mechanisms of animal behavior evolution.", "hook": ""}
+{"id": "ucsb:yangying-zhu", "fit": "C", "theme": "other", "summary": "Thermo-fluid engineering for electronics and energy.", "hook": ""}
+{"id": "usf:ju-minsoo", "fit": "C", "theme": "other", "summary": "Chemistry faculty.", "hook": ""}
+{"id": "umass:juan-zhai", "fit": "C", "theme": "other", "summary": "Software engineering techniques for high-quality software.", "hook": ""}
+{"id": "jhu:jiadi-xu", "fit": "C", "theme": "other", "summary": "MRI technologies such as CEST for tissue metabolism.", "hook": ""}
+{"id": "upenn:fan-yong", "fit": "B", "theme": "medical-AI", "summary": "Explainable deep learning, weakly-supervised cortical surface reconstruction, brain imaging.", "hook": ""}
+{"id": "ucsf:ge-jin", "fit": "C", "theme": "other", "summary": "Clinical hepatologist; papers on generative AI use in hepatology.", "hook": ""}
+{"id": "cornell:long-yicheng", "fit": "C", "theme": "other", "summary": "Epigenetics of cardiac differentiation in stem cells.", "hook": ""}
+{"id": "umich:lin-ma", "fit": "C", "theme": "other", "summary": "Self-driving database management systems.", "hook": ""}
+{"id": "nyu:feng-li", "fit": "B", "theme": "medical-AI", "summary": "Rapid quantitative MRI combining acquisition and image reconstruction.", "hook": ""}
+{"id": "usf:michael-teng", "fit": "C", "theme": "other", "summary": "Host-virus interactions in viral pathogenesis.", "hook": ""}
+{"id": "umass:ma-shiqing", "fit": "?", "theme": "other", "summary": "Secure, intelligent, transparent computing systems; ML role unclear.", "hook": ""}
+{"id": "jhu:liu-tin", "fit": "?", "theme": "other", "summary": "Ophthalmology; no research text.", "hook": ""}
+{"id": "upenn:gu-lei", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "ucsf:iwei-yeh", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "cornell:shi-yushu", "fit": "?", "theme": "other", "summary": "Only website navigation text.", "hook": ""}
+{"id": "umich:manhua-wang", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "nyu:hanxue-wei", "fit": "C", "theme": "other", "summary": "Urban built environment, public health, social equity.", "hook": ""}
+{"id": "usf:yan-zhang", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "umass:xu-yanfei", "fit": "C", "theme": "other", "summary": "Interdisciplinary mechanical engineering and materials group.", "hook": ""}
+{"id": "nyu:he", "fit": "A", "theme": "core-ML/CV", "summary": "How large language models work and risks of the technology.", "hook": "LLM circuit tracing / probing"}
+{"id": "jhu:sun-yu", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "jhu:susu-xu", "fit": "B", "theme": "other", "summary": "Collaborative and remote sensing with machine learning for smart infrastructure resilience.", "hook": ""}
+{"id": "jhu:tao-wang", "fit": "C", "theme": "other", "summary": "Genetic and neuronal mechanisms of developmental brain disorders.", "hook": ""}
+{"id": "jhu:wang-zheyu", "fit": "?", "theme": "other", "summary": "Reducing diagnostic errors with EHR data; ML use unstated.", "hook": ""}
+{"id": "nyu:jeremy-teo", "fit": "C", "theme": "other", "summary": "Immune-mechanobiology and bioengineering.", "hook": ""}
+{"id": "umich:zhang-zheshen", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "upenn:jianjing-kuang", "fit": "C", "theme": "other", "summary": "Linguistics faculty; no ML evidence.", "hook": ""}
+{"id": "nyu:lee-mark", "fit": "?", "theme": "other", "summary": "No research text.", "hook": ""}
+{"id": "nyu:lee-ting", "fit": "B", "theme": "stats-methods", "summary": "Statistical methods for complex dependent data structures.", "hook": ""}
+{"id": "upenn:li-ling", "fit": "C", "theme": "other", "summary": "Materials science and mechanical engineering.", "hook": ""}
+{"id": "nyu:long-michael", "fit": "C", "theme": "other", "summary": "Neural circuits of vocal behavior; neurobiology.", "hook": ""}
+{"id": "upenn:liu-sherry", "fit": "?", "theme": "other", "summary": "Bioengineering; no research text.", "hook": ""}
+{"id": "nyu:ma-xiao", "fit": "C", "theme": "other", "summary": "Mechanobiology, cellular morphogenesis, biophysics.", "hook": ""}
+{"id": "upenn:qian-xuyu", "fit": "?", "theme": "other", "summary": "Pediatric neurology brain research; no detail.", "hook": ""}
+{"id": "nyu:quanyan-zhu", "fit": "C", "theme": "other", "summary": "IoT security, secure control, strategic defense.", "hook": ""}
+{"id": "upenn:shanyin-tong", "fit": "B", "theme": "stats-methods", "summary": "Methodology for multivariate longitudinal health data and disease dynamics.", "hook": ""}
+{"id": "nyu:shi-yidan", "fit": "B", "theme": "stats-methods", "summary": "Statistical methods: survival analysis, longitudinal data, causal inference.", "hook": ""}
+{"id": "upenn:su-yijing", "fit": "?", "theme": "other", "summary": "Cell and developmental biology; no research text.", "hook": ""}
+{"id": "nyu:wang-zhaonan", "fit": "?", "theme": "other", "summary": "Urban science; no research text.", "hook": ""}
+{"id": "nyu:yi-zhang", "fit": "?", "theme": "other", "summary": "Mathematics and atmosphere/ocean science; no detail.", "hook": ""}
