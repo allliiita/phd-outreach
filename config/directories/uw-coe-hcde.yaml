@@ -1,0 +1,12 @@
+institution: University of Washington
+unit: Human Centered Design & Engineering
+urls:
+  - "https://engr.washington.edu/facultyfinder?dept=hcde&page=0"
+  - "https://engr.washington.edu/facultyfinder?dept=hcde&page=1"
+  - "https://engr.washington.edu/facultyfinder?dept=hcde&page=2"
+  - "https://engr.washington.edu/facultyfinder?dept=hcde&page=3"
+item: table#results tbody tr
+name: td:nth-of-type(2) b
+title: td:nth-of-type(3)
+profile: td:nth-of-type(2) b a@href
+filter: all

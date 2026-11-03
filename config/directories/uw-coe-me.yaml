@@ -1,0 +1,15 @@
+institution: University of Washington
+unit: Mechanical Engineering
+urls:
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=0"
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=1"
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=2"
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=3"
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=4"
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=5"
+  - "https://engr.washington.edu/facultyfinder?dept=me&page=6"
+item: table#results tbody tr
+name: td:nth-of-type(2) b
+title: td:nth-of-type(3)
+profile: td:nth-of-type(2) b a@href
+filter: all
