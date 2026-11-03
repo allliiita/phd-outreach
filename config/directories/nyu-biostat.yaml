@@ -1,0 +1,10 @@
+institution: New York University
+unit: "Biostatistics"
+urls:
+  - "https://med.nyu.edu/departments-institutes/population-health/divisions-sections-centers/biostatistics/faculty"
+item: div.user-content p
+name: a
+title: .
+profile: a@href
+require: 'Professor|Instructor|Scientist'
+filter: all

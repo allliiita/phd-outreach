@@ -1,0 +1,9 @@
+institution: New York University
+unit: "ai@NYU faculty directory (school-wide)"
+urls:
+  - "https://cims.nyu.edu/ai/faculty/"
+item: a.people-link
+name: h2.name
+title: div.people-description p
+profile: .@href
+filter: all
