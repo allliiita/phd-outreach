@@ -1,0 +1,10 @@
+institution: New York University
+unit: "Center for Neural Science"
+urls:
+  - "https://www.cns.nyu.edu/faculty.php"
+item: li
+name: b
+title: .
+profile: a@href
+require: 'Professor|Scientist|Fellow|Lecturer'
+filter: all
