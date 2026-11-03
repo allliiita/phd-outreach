@@ -45,7 +45,10 @@ Models: workers `sonnet`; verifiers and judges a different model from the author
 Goal (the human's goal in one line) / scope: exact files it may write and must not touch / actions it must not take /
 the EVIDENCE that proves done (commands + expected output). If the evidence can't be named, the unit isn't scoped.
 Every kickoff names the base SHA; the worker's first step is `git log -1` and, if HEAD is not that SHA,
-`git reset --hard <SHA>` (a worktree once started from `main` and wasted a run). Workers commit on their own branch or worktree; the coordinator merges only after re-running the evidence.
+`git reset --hard <SHA>` (a worktree once started from `main` and wasted a run). Kickoffs use LOCAL branch names / SHAs only (worktrees share the object store; `git fetch` in a worktree creates no
+`origin/*` refs and 9 agents stopped on that). Test a new setup command in one throwaway worktree before fanning out.
+Workers commit after EVERY finished unit (a container restart once killed 10 agents with nothing committed); WIP is resumed, never redone.
+Workers commit on their own branch or worktree; the coordinator merges only after re-running the evidence.
 Parallel school owners never edit shared code (`coverage/`, `outreach/`): they report bugs; one code worker fixes them.
 Shared jsonl ledgers merge as union (`.gitattributes`); `data/coverage/people.jsonl` is derived, rebuilt after each merge.
 Read the diff or artifact, never only the summary. Retry by cause; after two failed retries drop and replan.
