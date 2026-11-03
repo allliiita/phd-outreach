@@ -1,0 +1,83 @@
+{"id": "boston-university:chang-michael", "fit": "?", "theme": "other", "summary": "Assistant professor in Wheelock College of Education; CDS faculty fellow. Card has no research text.", "hook": ""}
+{"id": "mount-sinai:ang-cheen", "fit": "?", "theme": "other", "summary": "Neuroscience assistant professor; card has only institutional handbook text.", "hook": ""}
+{"id": "ucsc:andy-yeh", "fit": "C", "theme": "other", "summary": "De novo protein design and chemical biology to engineer biological light proteins.", "hook": ""}
+{"id": "umich:ang-chen", "fit": "C", "theme": "other", "summary": "Digital transformation: computing techniques for industrial systems; programmable network research.", "hook": ""}
+{"id": "cornell:cheng-tiffany", "fit": "C", "theme": "other", "summary": "Bio-inspired materials embedding functions through integrative technologies; no ML evident.", "hook": ""}
+{"id": "nyu:bharat-rao", "fit": "?", "theme": "other", "summary": "Technology management associate professor; card has no research text.", "hook": ""}
+{"id": "ucsf:austin-yang", "fit": "?", "theme": "other", "summary": "Psychiatry associate professor; card has no research text.", "hook": ""}
+{"id": "usf:bai-yuqiang", "fit": "C", "theme": "other", "summary": "Dry-eye optical imaging: multiphoton microscopy with optical coherence tomography; no ML evident.", "hook": ""}
+{"id": "gatech:callie-hao", "fit": "C", "theme": "other", "summary": "Parallel and distributed computing systems: hardware-software co-design, energy efficiency; no ML evident.", "hook": ""}
+{"id": "uci:seunghyun-sim", "fit": "?", "theme": "other", "summary": "Chemistry and biomedical engineering appointments; research text is generic department boilerplate.", "hook": ""}
+{"id": "umd:runzhou-tao", "fit": "C", "theme": "other", "summary": "Programming languages, operating systems and quantum computing; no ML.", "hook": ""}
+{"id": "boston-university:hua-wang", "fit": "C", "theme": "other", "summary": "Control of nonlinear phenomena and bifurcation in mechanical and systems engineering; no ML seen.", "hook": ""}
+{"id": "mount-sinai:geng-zhou", "fit": "C", "theme": "other", "summary": "Health economics of underserved children: healthcare resources and public policy; no ML.", "hook": ""}
+{"id": "ucsd:jingjing-zou", "fit": "B", "theme": "medical-AI", "summary": "Cited work validates a CNN for classifying sitting posture from hip accelerometers.", "hook": ""}
+{"id": "usf:fang-suey", "fit": "?", "theme": "other", "summary": "Associate professor of instruction; card has no research text.", "hook": ""}
+{"id": "gatech:cheung-lily", "fit": "C", "theme": "other", "summary": "Genome editing and systems biology for plant chemistry; no ML evident.", "hook": ""}
+{"id": "ucsb:gu-mengyang", "fit": "A", "theme": "stats-methods", "summary": "GNet: a scalable, flexible Gaussian process network with nonparametric neurons (arXiv 2026).", "hook": ""}
+{"id": "upenn:cao-quy", "fit": "?", "theme": "other", "summary": "Biostatistics and epidemiology researcher; cards show clinical imaging publications only.", "hook": ""}
+{"id": "duke:shuyan-zhou", "fit": "A", "theme": "core-ML/CV", "summary": "DukeNLP: LLM computer-use agents and language technologies; course on agents with frontier models.", "hook": "multi-agent LLM systems"}
+{"id": "ucf:junho-lee", "fit": "C", "theme": "other", "summary": "Pure mathematics: Gromov-Witten invariants and Hurwitz-number publications.", "hook": ""}
+{"id": "umich:euiwoong-lee", "fit": "C", "theme": "other", "summary": "Theoretical CS: max-cut approximation, SDP solutions and hardness results.", "hook": ""}
+{"id": "cornell:fang-kuan", "fit": "A", "theme": "core-ML/CV", "summary": "Embodied AI and robot learning: humanoid loco-manipulation and open-world mobile manipulation.", "hook": ""}
+{"id": "nyu:chao-li", "fit": "C", "theme": "other", "summary": "Differential geometry and PDE: minimal surfaces, scalar curvature, general relativity.", "hook": ""}
+{"id": "umich:gao-jun", "fit": "A", "theme": "core-ML/CV", "summary": "Generative world models for computer vision and graphics: controllable, consistent, scalable.", "hook": "BioCLIP/EfficientNet fusion (CV)"}
+{"id": "cornell:fei-wang", "fit": "A", "theme": "core-ML/CV", "summary": "Machine learning and generative models: diffusion language models and methods to control model behavior.", "hook": ""}
+{"id": "nyu:chen-feng", "fit": "A", "theme": "core-ML/CV", "summary": "AI4CE lab: learning for robotics; peg-insertion admittance learning and 3D generative models.", "hook": ""}
+{"id": "umich:guo-richard", "fit": "B", "theme": "stats-methods", "summary": "Statistics: graph distances, calibrated heavy-tailed combination tests, recommendation evaluation.", "hook": ""}
+{"id": "cornell:guinevere-lee", "fit": "C", "theme": "other", "summary": "HIV viral genetic variation and persistence; experimental and computational virology.", "hook": ""}
+{"id": "ucf:ren-yuxun", "fit": "C", "theme": "other", "summary": "Battery materials design, cell manufacturing and battery system modeling; no ML evident.", "hook": ""}
+{"id": "upenn:cheng-yuyan", "fit": "C", "theme": "other", "summary": "Neuronal aging and repair; single-cell genomics, spatial transcriptomics and CRISPR in retina.", "hook": ""}
+{"id": "gatech:li-shaolan", "fit": "B", "theme": "stats-methods", "summary": "Signal processing and information theory algorithms, including machine learning and data analytics.", "hook": ""}
+{"id": "ucsb:lei-li", "fit": "A", "theme": "core-ML/CV", "summary": "NLP and machine learning: machine translation, speech translation, data mining.", "hook": ""}
+{"id": "usf:hua-kaixun", "fit": "?", "theme": "other", "summary": "Industrial and management systems assistant professor; card has no research text.", "hook": ""}
+{"id": "mount-sinai:yang-yin", "fit": "?", "theme": "other", "summary": "Neuroscience assistant professor; card has only institutional handbook text.", "hook": ""}
+{"id": "umass:daoji-huang", "fit": "?", "theme": "other", "summary": "Mathematics and statistics assistant professor; page text has no research description.", "hook": ""}
+{"id": "cornell:jake-lee", "fit": "?", "theme": "other", "summary": "Computational oncology appointment; card text is graduate school boilerplate.", "hook": ""}
+{"id": "ucsf:cui-salena", "fit": "?", "theme": "other", "summary": "Neurology assistant professor; card has no research text.", "hook": ""}
+{"id": "uw:quansan-yang", "fit": "C", "theme": "other", "summary": "Developing new molecules and materials to answer biology questions; no ML.", "hook": ""}
+{"id": "ucsf:danny-ge", "fit": "?", "theme": "other", "summary": "Radiology assistant professor; card has no research text.", "hook": ""}
+{"id": "uw:ting-ye", "fit": "B", "theme": "stats-methods", "summary": "Biostatistics: covariate adjustment, plasma proteomics, and deep learning for cardiac imaging.", "hook": ""}
+{"id": "ucsf:duan-xu", "fit": "B", "theme": "medical-AI", "summary": "New MRI techniques for pediatric neuroradiology, including time-resolved MR fingerprinting.", "hook": ""}
+{"id": "uw:ying-zheng", "fit": "C", "theme": "other", "summary": "Biomechanics and microfluidics of living tissue and organ systems; no ML.", "hook": ""}
+{"id": "ucsf:ernest-lee", "fit": "B", "theme": "AI-for-science", "summary": "Develops ML and bioinformatics tools integrating multi-omic skin and blood data for drug discovery.", "hook": ""}
+{"id": "cornell:kevin-tang", "fit": "C", "theme": "other", "summary": "Programming languages and computer architecture at the hardware-software interface; no ML.", "hook": ""}
+{"id": "umass:jinwei-zhang", "fit": "B", "theme": "medical-AI", "summary": "AI and numerical methods for quantitative MRI, physics-informed reconstruction, medical image analysis.", "hook": ""}
+{"id": "jhu:ji-yi", "fit": "?", "theme": "other", "summary": "Biomedical engineering faculty; profile page unavailable, no research text.", "hook": ""}
+{"id": "upenn:eric-wong", "fit": "A", "theme": "trustworthy-ML", "summary": "Reliability and security of ML: adversarial robustness and debugging deep networks.", "hook": ""}
+{"id": "ucsf:feng-jean", "fit": "A", "theme": "trustworthy-ML", "summary": "Develops ML and deep learning algorithms with uncertainty quantification and safe recalibration on EHR data.", "hook": ""}
+{"id": "cornell:ling-wodan", "fit": "?", "theme": "other", "summary": "Statistics faculty; card text is site boilerplate.", "hook": ""}
+{"id": "umich:liao-vera", "fit": "C", "theme": "trustworthy-ML", "summary": "Human-AI interaction: explainability, evaluation, uncertainty communication, trust and reliance.", "hook": ""}
+{"id": "nyu:edward-wong", "fit": "A", "theme": "core-ML/CV", "summary": "Image processing, computer vision and pattern recognition research.", "hook": "BioCLIP/EfficientNet fusion (CV)"}
+{"id": "usf:lu", "fit": "?", "theme": "other", "summary": "Mathematics and statistics faculty; no research text available.", "hook": ""}
+{"id": "umass:liu-tingyi", "fit": "C", "theme": "other", "summary": "MEMS device research (IEEE MEMS posters); no ML evident.", "hook": ""}
+{"id": "jhu:laixi-shi", "fit": "?", "theme": "other", "summary": "Data science and ECE faculty; profile page unavailable, no research text.", "hook": ""}
+{"id": "upenn:gu-jiatao", "fit": "A", "theme": "core-ML/CV", "summary": "Generative ML for agents that understand and act in the physical world: video, 3D, language.", "hook": ""}
+{"id": "ucsf:hu-rebecca", "fit": "?", "theme": "other", "summary": "Psychiatry assistant professor; card has no research text.", "hook": ""}
+{"id": "cornell:samuel-wang", "fit": "?", "theme": "other", "summary": "Statistics and data science assistant professor; no research description available.", "hook": ""}
+{"id": "umich:lu-wang", "fit": "A", "theme": "trustworthy-ML", "summary": "NLP and ML: trustworthy LLMs for factuality, reasoning, evaluation and alignment.", "hook": ""}
+{"id": "nyu:han-yanjun", "fit": "A", "theme": "stats-methods", "summary": "Learning theory and empirical Bayes: bandits, information theory, statistical limits.", "hook": ""}
+{"id": "usf:wenqi-yu", "fit": "C", "theme": "other", "summary": "Staphylococcus aureus cell biology and cell cycle; no ML.", "hook": ""}
+{"id": "umass:sun-yubing", "fit": "C", "theme": "other", "summary": "Mechanobiology of stem cells for regenerative medicine; no ML.", "hook": ""}
+{"id": "jhu:shinuo-weng", "fit": "?", "theme": "other", "summary": "Mechanical engineering assistant professor; profile page unavailable, no research text.", "hook": ""}
+{"id": "upenn:hao-wu", "fit": "C", "theme": "other", "summary": "Genetics: RNA turnover mapping and single-nucleus multiomic atlases; wet-lab.", "hook": ""}
+{"id": "umich:song-ziyou", "fit": "?", "theme": "other", "summary": "ECE assistant professor; profile page unavailable, no research text.", "hook": ""}
+{"id": "ucsf:monica-yang", "fit": "C", "theme": "other", "summary": "Rheumatology: systemic sclerosis and interstitial lung disease pathogenesis, clinical registry.", "hook": ""}
+{"id": "ucsf:mu-weiya", "fit": "C", "theme": "other", "summary": "Neuroradiology clinical work: thoracic lesions, TBI in combat veterans, neuroplasticity.", "hook": ""}
+{"id": "ucsf:nan-wang", "fit": "?", "theme": "other", "summary": "Radiology assistant professor with PhD; no research text.", "hook": ""}
+{"id": "umich:wang-xu", "fit": "C", "theme": "other", "summary": "Intelligent tutoring and cognitively aligned interfaces for learning; no ML method described.", "hook": ""}
+{"id": "upenn:jiang-ning", "fit": "C", "theme": "other", "summary": "Systems immunology: how immune responses are regulated; wet-lab.", "hook": ""}
+{"id": "jhu:xiao-yang", "fit": "?", "theme": "other", "summary": "Biomedical engineering faculty; profile page unavailable, no research text.", "hook": ""}
+{"id": "nyu:jun-wang", "fit": "C", "theme": "other", "summary": "Tumor immunology and cancer immunotherapy: immune checkpoints, receptor-ligand biology.", "hook": ""}
+{"id": "jhu:yuxin-zhu", "fit": "?", "theme": "other", "summary": "Public health faculty in data science institute; profile page unavailable.", "hook": ""}
+{"id": "nyu:lei-qi", "fit": "A", "theme": "trustworthy-ML", "summary": "ML theory for AI safety: data privacy, distributionally robust and sample-efficient learning.", "hook": ""}
+{"id": "upenn:li-wang", "fit": "?", "theme": "other", "summary": "Pathology faculty at CBICA; directory page without research description.", "hook": ""}
+{"id": "nyu:lucas-tian", "fit": "B", "theme": "NeuroAI", "summary": "Computational neuroscience of how neural circuits learn and generalize compositional structure.", "hook": ""}
+{"id": "upenn:liu-vincent", "fit": "A", "theme": "core-ML/CV", "summary": "Networking for AI data centers: reducing traffic so large ML models train across processors.", "hook": ""}
+{"id": "nyu:mengye-ren", "fit": "A", "theme": "core-ML/CV", "summary": "Continual, agentic learning: adaptive learning algorithms, latent world models, recursive reasoning.", "hook": "multi-agent LLM systems"}
+{"id": "upenn:quan-sun", "fit": "B", "theme": "stats-methods", "summary": "Statistical genetics and genomics methods, bioinformatics, genetic epidemiology.", "hook": ""}
+{"id": "nyu:sai-zhang", "fit": "A", "theme": "core-ML/CV", "summary": "Efficient AI via algorithm-hardware co-design: quantization, speculative decoding, accelerators.", "hook": ""}
+{"id": "upenn:shen-yihui", "fit": "C", "theme": "other", "summary": "Imaging and systems metabolism of metabolic networks; no ML evident.", "hook": ""}
+{"id": "nyu:shunzhi-wang", "fit": "B", "theme": "AI-for-science", "summary": "Biomacromolecular self-assembly with AI-enabled generative design and delivery technologies.", "hook": ""}
+{"id": "upenn:wanding-zhou", "fit": "B", "theme": "stats-methods", "summary": "Computational methods and assays reading DNA methylation; decoding cell identity from methylomes.", "hook": ""}
+{"id": "nyu:wei-wu", "fit": "?", "theme": "other", "summary": "Mathematics faculty at NYU Shanghai; profile shows news items, no research description.", "hook": ""}
