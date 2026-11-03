@@ -1,0 +1,12 @@
+institution: University of Massachusetts Amherst
+unit: Chemical and Biomolecular Engineering
+urls:
+  - "https://www.umass.edu/engineering/about/directory?s=&field_person__profile_type_ref_target_id%5B411%5D=411&field_person__department_target_id%5B286%5D=286&page=0"
+  - "https://www.umass.edu/engineering/about/directory?s=&field_person__profile_type_ref_target_id%5B411%5D=411&field_person__department_target_id%5B286%5D=286&page=1"
+  - "https://www.umass.edu/engineering/about/directory?s=&field_person__profile_type_ref_target_id%5B411%5D=411&field_person__department_target_id%5B286%5D=286&page=2"
+  - "https://www.umass.edu/engineering/about/directory?s=&field_person__profile_type_ref_target_id%5B411%5D=411&field_person__department_target_id%5B286%5D=286&page=3"
+item: article.person
+name: h2.person__title
+title: div.person__position-role
+profile: h2.person__title a@href
+filter: all

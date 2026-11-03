@@ -1,0 +1,9 @@
+institution: University of Massachusetts Amherst
+unit: Computer Science (Manning CICS faculty directory)
+urls:
+  - "https://www.cics.umass.edu/about/directory?s=&field_person__profile_type_ref_target_id%5B351%5D=351"
+item: div.person--card-long
+name: div.person__title
+title: div.person__role
+profile: a.person__image@href
+filter: all

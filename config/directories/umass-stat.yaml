@@ -1,0 +1,9 @@
+institution: University of Massachusetts Amherst
+unit: Mathematics and Statistics
+urls:
+  - "https://www.umass.edu/mathematics-statistics/people/faculty"
+item: div.teaser-item.profile
+name: a.title
+title: div.prof-title-role
+profile: a.title@href
+filter: all
