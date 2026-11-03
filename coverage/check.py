@@ -126,6 +126,28 @@ def recall(ledger: list[dict]) -> dict[tuple, dict]:
     return miss
 
 
+PAGING = {"num", "page", "paged", "pg", "p", "start", "offset", "skip", "from"}
+
+
+def _base(url: str):
+    from urllib.parse import parse_qsl, urlparse
+    u = urlparse(url)
+    return u.netloc, u.path.rstrip("/"), tuple(sorted((k, v) for k, v in parse_qsl(u.query) if k not in PAGING))
+
+
+def roster_pages(url: str) -> list[str]:
+    """`url` plus every other page of the same paginated roster (?num=, ?page=, ...) that any roster row came from."""
+    if not url or not url.startswith("http"):
+        return [url]
+    key, out = _base(url), [url]
+    for p in sorted((DATA / "roster").glob("*.jsonl")):
+        for r in jl(p):
+            u = r.get("roster_url") or ""
+            if u.startswith("http") and u not in out and _base(u) == key:
+                out.append(u)
+    return out
+
+
 def unverified(ledger: list[dict]) -> list[dict]:
     """Listed people whose verify record can't be re-checked on saved snapshots (fail closed: no snapshot = unverified)."""
     from outreach.fetch import emails
@@ -143,12 +165,12 @@ def unverified(ledger: list[dict]) -> list[dict]:
         why = None
         if not v:
             why = "no verify record"
-        elif not page(v.get("official_page") or ""):
+        elif not (pages := [u for u in roster_pages(v.get("official_page") or "") if page(u)]):
             why = f"no saved snapshot of {v.get('official_page')}"
-        elif (e := quote_ok(v["official_page"], v.get("ml_quote") or "")):
-            why = e
-        elif (v.get("email") or "").lower() not in {a.lower() for a, _ in emails(page(v["official_page"])[0])}:
-            why = f"email {v.get('email')} not on {v['official_page']}"
+        elif all(quote_ok(u, v.get("ml_quote") or "") for u in pages):
+            why = quote_ok(pages[0], v.get("ml_quote") or "")
+        elif (v.get("email") or "").lower() not in {a.lower() for u in pages for a, _ in emails(page(u)[0])}:
+            why = f"email {v.get('email')} not on {v['official_page']} (or its other roster pages)"
         if why:
             bad.append({"school": r["school"], "name": r["name"], "why": why})
     return bad
