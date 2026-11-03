@@ -1,0 +1,13 @@
+institution: Boston University
+unit: Faculty of Computing & Data Sciences
+urls:
+  - https://www.bu.edu/cds-faculty/culture-community/faculty-staff-directory/?num=1
+  - https://www.bu.edu/cds-faculty/culture-community/faculty-staff-directory/?num=2
+  - https://www.bu.edu/cds-faculty/culture-community/faculty-staff-directory/?num=3
+  - https://www.bu.edu/cds-faculty/culture-community/faculty-staff-directory/?num=4
+item: div.bu-filtering-result-item-content
+name: h4.bu-filtering-result-item-title
+profile: h4.bu-filtering-result-item-title a@href
+title: h6.bu-filtering-result-item-title
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
+filter: all
