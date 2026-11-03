@@ -1,5 +1,5 @@
 institution: New York University
-unit: "Grossman PhD training faculty (ML/AI, Computational Biology, Computational Neuroscience areas)"
+unit: "Grossman PhD training faculty (ML/AI, Computational Biology/Neuroscience, imaging CAI2R, Systems Genetics)"
 urls:
   - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AMachine%2BLearning%2Band%2BAI"
   - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253AMachine%2BLearning%2Band%2BAI&page=1"
@@ -11,6 +11,10 @@ urls:
   - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ASystems%252C%2BCognitive%252C%2B%2526%2BComputational%2BNeuroscience"
   - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ASystems%252C%2BCognitive%252C%2B%2526%2BComputational%2BNeuroscience&page=1"
   - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ASystems%252C%2BCognitive%252C%2B%2526%2BComputational%2BNeuroscience&page=2"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ACenter%2Bfor%2BAdvanced%2BImaging%2BInnovation%2Band%2BResearch"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fresearch_areas%253ACenter%2Bfor%2BAdvanced%2BImaging%2BInnovation%2Band%2BResearch&page=1"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fcenters%2526institutes%253AInstitute%2Bfor%2BSystems%2BGenetics"
+  - "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/faculty?filter=%252Fcenters%2526institutes%253AInstitute%2Bfor%2BSystems%2BGenetics&page=1"
 item: div.search-result--profile
 name: h2.search-result__title a
 title: div.search-result__content

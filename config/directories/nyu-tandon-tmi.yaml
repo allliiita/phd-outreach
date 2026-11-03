@@ -1,0 +1,11 @@
+institution: New York University
+unit: "Technology Management and Innovation (Tandon)"
+urls:
+  - "https://engineering.nyu.edu/academics/departments/technology-management-and-innovation/people"
+item: article.node--type-profile
+name: h3 a span
+title: div.field--name-field-title
+profile: h3 a@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all
