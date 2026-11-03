@@ -47,3 +47,5 @@ ts	phase	decision	why	evidence	result
 2026-11-03T00:32:30Z	fanout	merged UCF (units 0, recall 0, funnel 11 fit-pending) and Georgia Tech (units 0, recall 0, funnel 11)	school predicates met	merges da35a2b, 0f50e45; coordinator re-ran pytest 62 + check	done
 2026-11-03T00:32:30Z	scope	engineering departments (G1 in docs/coverage_logic.md) are in scope everywhere; out_of_scope_unit may not be used for them (UCF excluded CECE's Zhaomiao Guo by census flag, UW flipped the same kind of units to covered)	same rule at every school	coverage_logic G1; UCF + UW reports	done
 2026-11-03T00:33:49Z	fanout	merged Duke: units 0, recall 1 (Furong Huang, blocked by K99 last-name bug -> code round 4), 12 open:title (scholars.duke.edu JS-only)	progress verified	merge c7abd09; pytest 62 + check	partial
+2026-11-03T00:36:38Z	fanout	merged UMass: units 0, recall 0, funnel 27 fit-pending; census 60 rows	school predicate met	merge 03f044f; pytest + check re-run	done
+2026-11-03T00:36:38Z	census	open: AI units marked out_of_scope by owners (UMass MassAITC, AI Hub) need the independent second census scout before final	BIG includes AI units created 2022+	umass.units.jsonl	open
