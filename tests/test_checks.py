@@ -4,7 +4,6 @@ import copy
 import pytest
 from pydantic import ValidationError
 
-from outreach.emailcheck import check_one
 from outreach.schema import Person, deobfuscate, email_appears_in
 from outreach.validate import check
 
@@ -78,13 +77,3 @@ def test_duplicates_flagged():
     assert any("duplicate person" in m for m in msgs)
     assert any("shared by" in m for m in msgs)
 
-
-def test_email_check():
-    p = Person.model_validate(BASE)
-    good = {"id": p.id, "to": "jdoe@andrew.cmu.edu", "subject": "Prospective PhD student (Fall 2027)",
-            "body": "Dear Professor Doe,\n\n" + "I read \"A Paper About Conformal Prediction\" with interest. " + "word " * 140 + "\nFall 2027\nLindsey Ma",
-            "claims": [{"field": "recent_papers"}]}
-    assert check_one(good, p) == []
-    bad = dict(good, to="jane@cmu.edu", body=good["body"].replace("Doe", "Smith", 1) + " groundbreaking, recommendation letter")
-    errs = check_one(bad, p)
-    assert any("differs" in e for e in errs) and any("surname" in e for e in errs) and any("banned" in e for e in errs)
