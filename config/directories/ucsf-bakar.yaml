@@ -1,0 +1,9 @@
+institution: University of California San Francisco
+unit: Bakar Computational Biomedicine Initiative (Berkeley-UCSF)
+urls: [https://bakarinstitute.ucsf.edu/people-at-bakar]
+item: div.people-teaser
+name: div.people-teaser__title a
+title: div.people__field-job-title
+profile: div.people-teaser__title a@href
+filter: faculty
+skip_titles: ['^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$']
