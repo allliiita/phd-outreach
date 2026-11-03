@@ -35,6 +35,16 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
     if a.status == "alt" and not a.alt_source:
         ap.error("status alt needs --alt-source (URL)")
+    if a.status == "done":
+        if not a.roster or a.page_count is None:
+            ap.error("status done needs --roster and --page-count (rows must equal the faculty count on the page)")
+        n = sum(1 for l in a.roster.read_text().splitlines() if l.strip())
+        if n != a.page_count:
+            print(f"refused: roster has {n} rows but page_count is {a.page_count} (diff {n - a.page_count:+d}). "
+                  f"Run `python -m coverage.pagecount --yaml <yaml> --roster {a.roster}` to see dropped / missing names; "
+                  f"staff in the roster or a real professor dropped by skip_titles is the usual cause. Use --status found/blocked until they match.",
+                  file=sys.stderr)
+            return 2
     path = DATA / "grid" / f"{SLUG[a.school]}.jsonl"
     rows = jl(path)
     old = next((r for r in rows if r.get("unit") == (a.match or a.unit)), None)

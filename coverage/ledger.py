@@ -9,7 +9,7 @@ Outcome (in scope only), from existing results, first match wins:
   data/tag/out/*.jsonl       fit C -> rejected:not ML      (joined to data/tag/people.jsonl by id)
   data/fit/decided.jsonl     fit C -> rejected:not ML | A/B -> open:verify (awaiting record verification)
                              | '?' -> open:fit (judges could not tell); overrides data/tag results
-  otherwise                  open
+  otherwise                  open | open:title (no title anywhere: look up the rank before any fit judging)
 Out of scope people keep a row (so a probe hit on them is "found") with outcome out_of_scope:<gate>.
 """
 from __future__ import annotations
@@ -133,6 +133,8 @@ def build() -> list[dict]:
             rr = res.get((school, tuple(k)), {})
             row["fit"] = rr.get("fit")
             row["outcome"] = outcome(rr)
+            if row["outcome"] == "open" and not row["title"]:
+                row["outcome"] = "open:title"   # no rank on any page: not fit-pending, needs a title (coverage.titles)
         else:
             row["outcome"] = "out_of_scope:" + ("/".join(gates) or "?")
         out.append(row)

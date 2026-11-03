@@ -3,8 +3,11 @@
   python -m coverage.fit cards --school S [--no-fetch]   # -> data/fit/in/<slug>.jsonl
   python -m coverage.fit merge --school S                # data/fit/out/<slug>.<judge>.jsonl -> decided.jsonl / tiebreak
 
-cards: ledger people in scope, outcome open, not yet decided. Research text comes from (first non-empty) a dossier,
-a data/tag/in card, or the person's profile page (outreach.fetch snapshot, then outreach.enrich.research_text).
+cards: ledger people in scope, outcome open (open:title people wait for a title first), not yet decided. Research text comes
+from (first non-empty) a dossier, a data/tag/in card, or the person's profile page (outreach.fetch snapshot, then
+outreach.enrich.research_text). With fetching on, the card also gets `home`: the first ~800 chars of visible text after the nav
+of the person's own homepage / lab page (outreach.enrich.pick_links on the profile), and up to 3 paper titles from those pages.
+A card stays <= ~2000 chars of text (research 800 + home 800 + 3 titles x 120).
 merge: two judge files agree on fit -> decided; disagree or either '?' -> data/fit/tiebreak/<slug>.jsonl for a
 third judge (data/fit/out/<slug>.tiebreak.jsonl), whose answer decides ('?' stays '?').
 """
@@ -19,7 +22,9 @@ from . import scope
 from .scope import DATA, SLUG, jl
 
 FIT = DATA / "fit"
-RESEARCH_MAX = 1200
+RESEARCH_MAX = 800
+HOME_MAX = 800
+PAPER_MAX = 120
 VALID = {"A", "B", "C", "?"}
 
 
@@ -71,6 +76,70 @@ def _fetch_research(url: str | None) -> str:
         return ""
 
 
+def page_lead(raw: str, limit: int = HOME_MAX) -> str:
+    """First `limit` chars of visible text after the navigation / header (menus, skip links, footers removed)."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(raw, "html.parser")
+    for t in soup(["script", "style", "noscript", "nav", "header", "footer", "aside", "form"]):
+        t.decompose()
+    root = soup.find("main") or soup.body or soup
+    text = " ".join(root.get_text(" ").split())
+    return text[:limit]
+
+
+_PUB_HEAD = re.compile(r"^(selected |recent |representative |all )?(publications?|papers|preprints)\b", re.I)
+
+
+def paper_titles(raw: str, limit: int = 3) -> list[str]:
+    """Up to `limit` paper titles from a page: items under a Publications/Papers heading (link text, quoted title, else
+    the first sentence). Heuristic and lossy by design: the judges only need a few topical hints."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(raw, "html.parser")
+    out: list[str] = []
+    for h in soup.find_all(re.compile(r"^h[1-6]$")):
+        if not _PUB_HEAD.match(" ".join(h.get_text(" ").split())):
+            continue
+        for el in h.find_all_next(["li", "p"], limit=40):
+            if el.find_previous(re.compile(r"^h[1-6]$")) is not h:
+                break   # next section started
+            txt = " ".join(el.get_text(" ").split())
+            a = el.find("a")
+            at = " ".join(a.get_text(" ").split()) if a else ""
+            m = re.search(r"[\"\u201c]([^\"\u201d]{15,200})[\"\u201d]", txt)
+            t = m.group(1) if m else at if len(at.split()) >= 4 and not re.search(r"pdf|arxiv|code|bibtex|project", at, re.I) \
+                else re.split(r"(?<=[a-z0-9\)])\.\s", txt)[0] if len(txt) > 30 else ""
+            t = t.strip(" .,;")[:PAPER_MAX]
+            if len(t.split()) >= 4 and t not in out:
+                out.append(t)
+            if len(out) >= limit:
+                return out
+    return out
+
+
+def own_page_context(profile_url: str | None, name: str = "") -> tuple[str, list[str]]:
+    """(homepage/lab lead text, paper titles) for the person's own page linked from their profile. Network via outreach.fetch
+    (cached snapshots); any failure gives ('', [])."""
+    if not profile_url or profile_url.startswith("mailto:"):
+        return "", []
+    try:
+        from outreach.enrich import pick_links
+        from outreach.fetch import get
+        raw = get(profile_url)
+        links = pick_links(raw, profile_url, name)
+        lead, titles = "", []
+        for u in dict.fromkeys(x for x in (links.get("homepage"), links.get("lab_website"), links.get("pubs")) if x):
+            try:
+                page = get(u)
+            except Exception:
+                continue
+            if not lead and u != links.get("pubs"):
+                lead = page_lead(page)
+            titles += [t for t in paper_titles(page) if t not in titles]
+        return lead, titles[:3]
+    except Exception:
+        return "", []
+
+
 def build_cards(school: str, fetch: bool = True) -> list[dict]:
     done = decided()
     res, papers = _local_texts()
@@ -86,9 +155,11 @@ def build_cards(school: str, fetch: bool = True) -> list[dict]:
             continue
         k = (school, tuple(r["key"]))
         text = res.get(k) or (_fetch_research(r.get("profile_url")) if fetch else "")
+        home, titles = own_page_context(r.get("profile_url"), r["name"]) if fetch else ("", [])
+        ptitles = (papers.get(k, []) + [t for t in titles if t not in papers.get(k, [])])[:3]
         cards.append({"id": cid, "name": r["name"], "school": school, "title": r.get("title") or "",
                       "units": r.get("units") or [], "research": " ".join(text.split())[:RESEARCH_MAX],
-                      "papers": papers.get(k, [])[:3], "profile_url": r.get("profile_url")})
+                      "home": home, "papers": [t[:PAPER_MAX] for t in ptitles], "profile_url": r.get("profile_url")})
     return cards
 
 
