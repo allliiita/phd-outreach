@@ -1,0 +1,8 @@
+institution: University of California Santa Barbara
+unit: Mechanical Engineering
+urls: ["https://me.ucsb.edu/people?tid=5"]
+item: div.me--ppl--row
+name: div.me-ppl-title a
+title: p.lead
+profile: div.me-ppl-title a@href
+filter: all

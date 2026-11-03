@@ -1,0 +1,8 @@
+institution: University of California Santa Barbara
+unit: Chemical Engineering
+urls: [https://www.chemengr.ucsb.edu/people/faculty]
+item: 'li:has(> div.views-field-title)'
+name: div.views-field-title a
+title: div.views-field-field-people-title-dept
+profile: div.views-field-title a@href
+filter: all

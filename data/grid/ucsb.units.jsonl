@@ -1,0 +1,67 @@
+{"unit": "Anthropology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDANTH", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Biochemistry/Molecular Biology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDBMB", "decision": "out_of_scope", "reason": "wet-lab life science"}
+{"unit": "Bioengineering (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDBIOE", "decision": "covered", "grid_unit": "Bioengineering"}
+{"unit": "Chemical Engineering (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCHEME", "decision": "covered", "grid_unit": "Chemical Engineering"}
+{"unit": "Chemistry (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCHEM", "decision": "out_of_scope", "reason": "physical science (not in scope list)"}
+{"unit": "Chicana and Chicano Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCHAST", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Classics (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCLASSANCNHIST", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Communication (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCOMM", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Comparative Literature (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCLIT", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Computer Science (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCMPSC", "decision": "covered", "grid_unit": "Computer Science"}
+{"unit": "Counseling/Clinical/School Psychology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDCNCSPCLINICAL", "decision": "out_of_scope", "reason": "clinical / counseling psychology"}
+{"unit": "Dynamical Neuroscience (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDDYNS", "decision": "covered", "grid_unit": "Dynamical Neuroscience"}
+{"unit": "Earth Science (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDEARTH", "decision": "out_of_scope", "reason": "earth science"}
+{"unit": "East Asian Languages & Cultural Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDEALCS", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Ecology, Evolution, and Marine Biology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDEEMB", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Economics (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDECON", "decision": "out_of_scope", "reason": "social science / economics"}
+{"unit": "Education (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDEDUC", "decision": "out_of_scope", "reason": "education school (Gevirtz)"}
+{"unit": "Electrical and Computer Engineering (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDECE", "decision": "covered", "grid_unit": "Electrical and Computer Engineering"}
+{"unit": "English (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDENGL", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Environmental Science and Management (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDESM", "decision": "out_of_scope", "reason": "Bren School environmental science / management (not an AI home)"}
+{"unit": "Feminist Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDFEMST", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Film and Media Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDFAMST", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Geography (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDGEOG", "decision": "out_of_scope", "reason": "social / physical geography (not in scope list)"}
+{"unit": "Global Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDGLOBL", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Hispanic Languages and Literatures (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDHSPLL", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "History (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDHIST", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "History of Art and Architecture (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDHSART", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Individual (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDINDIV", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Linguistics (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDLING", "decision": "covered", "grid_unit": "Linguistics"}
+{"unit": "Marine Science (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDMARSC", "decision": "out_of_scope", "reason": "marine / environmental science"}
+{"unit": "Materials (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDMATRL", "decision": "covered", "grid_unit": "Materials"}
+{"unit": "Mathematics (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDMATH", "decision": "covered", "grid_unit": "Mathematics"}
+{"unit": "Mechanical Engineering (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDME", "decision": "covered", "grid_unit": "Mechanical Engineering"}
+{"unit": "Media Arts and Technology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDMAT", "decision": "out_of_scope", "reason": "media arts / HCI-art program; ML-relevant affiliate faculty are rostered in CS, ECE, ME (mat.ucsb.edu/faculty lists affiliates from those depts)"}
+{"unit": "Molecular, Cellular, & Develop. Biology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDMCDB", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Music (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDMUSICCOMPOSTN", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Philosophy (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDPHIL", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Physics (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDPHYSASTRPHYS", "decision": "out_of_scope", "reason": "physical science (not in scope list)"}
+{"unit": "Political Science (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDPOLS", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Psychological & Brain Sciences (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDPBS", "decision": "covered", "grid_unit": "Psychological and Brain Sciences"}
+{"unit": "Religious Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDRGSTD", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "School Psychology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDSCLP", "decision": "out_of_scope", "reason": "clinical / school psychology"}
+{"unit": "Sociology (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDSOC", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "Statistics and Applied Probability (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDSTSAPFINMS", "decision": "covered", "grid_unit": "Statistics and Applied Probability"}
+{"unit": "Technology Management (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDTM", "decision": "out_of_scope", "reason": "business / management"}
+{"unit": "Theater, Dance, and Performance Studies (PhD)", "kind": "phd_program", "source": "https://catalog.ucsb.edu/programs/PHDTHDPS", "decision": "out_of_scope", "reason": "humanities / social science / arts"}
+{"unit": "College of Engineering", "kind": "school", "source": "https://www.ucsb.edu/academics", "decision": "covered", "grid_unit": "Computer Science"}
+{"unit": "College of Letters and Science (Math, Life and Physical Sciences; Social Sciences; Humanities and Fine Arts)", "kind": "school", "source": "https://www.ucsb.edu/academics", "decision": "covered", "grid_unit": "Mathematics"}
+{"unit": "Bren School of Environmental Science & Management", "kind": "school", "source": "https://www.ucsb.edu/academics", "decision": "out_of_scope", "reason": "environmental science / policy (Environmental Data Science is MDS only, no PhD)"}
+{"unit": "Gevirtz Graduate School of Education", "kind": "school", "source": "https://www.ucsb.edu/academics", "decision": "out_of_scope", "reason": "education / clinical psychology"}
+{"unit": "College of Creative Studies", "kind": "school", "source": "https://www.ucsb.edu/academics", "decision": "out_of_scope", "reason": "undergraduate college, no PhD program"}
+{"unit": "Technology Management Program", "kind": "department", "source": "https://catalog.ucsb.edu/programs", "decision": "out_of_scope", "reason": "business / management"}
+{"unit": "Center for Statistical Foundations of AI (est. 2026-05, in PSTAT)", "kind": "center", "source": "https://science.ucsb.edu/news/uc-santa-barbara-establishes-center-statistical-foundations-ai", "decision": "covered", "grid_unit": "Statistics and Applied Probability"}
+{"unit": "Data Science Initiative", "kind": "initiative", "source": "https://www.ucsb.edu/research", "decision": "covered", "grid_unit": "Statistics and Applied Probability", "reason": "host dsi.ucsb.edu unreachable from proxy; members are PSTAT/CS/ECE/Math faculty"}
+{"unit": "Center for Responsible Machine Learning", "kind": "center", "source": "https://www.ucsb.edu/research", "decision": "covered", "grid_unit": "Computer Science", "reason": "host crml.ucsb.edu unreachable from proxy; members are CS/ECE/PSTAT faculty"}
+{"unit": "ACTION Institute (NSF AI institute, cybersecurity, 2023)", "kind": "institute", "source": "https://action.ucsb.edu/people", "decision": "covered", "grid_unit": "Computer Science", "reason": "UCSB members on its people page (Vigna, Kruegel, Singh, Hespanha) are in CS/ECE rosters; others are other universities"}
+{"unit": "Mellichamp Initiative in Mind and Machine Intelligence", "kind": "initiative", "source": "https://mind-machine.ucsb.edu/people", "decision": "covered", "grid_unit": "Mellichamp Initiative in Mind and Machine Intelligence"}
+{"unit": "Center for Humanities and Machine Learning", "kind": "center", "source": "https://www.ucsb.edu/research", "decision": "out_of_scope", "reason": "humanities center, no own PhD-advising ML faculty list"}
+{"unit": "Institute for Energy Efficiency (AI/ML energy initiative)", "kind": "institute", "source": "https://iee.ucsb.edu/research/technical-foundations/ai-machine-learning", "decision": "covered", "grid_unit": "Electrical and Computer Engineering", "reason": "members are ECE/CS/ME faculty"}
+{"unit": "California NanoSystems Institute", "kind": "institute", "source": "https://www.research.ucsb.edu/research-centers-and-units", "decision": "out_of_scope", "reason": "nanoscience; faculty are in rostered departments (Materials, ChemEng, ECE, BioE)"}
+{"unit": "COAST PCL cloud lab (NSF, 2026)", "kind": "initiative", "source": "https://news.ucsb.edu/2026/022721/ucsb-lead-national-cloud-laboratory-advanced-materials", "decision": "covered", "grid_unit": "Materials"}
+{"unit": "Neuroscience Research Institute", "kind": "institute", "source": "https://www.research.ucsb.edu/organized-research-units", "decision": "covered", "grid_unit": "Dynamical Neuroscience"}
+{"unit": "Center for Information Technology and Society", "kind": "center", "source": "https://www.research.ucsb.edu/organized-research-units", "decision": "out_of_scope", "reason": "social science center; no own faculty"}
+{"unit": "Earth Research Institute", "kind": "institute", "source": "https://www.research.ucsb.edu/organized-research-units", "decision": "out_of_scope", "reason": "earth science"}
+{"unit": "Marine Science Institute", "kind": "institute", "source": "https://www.research.ucsb.edu/organized-research-units", "decision": "out_of_scope", "reason": "marine science"}
+{"unit": "Institute for Social, Behavioral, and Economic Research", "kind": "institute", "source": "https://www.research.ucsb.edu/organized-research-units", "decision": "out_of_scope", "reason": "social science"}
+{"unit": "Chicano Studies Institute", "kind": "institute", "source": "https://www.research.ucsb.edu/organized-research-units", "decision": "out_of_scope", "reason": "humanities / social science"}
