@@ -80,7 +80,8 @@ SLUG = {"Boston University": "boston-university", "Duke University": "duke", "Un
         "University of California San Diego": "ucsd", "University of Maryland": "umd",
         "Georgia Institute of Technology": "gatech", "University of California Irvine": "uci",
         "University of California Santa Cruz": "ucsc", "University of Massachusetts Amherst": "umass",
-        "University of California Santa Barbara": "ucsb", "New York University": "nyu"}
+        "University of California Santa Barbara": "ucsb", "New York University": "nyu",
+        "Memorial Sloan Kettering Cancer Center": "msk"}
 
 DATA = ROOT / "data"
 
