@@ -1,0 +1,83 @@
+{"id": "duke:anqi-zhao", "fit": "B", "theme": "stats-methods", "summary": "Experimental design, causal inference, survey sampling and missing data for social and biomedical sciences.", "hook": ""}
+{"id": "ucf:chen-xinyu", "fit": "?", "theme": "other", "summary": "Optimization and matrix computations for machine learning; card thin.", "hook": ""}
+{"id": "ucsf:andy-chang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "usf:alicia-long", "fit": "C", "theme": "other", "summary": "Library, literacy and education research.", "hook": ""}
+{"id": "gatech:beckett-zhou", "fit": "C", "theme": "other", "summary": "Computational aerodynamics and aeroacoustics, flow and noise control.", "hook": ""}
+{"id": "uci:chang-peter", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umd:liu-ruoshi", "fit": "A", "theme": "core-ML/CV", "summary": "Robot manipulation using machine learning, geometric processing and foundation models.", "hook": "multi-agent LLM systems (loosely)"}
+{"id": "boston-university:goh-ryan", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "mount-sinai:eric-fang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsd:gao-sicun", "fit": "A", "theme": "core-ML/CV", "summary": "Reinforcement learning: policy gradients, reward shaping, discretized actors, barrier function frameworks.", "hook": ""}
+{"id": "upenn:bingxin-zhao", "fit": "A", "theme": "medical-AI", "summary": "Statistical and AI methods for multimodal imaging, genomics and knowledge graphs; agentic AI for science.", "hook": "EEG/imaging data methods"}
+{"id": "duke:jason-ji", "fit": "A", "theme": "AI-for-science", "summary": "AI-driven methods for biomedical data science, multimodal biological data and large language models.", "hook": "LLM probing/multi-agent LLM"}
+{"id": "ucf:fang-li", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umass:bin-deng", "fit": "B", "theme": "medical-AI", "summary": "Multimodal imaging and sensing technologies for diagnosis, integrating optical imaging, elastography, modeling and AI.", "hook": ""}
+{"id": "boston-university:lau-siu", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "mount-sinai:guo-zhili", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsf:chan-selena", "fit": "C", "theme": "other", "summary": "Board-certified integrative psychiatrist, clinical practice.", "hook": ""}
+{"id": "uw:dongfang-zhao", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:ding-kai", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsd:xinlian-zhang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "usf:guo-zongqi", "fit": "B", "theme": "AI-for-science", "summary": "Materials and 3D printing research with machine learning of thermal images.", "hook": ""}
+{"id": "gatech:fong-ming", "fit": "C", "theme": "NeuroAI", "summary": "Neural circuit plasticity via electrophysiology, optogenetics, behavior and rehabilitation interventions.", "hook": ""}
+{"id": "ucsb:hongbo-yu", "fit": "C", "theme": "other", "summary": "Neurocognitive mechanisms of social emotions and moral behavior.", "hook": ""}
+{"id": "usf:ho-thao", "fit": "C", "theme": "other", "summary": "Neonatal anemia, iron supplementation and intestinal microbiome.", "hook": ""}
+{"id": "gatech:helen-xu", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsb:hou-lina", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "usf:hong-huang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:feng-xu", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsf:chris-hsiung", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "uw:kevin-lin", "fit": "B", "theme": "stats-methods", "summary": "Statistical methods for single-cell data from Alzheimer's disease tissue, including count splitting.", "hook": ""}
+{"id": "mount-sinai:randy-yeh", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umass:chuang-gan", "fit": "A", "theme": "core-ML/CV", "summary": "Embodied AI agents combining physical and social intelligence with advanced models.", "hook": "multi-agent LLM systems"}
+{"id": "cornell:hsu-justin", "fit": "C", "theme": "other", "summary": "Program verification for programs with rich mathematical structure.", "hook": ""}
+{"id": "ucf:weixuan-xia", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "upenn:chung-shinjae", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:hao-yang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umich:hui-julie", "fit": "C", "theme": "other", "summary": "Computer-supported career development and community development, HCI.", "hook": ""}
+{"id": "jhu:hu-jennifer", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umich:jessie-yang", "fit": "C", "theme": "other", "summary": "Human-robot interaction, human factors and user experience design.", "hook": ""}
+{"id": "jhu:huang-william", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umich:justine-zhang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:hungoo-lee", "fit": "C", "theme": "other", "summary": "Transcriptional regulation mechanisms in human disease.", "hook": ""}
+{"id": "umich:ke-sun", "fit": "B", "theme": "other", "summary": "Ambient intelligence and physical AI systems for wearable, IoT and robotic sensing.", "hook": "EEG/wearable sensing (loosely)"}
+{"id": "nyu:cui-wenqi", "fit": "A", "theme": "core-ML/CV", "summary": "Control, machine and reinforcement learning, optimization for energy systems; safe and robust AI.", "hook": ""}
+{"id": "upenn:dong-yina", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsf:fei-jiang", "fit": "A", "theme": "stats-methods", "summary": "Machine learning methods, high-dimensional models and functional data analysis for neurological, image and genetics data.", "hook": "EEG decoding/imaging"}
+{"id": "cornell:lenan-zhang", "fit": "C", "theme": "other", "summary": "Thermal and fluid transport, energy sustainability metrology and spectroscopy.", "hook": ""}
+{"id": "umich:lee-min", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "nyu:ed-wong", "fit": "A", "theme": "core-ML/CV", "summary": "Image processing, computer vision and pattern recognition.", "hook": "BioCLIP/EfficientNet CV"}
+{"id": "usf:lin-xiaomin", "fit": "A", "theme": "core-ML/CV", "summary": "Robotics, AI and perception; edge AI and multimodal sensing, deep-learning detection from imagery.", "hook": "CV fusion project"}
+{"id": "umass:li-yao", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:kuo-scot", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "upenn:gao-ziyue", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsf:hong-julian", "fit": "B", "theme": "medical-AI", "summary": "Computational tools and data science on real-world oncology data, including LLM topic identification.", "hook": ""}
+{"id": "cornell:ning-yang", "fit": "B", "theme": "stats-methods", "summary": "Statistical methods and theory for uncertainty quantification with high-dimensional data.", "hook": ""}
+{"id": "umich:liyue-shen", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "nyu:gan-wen", "fit": "C", "theme": "NeuroAI", "summary": "Neuroscience of astrocytes and gamma stimulation, experimental.", "hook": ""}
+{"id": "usf:wang-xuewei", "fit": "C", "theme": "other", "summary": "Molecular medicine and Alzheimer's research lab.", "hook": ""}
+{"id": "umass:qian-zhao", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:luo-yuting", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "upenn:han-tianyu", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "ucsf:kimberly-yu", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "jhu:shu-tianmin", "fit": "A", "theme": "core-ML/CV", "summary": "Social cognitive AI: engineering machine social intelligence, generative models and robot partner inference.", "hook": "multi-agent LLM systems"}
+{"id": "cornell:yian-yin", "fit": "C", "theme": "other", "summary": "Computational social science of science and innovation.", "hook": ""}
+{"id": "upenn:huang-jiaoyang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "upenn:huang-jing", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "upenn:huang-zhi", "fit": "A", "theme": "medical-AI", "summary": "Vision-language frameworks and chain-of-thought agents for computational pathology.", "hook": "BioCLIP vision-language"}
+{"id": "jhu:wang-ziyun", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "nyu:jie-xue", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "umich:zhaohui-zhong", "fit": "C", "theme": "other", "summary": "Nanoelectronics and nanophotonics with carbon nanomaterials.", "hook": ""}
+{"id": "jhu:yaojun-zhang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "upenn:jin-ying", "fit": "A", "theme": "trustworthy-ML", "summary": "Uncertainty quantification, distribution-free, causal and selective inference.", "hook": ""}
+{"id": "nyu:lim-sukbin", "fit": "B", "theme": "NeuroAI", "summary": "Attractor dynamics models of working memory and sensory-memory interactions.", "hook": "connectome/neural modeling"}
+{"id": "upenn:li-xie", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "nyu:lui-yvonne", "fit": "C", "theme": "medical-AI", "summary": "Traumatic brain injury imaging, translational clinical research.", "hook": ""}
+{"id": "upenn:lynn-wu", "fit": "C", "theme": "other", "summary": "Business research on AI innovation capability in drug discovery.", "hook": ""}
+{"id": "nyu:qi-sun", "fit": "B", "theme": "core-ML/CV", "summary": "Perceptual graphics, generative models, neural representation, computational optics, VR/AR.", "hook": ""}
+{"id": "upenn:ren-zhimei", "fit": "B", "theme": "stats-methods", "summary": "Knockoffs and statistical inference with applications to clinical prediction.", "hook": ""}
+{"id": "nyu:saining-xie", "fit": "A", "theme": "core-ML/CV", "summary": "Multimodal foundation models, RL versus SFT generalization, test-time compute for robot control.", "hook": "BioCLIP/EfficientNet CV"}
+{"id": "upenn:shujie-yang", "fit": "?", "theme": "other", "summary": "", "hook": ""}
+{"id": "nyu:song-yong", "fit": "C", "theme": "other", "summary": "BioMEMS devices, microfabrication and fluid mechanics.", "hook": ""}
+{"id": "upenn:wei-yuting", "fit": "A", "theme": "core-ML/CV", "summary": "Statistics, optimization and ML theory: high-dimensional learning, reinforcement learning sample efficiency, diffusion debiasing.", "hook": ""}
+{"id": "nyu:ye-yi", "fit": "?", "theme": "other", "summary": "", "hook": ""}
