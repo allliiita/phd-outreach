@@ -35,10 +35,10 @@ TODAY = date.today().isoformat()
 
 # Named / endowed chairs, "Distinguished", "Professor and ..." are senior even when the string also says "Associate Professor"
 # ("Dutton-Ducoffe Professor and Associate Professor"). A plain rank word before "professor" keeps it a rank, not a name.
-_RANK = r"assistant|associate|full|research|adjunct|visiting|courtesy|affiliate|clinical|teaching|incoming|tenure-track|tenured|joint|junior|university|emeritus|emerita|senior|distinguished"
+_RANK = r"asst\.?|assoc\.?|vice|deputy|assistant|associate|full|research|adjunct|visiting|courtesy|affiliate|clinical|teaching|incoming|tenure-track|tenured|joint|junior|university|emeritus|emerita|senior|distinguished"
 SENIOR = (r"\bdistinguished\b|(?<!assistant )(?<!associate )\bprofessor and\b|"
           rf"(?<![\w-])(?!(?:{_RANK})\b)[a-z][\w.'-]*\s+(?:endowed\s+|named\s+)?professor\b|"
-          r"(?<!assistant )(?<!associate )(?<!vice )(?<!deputy )\b[a-z][\w.'-]*\s+chair\b")
+          rf"(?<![\w-])(?!(?:{_RANK})\b)[a-z][\w.'-]*\s+chair\b")
 
 CLASS_RULES = [  # first match wins; order matters
     (r"emerit", "emeritus"),
