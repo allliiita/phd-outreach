@@ -87,9 +87,19 @@ def _waits_person(school: str, name: str, reqs: list[dict]) -> bool:
     return any(h["school"] == school and h.get("name") and scope.name_key(h["name"]) == k for h in reqs)
 
 
+def _explained_rows() -> list[dict]:
+    return [e for e in jl(DATA / "coverage" / "explained.jsonl") if e.get("school") and e.get("name") and e.get("reason")]
+
+
 def explained() -> set[tuple]:
-    return {(e["school"], scope.name_key(e["name"])) for e in jl(DATA / "coverage" / "explained.jsonl")
-            if e.get("school") and e.get("name") and e.get("reason")}
+    """Only exclusions carrying a verified quote (coverage.explain) count; legacy rows do not."""
+    from .explain import proven
+    return {(e["school"], scope.name_key(e["name"])) for e in _explained_rows() if not proven(e)}
+
+
+def unproven() -> dict[tuple, str]:
+    from .explain import proven
+    return {(e["school"], scope.name_key(e["name"])): f"{e['reason']}: {err}" for e in _explained_rows() if (err := proven(e))}
 
 
 def _truncated(school: str, key: tuple, name: str, known: set) -> bool:
@@ -105,11 +115,13 @@ def recall(ledger: list[dict]) -> dict[tuple, dict]:
     """(school, name_key) -> {name, probes: {probe: year}} for probe hits found nowhere."""
     known = {(r["school"], tuple(r["key"])) for r in ledger} | explained()
     miss: dict[tuple, dict] = {}
+    bad = unproven()
     for p in PROBES:
         for h in jl(DATA / "probes" / f"{p}.jsonl"):
             k = (h["school"], scope.name_key(h["name"]))
             if k not in known and not _truncated(h["school"], k[1], h["name"], {x for x in known}):
-                m = miss.setdefault(k, {"school": h["school"], "name": h["name"], "probes": {}, "url": h.get("source_url")})
+                m = miss.setdefault(k, {"school": h["school"], "name": h["name"], "probes": {}, "url": h.get("source_url"),
+                                                      "unproven": bad.get(k)})
                 m["probes"][p] = h.get("year")
     return miss
 
@@ -177,7 +189,7 @@ def main(argv: list[str] | None = None) -> int:
                 print("  ", x)
             print(f"-- recall misses ({len(rm)}): add the person to a roster/unit or explain in data/coverage/explained.jsonl")
             for m in sorted(rm, key=lambda m: m["name"]):
-                print(f"   {m['name']}  {m['probes']}  {m['url']}")
+                print(f"   {m['name']}  {m['probes']}  {m['url']}" + (f"  [unproven exclusion: {m['unproven']}]" if m.get("unproven") else ""))
             print(f"-- funnel open ({len(fo)})")
             for r in fo:
                 tag = "" if r["outcome"] == "open" else "[" + r["outcome"].split(" ")[0] + "] "

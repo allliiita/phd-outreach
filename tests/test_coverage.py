@@ -66,7 +66,11 @@ def test_probe_hit_without_ledger_row_fails_until_explained(tmp_path, monkeypatc
     with (tmp_path / "probes" / "csrankings.jsonl").open("a") as f:
         f.write(json.dumps({"name": "Wen Sun", "school": SCHOOL, "year": 2014, "source_url": "u", "detail": {}}) + "\n")
     assert check.main([]) == 1
-    (tmp_path / "coverage" / "explained.jsonl").write_text(json.dumps({"school": SCHOOL, "name": "Sun, Wen", "reason": "moved"}) + "\n")
+    (tmp_path / "coverage" / "explained.jsonl").write_text(json.dumps({"school": SCHOOL, "name": "Sun, Wen", "reason": "moved_institution"}) + "\n")
+    assert check.main([]) == 1                      # legacy row without a verified quote does not count
+    (tmp_path / "coverage" / "explained.jsonl").write_text(json.dumps(
+        {"school": SCHOOL, "name": "Sun, Wen", "reason": "moved_institution", "evidence_url": "https://x.example/sun",
+         "quote": "Wen Sun is now at Databricks", "to": "Databricks", "fetched": "2026-11-03"}) + "\n")
     assert check.main([]) == 0
 
 

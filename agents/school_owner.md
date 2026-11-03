@@ -39,10 +39,12 @@ A `.edu` host that answers `curl` with "unable to get local issuer certificate" 
 
 ## 3. Recall misses (probe hit not in the ledger)
 Find WHY, in this order: (a) in a unit you have not rostered: fix section 1; (b) name mismatch (credential, initials, 29-char NSF cut-off,
-nickname): fix the code with a test, or `--reason alias_of_ledger`; (c) person not in scope: `python -m coverage.explain --school S --name N --reason R --evidence URL`.
+nickname): fix the code with a test, or `--reason alias_of_ledger`; (c) person not in scope: `python -m coverage.explain --school S --name N --reason R --evidence URL --quote "verbatim text from that page" [--unit U|--to INST|--title T] [--dry-run]`.
+The tool fetches the page and REFUSES unless the quote is on it; the row stores quote + fetch date. Rows without a verified quote (all legacy ones) do not count in `coverage.check`: they show as "unproven exclusion". `--validate --school S` re-checks stored rows.
 Past-title rule: a stored title must be current. A page that says "was", "formerly", "prior to" is not evidence (`coverage.titles` rejects it); a person whose page says they now work elsewhere is `moved_institution`.
-Reasons: moved_institution, senior_title, not_phd_advising_title, postdoc_pre_independent (NIH K99), clinical_unit, out_of_scope_unit, alias_of_ledger.
-Evidence URL is a page you fetched (official page; NSF `api.nsf.gov/services/v1/awards/<id>.json`; `api.reporter.nih.gov/v2/projects/search`).
+Reasons and what each needs: moved_institution (`--to`, new institution named in the quote); senior_title / not_phd_advising_title (`--title`, in the quote);
+clinical_unit / out_of_scope_unit (`--unit`, in the quote; an official page naming the department, NOT nsf.gov / nih.gov APIs); alias_of_ledger (`--note "same as <ledger name>"`, no fetch);
+postdoc_pre_independent (evidence = the person's NIH RePORTER project; the tool queries RePORTER: an active K99, fiscal year >= current FY-1, at this school, and NO R00 for the PI; otherwise refused. A K99 older than that is stale: the person is probably faculty, look for the new post).
 Never explain with "not ML" (fit judges decide). Young and in scope but unrostered: `python -m coverage.add_person --school S --name N --url PROFILE`.
 Tip: NSF/NIH probe names may be spelled differently from the roster; check `grep -il surname data/roster/<slug>*.jsonl` before concluding "missing".
 
