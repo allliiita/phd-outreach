@@ -1,0 +1,8 @@
+institution: University of California, Irvine
+unit: Mathematical, Computational & Systems Biology (MCSB) PhD
+urls: [https://ccbs.uci.edu/education/mcsb/mcsb-program-faculty/]
+item: tr.ts-faculty
+name: td:nth-of-type(2)
+title: div.tshowcase-single-position
+profile: td:nth-of-type(2) a@href
+filter: all
