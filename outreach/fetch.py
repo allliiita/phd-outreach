@@ -3,13 +3,16 @@ email can later be checked against the exact bytes that were fetched.
 
   python -m outreach.fetch URL            -> prints visible text, saves snapshot
   python -m outreach.fetch URL --emails   -> prints emails found in the raw HTML (incl. obfuscated, mailto:)
+  python -m outreach.fetch URL --render   -> read it in headless Chromium instead of requests (snapshot is saved too)
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
 import html
+import os
 import re
+import tempfile
 import threading
 import time
 from pathlib import Path
@@ -33,6 +36,38 @@ BROWSER_HOSTS = ROOT / "config" / "browser_hosts.txt"
 CHALLENGE = re.compile(r"performing security verification|you have been blocked|access denied|verify you are human|captcha", re.I)
 
 
+EXTRA_CA = ROOT / "config" / "extra_ca"
+
+
+class FetchError(RuntimeError):
+    """A fetch failure that names the layer: 'tls' (certificate verify), 'browser' (Chromium render), 'http' (status), 'network'."""
+
+    def __init__(self, layer: str, url: str, detail: str):
+        self.layer = layer
+        super().__init__(f"[{layer}] {url}: {detail}")
+
+
+def ca_bundle(extra_dir: Path | None = None, base: str | None = None) -> str:
+    """Path of a combined CA file = the environment's bundle (REQUESTS_CA_BUNDLE / SSL_CERT_FILE, which holds the
+    proxy CA here; else certifi) + every PEM in config/extra_ca/ (e.g. emSign root, absent from common bundles).
+    Verification stays on; the file is only a larger trust list for this process's requests, written to the temp dir."""
+    extra_dir = EXTRA_CA if extra_dir is None else extra_dir
+    if base is None:
+        base = os.environ.get("REQUESTS_CA_BUNDLE") or os.environ.get("SSL_CERT_FILE") or ""
+    if not base or not Path(base).is_file():
+        import certifi
+        base = certifi.where()
+    parts = [Path(base).read_text(errors="ignore")]
+    parts += [f.read_text(errors="ignore") for f in sorted(extra_dir.glob("*.pem"))] if extra_dir.is_dir() else []
+    body = "\n".join(x if x.endswith("\n") else x + "\n" for x in parts)
+    out = Path(tempfile.gettempdir()) / f"outreach-ca-{hashlib.sha1(body.encode()).hexdigest()[:12]}.pem"
+    if not out.exists():
+        tmp = out.with_suffix(f".{os.getpid()}.tmp")
+        tmp.write_text(body)
+        tmp.replace(out)
+    return str(out)
+
+
 def browser_host(host: str) -> bool:
     if not BROWSER_HOSTS.exists():
         return False
@@ -45,15 +80,17 @@ def snapshot_path(root: Path, url: str) -> Path:
     return root / urlparse(url).netloc / f"{h}.html"
 
 
-def get(url: str, refresh: bool = False) -> str:
+def get(url: str, refresh: bool = False, force_render: bool = False) -> str:
     p = snapshot_path(SNAP, url)
     if p.exists() and not refresh:
         return p.read_text(errors="ignore")
     host = urlparse(url).netloc
-    if browser_host(host):
-        text = render(url, browser_ua=True)
-        if not text or CHALLENGE.search(visible_text(text)[:600]):
-            raise RuntimeError(f"browser host served no page or a challenge (not retried): {url}")
+    if browser_host(host) or force_render:
+        text = render(url, browser_ua=browser_host(host))
+        if not text:
+            raise FetchError("browser", url, "Chromium produced no page (not installed, navigation failed or TLS rejected)")
+        if CHALLENGE.search(visible_text(text)[:600]):
+            raise FetchError("browser", url, "bot-check / challenge page served (not retried, never worked around)")
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(text)
         p.with_suffix(".url").write_text(url)
@@ -65,20 +102,24 @@ def get(url: str, refresh: bool = False) -> str:
         if wait > 0:
             time.sleep(wait)
         try:
-            r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
-        except requests.exceptions.SSLError:
-            r = None   # incomplete certificate chain (common on university hosts); Chromium completes it
+            r = requests.get(url, headers={"User-Agent": UA}, timeout=30, verify=ca_bundle())
+        except requests.exceptions.SSLError as e:
+            r = None   # certificate chain not trusted (common on university hosts); Chromium may complete it
+            tls_err = str(e)[:200]
+        except requests.exceptions.RequestException as e:
+            raise FetchError("network", url, f"{type(e).__name__}: {str(e)[:200]}") from e
         finally:
             _last[host] = time.time()
     if r is None:
         text = render(url)
         if not text:
-            raise RuntimeError(f"SSL error and browser render failed: {url}")
+            raise FetchError("tls", url, f"certificate verification failed in requests ({tls_err}) and the browser fallback also failed")
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(text)
         p.with_suffix(".url").write_text(url)
         return text
-    r.raise_for_status()
+    if r.status_code >= 400:
+        raise FetchError("http", url, f"HTTP status {r.status_code} {r.reason or ''}".strip())
     text = r.text
     if url.lower().split("?")[0].endswith(".pdf") or "pdf" in r.headers.get("content-type", ""):
         text = pdf_text(r.content)   # CVs: the snapshot holds the extracted text, so quotes stay checkable
@@ -162,8 +203,12 @@ def main() -> None:
     ap.add_argument("--emails", action="store_true")
     ap.add_argument("--links", action="store_true")
     ap.add_argument("--refresh", action="store_true")
+    ap.add_argument("--render", action="store_true", help="read through headless Chromium instead of requests")
     a = ap.parse_args()
-    raw = get(a.url, a.refresh)
+    try:
+        raw = get(a.url, a.refresh or a.render, force_render=a.render)
+    except FetchError as e:
+        raise SystemExit(f"fetch failed at layer '{e.layer}': {e}")
     if a.emails:
         for e, ctx in emails(raw):
             print(f"{e}\t{ctx}")

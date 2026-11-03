@@ -1,8 +1,9 @@
 # School owner (one school to a passing `python -m coverage.check --school "<School>"`)
 
 Recipe from the Cornell pilot. Follow in order. First step: `git log -1` must be the SHA in your kickoff, else `git reset --hard <SHA>`.
-You may write: `config/directories/<slug>-*.yaml`, `data/roster/<slug>-*.jsonl`, `data/grid/<slug>*.jsonl`, `data/coverage/`,
-`coverage/`, `tests/`. Not: other schools, CLAUDE.md, config/targets.yaml, docs/decisions.tsv. Never hand-edit a roster row or a count.
+Standing overrides (every kickoff): you NEVER edit shared code (`coverage/`, `outreach/`, `tests/`): report the bug (file, repro command, expected) in your reply; the single code worker fixes it. The real browser (Chromium via Playwright) IS available: `python -m outreach.fetch URL --render`.
+You may write: `config/directories/<slug>-*.yaml`, `data/roster/<slug>-*.jsonl`, `data/grid/<slug>*.jsonl`, `data/coverage/`.
+Not: other schools, CLAUDE.md, config/targets.yaml, docs/decisions.tsv. Never hand-edit a roster row or a count.
 Everything below is a command; counts are computed, not typed.
 
 ## 0. Baseline
@@ -20,20 +21,20 @@ For every census row decided covered/added, `grid_unit` must equal ONE grid row'
 - Count check: `python -m coverage.pagecount --yaml config/directories/<file>.yaml --roster data/roster/<slug>-x.jsonl`
   prints entries on the page, kept, dropped (READ the dropped list: staff/postdocs are fine, a real professor is a bug), and faculty missing from the roster.
   Tool-less pages: `python -m coverage.pagecount URL`. Duplicate cards on a page: page_count = unique people.
-- Write the row: `python -m coverage.gridrow --school S --unit "NAME" --status done --roster data/roster/x.jsonl --page-count N --note "yaml, entries/kept/dropped"`.
+- Write the row (`--status done` is REFUSED when roster rows != page_count and prints the diff: fix the roster/YAML or the count source first; use `found`/`blocked` meanwhile): `python -m coverage.gridrow --school S --unit "NAME" --status done --roster data/roster/x.jsonl --page-count N --note "yaml, entries/kept/dropped"`.
   `rows` is counted from the roster file; `done` fails check unless rows == page_count.
 - Mismatch causes seen: staff/postdocs on the page (record the true faculty count, not 0); a page that changed since the old roster
   (regenerate from YAML); stale auto-made rosters (`<school>-university-*.jsonl`) that outlived the YAML ones: delete them with `git rm` after diffing names (only staff were lost).
 
 ## 2. Blocked units: the alternates ladder (in order; record `--status alt --alt-source URL`)
 1. Plain GET again: "blocked" notes from older runs were often transient (stat.cornell.edu worked). Try `python -m outreach.fetch URL` first.
-2. Real browser: `outreach.fetch.get` renders SSL-failing hosts with Playwright; in the cloud container it is NOT installed (cs/infosci.cornell.edu stay dead). Do not pip-install browsers or bypass TLS.
+2. Real browser: `python -m outreach.fetch URL --render` (headless Chromium). The requests path trusts the proxy CA plus `config/extra_ca/*.pem` (emSign root: InCommon .edu hosts such as cse.ucsd.edu, cs.umd.edu, cs.cornell.edu now load). Errors name the layer: `[tls]`, `[browser]`, `[http]`, `[network]`. Never bypass TLS.
 3. Wayback `https://web.archive.org/web/2026/<url>`: resets from the cloud proxy (also WebFetch refuses it). Try once, move on.
 4. College/graduate directory with a department filter: Cornell Bowers `https://bowers.cornell.edu/directory?department=15|16|17&page=N` (15 CS, 16 IS, 17 Stats) via `python -m coverage.bowers_dir` (bowers is in browser_hosts.txt, so use requests, not fetch.get). The unfiltered list omits people; a filter id is found in the form's `input[name=department]`.
    Weill: `https://gradschool.weill.cornell.edu/faculty?program=<id>` (ids in `select[name=program]`), table rows, no titles.
 5. Probes (CSRankings / NSF / NIH) are leads, never roster rows (a CSRankings roster once added Wen Sun, who had left). Confirm each lead on a CURRENT official page or the person's own current homepage; the ledger ignores probe-sourced rosters.
 6. New-faculty news, NSF/NIH probes (already running in the recall check).
-7. Only then `data/coverage/human_requests.jsonl` `{school, unit, url, why}` for the human to save the page.
+7. Only then `data/coverage/human_requests.jsonl` `{school, unit, url, why}` (add `name` for a person) for the human to save the page. `coverage.check` shows these in a "waiting on human" column, not as open work; the unit stays non-terminal (exit 1) until the page arrives.
 A `.edu` host that answers `curl` with "unable to get local issuer certificate" is the SSL case in step 2.
 
 ## 3. Recall misses (probe hit not in the ledger)
@@ -48,7 +49,7 @@ Tip: NSF/NIH probe names may be spelled differently from the roster; check `grep
 ## 4. Funnel: empty titles
 `python -m coverage.ledger && python -m coverage.titles --school S` reads each untitled in-scope person's profile page and appends
 `data/coverage/titles.jsonl` (survives re-scrapes; ledger applies it). Printed leftovers have no title on their page: look them up on an
-official page and record with `--set NAME --title T --url URL`. Then rerun `coverage.ledger`. Open people who are young + in scope remain for the fit judges.
+official page and record with `--set NAME --title T --url URL`. Then rerun `coverage.ledger`. People still without a rank show outcome `open:title` in the check detail (not fit-pending, no card is made until a title exists). Young + in scope + titled people remain for the fit judges.
 
 ## 5. Finish
 `python -m pytest -q tests | tail -1`; `python -m coverage.check --school S`; commit on your branch (end message with the attribution lines). Report <=12 lines:

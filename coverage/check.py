@@ -9,6 +9,9 @@ Columns: big units open | recall misses | funnel open | listed unverified.
             data/coverage/explained.jsonl {school, name, reason}
   funnel    in-scope ledger people whose outcome is still "open"
   unverified listed people whose verify record is not backed by saved snapshots (page exists, ML quote and email on it)
+  waiting on human  open units / recall misses / funnel people named in data/coverage/human_requests.jsonl
+            {school, unit, url, why[, name]}: listed in their own column, not counted as open work, but still non-terminal
+            (exit 1 while any exist). A request with `unit` covers that unit's open problems; with `name` it covers that person.
 Run `python -m coverage.ledger` and `python -m coverage.probes` first; the check only reads their files.
 """
 from __future__ import annotations
@@ -69,6 +72,19 @@ def _unit_problems(gu, rows, c) -> list[str]:
         elif st == "done" and g.get("page_count") is not None and g.get("rows") != g.get("page_count"):
             bad.append(f"{gu}: done but roster rows {g.get('rows')} != page count {g.get('page_count')}")
     return bad
+
+
+def human_requests() -> list[dict]:
+    return [h for h in jl(DATA / "coverage" / "human_requests.jsonl") if h.get("school")]
+
+
+def _waits_unit(school: str, problem: str, reqs: list[dict]) -> bool:
+    return any(h["school"] == school and h.get("unit") and not h.get("name") and problem.startswith(h["unit"] + ":") for h in reqs)
+
+
+def _waits_person(school: str, name: str, reqs: list[dict]) -> bool:
+    k = scope.name_key(name)
+    return any(h["school"] == school and h.get("name") and scope.name_key(h["name"]) == k for h in reqs)
 
 
 def explained() -> set[tuple]:
@@ -134,21 +150,28 @@ def main(argv: list[str] | None = None) -> int:
     missing = recall(ledger)
     unver = unverified(ledger)
     want = [s for s in scope.schools() if not a.school or a.school.lower() in s.lower()]
-    print(f"{'school':44} {'big units open':>14} {'recall misses':>13} {'funnel open':>11} {'listed unverified':>17}")
+    reqs = human_requests()
+    print(f"{'school':44} {'big units open':>14} {'recall misses':>13} {'funnel open':>11} {'listed unverified':>17} {'waiting on human':>16}")
     total = 0
     detail = {}
     for s in want:
-        u = units(s)
-        rm = [m for m in missing.values() if m["school"] == s]
-        fo = [r for r in ledger if r["school"] == s and r.get("in_scope") and str(r.get("outcome")).startswith("open")]
+        u_all = units(s)
+        rm_all = [m for m in missing.values() if m["school"] == s]
+        fo_all = [r for r in ledger if r["school"] == s and r.get("in_scope") and str(r.get("outcome")).startswith("open")]
+        wait = ([("unit", x) for x in u_all if _waits_unit(s, x, reqs)]
+                + [("recall", m["name"]) for m in rm_all if _waits_person(s, m["name"], reqs)]
+                + [("funnel", r["name"]) for r in fo_all if _waits_person(s, r["name"], reqs)])
+        u = [x for x in u_all if not _waits_unit(s, x, reqs)]
+        rm = [m for m in rm_all if not _waits_person(s, m["name"], reqs)]
+        fo = [r for r in fo_all if not _waits_person(s, r["name"], reqs)]
         lu = [x for x in unver if x["school"] == s]
-        detail[s] = (u, rm, fo, lu)
-        total += len(u) + len(rm) + len(fo) + len(lu)
-        print(f"{s[:44]:44} {len(u):>14} {len(rm):>13} {len(fo):>11} {len(lu):>17}")
+        detail[s] = (u, rm, fo, lu, wait)
+        total += len(u) + len(rm) + len(fo) + len(lu) + len(wait)
+        print(f"{s[:44]:44} {len(u):>14} {len(rm):>13} {len(fo):>11} {len(lu):>17} {len(wait):>16}")
     print(f"{'TOTAL':44} {sum(len(d[0]) for d in detail.values()):>14} {sum(len(d[1]) for d in detail.values()):>13} "
-          f"{sum(len(d[2]) for d in detail.values()):>11} {sum(len(d[3]) for d in detail.values()):>17}")
+          f"{sum(len(d[2]) for d in detail.values()):>11} {sum(len(d[3]) for d in detail.values()):>17} {sum(len(d[4]) for d in detail.values()):>16}")
     if a.school:
-        for s, (u, rm, fo, lu) in detail.items():
+        for s, (u, rm, fo, lu, wait) in detail.items():
             print(f"\n== {s}\n-- big units open ({len(u)})")
             for x in u:
                 print("  ", x)
@@ -159,6 +182,9 @@ def main(argv: list[str] | None = None) -> int:
             for r in fo:
                 tag = "" if r["outcome"] == "open" else "[" + r["outcome"].split(" ")[0] + "] "
                 print(f"   {tag}{r['name']} | {r['title'][:40]} | {', '.join(r['units'])[:60]}")
+            print(f"-- waiting on human ({len(wait)}): see data/coverage/human_requests.jsonl; still not done")
+            for kind, x in wait:
+                print(f"   [{kind}] {x[:110]}")
             print(f"-- listed unverified ({len(lu)})")
             for x in lu:
                 print(f"   {x['name']}: {x['why'][:110]}")
