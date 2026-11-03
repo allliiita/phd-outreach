@@ -1,0 +1,11 @@
+institution: University of South Florida
+unit: "School of Information"
+urls:
+  - "https://www.usf.edu/arts-sciences/departments/information/people/index.aspx"
+item: div.snippetImageGrid_item
+name: p a
+title: .
+profile: p a@href
+filter: all
+skip_titles:
+  - 'Memoriam'
