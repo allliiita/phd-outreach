@@ -27,6 +27,7 @@ focus_schools:               # batch 1 (applicant, 2026-10-31)
   - University of California Santa Barbara
   # batch 5 (applicant, 2026-11-02)
   - New York University
+  - Memorial Sloan Kettering Cancer Center   # added 2026-11-03: institute that grants PhDs
 postponed_schools:           # scouted (data/discovery/v3) but not rostered this round
   - Washington University in St. Louis
   - University of Virginia
