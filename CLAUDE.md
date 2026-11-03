@@ -66,6 +66,7 @@ test or check that fails on the old behavior. Docs are the last resort. Keep the
 | a blocked BIG unit fails the build | `coverage.check` units section |
 | a probe hit without ledger row or reason fails | `coverage.check` recall section |
 | a worker starts from the wrong base | base SHA check in every kickoff |
+| an exclusion's evidence must show the reason itself: out_of_scope/clinical need an official page naming the department (NSF/NIH APIs don't); postdoc_pre_independent needs an active K99 (last 2 FY, no R00) | `coverage.explain` validation + test (code round 3) |
 | probes (CSRankings/NSF/NIH) are leads, never roster rows: a person needs a current official or own page | test: ledger ignores probe-sourced rosters |
 
 ## Token budget
