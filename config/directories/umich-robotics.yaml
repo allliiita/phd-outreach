@@ -1,0 +1,11 @@
+institution: University of Michigan
+unit: "Robotics Department"
+urls:
+  - "https://robotics.umich.edu/people/faculty/"
+item: div.faculty-card
+name: h2
+title: "div.space-y-1 > p"
+profile: a@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

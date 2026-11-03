@@ -1,0 +1,12 @@
+institution: University of Michigan
+unit: "School of Information (UMSI)"
+urls:
+  - "https://www.si.umich.edu/people/directory/faculty"
+item: div.research-person-profile__item
+name: h2.research-person-profile__name
+title: div.research-person-profile__job-title
+profile: a.button-arrow@href
+skip_titles:
+  - '^$'
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

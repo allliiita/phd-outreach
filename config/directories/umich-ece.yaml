@@ -1,0 +1,11 @@
+institution: University of Michigan
+unit: "Electrical and Computer Engineering (EECS-ECE)"
+urls:
+  - "https://ece.engin.umich.edu/people/directory/faculty/"
+item: div.eecs_person_wrapper
+name: p.eecs_person_name
+title: "div.eecs_person_copy > div"
+profile: a.person_web@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

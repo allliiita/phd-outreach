@@ -1,0 +1,11 @@
+institution: University of Michigan
+unit: "Computer Science and Engineering (EECS-CSE)"
+urls:
+  - "https://cse.engin.umich.edu/people/faculty/"
+item: div.eecs_person_wrapper
+name: p.eecs_person_name
+title: "div.eecs_person_copy > div"
+profile: a.person_web@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

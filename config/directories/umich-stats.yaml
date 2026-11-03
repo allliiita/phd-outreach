@@ -1,0 +1,12 @@
+institution: University of Michigan
+unit: "Statistics (LSA)"
+urls:
+  - "https://prod.lsa.umich.edu/stats/people.directory.html"
+item: div.person.row
+name: a.name
+title: span.title
+profile: a.name@href
+skip_titles:
+  - '^$'
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all
