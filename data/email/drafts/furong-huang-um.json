@@ -1,0 +1,48 @@
+{
+ "id": "furong-huang-um",
+ "to": "furongh@umd.edu",
+ "subject": "PhD Inquiry – Lindsey Ma – Trustworthy Machine Learning and Safety",
+ "body": "Dear Professor Huang,\n\nI am Lindsey Ma, a prospective PhD applicant interested in trustworthy machine learning, interpretable models, and rigorous evaluation of deep models. I hold an M.S. in Statistics from Columbia University (2026) and a B.A. in Economics from Renmin University of China, and have since focused on stress-testing machine learning systems under limited supervision.\n\nI recently read your 2025 paper \"Adversarial prompt and fine-tuning attacks threaten medical large language models\". I was particularly interested in the idea that both prompting and fine-tuning can be used as attack routes against medical language models. This resonated with my experience at Arborphy AI, where I stress-tested a BioCLIP and EfficientNet fusion model with a leakage-aware, multi-seed protocol and found that its gains did not reliably beat a BioCLIP-only baseline.\n\nMy broad research interest lies in reliable machine learning methods for scientific and biomedical data. More specifically, I am interested in how to evaluate and interpret model failures in a way that supports trustworthy conclusions. I see this as a direction I would like to develop further under supervision.\n\nI have also built a multi-agent system with blind cross-model verification and trust levels that gate each stage's autonomy on measured error rates. That work taught me to treat reliability as something measured rather than assumed. I would be interested in learning how your research group approaches trustworthy machine learning and the safety of deployed models. Would you be considering PhD students for 2027 entry?\n\nMy CV and selected project portfolio are attached for your reference. I would be happy to share my academic transcript and a research concept note upon request.\n\nThank you for your time and consideration. I would appreciate the opportunity for a brief discussion if my research interests might be relevant to your ongoing work.\n\nSincerely,\nLindsey Ma",
+ "claims": [
+  {
+   "para": 1,
+   "text": "interested in trustworthy ML, interpretable models, evaluation",
+   "source": "research.text"
+  },
+  {
+   "para": 1,
+   "text": "M.S. Statistics Columbia, B.A. Economics Renmin",
+   "source": "applicant.degree"
+  },
+  {
+   "para": 1,
+   "text": "focus on stress-testing ML systems",
+   "source": "applicant.interests"
+  },
+  {
+   "para": 2,
+   "text": "2025 paper on adversarial prompt and fine-tuning attacks on medical LLMs",
+   "source": "papers[0].title"
+  },
+  {
+   "para": 2,
+   "text": "stress-tested BioCLIP+EfficientNet fusion with leakage-aware multi-seed protocol",
+   "source": "applicant.projects.arborphy"
+  },
+  {
+   "para": 3,
+   "text": "reliable ML for scientific and biomedical data; evaluation and interpretation",
+   "source": "applicant.interests"
+  },
+  {
+   "para": 4,
+   "text": "multi-agent system with blind cross-model verification and trust levels",
+   "source": "applicant.projects.agents"
+  },
+  {
+   "para": 4,
+   "text": "group works on trustworthy machine learning",
+   "source": "research.text"
+  }
+ ]
+}

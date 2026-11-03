@@ -1,0 +1,48 @@
+{
+ "id": "chao-zhang-georgia-tech",
+ "to": "chaozhang@gatech.edu",
+ "subject": "PhD Inquiry – Lindsey Ma – Protein Language Models and Fitness Landscapes",
+ "body": "Dear Professor Zhang,\n\nI am Lindsey Ma, a prospective PhD applicant interested in representation learning with pretrained models, protein language models, and machine learning for biological data. I hold an M.S. in Statistics from Columbia University (2026) and a B.A. in Economics from Renmin University of China, and have since focused on self-supervised learning for scientific data.\n\nI recently read your 2024 paper \"Contrastive Fitness Learning: Reprogramming Protein Language Models for Low- N Learning of Protein Fitness Landscape\". I was particularly interested in the idea of reprogramming a pretrained protein language model to learn fitness landscapes from very few labeled examples. This resonated with my experience at Arborphy AI, where I worked with the pretrained BioCLIP model for fine-grained species recognition and tested carefully whether adding a second model helped.\n\nMy broad research interest lies in learning from pretrained and self-supervised models when labels are scarce. More specifically, I am interested in how such models can be adapted to biological data and evaluated rigorously. I see this as a direction I would like to develop further under supervision.\n\nAt Columbia's Center for Theoretical Neuroscience I worked on self-supervised denoising of two-photon calcium imaging, using masking strategies combined with penalized matrix decomposition and synthetic benchmarks built from real neuronal footprints. That project gave me practice in learning from data without clean labels. I would be interested in learning how your research group approaches adapting language models to biological problems with limited labels. Would you be considering PhD students for 2027 entry?\n\nMy CV and selected project portfolio are attached for your reference. I would be happy to share my academic transcript and a research concept note upon request.\n\nThank you for your time and consideration. I would appreciate the opportunity for a brief discussion if my research interests might be relevant to your ongoing work.\n\nSincerely,\nLindsey Ma",
+ "claims": [
+  {
+   "para": 1,
+   "text": "interested in protein language models and ML for biological data",
+   "source": "keywords"
+  },
+  {
+   "para": 1,
+   "text": "degrees",
+   "source": "applicant.degree"
+  },
+  {
+   "para": 1,
+   "text": "self-supervised and representation learning",
+   "source": "applicant.interests"
+  },
+  {
+   "para": 2,
+   "text": "2024 Contrastive Fitness Learning paper",
+   "source": "papers[0].title"
+  },
+  {
+   "para": 2,
+   "text": "used pretrained BioCLIP and tested the fusion with a second model",
+   "source": "applicant.projects.arborphy"
+  },
+  {
+   "para": 3,
+   "text": "learning with scarce labels, applied to biology",
+   "source": "applicant.interests"
+  },
+  {
+   "para": 4,
+   "text": "self-supervised denoising of calcium imaging with masking and matrix decomposition",
+   "source": "applicant.projects.calcium"
+  },
+  {
+   "para": 4,
+   "text": "group works on protein language models",
+   "source": "keywords"
+  }
+ ]
+}

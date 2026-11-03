@@ -1,0 +1,48 @@
+{
+ "id": "pan-li-georgia-tech",
+ "to": "pli95@gatech.edu",
+ "subject": "PhD Inquiry – Lindsey Ma – Explainable Geometric Deep Learning on Graphs",
+ "body": "Dear Professor Li,\n\nI am Lindsey Ma, a prospective PhD applicant interested in explainable and interpretable deep learning, graph and network models, and rigorous evaluation. I hold an M.S. in Statistics from Columbia University (2026) and a B.A. in Economics from Renmin University of China, and have since focused on statistical modeling of scientific data.\n\nI recently read your 2024 paper \"Towards Understanding Sensitive and Decisive Patterns in Explainable AI: A Case Study of Model Interpretation in Geometric Deep Learning\". I was particularly interested in the idea of separating the patterns a geometric deep learning model is sensitive to from those that actually decide its predictions. This resonated with my experience fitting Bayesian stochastic block models to the FlyWire connectome to infer latent neuron types.\n\nMy broad research interest lies in interpretable machine learning for structured scientific data. More specifically, I am interested in how explanations of deep models can be tested with controls so that they support reliable conclusions. I see this as a direction I would like to develop further under supervision.\n\nI reproduced circuit-tracing analyses of hallucination on Qwen3 and built probing and steering tooling with sham and randomized controls, concluding the effects were too unstable to support causal claims. That experience made me careful about what an interpretation method can actually establish. I would be interested in learning how your research group approaches explainability and geometric deep learning on graphs. Would you be considering PhD students for 2027 entry?\n\nMy CV and selected project portfolio are attached for your reference. I would be happy to share my academic transcript and a research concept note upon request.\n\nThank you for your time and consideration. I would appreciate the opportunity for a brief discussion if my research interests might be relevant to your ongoing work.\n\nSincerely,\nLindsey Ma",
+ "claims": [
+  {
+   "para": 1,
+   "text": "interested in explainable AI and graph models",
+   "source": "keywords"
+  },
+  {
+   "para": 1,
+   "text": "degrees",
+   "source": "applicant.degree"
+  },
+  {
+   "para": 1,
+   "text": "statistical modeling, evaluation, interpretability",
+   "source": "applicant.interests"
+  },
+  {
+   "para": 2,
+   "text": "2024 paper on sensitive and decisive patterns in explainable AI",
+   "source": "papers[1].title"
+  },
+  {
+   "para": 2,
+   "text": "Bayesian SBMs on FlyWire connectome",
+   "source": "applicant.projects.flywire"
+  },
+  {
+   "para": 3,
+   "text": "interpretable ML for structured scientific data",
+   "source": "applicant.interests"
+  },
+  {
+   "para": 4,
+   "text": "circuit-tracing reproduction with sham and randomized controls",
+   "source": "applicant.projects.interp"
+  },
+  {
+   "para": 4,
+   "text": "group works on explainable AI and geometric deep learning",
+   "source": "keywords"
+  }
+ ]
+}
