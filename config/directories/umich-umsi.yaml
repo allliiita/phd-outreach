@@ -1,28 +1,7 @@
 institution: University of Michigan
 unit: "School of Information (UMSI)"
 urls:
-  - "https://www.si.umich.edu/people/faculty?page=0"
-  - "https://www.si.umich.edu/people/faculty?page=1"
-  - "https://www.si.umich.edu/people/faculty?page=2"
-  - "https://www.si.umich.edu/people/faculty?page=3"
-  - "https://www.si.umich.edu/people/faculty?page=4"
-  - "https://www.si.umich.edu/people/faculty?page=5"
-  - "https://www.si.umich.edu/people/faculty?page=6"
-  - "https://www.si.umich.edu/people/faculty?page=7"
-  - "https://www.si.umich.edu/people/faculty?page=8"
-  - "https://www.si.umich.edu/people/faculty?page=9"
-  - "https://www.si.umich.edu/people/faculty?page=10"
-  - "https://www.si.umich.edu/people/faculty?page=11"
-  - "https://www.si.umich.edu/people/faculty?page=12"
-  - "https://www.si.umich.edu/people/faculty?page=13"
-  - "https://www.si.umich.edu/people/faculty?page=14"
-  - "https://www.si.umich.edu/people/faculty?page=15"
-  - "https://www.si.umich.edu/people/faculty?page=16"
-  - "https://www.si.umich.edu/people/faculty?page=17"
-  - "https://www.si.umich.edu/people/faculty?page=18"
-  - "https://www.si.umich.edu/people/faculty?page=19"
-  - "https://www.si.umich.edu/people/faculty?page=20"
-  - "https://www.si.umich.edu/people/faculty?page=21"
+  - "https://www.si.umich.edu/people/directory/faculty"
 item: div.research-person-profile__item
 name: h2.research-person-profile__name
 title: div.research-person-profile__job-title
