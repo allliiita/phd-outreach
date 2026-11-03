@@ -1,0 +1,11 @@
+institution: University of Pennsylvania
+unit: "Bioengineering"
+urls:
+  - "https://directory.engineering.upenn.edu/"
+item: div.SingleStaffList.ft-be
+name: div.StaffListName
+title: div.StaffListTitles > div
+profile: div.StaffListName a@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

@@ -1,0 +1,11 @@
+institution: University of Pennsylvania
+unit: "Statistics and Data Science (Wharton)"
+urls:
+  - "https://statistics.wharton.upenn.edu/faculty/faculty-list/"
+item: li.wdp_listing-row
+name: strong
+title: li
+profile: strong a@href
+skip_titles:
+  - '^(?!.*(professor|lecturer|instructor|scientist|faculty|chair|emerit)).+$'
+filter: all

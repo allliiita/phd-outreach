@@ -1,0 +1,9 @@
+institution: University of Pennsylvania
+unit: "Genomics and Computational Biology (PhD graduate group)"
+urls:
+  - "https://www.med.upenn.edu/gcb/faculty.html"
+item: td.member_name
+name: a
+title: div.member_title
+profile: a@href
+filter: all
