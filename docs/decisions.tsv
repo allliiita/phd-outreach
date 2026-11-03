@@ -50,3 +50,6 @@ ts	phase	decision	why	evidence	result
 2026-11-03T00:36:38Z	fanout	merged UMass: units 0, recall 0, funnel 27 fit-pending; census 60 rows	school predicate met	merge 03f044f; pytest + check re-run	done
 2026-11-03T00:36:38Z	census	open: AI units marked out_of_scope by owners (UMass MassAITC, AI Hub) need the independent second census scout before final	BIG includes AI units created 2022+	umass.units.jsonl	open
 2026-11-03T00:38:30Z	fanout	merged UCSC: units 0, recall 0, funnel 0 (5 listed await re-verification)	school predicate met	merge 9ddfb3a; pytest + check	done
+2026-11-03T00:40:22Z	verify	merged code round 4: surname in exclusion quotes, --to aliases, no out_of_scope for engineering/CS/stats units, R00 hint, named chairs not young, paginated precision search, add_person titles, K99 last-name bug	owner-reported bugs fixed once	commit bab34c0; coordinator re-ran pytest 93, Furong Huang dry-run OK	done
+2026-11-03T00:40:22Z	fanout	merged UCSF partial: units 5 (BMS bot-check -> human request; Profiles units need a faculty-only count), recall 17, funnel 30	progress verified; follow-up owner next	ucsf-owner merge; check	partial
+2026-11-03T00:40:22Z	verify	61 unproven exclusions after stricter rules; repaired by second-pass owners (Cornell/UMD/UCSD/UW/JHU) and a repair agent (BU/UCF/GaTech/Duke)	exclusions must be proven	coverage.explain --validate	open
