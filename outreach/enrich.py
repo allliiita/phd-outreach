@@ -33,12 +33,20 @@ from .validate import norm_name
 OUT = ROOT / "data" / "dossiers"
 TODAY = date.today().isoformat()
 
+# Named / endowed chairs, "Distinguished", "Professor and ..." are senior even when the string also says "Associate Professor"
+# ("Dutton-Ducoffe Professor and Associate Professor"). A plain rank word before "professor" keeps it a rank, not a name.
+_RANK = r"asst\.?|assoc\.?|vice|deputy|assistant|associate|full|research|adjunct|visiting|courtesy|affiliate|clinical|teaching|incoming|tenure-track|tenured|joint|junior|university|emeritus|emerita|senior|distinguished"
+SENIOR = (r"\bdistinguished\b|(?<!assistant )(?<!associate )\bprofessor and\b|"
+          rf"(?<![\w-])(?!(?:{_RANK})\b)[a-z][\w.'-]*\s+(?:endowed\s+|named\s+)?professor\b|"
+          rf"(?<![\w-])(?!(?:{_RANK})\b)[a-z][\w.'-]*\s+chair\b")
+
 CLASS_RULES = [  # first match wins; order matters
     (r"emerit", "emeritus"),
     (r"teaching|lecturer|instructor|of the practice|clinical", "teaching"),
     (r"adjunct|affiliate|courtesy|visiting|postdoc", "other"),   # UC "in Residence" is a regular PI series (not here)
     (r"incoming|starting (in )?(fall|spring|january|july)", "incoming_assistant"),
     (r"research (assistant |associate )?professor|research scientist|senior scientist", "research_faculty"),
+    (SENIOR, "full"),
     (r"assistant professor|\basst\.? prof", "assistant"),     # UCSF Profiles: "Asst Professor In Residence"
     (r"associate professor|\bassoc\.? prof", "associate"),
     (r"professor|chair\b|university professor", "full"),

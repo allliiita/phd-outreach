@@ -42,16 +42,16 @@ Find WHY, in this order: (a) in a unit you have not rostered: fix section 1; (b)
 nickname): fix the code with a test, or `--reason alias_of_ledger`; (c) person not in scope: `python -m coverage.explain --school S --name N --reason R --evidence URL --quote "verbatim text from that page" [--unit U|--to INST|--title T] [--dry-run]`.
 The tool fetches the page and REFUSES unless the quote is on it; the row stores quote + fetch date. Rows without a verified quote (all legacy ones) do not count in `coverage.check`: they show as "unproven exclusion". `--validate --school S` re-checks stored rows.
 Past-title rule: a stored title must be current. A page that says "was", "formerly", "prior to" is not evidence (`coverage.titles` rejects it); a person whose page says they now work elsewhere is `moved_institution`.
-Reasons and what each needs: moved_institution (`--to`, new institution named in the quote); senior_title / not_phd_advising_title (`--title`, in the quote);
-clinical_unit / out_of_scope_unit (`--unit`, in the quote; an official page naming the department, NOT nsf.gov / nih.gov APIs); alias_of_ledger (`--note "same as <ledger name>"`, no fetch);
-postdoc_pre_independent (evidence = the person's NIH RePORTER project; the tool queries RePORTER: an active K99, fiscal year >= current FY-1, at this school, and NO R00 for the PI; otherwise refused. A K99 older than that is stale: the person is probably faculty, look for the new post).
+Reasons and what each needs: moved_institution (`--to`: full name or any alias, named in the quote); senior_title / not_phd_advising_title (`--title`); all three quotes must also contain the person's surname;
+clinical_unit / out_of_scope_unit (`--unit`, in the quote; an official page naming the department, NOT nsf.gov / nih.gov APIs; out_of_scope is REFUSED for engineering / CS / ECE / statistics / data / applied math / OR / information / linguistics units); alias_of_ledger (`--note "same as <ledger name>"`, no fetch);
+postdoc_pre_independent (evidence = the person's NIH RePORTER project; the tool queries RePORTER: an active K99, fiscal year >= current FY-1, at this school, and NO R00 for the PI; otherwise refused; the refusal names the R00's organization: use moved_institution, or add_person if in scope. A stale K99: probably faculty, look for the new post).
 Never explain with "not ML" (fit judges decide). Young and in scope but unrostered: `python -m coverage.add_person --school S --name N --url PROFILE`.
 Tip: NSF/NIH probe names may be spelled differently from the roster; check `grep -il surname data/roster/<slug>*.jsonl` before concluding "missing".
 
 ## 4. Funnel: empty titles
 `python -m coverage.ledger && python -m coverage.titles --school S` reads each untitled in-scope person's profile page and appends
 `data/coverage/titles.jsonl` (survives re-scrapes; ledger applies it). Printed leftovers have no title on their page: look them up on an
-official page and record with `--set NAME --title T --url URL`. Then rerun `coverage.ledger`. People still without a rank show outcome `open:title` in the check detail (not fit-pending, no card is made until a title exists). Young + in scope + titled people remain for the fit judges.
+official page and record with `--set NAME --title T --url URL`. Then rerun `coverage.ledger`. People still without a rank show outcome `open:title` in the check detail (not fit-pending, no card is made until a title exists). Young + in scope + titled people remain for the fit judges. Named / endowed chairs, "Distinguished", "Professor and ..." are NOT young even next to "Associate Professor".
 
 ## 5. Finish
 `python -m pytest -q tests | tail -1`; `python -m coverage.check --school S`; commit on your branch (end message with the attribution lines). Report <=12 lines:
