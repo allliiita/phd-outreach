@@ -1,0 +1,9 @@
+institution: University of Pennsylvania
+unit: "Linguistics"
+urls:
+  - "https://www.ling.upenn.edu/people/faculty"
+item: div.people-list.views-row
+name: h3 a
+title: span.title
+profile: h3 a@href
+filter: all
