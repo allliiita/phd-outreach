@@ -16,3 +16,7 @@ Output: {"id", "checks": {"swap": bool, "site": bool, "bridge": bool, "ask": boo
 with `problems`; a second failure goes to the applicant's review queue.
 Code checks run as well (`python -m outreach.emailcheck`): length, banned phrases, each project used once, claims
 traced to the card.
+
+Lessons (2026-11-04, first sample): a "second line of work" mention must connect to an applicant project, never stand
+alone ("I was also drawn to X" = filler). Do not restate the ask as a separate sentence. Copy project wording from
+applicant.yaml exactly (no added "LLM").

@@ -1,0 +1,69 @@
+{
+ "id": "b1-0304",
+ "name": "Weinan Sun",
+ "school": "Cornell University",
+ "email": "ws467@cornell.edu",
+ "their_words": [
+  {
+   "url": "https://neuroai.github.io/sunlab/",
+   "quote": "We bridge biological and artificial intelligence—investigating how brains learn and reason, while building neuro-inspired AI systems that can think, plan, and discover."
+  },
+  {
+   "url": "https://neuroai.github.io/sunlab/research",
+   "quote": "from improving how foundation models handle compositional generalization to building world models that enable more human-like reasoning and planning"
+  }
+ ],
+ "paper": {
+  "title": "Learning produces an orthogonalized state machine in the hippocampus",
+  "coauthors": "W. Sun, J. Winnubst, M. Natrajan, C. Lai, K. Kajikawa, A. Bast, M. Michaelos, R. Gattoni, C. Stringer, D. Flickinger, J. E. Fitzgerald, N. Spruston",
+  "year": 2025,
+  "venue": "Nature",
+  "url": "https://neuroai.github.io/sunlab/publications",
+  "quote": "Learning produces an orthogonalized state machine in the hippocampus W. Sun, J. Winnubst",
+  "core_idea": {
+   "url": "https://neuroai.github.io/sunlab/research",
+   "quote": "the hippocampus organizes learned experiences into orthogonalized representations that function like a state machine, enabling flexible navigation through both physical and abstract spaces"
+  }
+ },
+ "recording": {
+  "url": "https://neuroai.github.io/sunlab/research",
+  "quote": "2-Photon calcium imaging of mouse hippocampus showing activities of over 5,000 neurons"
+ },
+ "second_line": [
+  {
+   "url": "https://neuroai.github.io/sunlab/research",
+   "quote": "AI Scientists: autonomous agents for science automation"
+  },
+  {
+   "url": "https://neuroai.github.io/sunlab/publications",
+   "quote": "Ataraxis: Bridging AI Coding Assistants and Scientific Hardware I. Kondratyev, W. Sun"
+  },
+  {
+   "url": "https://neuroai.github.io/sunlab/publications",
+   "quote": "A Neuroscience-Inspired Dual-Process Model of Compositional Generalization"
+  }
+ ],
+ "program": {
+  "url": "https://www.nbb.cornell.edu/weinan-sun",
+  "quote": "Applying to the Neurobiology & Behavior PhD Program"
+ },
+ "contact_rule": {
+  "url": "https://neuroai.github.io/sunlab/contact",
+  "quote": "Please include your CV, a brief description of your research interests, and why you're interested in our lab."
+ },
+ "recruiting": {
+  "url": "https://neuroai.github.io/sunlab/",
+  "quote": "Whether you're a prospective PhD student, postdoc, or undergraduate researcher—we'd love to hear from you."
+ },
+ "match": {
+  "project": "calcium",
+  "finding": "self-supervised denoising of two-photon calcium imaging (masking + penalized matrix decomposition, synthetic benchmarks from real neuronal footprints)",
+  "bridge": "his central claim rests on reading out joint structure from thousands of simultaneously imaged neurons; her work is on the signal side of exactly that recording method",
+  "question": "whether orthogonalized, state-machine-like latent structure can be encouraged in and measured in world models / agents, and whether it helps them generalize and plan",
+  "evidence_projects": [
+   "agents",
+   "interp"
+  ],
+  "level": "paper"
+ }
+}

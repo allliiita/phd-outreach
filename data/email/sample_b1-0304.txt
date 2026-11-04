@@ -1,0 +1,18 @@
+Subject: PhD Inquiry (Fall 2027) – Lindsey Ma – Hippocampal cognitive maps and neuro-inspired AI
+
+Dear Professor Sun,
+
+I am Lindsey Ma, finishing an M.S. in Statistics at Columbia and applying to PhD programs for Fall 2027. I am interested in bridging biological and artificial intelligence, in both directions.
+
+I recently read your 2025 Nature paper "Learning produces an orthogonalized state machine in the hippocampus" (with Winnubst, Stringer, Fitzgerald, Spruston and colleagues). What I found compelling is that learning organizes experiences into orthogonalized, state-machine-like representations, so one structure supports navigation through both physical and abstract spaces. This connected with my own work at Columbia's Center for Theoretical Neuroscience on self-supervised denoising of two-photon calcium imaging, where I combined masking strategies with penalized matrix decomposition and built synthetic benchmarks from real neuronal footprints. A result like yours rests on the joint structure of thousands of imaged neurons, and I would like to connect that signal-side work to models of the structure it reveals.
+
+More specifically, I would like to study whether orthogonalized, state-machine-like latent structure can be encouraged and measured in world models for planning, and whether it helps them generalize to new tasks, a question I would hope to develop under your supervision.
+
+Closer to your AI Scientists direction, I built a multi-agent system with blind cross-model verification and trust levels that gate each stage's autonomy on measured error rates. In an interpretability project, I reproduced circuit-tracing analyses of hallucination on Qwen3 with sham and randomized controls, and concluded the effects were too unstable to support causal claims. Would you be considering PhD students for Fall 2027 through the Neurobiology & Behavior PhD program?
+
+My CV is attached. Thank you for your time; I would appreciate a brief conversation if my interests fit your lab.
+
+Best regards,
+Lindsey Ma
+M.S. in Statistics, Columbia University
+lindseyma.com
